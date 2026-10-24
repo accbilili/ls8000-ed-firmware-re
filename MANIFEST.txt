@@ -1,7 +1,7 @@
 # LS8000 固件逆向 —— 文件校验清单（发布版）
 # 格式: SHA256  字节数  相对路径
 # 包根: <REPO_ROOT>  (仓库 ls8000-ed-firmware-re)
-# 文件数: 723   总字节: 13514051
+# 文件数: 723   总字节: 13514052
 # 注意: 脱敏改写后重新生成，与原交付包 MANIFEST 的哈希不可直接比对
 #       已排除目录: .git, .github, __pycache__
 
@@ -308,7 +308,7 @@ ccbd9aca2e204c0df89ec472804188b2a97d14a56bfabf2006af11aa6930ef05        6586  DI
 3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986       35149  LICENSE
 28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5       20138  LICENSE-DOCS
 c3e62300e6035a5986fbe0c09c9fd3579d3a7720737eef5f346fc4a0700d4553        7035  NOTICE
-5dc657f9d1c6e05fcd6f8eb509b8a5e4bb4c33195e359e8559ec279d6414c328       48463  README.md
+4bf94da59aa43cef1d01d0d00164651e947c89cdac72cbc56d93855f7bf0b8dd       48464  README.md
 9e56dc8157b0e72725ce1af2118d6bb865ef57b27fad0d12d6db0c13bed94f4f        5129  README_实机安全须知.md
 32b263e625c7bf80614399ae4966f104ecebe345a25bb1f1f89a87f130c4cf8c        3515  bootstrap.ps1
 9f5733094739d14a5f7a826ed8718dda006e698fc9a9e5d6b73a47dee3e09f5d        3949  bootstrap.sh

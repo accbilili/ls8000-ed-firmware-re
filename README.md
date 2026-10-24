@@ -99,143 +99,6 @@ probably the part most likely to actually help someone.
 
 ---
 
-## 📢 请先读完这一段 / Please Read This First
-
-### 关于作者：我是新手，这是 AI 辅助的产物 / About the author: a beginner, AI-assisted
-
-> **中文**  
->
-> 这个仓库里**几乎没有一行代码是我"从零写出来"的**。全部内容是在 **AI 助手辅助**下完成的——  
-> 方式是**一轮一轮提问 → AI 给出假设 → 我用脚本/模拟器去跑 → 推翻 → 再提问**，这样迭代累积出来的。  
-> 中间经历了 **25 轮较大的修正（R1–R25）**，其中还包括几次**自我推翻**已写进文档的结论。
->
-> 所以我请你：**把这里的所有结论当作"待验证的线索"，而不是"权威结论"**。真正能站住脚的，  
-> 是那些能被脚本重复跑出来、且脚本就在本仓库里的部分。
->
-> **English**  
->
-> **Almost no line here was written from scratch by me.** Everything was produced with the assistance of an  
-> **AI assistant**, through many rounds of: ask → AI proposes → I run a script/simulator to test →  
-> disprove → ask again. The notes record **25 rounds (R1–R25)** of correction, including several  
-> instances of **retracting my own previously "confirmed" conclusions**.
->
-> **Please treat every conclusion here as a lead to verify, not as established fact.**  
-> What is trustworthy is the part you can re-run yourself — and the scripts are here.
-
-### 为什么仍然值得看 / Why it may still be useful
-
-有一件事我认为**不因作者水平而打折**：本项目的关键结论是**用指令级模拟器实跑验证**的，  
-而不是靠人（或 AI）通读代码后得出的推理。
-
-这也正好回应了上面那段"迷路"的经历：
-**当你无法判断 AI 说得对不对时，唯一能依靠的东西是"可复现"。**
-不是去相信谁的分析更可信，而是自己跑一遍脚本，让机器把答案吐出来。
-这正是本仓库坚持把每条关键结论都做成可执行验证的原因——它绕开了"我不懂"这个事实。
-
-Why this survives the author's skill level: the load-bearing conclusions were produced by an  
-**instruction-level simulator executing the actual firmware code**, not by anyone reasoning about it.
-
-| 结论 / Conclusion | 人工/AI 推导的版本 / Hand- or AI-derived | 模拟器实跑的正确答案 / Simulator-executed |
-| --- | --- | --- |
-| `er3`（校验对象 / checksum target） | payload[1..8] 重排相加 ❌<br>payload[1..8] rearranged and summed ❌ | **`BE32(payload[1..4])`** ✅ |
-| 四条 `shll.l #2` 的位移量 / shift amount of the four `shll.l #2` | 以为是左移 16 位 ❌<br>thought to be a left shift of 16 ❌ | **实为左移 8 位（2 位 ×4）** ✅<br>**actually a left shift of 8 (2 bits × 4)** ✅ |
-| `@(0x2,er6)` 的含义 / meaning of `@(0x2,er6)` | 以为是 payload[1] ❌<br>thought to be payload[1] ❌ | **实为 payload[2]**（下标基准不同）✅<br>**actually payload[2]** (different index base) ✅ |
-
-复现方法只需一行 / Reproduction takes one line:
-
-```bash
-python tools/sim_verify_formulas.py
-```
-
-> 这也是本项目最想留下的经验：**凡是涉及位段、移位、字节序的结论，永远不要用推导，用模拟执行。**
-> 因为推理链条上任何一层出错，结果看起来仍然自洽——它不会报错，只会静静地错。
->
-> The lesson this project most wants to leave behind: **for any conclusion involving bit fields, shifts or byte
-> order, never derive it — execute it in a simulator.** Because if any link in the reasoning chain is wrong,
-> the result still looks self-consistent: it raises no error, it is simply and quietly wrong.
-
----
-
-## ⚠️ 非官方声明 / Official Disclaimer
-
-> **本仓库是非官方的个人学习项目，与 Nikon Corporation 没有任何关联，未获得其授权、支持或背书。**  
-> **This is an unofficial personal study project. It is not affiliated with, authorized by,  
-> endorsed by, or supported by Nikon Corporation in any way.**
->
-> **`samples/` 收录了 Nikon 官方公开发布的固件更新软件包及其中的 ROM 镜像**——
-> 即尼康自己提供给用户、用于升级扫描仪固件的那份安装程序（Ver. 1.11，2002-12-26 发布）。
-> 这不是泄露件或内部渠道，来源已通过**三层可复现方法**验证，
-> 任何人都能自行核实，详见 [`samples/SOURCES.md`](samples/SOURCES.md)。
->
-> `samples/` includes the firmware update package that Nikon publicly released, together with the ROM image
-> inside it — that is, the very installer Nikon shipped for users to update their scanner firmware
-> (Ver. 1.11, released 2002-12-26). This is not a leak and does not come from any internal channel;
-> its provenance is verified by a **three-layer reproducible method** that anyone can re-check —
-> see [`samples/SOURCES.md`](samples/SOURCES.md).
->
-> 分析本体仍以纯文本为主：`.md` / `.py` / `.asm` / `.txt` / `.json` / `.csv` / `.ps1`。
-> 本仓库**不涉及**任何需登录、付费或非公开渠道才能取得的固件。
->
-> The analysis itself remains mostly plain text: `.md` / `.py` / `.asm` / `.txt` / `.json` / `.csv` / `.ps1`.
-> This repository **does not involve** any firmware that requires a login, a payment, or a non-public
-> channel to obtain.
->
-> 详见 [`NOTICE`](NOTICE) 与 [`DISCLAIMER.md`](DISCLAIMER.md)。
-
----
-
-## 这是什么 / What this is
-
-面向 **Hitachi H8/300H** 单片机的一套静态分析工具链，以及针对 Nikon LS-8000 ED 底片扫描仪固件的  
-结构化分析记录。分析对象主要是一个 **228,345 字节的 ROM 镜像**与其 Windows 驱动侧的 ioctl 接口。
-
-A static-analysis toolkit for the **Hitachi H8/300H** MCU, plus structured analysis notes on the firmware  
-of the Nikon LS-8000 ED film scanner — primarily a **228,345-byte ROM image** and the Windows driver's  
-ioctl surface.
-
-**你会得到 / What you get**
-
-| # | 产出 / Deliverable | 说明 / Notes |
-| - | --- | --- |
-| 1 | **H8 反汇编工具链** / **H8 disassembly toolchain**<br>`h8dis` / `h8tab` / `h8sim` | 纯 Python，无第三方依赖，零 `ctypes`/`struct`<br>Pure Python, no third-party dependencies, no `ctypes`/`struct` |
-| 2 | **解码器缺陷的量化修复** / **Quantified fix of a decoder defect** | 原版指令表 393 项 → 修复版 399 项；全 ROM 多检出 **211 处** 此前不可解的 `mov.l`（均为 size=10）<br>Original instruction table 393 entries → fixed 399; **211** previously undecodable `mov.l` (all size=10) newly decoded across the whole ROM |
-| 3 | **指令级模拟器** / **Instruction-level simulator** | 可执行真实指令读出寄存器值——本项目最重要的纠错手段<br>Executes real instructions and reads out register values — the most important error-correction tool in this project |
-| 4 | **200 个带洞函数的递归复走** / **Recursive re-walk of 200 holed functions** | 36 个带洞函数额外解出 **1,299 条**指令<br>36 holed functions yielded an extra **1,299** decoded instructions |
-| 5 | **ioctl `0x190012` 的完整判定** / **Complete determination of ioctl `0x190012`** | 穷举 Function×Method×Access 后的**唯一解**：`CTL_CODE(0x19, 0x004, METHOD_OUT_DIRECT, FILE_ANY_ACCESS)`<br>After exhausting Function×Method×Access: the **unique** solution `CTL_CODE(0x19, 0x004, METHOD_OUT_DIRECT, FILE_ANY_ACCESS)` |
-| 6 | **25 轮修正的完整记录** / **Full record of 25 correction rounds** | 含 4 次自我推翻——难得的"错误档案"，见 `docs/REPORT_回写总账-20261024.md`<br>Includes 4 self-retractions — a rare "error archive", see `docs/REPORT_回写总账-20261024.md` |
-| 7 | **12 组 / 146 条调用边** / **12 groups / 146 call edges** | 由实测而非猜测得出<br>Derived from measurement, not guesswork |
-| 8 | ⭐ **Windows 11 驱动适配包** / **Windows 11 driver package**<br>[`win11-driver/`](win11-driver) | LS-8000 ED / 9000 ED 在 Win11 x64 上被正确识别；不含任何驱动二进制，INF 仅 1,217 B<br>LS-8000 ED / 9000 ED correctly detected on Win11 x64; contains no driver binaries, the INF is only 1,217 B |
-
-> ⭐ **如果你只想要一件能直接用的东西**：看 [`win11-driver/`](win11-driver)。
-> 其余部分是逆向分析记录，主要用于研究与参考。
->
-> 🔍 好奇它为什么只用了 **1,217 字节**就能管用？
-> 见下方「**Windows 11 驱动适配包**」一节中的「**精妙之处**」：
-> 没有写一行内核代码，也没有关签名强制——它只是把路让开了。
->
-> If you only want one immediately usable thing: see [`win11-driver/`](win11-driver).
-> Everything else is reverse-engineering notes, mainly for study and reference.
->
-> 🔍 Curious why **1,217 bytes** is enough? See "**Why 1,217 bytes is enough**" inside the
-> **Windows 11 driver package** section below: no kernel code was written and signature
-> enforcement was never disabled — it just stepped out of the way.
-
-**这不是 / What this is NOT**
-
-- ❌ 不是官方产物：与 Nikon 无关联，未获授权（见 [`NOTICE`](NOTICE)）<br>Not an official product: no affiliation with Nikon, no authorization (see [`NOTICE`](NOTICE))
-- ❌ 不是可用替代品：没有开源驱动、不能替代官方软件、不提供可刷写镜像<br>Not a working replacement: no open-source driver, does not substitute for the vendor software, ships no flashable image
-- ❌ 不是完整逆向：结论覆盖 ROM 的一小部分，大量区域仍未分析<br>Not a complete reverse-engineering: the conclusions cover only a small part of the ROM, large regions remain unanalyzed
-- ❌ 不是权威资料：见开头关于作者能力与 AI 辅助的说明<br>Not an authoritative source: see the note at the top about the author's ability and AI assistance
-- ⚠️ `samples/other/` 下的 LS-2000 等**其它机型**固件仅供格式交叉参考，与本项目主题无关<br>Firmware of **other models** (LS-2000 etc.) under `samples/other/` is kept only for format cross-reference and is unrelated to this project
-
-> 关于样本完整性 On sample integrity：`samples/` 收录的是**完整未改动的官方发布原件**，  
-> 而非改造过的或来源不明的镜像。所有文件的 SHA256 均登记在 `MANIFEST.txt`，  
-> 可用 `python tools/verify_package.py` 一键核对是否被改动。  
-> The samples are complete, unmodified official originals — not altered or  
-> unattributable dumps. Every SHA256 is recorded in MANIFEST.txt.
-
----
-
 ## 🔧 Windows 11 驱动适配包（LS-8000 ED / LS-9000 ED） / Windows 11 x64 driver package
 
 > 本节内容与独立文件 [`win11-driver/README.md`](win11-driver/README.md) 一致；文中出现的相对路径均相对于 `win11-driver/` 目录。
@@ -566,6 +429,144 @@ cd win11-driver && sha256sum -c SHA256SUMS.txt
 > 这类"哪台机器能跑 / 哪台不能"的一手数据，对后来的人非常有价值。
 
 ---
+
+## 📢 请先读完这一段 / Please Read This First
+
+### 关于作者：我是新手，这是 AI 辅助的产物 / About the author: a beginner, AI-assisted
+
+> **中文**  
+>
+> 这个仓库里**几乎没有一行代码是我"从零写出来"的**。全部内容是在 **AI 助手辅助**下完成的——  
+> 方式是**一轮一轮提问 → AI 给出假设 → 我用脚本/模拟器去跑 → 推翻 → 再提问**，这样迭代累积出来的。  
+> 中间经历了 **25 轮较大的修正（R1–R25）**，其中还包括几次**自我推翻**已写进文档的结论。
+>
+> 所以我请你：**把这里的所有结论当作"待验证的线索"，而不是"权威结论"**。真正能站住脚的，  
+> 是那些能被脚本重复跑出来、且脚本就在本仓库里的部分。
+>
+> **English**  
+>
+> **Almost no line here was written from scratch by me.** Everything was produced with the assistance of an  
+> **AI assistant**, through many rounds of: ask → AI proposes → I run a script/simulator to test →  
+> disprove → ask again. The notes record **25 rounds (R1–R25)** of correction, including several  
+> instances of **retracting my own previously "confirmed" conclusions**.
+>
+> **Please treat every conclusion here as a lead to verify, not as established fact.**  
+> What is trustworthy is the part you can re-run yourself — and the scripts are here.
+
+### 为什么仍然值得看 / Why it may still be useful
+
+有一件事我认为**不因作者水平而打折**：本项目的关键结论是**用指令级模拟器实跑验证**的，  
+而不是靠人（或 AI）通读代码后得出的推理。
+
+这也正好回应了上面那段"迷路"的经历：
+**当你无法判断 AI 说得对不对时，唯一能依靠的东西是"可复现"。**
+不是去相信谁的分析更可信，而是自己跑一遍脚本，让机器把答案吐出来。
+这正是本仓库坚持把每条关键结论都做成可执行验证的原因——它绕开了"我不懂"这个事实。
+
+Why this survives the author's skill level: the load-bearing conclusions were produced by an  
+**instruction-level simulator executing the actual firmware code**, not by anyone reasoning about it.
+
+| 结论 / Conclusion | 人工/AI 推导的版本 / Hand- or AI-derived | 模拟器实跑的正确答案 / Simulator-executed |
+| --- | --- | --- |
+| `er3`（校验对象 / checksum target） | payload[1..8] 重排相加 ❌<br>payload[1..8] rearranged and summed ❌ | **`BE32(payload[1..4])`** ✅ |
+| 四条 `shll.l #2` 的位移量 / shift amount of the four `shll.l #2` | 以为是左移 16 位 ❌<br>thought to be a left shift of 16 ❌ | **实为左移 8 位（2 位 ×4）** ✅<br>**actually a left shift of 8 (2 bits × 4)** ✅ |
+| `@(0x2,er6)` 的含义 / meaning of `@(0x2,er6)` | 以为是 payload[1] ❌<br>thought to be payload[1] ❌ | **实为 payload[2]**（下标基准不同）✅<br>**actually payload[2]** (different index base) ✅ |
+
+复现方法只需一行 / Reproduction takes one line:
+
+```bash
+python tools/sim_verify_formulas.py
+```
+
+> 这也是本项目最想留下的经验：**凡是涉及位段、移位、字节序的结论，永远不要用推导，用模拟执行。**
+> 因为推理链条上任何一层出错，结果看起来仍然自洽——它不会报错，只会静静地错。
+>
+> The lesson this project most wants to leave behind: **for any conclusion involving bit fields, shifts or byte
+> order, never derive it — execute it in a simulator.** Because if any link in the reasoning chain is wrong,
+> the result still looks self-consistent: it raises no error, it is simply and quietly wrong.
+
+---
+
+## ⚠️ 非官方声明 / Official Disclaimer
+
+> **本仓库是非官方的个人学习项目，与 Nikon Corporation 没有任何关联，未获得其授权、支持或背书。**  
+> **This is an unofficial personal study project. It is not affiliated with, authorized by,  
+> endorsed by, or supported by Nikon Corporation in any way.**
+>
+> **`samples/` 收录了 Nikon 官方公开发布的固件更新软件包及其中的 ROM 镜像**——
+> 即尼康自己提供给用户、用于升级扫描仪固件的那份安装程序（Ver. 1.11，2002-12-26 发布）。
+> 这不是泄露件或内部渠道，来源已通过**三层可复现方法**验证，
+> 任何人都能自行核实，详见 [`samples/SOURCES.md`](samples/SOURCES.md)。
+>
+> `samples/` includes the firmware update package that Nikon publicly released, together with the ROM image
+> inside it — that is, the very installer Nikon shipped for users to update their scanner firmware
+> (Ver. 1.11, released 2002-12-26). This is not a leak and does not come from any internal channel;
+> its provenance is verified by a **three-layer reproducible method** that anyone can re-check —
+> see [`samples/SOURCES.md`](samples/SOURCES.md).
+>
+> 分析本体仍以纯文本为主：`.md` / `.py` / `.asm` / `.txt` / `.json` / `.csv` / `.ps1`。
+> 本仓库**不涉及**任何需登录、付费或非公开渠道才能取得的固件。
+>
+> The analysis itself remains mostly plain text: `.md` / `.py` / `.asm` / `.txt` / `.json` / `.csv` / `.ps1`.
+> This repository **does not involve** any firmware that requires a login, a payment, or a non-public
+> channel to obtain.
+>
+> 详见 [`NOTICE`](NOTICE) 与 [`DISCLAIMER.md`](DISCLAIMER.md)。
+
+---
+
+## 这是什么 / What this is
+
+面向 **Hitachi H8/300H** 单片机的一套静态分析工具链，以及针对 Nikon LS-8000 ED 底片扫描仪固件的  
+结构化分析记录。分析对象主要是一个 **228,345 字节的 ROM 镜像**与其 Windows 驱动侧的 ioctl 接口。
+
+A static-analysis toolkit for the **Hitachi H8/300H** MCU, plus structured analysis notes on the firmware  
+of the Nikon LS-8000 ED film scanner — primarily a **228,345-byte ROM image** and the Windows driver's  
+ioctl surface.
+
+**你会得到 / What you get**
+
+| # | 产出 / Deliverable | 说明 / Notes |
+| - | --- | --- |
+| 1 | **H8 反汇编工具链** / **H8 disassembly toolchain**<br>`h8dis` / `h8tab` / `h8sim` | 纯 Python，无第三方依赖，零 `ctypes`/`struct`<br>Pure Python, no third-party dependencies, no `ctypes`/`struct` |
+| 2 | **解码器缺陷的量化修复** / **Quantified fix of a decoder defect** | 原版指令表 393 项 → 修复版 399 项；全 ROM 多检出 **211 处** 此前不可解的 `mov.l`（均为 size=10）<br>Original instruction table 393 entries → fixed 399; **211** previously undecodable `mov.l` (all size=10) newly decoded across the whole ROM |
+| 3 | **指令级模拟器** / **Instruction-level simulator** | 可执行真实指令读出寄存器值——本项目最重要的纠错手段<br>Executes real instructions and reads out register values — the most important error-correction tool in this project |
+| 4 | **200 个带洞函数的递归复走** / **Recursive re-walk of 200 holed functions** | 36 个带洞函数额外解出 **1,299 条**指令<br>36 holed functions yielded an extra **1,299** decoded instructions |
+| 5 | **ioctl `0x190012` 的完整判定** / **Complete determination of ioctl `0x190012`** | 穷举 Function×Method×Access 后的**唯一解**：`CTL_CODE(0x19, 0x004, METHOD_OUT_DIRECT, FILE_ANY_ACCESS)`<br>After exhausting Function×Method×Access: the **unique** solution `CTL_CODE(0x19, 0x004, METHOD_OUT_DIRECT, FILE_ANY_ACCESS)` |
+| 6 | **25 轮修正的完整记录** / **Full record of 25 correction rounds** | 含 4 次自我推翻——难得的"错误档案"，见 `docs/REPORT_回写总账-20261024.md`<br>Includes 4 self-retractions — a rare "error archive", see `docs/REPORT_回写总账-20261024.md` |
+| 7 | **12 组 / 146 条调用边** / **12 groups / 146 call edges** | 由实测而非猜测得出<br>Derived from measurement, not guesswork |
+| 8 | ⭐ **Windows 11 驱动适配包** / **Windows 11 driver package**<br>[`win11-driver/`](win11-driver) | LS-8000 ED / 9000 ED 在 Win11 x64 上被正确识别；不含任何驱动二进制，INF 仅 1,217 B<br>LS-8000 ED / 9000 ED correctly detected on Win11 x64; contains no driver binaries, the INF is only 1,217 B |
+
+> ⭐ **如果你只想要一件能直接用的东西**：看 [`win11-driver/`](win11-driver)。
+> 其余部分是逆向分析记录，主要用于研究与参考。
+>
+> 🔍 好奇它为什么只用了 **1,217 字节**就能管用？
+> 见前文「**Windows 11 驱动适配包**」一节中的「**精妙之处**」：
+> 没有写一行内核代码，也没有关签名强制——它只是把路让开了。
+>
+> If you only want one immediately usable thing: see [`win11-driver/`](win11-driver).
+> Everything else is reverse-engineering notes, mainly for study and reference.
+>
+> 🔍 Curious why **1,217 bytes** is enough? See "**Why 1,217 bytes is enough**" inside the
+> **Windows 11 driver package** section above: no kernel code was written and signature
+> enforcement was never disabled — it just stepped out of the way.
+
+**这不是 / What this is NOT**
+
+- ❌ 不是官方产物：与 Nikon 无关联，未获授权（见 [`NOTICE`](NOTICE)）<br>Not an official product: no affiliation with Nikon, no authorization (see [`NOTICE`](NOTICE))
+- ❌ 不是可用替代品：没有开源驱动、不能替代官方软件、不提供可刷写镜像<br>Not a working replacement: no open-source driver, does not substitute for the vendor software, ships no flashable image
+- ❌ 不是完整逆向：结论覆盖 ROM 的一小部分，大量区域仍未分析<br>Not a complete reverse-engineering: the conclusions cover only a small part of the ROM, large regions remain unanalyzed
+- ❌ 不是权威资料：见开头关于作者能力与 AI 辅助的说明<br>Not an authoritative source: see the note at the top about the author's ability and AI assistance
+- ⚠️ `samples/other/` 下的 LS-2000 等**其它机型**固件仅供格式交叉参考，与本项目主题无关<br>Firmware of **other models** (LS-2000 etc.) under `samples/other/` is kept only for format cross-reference and is unrelated to this project
+
+> 关于样本完整性 On sample integrity：`samples/` 收录的是**完整未改动的官方发布原件**，  
+> 而非改造过的或来源不明的镜像。所有文件的 SHA256 均登记在 `MANIFEST.txt`，  
+> 可用 `python tools/verify_package.py` 一键核对是否被改动。  
+> The samples are complete, unmodified official originals — not altered or  
+> unattributable dumps. Every SHA256 is recorded in MANIFEST.txt.
+
+---
+
 
 ## 目录地图 / Repository map
 

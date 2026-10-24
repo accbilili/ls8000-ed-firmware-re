@@ -1,0 +1,226 @@
+[
+ {
+  "cdb0": "0x00",
+  "func": "0x1009FEB0",
+  "site": "0x1009FEB0",
+  "sub": null,
+  "callers": [
+   "0x10093D9C",
+   "0x100941D0",
+   "0x10094AB0",
+   "0x100A4DE8",
+   "0x100A603C"
+  ],
+  "name": "TEST UNIT READY"
+ },
+ {
+  "cdb0": "0x03",
+  "func": null,
+  "site": null,
+  "sub": null,
+  "callers": [],
+  "name": "REQUEST SENSE"
+ },
+ {
+  "cdb0": "0x12",
+  "func": "0x100A01A0",
+  "site": "0x100A01A5",
+  "sub": null,
+  "callers": [
+   "0x100A4E8E",
+   "0x100A7443",
+   "0x100A7C15",
+   "0x100A7EBD",
+   "0x100A7F2B"
+  ],
+  "name": "INQUIRY"
+ },
+ {
+  "cdb0": "0x15",
+  "func": "0x1009FDB0",
+  "site": "0x1009FDBE",
+  "sub": null,
+  "callers": [
+   "0x1009402A"
+  ],
+  "name": "MODE SELECT(6)"
+ },
+ {
+  "cdb0": "0x15",
+  "func": "0x100A0070",
+  "site": "0x100A007E",
+  "sub": null,
+  "callers": [
+   "0x100A4FB7"
+  ],
+  "name": "MODE SELECT(6) [b]"
+ },
+ {
+  "cdb0": "0x16",
+  "func": "0x1009FF40",
+  "site": "0x1009FF40",
+  "sub": null,
+  "callers": [
+   "0x100A4ED0"
+  ],
+  "name": "RESERVE(6)"
+ },
+ {
+  "cdb0": "0x17",
+  "func": null,
+  "site": null,
+  "sub": null,
+  "callers": [],
+  "name": "RELEASE(6)"
+ },
+ {
+  "cdb0": "0x1A",
+  "func": "0x1009FE60",
+  "site": "0x1009FE69",
+  "sub": null,
+  "callers": [
+   "0x10094101"
+  ],
+  "name": "MODE SENSE(6)"
+ },
+ {
+  "cdb0": "0x1B",
+  "func": "0x100A0290",
+  "site": "0x100A0296",
+  "sub": null,
+  "callers": [
+   "0x100A9F92"
+  ],
+  "name": "START STOP UNIT"
+ },
+ {
+  "cdb0": "0x1D",
+  "func": "0x1009FF80",
+  "site": "0x1009FF80",
+  "sub": null,
+  "callers": [
+   "0x10093E08",
+   "0x1009423A",
+   "0x100A4FF9",
+   "0x100A61D2",
+   "0x100A6B2B"
+  ],
+  "name": "SEND DIAGNOSTIC"
+ },
+ {
+  "cdb0": "0x24",
+  "func": "0x100A0210",
+  "site": "0x100A021E",
+  "sub": null,
+  "callers": [
+   "0x100A98F9",
+   "0x100A9B34",
+   "0x100A9DA9",
+   "0x100AA00E",
+   "0x100AA789"
+  ],
+  "name": "SET WINDOW"
+ },
+ {
+  "cdb0": "0x25",
+  "func": "0x100A01D0",
+  "site": "0x100A01E8",
+  "sub": null,
+  "callers": [
+   "0x100A4F68",
+   "0x100A5B3B",
+   "0x100A9C0A",
+   "0x100AA0A6"
+  ],
+  "name": "GET WINDOW"
+ },
+ {
+  "cdb0": "0x28",
+  "func": "0x100AAD00",
+  "site": "0x100AAD20",
+  "sub": null,
+  "callers": [
+   "0x100A3B12",
+   "0x100A3B62",
+   "0x100A5088",
+   "0x100A6877",
+   "0x100A7518"
+  ],
+  "name": "READ(10)"
+ },
+ {
+  "cdb0": "0x2A",
+  "func": "0x100AAD50",
+  "site": "0x100AAD70",
+  "sub": null,
+  "callers": [
+   "0x100A3AAA",
+   "0x100A695C",
+   "0x100AA161"
+  ],
+  "name": "WRITE(10)"
+ },
+ {
+  "cdb0": "0x3B",
+  "func": "0x100AADC0",
+  "site": "0x100AADEC",
+  "sub": null,
+  "callers": [
+   "0x100A3D56"
+  ],
+  "name": "WRITE BUFFER"
+ },
+ {
+  "cdb0": "0x3C",
+  "func": "0x100AAD80",
+  "site": "0x100AADAC",
+  "sub": null,
+  "callers": [
+   "0x100A3D07"
+  ],
+  "name": "READ BUFFER"
+ },
+ {
+  "cdb0": "0xC0",
+  "func": "0x100AAE20",
+  "site": "0x100AAE20",
+  "sub": null,
+  "callers": [
+   "0x100A43F4"
+  ],
+  "name": "CANCEL"
+ },
+ {
+  "cdb0": "0xC1",
+  "func": "0x100A0190",
+  "site": "0x100A0190",
+  "sub": null,
+  "callers": [
+   "0x100A60F8",
+   "0x100A6A81"
+  ],
+  "name": "EXECUTE"
+ },
+ {
+  "cdb0": "0xE0",
+  "func": "0x100A0230",
+  "site": "0x100A0244",
+  "sub": "0x100A0233",
+  "callers": [
+   "0x100A60BD",
+   "0x100A6A3F"
+  ],
+  "name": "MECHANISM CONTROL"
+ },
+ {
+  "cdb0": "0xE1",
+  "func": "0x100A0260",
+  "site": "0x100A0274",
+  "sub": "0x100A0263",
+  "callers": [
+   "0x100A6190",
+   "0x100A6AEC"
+  ],
+  "name": "READ STATUS"
+ }
+]

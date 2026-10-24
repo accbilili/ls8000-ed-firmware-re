@@ -1,0 +1,37 @@
+# =============================================================================
+# 字节精确性优先 / Byte-exactness first
+# =============================================================================
+#
+# 本仓库的内容由 MANIFEST.txt 中的 SHA256 **逐字节**自校验
+# （验证工具：tools/verify_package.py）。
+#
+# Git 在 Windows 上默认启用 core.autocrlf=true，会在检出时把 LF 转换为 CRLF。
+# 这会改变文件的字节内容 —— 从而让每一个 Windows 用户的校验都必然失败，
+# 即使文件本身从未被修改。
+#
+# 因此本仓库**全局禁用行尾转换**，确保任何平台上的 clone 都与发布状态
+# 逐字节一致。
+#
+# This repository is byte-verified by the SHA256 sums in MANIFEST.txt
+# (tool: tools/verify_package.py). Git's default core.autocrlf=true on Windows
+# rewrites LF to CRLF on checkout, changing file bytes and making every
+# Windows-side verification fail even though nothing was modified.
+# Line-ending conversion is therefore disabled globally.
+# =============================================================================
+
+* -text
+
+# 语言可视化 / Linguist 覆盖：让 GitHub 正确识别
+*.ps1   linguist-language=PowerShell
+*.asm   linguist-language=Assembly
+*.lst   linguist-language=Assembly
+
+# 明确排除二进制（本仓库不应出现，仅作双保险）
+# Explicitly exclude binaries (should never exist here; belt and braces)
+*.bin   binary
+*.rom   binary
+*.hex   binary
+*.dmp   binary
+*.sys   binary
+*.exe   binary
+*.dll   binary

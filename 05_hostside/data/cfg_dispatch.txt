@@ -1,0 +1,74 @@
+268481834 func=268481824 dword ptr [eax*4 + 0x1000b57c]             tab=268481916 n=4 valid=4 idx=eax
+   guard: [(268481824, 'mov', 'eax, dword ptr [esp + 4]'), (268481828, 'dec', 'eax'), (268481829, 'cmp', 'eax, 3'), (268481832, 'ja', '0x1000b571')]
+269138213 func=269138160 dword ptr [edx*4 + 0x100aba3c]             tab=269138492 n=4 valid=4 idx=edx
+   guard: [(269138182, 'jbe', '0x100ab910'), (269138184, 'cmp', 'edi, eax'), (269138186, 'jb', '0x100aba8c'), (269138192, 'test', 'edi, 3'), (269138198, 'jne', '0x100ab92c'), (269138200, 'shr', 'ecx, 2'), (269138203, 'and', 'edx, 3'), (269138206, 'cmp', 'ecx, 8'), (269138209, 'jb', '0x100ab94c'), (269138211, 'rep movsd', 'dword ptr es:[edi], dword ptr [esi]')]
+269138252 func=269138252 dword ptr [ecx*4 + 0x100ab9d0]             tab=269138384 n=8 valid=8 idx=ecx
+   guard: []
+269138483 func=269138416 dword ptr [edx*4 + 0x100aba3c]             tab=269138492 n=4 valid=4 idx=edx
+   guard: [(269138444, 'mov', 'dword ptr [edi + ecx*4 - 0x10], eax'), (269138448, 'mov', 'eax, dword ptr [esi + ecx*4 - 0xc]'), (269138452, 'mov', 'dword ptr [edi + ecx*4 - 0xc], eax'), (269138456, 'mov', 'eax, dword ptr [esi + ecx*4 - 8]'), (269138460, 'mov', 'dword ptr [edi + ecx*4 - 8], eax'), (269138464, 'mov', 'eax, dword ptr [esi + ecx*4 - 4]'), (269138468, 'mov', 'dword ptr [edi + ecx*4 - 4], eax'), (269138472, 'lea', 'eax, [ecx*4]'), (269138479, 'add', 'esi, eax'), (269138481, 'add', 'edi, eax')]
+269138237 func=269138220 dword ptr [eax*4 + 0x100ab950]             tab=269138256 n=0 valid=0 idx=eax
+   guard: [(269138220, 'mov', 'eax, edi'), (269138222, 'mov', 'edx, 3'), (269138227, 'sub', 'ecx, 4'), (269138230, 'jb', '0x100ab944'), (269138232, 'and', 'eax, 3'), (269138235, 'add', 'ecx, eax')]
+269138244 func=269138244 dword ptr [ecx*4 + 0x100aba4c]             tab=269138508 n=0 valid=0 idx=ecx
+   guard: []
+269138603 func=269138572 dword ptr [edx*4 + 0x100abbd8]             tab=269138904 n=4 valid=4 idx=edx
+   guard: [(269138576, 'lea', 'edi, [ecx + edi - 4]'), (269138580, 'test', 'edi, 3'), (269138586, 'jne', '0x100abac0'), (269138588, 'shr', 'ecx, 2'), (269138591, 'and', 'edx, 3'), (269138594, 'cmp', 'ecx, 8'), (269138597, 'jb', '0x100abab4'), (269138599, 'std', ''), (269138600, 'rep movsd', 'dword ptr es:[edi], dword ptr [esi]'), (269138602, 'cld', '')]
+269138614 func=269138612 dword ptr [ecx*4 + 0x100abb88]             tab=269138824 n=1 valid=1 idx=ecx
+   guard: [(269138612, 'neg', 'ecx')]
+269138895 func=269138895 dword ptr [edx*4 + 0x100abbd8]             tab=269138904 n=4 valid=4 idx=edx
+   guard: []
+269138641 func=269138624 dword ptr [eax*4 + 0x100abadc]             tab=269138652 n=0 valid=0 idx=eax
+   guard: [(269138624, 'mov', 'eax, edi'), (269138626, 'mov', 'edx, 3'), (269138631, 'cmp', 'ecx, 4'), (269138634, 'jb', '0x100abad8'), (269138636, 'and', 'eax, 3'), (269138639, 'sub', 'ecx, eax')]
+269138648 func=269138648 dword ptr [ecx*4 + 0x100abbd8]             tab=269138904 n=4 valid=4 idx=ecx
+   guard: []
+269145429 func=269145376 dword ptr [edx*4 + 0x100ad66c]             tab=269145708 n=4 valid=4 idx=edx
+   guard: [(269145398, 'jbe', '0x100ad540'), (269145400, 'cmp', 'edi, eax'), (269145402, 'jb', '0x100ad6bc'), (269145408, 'test', 'edi, 3'), (269145414, 'jne', '0x100ad55c'), (269145416, 'shr', 'ecx, 2'), (269145419, 'and', 'edx, 3'), (269145422, 'cmp', 'ecx, 8'), (269145425, 'jb', '0x100ad57c'), (269145427, 'rep movsd', 'dword ptr es:[edi], dword ptr [esi]')]
+269145468 func=269145468 dword ptr [ecx*4 + 0x100ad600]             tab=269145600 n=8 valid=8 idx=ecx
+   guard: []
+269145699 func=269145632 dword ptr [edx*4 + 0x100ad66c]             tab=269145708 n=4 valid=4 idx=edx
+   guard: [(269145660, 'mov', 'dword ptr [edi + ecx*4 - 0x10], eax'), (269145664, 'mov', 'eax, dword ptr [esi + ecx*4 - 0xc]'), (269145668, 'mov', 'dword ptr [edi + ecx*4 - 0xc], eax'), (269145672, 'mov', 'eax, dword ptr [esi + ecx*4 - 8]'), (269145676, 'mov', 'dword ptr [edi + ecx*4 - 8], eax'), (269145680, 'mov', 'eax, dword ptr [esi + ecx*4 - 4]'), (269145684, 'mov', 'dword ptr [edi + ecx*4 - 4], eax'), (269145688, 'lea', 'eax, [ecx*4]'), (269145695, 'add', 'esi, eax'), (269145697, 'add', 'edi, eax')]
+269145453 func=269145436 dword ptr [eax*4 + 0x100ad580]             tab=269145472 n=0 valid=0 idx=eax
+   guard: [(269145436, 'mov', 'eax, edi'), (269145438, 'mov', 'edx, 3'), (269145443, 'sub', 'ecx, 4'), (269145446, 'jb', '0x100ad574'), (269145448, 'and', 'eax, 3'), (269145451, 'add', 'ecx, eax')]
+269145460 func=269145460 dword ptr [ecx*4 + 0x100ad67c]             tab=269145724 n=0 valid=0 idx=ecx
+   guard: []
+269145819 func=269145788 dword ptr [edx*4 + 0x100ad808]             tab=269146120 n=4 valid=4 idx=edx
+   guard: [(269145792, 'lea', 'edi, [ecx + edi - 4]'), (269145796, 'test', 'edi, 3'), (269145802, 'jne', '0x100ad6f0'), (269145804, 'shr', 'ecx, 2'), (269145807, 'and', 'edx, 3'), (269145810, 'cmp', 'ecx, 8'), (269145813, 'jb', '0x100ad6e4'), (269145815, 'std', ''), (269145816, 'rep movsd', 'dword ptr es:[edi], dword ptr [esi]'), (269145818, 'cld', '')]
+269145830 func=269145828 dword ptr [ecx*4 + 0x100ad7b8]             tab=269146040 n=1 valid=1 idx=ecx
+   guard: [(269145828, 'neg', 'ecx')]
+269146111 func=269146111 dword ptr [edx*4 + 0x100ad808]             tab=269146120 n=4 valid=4 idx=edx
+   guard: []
+269145857 func=269145840 dword ptr [eax*4 + 0x100ad70c]             tab=269145868 n=0 valid=0 idx=eax
+   guard: [(269145840, 'mov', 'eax, edi'), (269145842, 'mov', 'edx, 3'), (269145847, 'cmp', 'ecx, 4'), (269145850, 'jb', '0x100ad708'), (269145852, 'and', 'eax, 3'), (269145855, 'sub', 'ecx, eax')]
+269145864 func=269145864 dword ptr [ecx*4 + 0x100ad808]             tab=269146120 n=4 valid=4 idx=ecx
+   guard: []
+268596750 func=268596736 dword ptr [eax*4 + 0x10027840]             tab=268597312 n=16 valid=16 idx=eax
+   guard: [(268596736, 'mov', 'eax, dword ptr [esp + 8]'), (268596740, 'cmp', 'eax, 0xf'), (268596743, 'push', 'esi'), (268596744, 'ja', '0x1002780e')]
+268765884 func=268765874 dword ptr [eax*4 + 0x10050bc8]             tab=268766152 n=10 valid=10 idx=eax
+   guard: [(268765874, 'add', 'eax, 0xffffdfff'), (268765879, 'cmp', 'eax, 5'), (268765882, 'ja', '0x10050b10')]
+268766032 func=268765995 dword ptr [eax*4 + 0x10050be0]             tab=268766176 n=4 valid=4 idx=eax
+   guard: [(268765995, 'cmp', 'eax, 0x8203'), (268766000, 'ja', '0x10050b99'), (268766002, 'je', '0x10050b10'), (268766004, 'cmp', 'eax, 0x8102'), (268766009, 'ja', '0x10050b72'), (268766011, 'je', '0x10050b69'), (268766013, 'add', 'eax, 0xffff7ff9'), (268766018, 'cmp', 'eax, 0xfa'), (268766023, 'ja', '0x10050b10'), (268766025, 'movzx', 'eax, byte ptr [eax + 0x10050bf0]')]
+268766126 func=268766105 dword ptr [ecx*4 + 0x10050cec]             tab=268766444 n=4 valid=4 idx=ecx
+   guard: [(268766105, 'add', 'eax, 0xffff7aff'), (268766110, 'cmp', 'eax, 0x13'), (268766113, 'ja', '0x10050b10'), (268766119, 'movzx', 'ecx, byte ptr [eax + 0x10050cfc]')]
+268901653 func=268901622 dword ptr [eax*4 + 0x10073720]             tab=268908320 n=24 valid=24 idx=eax
+   guard: [(268901622, 'cmp', 'eax, 0x400d'), (268901627, 'ja', '0x10071e27'), (268901633, 'je', '0x10071dfa'), (268901639, 'add', 'eax, 0xffffbffc'), (268901644, 'cmp', 'eax, 4'), (268901647, 'ja', '0x10073700')]
+268902133 func=268902112 dword ptr [eax*4 + 0x10073734]             tab=268908340 n=19 valid=19 idx=eax
+   guard: [(268902112, 'add', 'eax, 0xffffaffa'), (268902117, 'cmp', 'eax, 0x2a'), (268902120, 'ja', '0x10073700'), (268902126, 'movzx', 'eax, byte ptr [eax + 0x10073780]')]
+268902961 func=268902938 dword ptr [ecx*4 + 0x100737ac]             tab=268908460 n=38 valid=38 idx=ecx
+   guard: [(268902938, 'add', 'eax, 0xffffafcb'), (268902943, 'cmp', 'eax, 0xb0'), (268902948, 'ja', '0x10073700'), (268902954, 'movzx', 'ecx, byte ptr [eax + 0x10073844]')]
+268904657 func=268904626 dword ptr [eax*4 + 0x100738f8]             tab=268908792 n=20 valid=20 idx=eax
+   guard: [(268904626, 'cmp', 'eax, 0x5101'), (268904631, 'ja', '0x10072a33'), (268904637, 'je', '0x100729fe'), (268904643, 'add', 'eax, 0xffffaf19'), (268904648, 'cmp', 'eax, 0xa'), (268904651, 'ja', '0x10073700')]
+268905083 func=268905011 dword ptr [edx*4 + 0x10073924]             tab=268908836 n=9 valid=9 idx=edx
+   guard: [(268905028, 'cmp', 'eax, 0x5422'), (268905033, 'ja', '0x10072d74'), (268905039, 'je', '0x10072d4a'), (268905045, 'cmp', 'eax, 0x5285'), (268905050, 'ja', '0x10072bff'), (268905056, 'je', '0x10072bd5'), (268905062, 'add', 'eax, 0xffffadf8'), (268905067, 'cmp', 'eax, 0x7c'), (268905070, 'ja', '0x10073700'), (268905076, 'movzx', 'edx, byte ptr [eax + 0x10073948]')]
+268905492 func=268905471 dword ptr [eax*4 + 0x100739c8]             tab=268909000 n=9 valid=9 idx=eax
+   guard: [(268905471, 'add', 'eax, 0xffffabf8'), (268905476, 'cmp', 'eax, 0x18'), (268905479, 'ja', '0x10073700'), (268905485, 'movzx', 'eax, byte ptr [eax + 0x100739ec]')]
+268905901 func=268905844 dword ptr [ecx*4 + 0x10073a08]             tab=268909064 n=5 valid=5 idx=ecx
+   guard: [(268905844, 'cmp', 'eax, 0x6003'), (268905849, 'ja', '0x10072f4f'), (268905855, 'je', '0x10072f25'), (268905861, 'cmp', 'eax, 0x551f'), (268905866, 'ja', '0x10072e8f'), (268905872, 'je', '0x10072e65'), (268905878, 'add', 'eax, 0xffffabdd'), (268905883, 'cmp', 'eax, 0xfb'), (268905888, 'ja', '0x10073700'), (268905894, 'movzx', 'ecx, byte ptr [eax + 0x10073a1c]')]
+268906333 func=268906319 dword ptr [eax*4 + 0x10073b18]             tab=268909336 n=50 valid=50 idx=eax
+   guard: [(268906319, 'add', 'eax, 0xffff9ffc'), (268906324, 'cmp', 'eax, 0xb'), (268906327, 'ja', '0x10073700')]
+268906719 func=268906688 dword ptr [eax*4 + 0x10073b48]             tab=268909384 n=38 valid=38 idx=eax
+   guard: [(268906688, 'cmp', 'eax, 0x8000'), (268906693, 'ja', '0x10073449'), (268906699, 'je', '0x1007341c'), (268906705, 'add', 'eax, 0xffff9fea'), (268906710, 'cmp', 'eax, 0x14'), (268906713, 'ja', '0x10073700')]
+268907624 func=268907593 dword ptr [eax*4 + 0x10073b9c]             tab=268909468 n=17 valid=17 idx=eax
+   guard: [(268907593, 'cmp', 'eax, 0x8100'), (268907598, 'ja', '0x100735d3'), (268907604, 'je', '0x100735a9'), (268907610, 'add', 'eax, 0xffff7ffd'), (268907615, 'cmp', 'eax, 0xb'), (268907618, 'ja', '0x10073700')]
+268908001 func=268907987 dword ptr [eax*4 + 0x10073bcc]             tab=268909516 n=5 valid=5 idx=eax
+   guard: [(268907987, 'add', 'eax, 0xffff7eff'), (268907992, 'cmp', 'eax, 4'), (268907995, 'ja', '0x10073700')]
+269031517 func=269031504 dword ptr [edx + 4]                        tab=None n=None valid=None idx=None
+   guard: 

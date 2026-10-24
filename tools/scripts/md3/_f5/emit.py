@@ -1,0 +1,58 @@
+import sys, json
+sys.path.insert(0, r'<HOME>\WorkBuddy\2026-10-24-15-49-48\LS8000\03_analysis\md3\cdb')
+from core import *
+
+# (cdb0, name, builder_entry, site, len_site, len_val, vtable, ctor)
+ROWS = [
+ (0x00, 'TEST UNIT READY',   0x1009FEB0, 0x1009FEB0, 0x1009FEB4, 6,  0x100C28D4, 0x1009FD20),
+ (0x00, 'TEST UNIT READY(2)',0x1009FEB0, 0x1009FEB0, 0x1009FEB4, 6,  0x100C2974, 0x1009FE80),
+ (0x03, 'REQUEST SENSE',     None,       None,       None,       None,None,       None),
+ (0x12, 'INQUIRY',           0x100A01A0, 0x100A01A5, 0x100A01BF, 6,  0x100C299C, 0x1009FEC0),
+ (0x15, 'MODE SELECT(6) a',  0x1009FDB0, 0x1009FDBE, 0x1009FDB9, 6,  0x100C2924, 0x1009FD60),
+ (0x15, 'MODE SELECT(6) b',  0x100A0070, 0x100A007E, 0x100A0079, 6,  0x100C2A64, 0x100A0020),
+ (0x16, 'RESERVE(6)',        0x1009FF40, 0x1009FF40, 0x1009FF44, 6,  0x100C29C4, 0x1009FF10),
+ (0x17, 'RELEASE(6)',        None,       None,       None,       None,None,       None),
+ (0x1A, 'MODE SENSE(6)',     0x1009FE60, 0x1009FE69, 0x1009FE74, 6,  0x100C294C, 0x1009FDE0),
+ (0x1B, 'START STOP UNIT',   0x100A0290, 0x100A0296, 0x100A029A, 6,  0x100C2ADC, 0x100A0120),
+ (0x1D, 'SEND DIAGNOSTIC',   0x1009FF80, 0x1009FF80, 0x1009FF88, 6,  0x100C28FC, 0x1009FD40),
+ (0x1D, 'SEND DIAGNOSTIC(2)',0x1009FF80, 0x1009FF80, 0x1009FF88, 6,  0x100C29EC, 0x1009FF50),
+ (0x24, 'SET WINDOW',        0x100A0210, 0x100A021E, 0x100A0229, 10, 0x100C2A3C, 0x1009FFE0),
+ (0x25, 'GET WINDOW',        0x100A01D0, 0x100A01E8, 0x100A0205, 10, 0x100C2A14, 0x1009FF90),
+ (0x28, 'READ(10)',          0x100AAD00, 0x100AAD20, 0x100AAD2B, 10, 0x100C303C, 0x100AAB30),
+ (0x28, 'READ(10) b',        0x100AAD00, 0x100AAD20, 0x100AAD2B, 10, 0x100C303C, 0x100AAB90),
+ (0x2A, 'WRITE(10)',         0x100AAD50, 0x100AAD70, 0x100AAD77, 10, 0x100C3064, 0x100AABF0),
+ (0x3B, 'WRITE BUFFER',      0x100AADC0, 0x100AADEC, 0x100AADF3, 10, 0x100C30B4, 0x100AAC90),
+ (0x3C, 'READ BUFFER',       0x100AAD80, 0x100AADAC, 0x100AADB3, 10, 0x100C308C, 0x100AAC40),
+ (0xC0, 'CANCEL',            0x100AAE20, 0x100AAE20, 0x100AAE24, 6,  0x100C30DC, 0x100AAE00),
+ (0xC1, 'EXECUTE',           0x100A0190, 0x100A0190, 0x100A0194, 6,  0x100C2B04, 0x100A0160),
+ (0xE0, 'MECH CONTROL',      0x100A0230, 0x100A0244, 0x100A024B, 10, 0x100C2A8C, 0x100A00A0),
+ (0xE1, 'READ STATUS',       0x100A0260, 0x100A0274, 0x100A027B, 10, 0x100C2AB4, 0x100A00E0),
+]
+cal = json.load(open(r'<HOME>\WorkBuddy\2026-10-24-15-49-48\LS8000\03_analysis\md3\cdb\callers.json'))
+
+print('%-5s %-20s %-11s %-11s %-11s %s' % ('cdb0', 'name', 'entry', 'site', 'len_site', 'chk'))
+out = []
+for cdb0, name, ent, site, lsite, lval, vt, ctor in ROWS:
+    chk = ''
+    if site:
+        i = D(site)
+        ok = (i.mnemonic == 'mov' and i.operands[1].type == 2 and i.operands[1].imm == cdb0)
+        j = D(lsite)
+        ok2 = (j.mnemonic == 'mov' and j.operands[1].type == 2 and j.operands[1].imm == lval)
+        chk = 'OK' if (ok and ok2) else 'FAIL(%s,%s)' % (i.op_str, j.op_str)
+    else:
+        chk = 'absent'
+    callers = [hex(x) for x in cal.get('0x%x' % ctor, [])][:5] if ctor else []
+    print('0x%02X  %-20s 0x%08X  0x%08X  0x%08X  %s  callers=%d' %
+          (cdb0, name, ent or 0, site or 0, lsite or 0, chk, len(callers)))
+    if callers:
+        print('       ', callers)
+    out.append(dict(cdb0='0x%02X' % cdb0, func=('0x%08X' % ent) if ent else None,
+                    site=('0x%08X' % site) if site else None, sub=None,
+                    callers=callers, name=name,
+                    _len=('%d@0x%08X' % (lval, lsite)) if lsite else None,
+                    _vtable=('0x%08X' % vt) if vt else None,
+                    _ctor=('0x%08X' % ctor) if ctor else None))
+json.dump(out, open(r'<HOME>\WorkBuddy\2026-10-24-15-49-48\LS8000\03_analysis\md3\cdb_sites.json', 'w'),
+          indent=1, ensure_ascii=False)
+print('wrote', len(out))

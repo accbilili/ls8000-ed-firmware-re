@@ -1,0 +1,11 @@
+ram:0003e9a4	Nikon   LS-8000 ED      1.11SL-1	
+ram:0003e9c5	Unknown	ram:0003ead8
+ram:0003e9e5	35mm Mount Film	
+ram:0003e9f5	35mm Strip Film	ram:0003eaec
+ram:0003ea05	Brownie Mount Film	ram:0003eaf0
+ram:0003ea2b	Brownie Strip Film with G	ram:0003eaf8
+ram:0003ea45	6*4.5 Film	ram:0003eafc
+ram:0003ea59	6*7 Film	ram:0003eb04
+ram:0003eabb	OFFSET_DA	ram:0003eb24
+ram:0003eac5	EXP_TIME	ram:0003eb28
+ram:0003ee5a	snsnsniFsnsnsnsnsnsnsn	

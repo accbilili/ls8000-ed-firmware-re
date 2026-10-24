@@ -1,0 +1,7 @@
+functions 1241
+instructions 13616
+bytes 43632 (5.6% .text)
+dispatch sites 37
+jump-table sites 36
+total table entries 330
+invalid entries 0

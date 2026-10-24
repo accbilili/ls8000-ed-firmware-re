@@ -1,0 +1,504 @@
+
+=== PROBE 0x10824 ===
+  bytes: 01 20 6d f4 0d 0e 7a 05 00 01 90 a6 40 28 6f 50 00 0a 66 e0 47 1a 01 00
+  ram:00010826  push.w r4
+  ram:00010828  mov.w r0,e6
+  ram:0001082a  mov.l #0x190a6,er5
+  ram:00010830  bra 0x0001085a
+  ram:00010832  mov.w @(0xa,er5),r0
+  ram:00010836  and.w e6,r0
+  ram:00010838  beq 0x00010854
+  ram:0001083a  mov.l @(0x4,er5),er1
+  ram:00010840  mov.w @(0x8,er5),e0
+  ram:00010844  bra 0x00010850
+  ram:00010846  mov.b @er4,r0l
+  ram:00010848  mov.b r0l,@er1
+  ram:0001084a  inc.l #1,er1
+  ram:0001084c  inc.l #1,er4
+  ram:0001084e  dec.w #1,e0
+  ram:00010850  mov.w e0,e0
+  ram:00010852  bne 0x00010846
+  ram:00010854  add.l #0xc,er5
+  ram:0001085a  mov.l @er5,er4
+  ram:0001085e  bne 0x00010832
+  ram:00010860  mov.w e6,r0
+  ram:00010862  btst #0x0,r0l
+  ram:00010864  bne 0x0001086c
+  ram:00010866  mov.w e6,r0
+  decoded=24
+
+=== PROBE 0x12000 ===
+  bytes: 0d 20 a8 01 46 02 40 52 6a 28 00 40 04 3d 17 50 79 60 00 18 47 0e 79 00
+  ram:00012000  mov.w r2,r0
+  ram:00012002  cmp.b #0x1,r0l
+  ram:00012004  bne 0x00012008
+  ram:00012006  bra 0x0001205a
+  ram:00012008  mov.b @0x0040043d,r0l
+  ram:0001200e  extu.w r0
+  ram:00012010  and.w #0x18,r0
+  ram:00012014  beq 0x00012024
+  ram:00012016  mov.w #0x50,r0
+  ram:0001201a  mov.w r0,@0x00400436
+  ram:00012020  jmp @0x0001256e
+  ram:00012024  mov.b @0x00400445,r0l
+  ram:0001202a  beq 0x0001203a
+  ram:0001202c  mov.w #0x50,r0
+  ram:00012030  mov.w r0,@0x00400436
+  ram:00012036  jmp @0x0001256e
+  ram:0001203a  mov.b @0x0040043d,r0l
+  ram:00012040  extu.w r0
+  ram:00012042  and.w #0x7,r0
+  ram:00012046  cmp.w #0x5,r0
+  ram:0001204a  beq 0x0001205a
+  ram:0001204c  mov.w #0x50,r0
+  ram:00012050  mov.w r0,@0x00400436
+  ram:00012056  jmp @0x0001256e
+  decoded=24
+
+=== PROBE 0x14000 ===
+  bytes: 00 c0 00 00 46 08 0f c0 5c 00 f7 86 40 30 7a 25 00 80 00 00 45 20 7a 25
+  ram:00014002  nop
+  ram:00014004  bne 0x0001400e
+  ram:00014006  mov.l er4,er0
+  ram:00014008  bsr 0x00013792
+  ram:0001400c  bra 0x0001403e
+  ram:0001400e  cmp.l #0x800000,er5
+  ram:00014014  bcs 0x00014036
+  ram:00014016  cmp.l #0x900000,er5
+  ram:0001401c  bcc 0x00014036
+  ram:0001401e  mov.l @(-0x10,er6),er0
+  ram:00014024  and.l #0xfff,er0
+  ram:0001402a  bne 0x00014036
+  ram:0001402c  mov.l er4,er1
+  ram:0001402e  mov.l er5,er0
+  ram:00014030  bsr 0x00013974
+  ram:00014034  bra 0x0001403e
+  ram:00014036  mov.l er4,er1
+  ram:00014038  mov.l er5,er0
+  ram:0001403a  bsr 0x000138b8
+  ram:0001403e  mov.l er4,er0
+  ram:00014040  jmp @0x000140d0
+  ram:00014044  bra 0x00014046
+  ram:00014046  mov.l @(-0x14,er6),er0
+  ram:0001404c  mov.l @0x004003f6,er1
+  decoded=24
+
+=== PROBE 0x16000 ===
+  bytes: 7a 05 00 40 03 f6 0f 84 01 00 69 56 40 04 5e 01 0b 56 01 00 69 50 1a e0
+  ram:00016000  mov.l #0x4003f6,er5
+  ram:00016006  mov.l er0,er4
+  ram:00016008  mov.l @er5,er6
+  ram:0001600c  bra 0x00016012
+  ram:0001600e  jsr @0x00010b56
+  ram:00016012  mov.l @er5,er0
+  ram:00016016  sub.l er6,er0
+  ram:00016018  cmp.l er4,er0
+  ram:0001601a  bcs 0x0001600e
+  ram:0001601e  pop.w r6
+  ram:00016020  rts
+  ram:00016024  push.w r4
+  ram:00016026  subs #4,er7
+  ram:00016028  mov.l er0,er5
+  ram:0001602a  mov.w r1,r4
+  ram:0001602c  mov.l er7,er1
+  ram:0001602e  extu.l er4
+  ram:00016030  add.l er4,er5
+  ram:00016032  mov.b @er5,r0l
+  ram:00016034  mov.b r0l,@er1
+  ram:00016036  inc.l #1,er1
+  ram:00016038  inc.l #1,er5
+  ram:0001603a  mov.b @er5,r0l
+  ram:0001603c  mov.b r0l,@er1
+  decoded=24
+
+=== PROBE 0x18000 ===
+  bytes: 0f c2 68 16 68 2e 0f a0 01 00 69 14 01 00 6f 15 00 04 01 00 69 02 01 00
+  ram:00018000  mov.l er4,er2
+  ram:00018002  mov.b @er1,r6h
+  ram:00018004  mov.b @er2,r6l
+  ram:00018006  mov.l er2,er0
+  ram:00018008  mov.l @er1,er4
+  ram:0001800c  mov.l @(0x4,er1),er5
+  ram:00018012  mov.l @er0,er2
+  ram:00018016  mov.l @(0x4,er0),er3
+  ram:0001801c  and.w #0xf,e4
+  ram:00018020  and.w #0xf,e2
+  ram:00018024  mov.w @er1,e1
+  ram:0001802a  and.w #0x7ff,e1
+  ram:0001802e  mov.w @er0,r1
+  ram:00018034  and.w #0x7ff,r1
+  ram:00018038  cmp.w #0x7ff,e1
+  ram:0001803c  beq 0x00017f14
+  ram:00018040  mov.w r1,r1
+  ram:00018042  beq 0x00017f38
+  ram:00018046  shll.l er5
+  ram:00018048  rotxl.l er4
+  ram:0001804a  shll.l er5
+  ram:0001804c  rotxl.l er4
+  ram:0001804e  shll.l er5
+  ram:00018050  rotxl.l er4
+  decoded=24
+
+=== PROBE 0x22000 ===
+  bytes: 79 08 00 3a 52 80 0a b0 7a 10 00 00 00 19 68 08 a8 02 47 06 79 00 00 55
+  ram:00022000  mov.w #0x3a,e0
+  ram:00022004  mulxu.w e0,er0
+  ram:00022006  add.l er3,er0
+  ram:00022008  add.l #0x19,er0
+  ram:0002200e  mov.b @er0,r0l
+  ram:00022010  cmp.b #0x2,r0l
+  ram:00022012  beq 0x0002201a
+  ram:00022014  mov.w #0x55,r0
+  ram:00022018  bra 0x0002207c
+  ram:0002201a  mov.b @er6,r0l
+  ram:0002201c  beq 0x00022024
+  ram:0002201e  mov.b @(0x1,er6),r0l
+  ram:00022022  bne 0x0002202e
+  ram:00022024  mov.b #0x1,r0l
+  ram:00022026  mov.b r0l,@0x004007c7
+  ram:0002202c  bra 0x00022090
+  ram:0002202e  mov.b @er6,r0l
+  ram:00022030  cmp.b #0x4,r0l
+  ram:00022032  beq 0x0002203c
+  ram:00022034  mov.b @(0x1,er6),r0l
+  ram:00022038  cmp.b #0x4,r0l
+  ram:0002203a  bne 0x00022044
+  ram:0002203c  mov.b #0x1,r0l
+  ram:0002203e  mov.b r0l,@0x00400d56
+  decoded=24
+
+=== PROBE 0x24000 ===
+  bytes: 5a 02 41 16 18 ee 0f c5 0b f5 7a 00 00 40 05 2f 01 00 69 f0 7a 00 00 40
+  ram:00024000  jmp @0x00024116
+  ram:00024004  sub.b r6l,r6l
+  ram:00024006  mov.l er4,er5
+  ram:00024008  inc.l #2,er5
+  ram:0002400a  mov.l #0x40052f,er0
+  ram:00024010  mov.l er0,@er7
+  ram:00024014  mov.l #0x400530,er0
+  ram:0002401a  mov.l er0,er2
+  ram:0002401c  mov.b r6l,r0l
+  ram:0002401e  extu.w r0
+  ram:00024020  mov.w #0x6,e0
+  ram:00024024  mulxu.w e0,er0
+  ram:00024026  mov.b @er5,r1l
+  ram:00024028  mov.b @(0x3e5d8,er0),r0l
+  ram:00024030  cmp.b r0l,r1l
+  ram:00024032  bne 0x00024058
+  ram:00024034  mov.l @er7,er0
+  ram:00024038  mov.b @er5,r1l
+  ram:0002403a  mov.b r1l,@er0
+  ram:0002403c  mov.l er2,er0
+  ram:0002403e  sub.b r1l,r1l
+  ram:00024040  mov.b r1l,@er0
+  ram:00024042  mov.b r6l,r0l
+  ram:00024044  extu.w r0
+  decoded=24
+
+=== PROBE 0x26000 ===
+  bytes: 46 20 6b 20 00 40 07 be 79 20 0f a0 46 08 7a 06 00 00 a6 16 40 06 7a 06
+  ram:00026000  bne 0x00026022
+  ram:00026002  mov.w @0x004007be,r0
+  ram:00026008  cmp.w #0xfa0,r0
+  ram:0002600c  bne 0x00026016
+  ram:0002600e  mov.l #0xa616,er6
+  ram:00026014  bra 0x0002601c
+  ram:00026016  mov.l #0x31d2,er6
+  ram:0002601c  cmp.l er6,er3
+  ram:0002601e  bls 0x00026032
+  ram:00026020  bra 0x0002602e
+  ram:00026022  mov.l @0x00400c78,er0
+  ram:0002602a  cmp.l er0,er3
+  ram:0002602c  bls 0x00026032
+  ram:0002602e  sub.b r0l,r0l
+  ram:00026030  bra 0x00026040
+  ram:00026032  mov.l @(0x14,er7),er0
+  ram:00026038  mov.w #0x4,r1
+  ram:0002603c  mov.w r1,@er0
+  ram:0002603e  mov.b #0x1,r0l
+  ram:00026042  pop.w r6
+  ram:00026044  pop.l er3
+  ram:00026048  rts
+  ram:0002604a  push.l er6
+  ram:0002604e  mov.l er0,er6
+  decoded=24
+
+=== PROBE 0x28000 ===
+  bytes: 01 28 01 00 69 f0 18 dd 0c 58 17 50 79 08 00 18 52 80 7a 10 00 42 01 28
+  ram:00028002  mov.l er0,@er7
+  ram:00028006  sub.b r5l,r5l
+  ram:00028008  mov.b r5h,r0l
+  ram:0002800a  extu.w r0
+  ram:0002800c  mov.w #0x18,e0
+  ram:00028010  mulxu.w e0,er0
+  ram:00028012  add.l #0x420128,er0
+  ram:00028018  mov.l er0,@(0x4,er7)
+  ram:0002801e  mov.b r5l,r3l
+  ram:00028020  extu.w r3
+  ram:00028022  mov.w #0x6,e3
+  ram:00028026  mulxu.w e3,er3
+  ram:00028028  mov.l er3,@(0x8,er7)
+  ram:0002802e  mov.l @(0x4,er7),er0
+  ram:00028034  add.l er0,er3
+  ram:00028036  mov.l @er7,er0
+  ram:0002803a  mov.l @(0x8,er7),er1
+  ram:00028040  add.l er1,er0
+  ram:00028042  mov.l er0,er2
+  ram:00028044  mov.w @er0,r0
+  ram:00028046  mov.w r0,@er3
+  ram:00028048  mov.l er2,er0
+  ram:0002804a  inc.l #2,er0
+  ram:0002804c  mov.w @er0,r0
+  decoded=24
+
+=== PROBE 0x2a000 ===
+  bytes: 6f 70 00 c8 17 70 10 30 01 00 6f f0 00 ba 40 3c 1a c4 19 66 40 0a 69 30
+  ram:0002a000  mov.w @(0xc8,er7),r0
+  ram:0002a004  extu.l er0
+  ram:0002a006  shll.l er0
+  ram:0002a008  mov.l er0,@(0xba,er7)
+  ram:0002a00e  bra 0x0002a04c
+  ram:0002a010  sub.l er4,er4
+  ram:0002a012  sub.w r6,r6
+  ram:0002a014  bra 0x0002a020
+  ram:0002a016  mov.w @er3,r0
+  ram:0002a018  extu.l er0
+  ram:0002a01a  add.l er0,er4
+  ram:0002a01c  inc.l #2,er3
+  ram:0002a01e  inc.w #1,r6
+  ram:0002a020  cmp.w #0x3e8,r6
+  ram:0002a024  bcs 0x0002a016
+  ram:0002a026  mov.l er4,er0
+  ram:0002a028  mov.l #0x3e8,er1
+  ram:0002a02e  jsr @0x0001872e
+  ram:0002a032  mov.w #0x14,r1
+  ram:0002a036  mulxu.w e6,er1
+  ram:0002a038  mov.l @(0xc0,er7),er2
+  ram:0002a03e  add.l er1,er2
+  ram:0002a040  mov.l @(0xba,er7),er1
+  ram:0002a046  add.l er1,er2
+  decoded=24
+
+=== PROBE 0x2c000 ===
+  bytes: 68 09 e9 4c 68 89 6a 38 00 ff ff f4 70 00 69 60 47 22 69 50 6b a0 00 ff
+  ram:0002c000  mov.b @er0,r1l
+  ram:0002c002  and.b #0x4c,r1l
+  ram:0002c004  mov.b r1l,@er0
+  ram:0002c00a  mov.b #0xf4,r7l
+  ram:0002c00c  bset #0x0,r0h
+  ram:0002c00e  mov.w @er6,r0
+  ram:0002c010  beq 0x0002c034
+  ram:0002c012  mov.w @er5,r0
+  ram:0002c014  mov.w r0,@0x00fffffa
+  ram:0002c01a  mov.w @er6,r0
+  ram:0002c01c  extu.l er0
+  ram:0002c01e  shll.l er0
+  ram:0002c020  add.l er5,er0
+  ram:0002c022  mov.w @er0,r1
+  ram:0002c024  extu.l er1
+  ram:0002c026  mov.w #0x64,r0
+  ram:0002c02a  divxu.w r0,er1
+  ram:0002c02c  mov.w r1,@0x00fffff8
+  ram:0002c032  bra 0x0002c04c
+  ram:0002c034  mov.w @er4,r0
+  ram:0002c036  mov.w r0,@0x00fffffa
+  ram:0002c03c  mov.w @er4,r0
+  ram:0002c03e  extu.l er0
+  ram:0002c040  mov.w #0x12c,r1
+  decoded=24
+
+=== PROBE 0x32000 ===
+  bytes: 01 00 69 31 01 00 6f f0 00 08 7a 00 00 00 00 0c 0a f0 5e 01 89 58 01 00
+  ram:00032000  mov.l @er3,er1
+  ram:00032004  mov.l er0,@(0x8,er7)
+  ram:0003200a  mov.l #0xc,er0
+  ram:00032010  add.l er7,er0
+  ram:00032012  jsr @0x00018958
+  ram:00032016  mov.l @(0x8,er7),er1
+  ram:0003201c  mov.l er0,er2
+  ram:0003201e  mov.l er7,er0
+  ram:00032020  jsr @0x00017fd2
+  ram:00032024  jsr @0x0001876a
+  ram:00032028  mov.l er0,@er6
+  ram:0003202c  mov.l er0,@er4
+  ram:00032030  mov.l @(0x38,er7),er1
+  ram:00032036  mov.l @er1,er1
+  ram:0003203a  mov.l #0x1c,er0
+  ram:00032040  add.l er7,er0
+  ram:00032042  jsr @0x00018e68
+  ram:00032046  mov.l er0,er1
+  ram:00032048  mov.l #0x3f7ce,er2
+  ram:0003204e  mov.l #0x14,er0
+  ram:00032054  add.l er7,er0
+  ram:00032056  jsr @0x00018aa0
+  ram:0003205a  mov.l @(0x24,er7),er1
+  ram:00032060  mov.l @er1,er1
+  decoded=24
+
+=== PROBE 0x34000 ===
+  bytes: 45 d2 0b 5c 1d ec 45 c8 5e 01 0b 56 0a 0e 6a 28 00 03 f8 12 1c 8e 58 50
+  ram:00034000  bcs 0x00033fd4
+  ram:00034002  inc.w #1,e4
+  ram:00034004  cmp.w e6,e4
+  ram:00034006  bcs 0x00033fd0
+  ram:00034008  jsr @0x00010b56
+  ram:0003400c  inc.b r6l
+  ram:0003400e  mov.b @0x0003f812,r0l
+  ram:00034014  cmp.b r0l,r6l
+  ram:00034016  bcs 0x00033b6a
+  ram:0003401a  mov.b @(0x55,er7),r0l
+  ram:0003401e  inc.b r0l
+  ram:00034020  mov.b r0l,@(0x55,er7)
+  ram:00034024  cmp.b #0x4,r0l
+  ram:00034026  bcs 0x00033906
+  ram:0003402a  mov.b #0x2,r0l
+  ram:0003402c  mov.b r0l,@0x0042007e
+  ram:00034032  add.l #0x64,er7
+  ram:0003403a  pop.w r6
+  ram:0003403e  pop.w r3
+  ram:00034040  rts
+  ram:00034044  push.w r4
+  ram:00034046  subs #4,er7
+  ram:00034048  mov.w r0,r6
+  ram:0003404a  mov.l er7,er1
+  decoded=24
+
+=== PROBE 0x36000 ===
+  bytes: 73 50 46 f6 68 38 c8 c0 68 b8 7c 30 73 60 46 fa 6a 28 00 42 02 a4 a8 07
+  ram:00036000  btst #0x5,r0h
+  ram:00036002  bne 0x00035ffa
+  ram:00036004  mov.b @er3,r0l
+  ram:00036006  or.b #0xc0,r0l
+  ram:00036008  mov.b r0l,@er3
+  ram:0003600a  btst #0x6,@er3
+  ram:0003600e  bne 0x0003600a
+  ram:00036010  mov.b @0x004202a4,r0l
+  ram:00036016  cmp.b #0x7,r0l
+  ram:00036018  bne 0x00036010
+  ram:0003601a  jmp @0x00035f5e
+  ram:0003601e  sub.b r0l,r0l
+  ram:00036020  mov.b r0l,r2l
+  ram:00036022  mov.l @0x00400522,er0
+  ram:0003602a  bne 0x000360b6
+  ram:00036032  mov.b #0x2e,r7l
+  ram:00036034  bset #0x4,r0h
+  ram:00036036  btst #0x7,@er4
+  ram:0003603a  bne 0x000362ea
+  ram:0003603e  mov.l @0x00400522,er0
+  ram:00036046  bne 0x0003607c
+  ram:00036048  jsr @0x00010b56
+  ram:0003604c  mov.b @0x004206e0,r0l
+  ram:00036052  bne 0x00036036
+  decoded=24
+
+=== PROBE 0x3a000 ===
+  bytes: 00 18 7a 06 00 40 0d 86 68 38 17 50 79 08 00 3a 52 80 0a d0 79 01 00 02
+  ram:0003a002  mov.l #0x400d86,er6
+  ram:0003a008  mov.b @er3,r0l
+  ram:0003a00a  extu.w r0
+  ram:0003a00c  mov.w #0x3a,e0
+  ram:0003a010  mulxu.w e0,er0
+  ram:0003a012  add.l er5,er0
+  ram:0003a014  mov.w #0x2,r1
+  ram:0003a018  jsr @0x0001605a
+  ram:0003a01c  mov.w #0xfa0,r1
+  ram:0003a020  extu.l er1
+  ram:0003a022  divxu.w r0,er1
+  ram:0003a024  mov.b r1l,@er6
+  ram:0003a026  mov.b @er6,r0l
+  ram:0003a028  mov.b r0l,@0x00420269
+  ram:0003a02e  mov.l #0x4007be,er4
+  ram:0003a034  mov.l @(0x1c,er7),er0
+  ram:0003a03a  mov.l #0xfa0,er1
+  ram:0003a040  jsr @0x00018e1e
+  ram:0003a044  mov.l er0,er2
+  ram:0003a046  mov.w @er4,r1
+  ram:0003a048  extu.l er1
+  ram:0003a04a  mov.l er1,@(0x14,er7)
+  ram:0003a050  jsr @0x0001872e
+  ram:0003a054  mov.w r0,@0x00400d80
+  decoded=24
+
+=== PROBE 0x40000 ===
+  bytes: 04 04 04 04 05 05 05 05 04 04 04 04 05 05 05 05 04 04 04 04 05 05 05 05
+  ram:00040000  orc #0x4,ccr
+  ram:00040002  orc #0x4,ccr
+  ram:00040004  xorc #0x5,ccr
+  ram:00040006  xorc #0x5,ccr
+  ram:00040008  orc #0x4,ccr
+  ram:0004000a  orc #0x4,ccr
+  ram:0004000c  xorc #0x5,ccr
+  ram:0004000e  xorc #0x5,ccr
+  ram:00040010  orc #0x4,ccr
+  ram:00040012  orc #0x4,ccr
+  ram:00040014  xorc #0x5,ccr
+  ram:00040016  xorc #0x5,ccr
+  ram:00040018  xorc #0x5,ccr
+  ram:0004001a  xorc #0x5,ccr
+  ram:0004001c  xorc #0x5,ccr
+  ram:0004001e  xorc #0x5,ccr
+  ram:00040020  xorc #0x5,ccr
+  ram:00040022  xorc #0x5,ccr
+  ram:00040024  xorc #0x5,ccr
+  ram:00040026  xorc #0x5,ccr
+  ram:00040028  orc #0x4,ccr
+  ram:0004002a  orc #0x4,ccr
+  ram:0004002c  xorc #0x5,ccr
+  ram:0004002e  xorc #0x5,ccr
+  decoded=24
+
+=== PROBE 0x43000 ===
+  bytes: 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00
+  ram:00043000  nop
+  ram:00043002  nop
+  ram:00043006  nop
+  ram:00043008  nop
+  ram:0004300a  nop
+  ram:0004300c  nop
+  ram:00043010  nop
+  ram:00043012  nop
+  ram:00043014  nop
+  ram:00043016  nop
+  ram:0004301a  nop
+  ram:0004301c  nop
+  ram:0004301e  nop
+  ram:00043020  nop
+  ram:00043024  nop
+  ram:00043026  nop
+  ram:00043028  nop
+  ram:0004302a  nop
+  ram:0004302c  nop
+  ram:00043030  nop
+  ram:00043032  nop
+  ram:00043034  nop
+  ram:00043036  nop
+  ram:00043038  nop
+  decoded=24
+
+=== PROBE 0x46000 ===
+  bytes: 01 00 00 00 00 00 00 01 00 00 00 00 00 00 01 00 00 00 00 00 00 01 00 00
+  ram:00046002  nop
+  ram:00046004  nop
+  ram:00046008  nop
+  ram:0004600a  nop
+  ram:0004600c  nop
+  ram:00046010  nop
+  ram:00046012  nop
+  ram:00046016  nop
+  ram:00046018  nop
+  ram:0004601a  nop
+  ram:0004601e  nop
+  ram:00046020  nop
+  ram:00046024  nop
+  ram:00046026  nop
+  ram:0004602a  nop
+  ram:0004602c  nop
+  ram:00046030  nop
+  ram:00046032  nop
+  ram:00046036  nop
+  ram:00046038  nop
+  ram:0004603c  nop
+  ram:0004603e  nop
+  ram:00046040  nop
+  ram:00046044  nop
+  decoded=24

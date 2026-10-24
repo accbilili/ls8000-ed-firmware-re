@@ -1,0 +1,75 @@
+name: CI
+
+# LS-8000 ED 固件逆向 —— 持续集成
+# 目标：每次提交都自动验证「发布卫生」与「核心结论可复现」
+# Goal: verify publication hygiene and reproducibility of key findings on every commit.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: 校验 / Verify
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码 / Checkout
+        uses: actions/checkout@v4
+
+      - name: 配置 Python / Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # ------------------------------------------------------------
+      # 说明：本 CI 不需要固件样本。依赖样本的脚本已在此排除，
+      #       需要样本的用户请本地运行 bootstrap.sh 后自行执行。
+      # This CI does NOT require firmware samples. Sample-dependent
+      # steps are excluded; run them locally after bootstrap.sh.
+      # ------------------------------------------------------------
+
+      - name: ① 发布卫生自检 / Publication hygiene check
+        id: hygiene
+        run: python tools/publish_check.py
+
+      - name: ② Python 语法编译 / Syntax compile
+        run: |
+          python - <<'PY'
+          import pathlib, py_compile, sys
+          bad = []
+          n = 0
+          for p in sorted(pathlib.Path('.').rglob('*.py')):
+              if '.git' in p.parts:
+                  continue
+              n += 1
+              try:
+                  py_compile.compile(str(p), doraise=True, cfile='/tmp/x.pyc')
+              except Exception as e:
+                  bad.append((str(p), str(e).splitlines()[0]))
+          print('编译脚本数 / compiled: %d' % n)
+          if bad:
+              for p, e in bad:
+                  print('  ✗ %s -> %s' % (p, e))
+              sys.exit(1)
+          print('✓ 全部通过 / all passed')
+          PY
+
+      - name: ③ 完整性校验 / Package integrity
+        run: python tools/verify_package.py
+
+      - name: ④ 三公式模拟验证 / Three formulas (simulator)
+        run: python tools/sim_verify_formulas.py
+
+      - name: ⑤ 仓库结构快照 / Structure snapshot
+        run: |
+          echo "文件总数 / total files: $(find . -type f -not -path './.git/*' | wc -l)"
+          echo "二进制数 / binaries   : $(find . -type f -not -path './.git/*' \
+               \( -name '*.bin' -o -name '*.rom' -o -name '*.exe' -o -name '*.sys' -o -name '*.dmp' \) | wc -l)"
+          echo "总字节 / total bytes  : $(du -sb --exclude=.git . | cut -f1)"

@@ -1,0 +1,49 @@
+# LS8000 固件逆向 —— 只读样本登记表
+#
+# 【重要】本包 **不包含** 原始样本文件。以下仅登记其路径、字节数与 SHA256，
+#              便于第三方核对分析所依据的样本是否一致（防止张冠李戴）。
+#
+# 获取方式（二选一）：
+#   A. 直接从下表路径取用原样本（推荐，保持原始来源）
+#   B. 复制到一个目录后，用环境变量指定：
+#        set LS8000_SAMPLE_ROOT=<你的样本目录>
+#      然后运行 python tools/paths.py 自检。
+#
+# 样本间关系（已实测）：
+#   - LS8000_full_512K.bin[0x00000:0x10000] == LS8000_bootblock.bin （逐字节全等）
+#   - LS8000_full_512K.bin[0x10000:0x10000+228345] == LS8000_111_ROM.bin（逐字节全等）
+#   - decoded.bin 与 LS8000_111_ROM.bin SHA256 相同（同一份数据，命名有误导）
+#   - research/LS8000.bin 与 full_512K 差异 249568 字节、头部不同，为异源镜像
+
+# SHA256                                                                   字节数  说明
+# ----------------------------------------------------------------------------------------------------------------------
+fd1f17c594490ad0034ff2b80d4c8eaf1eb93721eaff1a5131e87faca358be85      228345  H8 固件 ROM 主程序镜像（228345 B，逆向主对象）
+#   └─ 路径: D:/DS/TEST/LS8000/LS8000_111_ROM.bin
+2117e671e394bfb5bf407988bb6d28064fd48807580f04bccb4468bdc7790a72       65536  引导块 64 KB（复位向量/缝隙/挂死桩/设置记录）
+#   └─ 路径: D:/DS/TEST/LS8000/LS8000_bootblock.bin
+015b512723d52c8e8cf89c50fb1de7179c64f8b0edcd57526b12faf002320bc8      524288  整机 512 KB 全镜像（引导块 + ROM + 两段镜像 + 0x60000 区）
+#   └─ 路径: D:/DS/TEST/LS8000/LS8000_full_512K.bin
+fd1f17c594490ad0034ff2b80d4c8eaf1eb93721eaff1a5131e87faca358be85      228345  与 LS8000_111_ROM.bin 同哈希（历史遗留命名，非独立样本）
+#   └─ 路径: D:/DS/TEST/LS8000/decoded.bin
+65e2559e795fc2392a107b5a235b6235d64aac819c3dcfee7ea08b8e201a3563       99865  宿主 updater 的 FIRMDATA 资源
+#   └─ 路径: D:/DS/TEST/LS8000/FIRMDATA.bin
+416f712236ef9c046ea31a23cb5d21403d25730e1516c0f7703233682bf2639a       73356  H8 指令模式表（自建解码器输入；注意原版正则缺陷）
+#   └─ 路径: D:/DS/TEST/LS8000/h8.lst
+c4a74dd5cc47e734ba02b68f3145b976aee657075957ca38538edf50b82282e3        3962  自建 H8 反汇编器
+#   └─ 路径: D:/DS/TEST/LS8000/h8dis.py
+8bf7cc030330816e847af7aebafdb13484080e89a1e7847f68a9517a4211e149        1537  模式表加载器（原版，含被修复的缺陷）
+#   └─ 路径: D:/DS/TEST/LS8000/h8tab.py
+1ef6f0f6ad0555c4467382d4413ef368ea8a40546a59f12d694600eb56a22751     2154740  主机侧静态分析配置快照（脚本高频引用）
+#   └─ 路径: D:/DS/TEST/LS8000/cfg_v4.json
+467aa9abb59b7635332443d05a2819f3823ad14d7900d41ca375025c2b0eacac      958464  扫描仪主机侧驱动/程序（958 KB）
+#   └─ 路径: D:/DS/TEST/LS8000/driver/LS8000.md3
+4aa05d2ae83ab1c2f422eff4a1f08a822cb626a5a76491a0bf797c5dcbd44cce       90112  主机侧 USB/1394 通道 DLL
+#   └─ 路径: D:/DS/TEST/LS8000/driver/NKDUSCAN.dll
+b7e8d1696d6441892d6e4f13a686671a2215221bb9709cb8c95cf0430d585df5       86016  主机侧 SBP2 通道 DLL（蓝屏栈涉及）
+#   └─ 路径: D:/DS/TEST/LS8000/driver/NKDSBP2.dll
+ae86eb26f24ae65106af67847df3822a6da0fe9c74ff5ec31967d4ab7c8f2663      286720  主机侧 ICE 引擎 DLL
+#   └─ 路径: D:/DS/TEST/LS8000/driver/ICEDLL.dll
+83ca7a8e991ba3fb85913f31e0f3a6c6b8f4202d779bdfdf233cb3878e997c3e      524288  异源镜像（与 full_512K 差异 249568 B，非本机 ROM）
+#   └─ 路径: D:/DS/TEST/research/LS8000.bin
+
+# 登记条目: 14 / 14

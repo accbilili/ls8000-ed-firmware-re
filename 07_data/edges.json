@@ -1,0 +1,900 @@
+{
+ "10->035598": [
+  {
+   "from": 218530,
+   "kind": "call",
+   "to": 222558,
+   "text": "jsr 0x03655e"
+  },
+  {
+   "from": 218544,
+   "kind": "bcc",
+   "to": 218572,
+   "text": "beq 0x0355cc"
+  },
+  {
+   "from": 218548,
+   "kind": "bcc",
+   "to": 218588,
+   "text": "beq 0x0355dc"
+  },
+  {
+   "from": 218552,
+   "kind": "bcc",
+   "to": 218606,
+   "text": "beq 0x0355ee"
+  },
+  {
+   "from": 218556,
+   "kind": "bcc",
+   "to": 218606,
+   "text": "beq 0x0355ee"
+  },
+  {
+   "from": 218560,
+   "kind": "bcc",
+   "to": 218572,
+   "text": "beq 0x0355cc"
+  },
+  {
+   "from": 218564,
+   "kind": "bcc",
+   "to": 218650,
+   "text": "beq 0x03561a"
+  },
+  {
+   "from": 218568,
+   "kind": "bcc",
+   "to": 218668,
+   "text": "beq 0x03562c"
+  },
+  {
+   "from": 218570,
+   "kind": "jmp",
+   "to": 218684,
+   "text": "bt 0x03563c"
+  },
+  {
+   "from": 218718,
+   "kind": "call",
+   "to": 191834,
+   "text": "jsr 0x02ed5a"
+  },
+  {
+   "from": 218726,
+   "kind": "bcc",
+   "to": 218732,
+   "text": "bne 0x03566c"
+  },
+  {
+   "from": 218730,
+   "kind": "jmp",
+   "to": 218734,
+   "text": "bt 0x03566e"
+  },
+  {
+   "from": 218746,
+   "kind": "call",
+   "to": 245808,
+   "text": "jsr 0x03c030"
+  },
+  {
+   "from": 218754,
+   "kind": "bcc",
+   "to": 218768,
+   "text": "bne 0x035690"
+  },
+  {
+   "from": 218680,
+   "kind": "call",
+   "to": 225442,
+   "text": "jsr 0x0370a2"
+  },
+  {
+   "from": 218662,
+   "kind": "call",
+   "to": 225432,
+   "text": "jsr 0x037098"
+  },
+  {
+   "from": 218666,
+   "kind": "jmp",
+   "to": 218684,
+   "text": "bt 0x03563c"
+  },
+  {
+   "from": 218582,
+   "kind": "call",
+   "to": 218774,
+   "text": "bsr 0x035696"
+  },
+  {
+   "from": 218586,
+   "kind": "jmp",
+   "to": 218684,
+   "text": "bt 0x03563c"
+  },
+  {
+   "from": 218612,
+   "kind": "bcc",
+   "to": 218632,
+   "text": "bne 0x035608"
+  },
+  {
+   "from": 218626,
+   "kind": "call",
+   "to": 225422,
+   "text": "jsr 0x03708e"
+  },
+  {
+   "from": 218630,
+   "kind": "jmp",
+   "to": 218684,
+   "text": "bt 0x03563c"
+  },
+  {
+   "from": 218644,
+   "kind": "call",
+   "to": 225412,
+   "text": "jsr 0x037084"
+  },
+  {
+   "from": 218648,
+   "kind": "jmp",
+   "to": 218684,
+   "text": "bt 0x03563c"
+  },
+  {
+   "from": 218600,
+   "kind": "call",
+   "to": 234306,
+   "text": "jsr 0x039342"
+  },
+  {
+   "from": 218604,
+   "kind": "jmp",
+   "to": 218684,
+   "text": "bt 0x03563c"
+  }
+ ],
+ "40->02AEAA": [
+  {
+   "from": 175828,
+   "kind": "bcc",
+   "to": 175866,
+   "text": "bne 0x02aefa"
+  },
+  {
+   "from": 175844,
+   "kind": "call",
+   "to": 175566,
+   "text": "bsr 0x02adce"
+  },
+  {
+   "from": 175850,
+   "kind": "call",
+   "to": 175290,
+   "text": "bsr 0x02acba"
+  },
+  {
+   "from": 175862,
+   "kind": "bcc",
+   "to": 175808,
+   "text": "bne 0x02aec0"
+  },
+  {
+   "from": 175864,
+   "kind": "jmp",
+   "to": 175962,
+   "text": "bt 0x02af5a"
+  },
+  {
+   "from": 175874,
+   "kind": "bcc",
+   "to": 175882,
+   "text": "bls 0x02af0a"
+  },
+  {
+   "from": 175880,
+   "kind": "jmp",
+   "to": 175886,
+   "text": "bt 0x02af0e"
+  },
+  {
+   "from": 175890,
+   "kind": "bcc",
+   "to": 175970,
+   "text": "beq 0x02af62"
+  },
+  {
+   "from": 175896,
+   "kind": "bcc",
+   "to": 175908,
+   "text": "bls 0x02af24"
+  },
+  {
+   "from": 175906,
+   "kind": "jmp",
+   "to": 175914,
+   "text": "bt 0x02af2a"
+  },
+  {
+   "from": 175942,
+   "kind": "call",
+   "to": 172790,
+   "text": "bsr 0x02a2f6"
+  },
+  {
+   "from": 175950,
+   "kind": "call",
+   "to": 175290,
+   "text": "bsr 0x02acba"
+  },
+  {
+   "from": 175958,
+   "kind": "bcc",
+   "to": 175808,
+   "text": "bne 0x02aec0"
+  }
+ ],
+ "41->02B98A": [
+  {
+   "from": 178586,
+   "kind": "bcc",
+   "to": 178716,
+   "text": "beq 0x02ba1c"
+  },
+  {
+   "from": 178600,
+   "kind": "bcc",
+   "to": 178716,
+   "text": "beq 0x02ba1c"
+  },
+  {
+   "from": 178614,
+   "kind": "bcc",
+   "to": 178632,
+   "text": "bne 0x02b9c8"
+  },
+  {
+   "from": 178626,
+   "kind": "call",
+   "to": 178410,
+   "text": "bsr 0x02b8ea"
+  },
+  {
+   "from": 178630,
+   "kind": "jmp",
+   "to": 178706,
+   "text": "bt 0x02ba12"
+  },
+  {
+   "from": 178706,
+   "kind": "call",
+   "to": 178218,
+   "text": "bsr 0x02b82a"
+  },
+  {
+   "from": 178712,
+   "kind": "bcc",
+   "to": 178576,
+   "text": "beq 0x02b990"
+  },
+  {
+   "from": 178646,
+   "kind": "bcc",
+   "to": 178716,
+   "text": "beq 0x02ba1c"
+  },
+  {
+   "from": 178656,
+   "kind": "bcc",
+   "to": 178670,
+   "text": "bls 0x02b9ee"
+  },
+  {
+   "from": 178668,
+   "kind": "jmp",
+   "to": 178680,
+   "text": "bt 0x02b9f8"
+  },
+  {
+   "from": 178700,
+   "kind": "call",
+   "to": 176758,
+   "text": "bsr 0x02b276"
+  }
+ ],
+ "42->02CB66": [
+  {
+   "from": 183166,
+   "kind": "jmp",
+   "to": 183192,
+   "text": "bt 0x02cb98"
+  },
+  {
+   "from": 183200,
+   "kind": "bcc",
+   "to": 183168,
+   "text": "bne 0x02cb80"
+  },
+  {
+   "from": 183182,
+   "kind": "call",
+   "to": 182756,
+   "text": "bsr 0x02c9e4"
+  },
+  {
+   "from": 183188,
+   "kind": "call",
+   "to": 182452,
+   "text": "bsr 0x02c8b4"
+  }
+ ],
+ "81->028648": [
+  {
+   "from": 165448,
+   "kind": "call",
+   "to": 178854,
+   "text": "jsr 0x02baa6"
+  },
+  {
+   "from": 165452,
+   "kind": "call",
+   "to": 183300,
+   "text": "jsr 0x02cc04"
+  },
+  {
+   "from": 165456,
+   "kind": "call",
+   "to": 176184,
+   "text": "jsr 0x02b038"
+  }
+ ],
+ "A0->03A3D4": [
+  {
+   "from": 238608,
+   "kind": "call",
+   "to": 240020,
+   "text": "bsr 0x03a994"
+  },
+  {
+   "from": 238614,
+   "kind": "bcc",
+   "to": 238648,
+   "text": "beq 0x03a438"
+  },
+  {
+   "from": 238644,
+   "kind": "jmp",
+   "to": 240004,
+   "text": "jmp 0x03a984"
+  },
+  {
+   "from": 238662,
+   "kind": "call",
+   "to": 209954,
+   "text": "jsr 0x033422"
+  },
+  {
+   "from": 238688,
+   "kind": "call",
+   "to": 214914,
+   "text": "jsr 0x034782"
+  },
+  {
+   "from": 238692,
+   "kind": "call",
+   "to": 250996,
+   "text": "jsr 0x03d474"
+  },
+  {
+   "from": 238698,
+   "kind": "jmp",
+   "to": 238726,
+   "text": "bt 0x03a486"
+  },
+  {
+   "from": 238730,
+   "kind": "bcc",
+   "to": 238700,
+   "text": "blt 0x03a46c"
+  },
+  {
+   "from": 238732,
+   "kind": "call",
+   "to": 184796,
+   "text": "jsr 0x02d1dc"
+  },
+  {
+   "from": 238844,
+   "kind": "call",
+   "to": 243086,
+   "text": "bsr 0x03b58e"
+  },
+  {
+   "from": 238868,
+   "kind": "bcc",
+   "to": 238876,
+   "text": "bne 0x03a51c"
+  },
+  {
+   "from": 238874,
+   "kind": "jmp",
+   "to": 238880,
+   "text": "bt 0x03a520"
+  },
+  {
+   "from": 238900,
+   "kind": "bcc",
+   "to": 239490,
+   "text": "bcs 0x03a782"
+  },
+  {
+   "from": 238918,
+   "kind": "jmp",
+   "to": 239018,
+   "text": "bt 0x03a5aa"
+  },
+  {
+   "from": 239022,
+   "kind": "bcc",
+   "to": 238920,
+   "text": "blt 0x03a548"
+  },
+  {
+   "from": 239070,
+   "kind": "bcc",
+   "to": 239934,
+   "text": "bne 0x03a93e"
+  },
+  {
+   "from": 239118,
+   "kind": "call",
+   "to": 243086,
+   "text": "bsr 0x03b58e"
+  },
+  {
+   "from": 239144,
+   "kind": "call",
+   "to": 102110,
+   "text": "jsr 0x018ede"
+  },
+  {
+   "from": 239154,
+   "kind": "call",
+   "to": 100562,
+   "text": "jsr 0x0188d2"
+  },
+  {
+   "from": 239160,
+   "kind": "bcc",
+   "to": 239490,
+   "text": "bne 0x03a782"
+  },
+  {
+   "from": 239210,
+   "kind": "call",
+   "to": 101918,
+   "text": "jsr 0x018e1e"
+  },
+  {
+   "from": 239248,
+   "kind": "call",
+   "to": 246164,
+   "text": "bsr 0x03c194"
+  },
+  {
+   "from": 239288,
+   "kind": "call",
+   "to": 102046,
+   "text": "jsr 0x018e9e"
+  },
+  {
+   "from": 239320,
+   "kind": "call",
+   "to": 99822,
+   "text": "jsr 0x0185ee"
+  },
+  {
+   "from": 239324,
+   "kind": "call",
+   "to": 100448,
+   "text": "jsr 0x018860"
+  },
+  {
+   "from": 239354,
+   "kind": "call",
+   "to": 241142,
+   "text": "bsr 0x03adf6"
+  },
+  {
+   "from": 239360,
+   "kind": "bcc",
+   "to": 239396,
+   "text": "bne 0x03a724"
+  },
+  {
+   "from": 239382,
+   "kind": "call",
+   "to": 243014,
+   "text": "bsr 0x03b546"
+  },
+  {
+   "from": 239388,
+   "kind": "bcc",
+   "to": 239934,
+   "text": "beq 0x03a93e"
+  },
+  {
+   "from": 239392,
+   "kind": "jmp",
+   "to": 239922,
+   "text": "jmp 0x03a932"
+  },
+  {
+   "from": 239930,
+   "kind": "bcc",
+   "to": 239062,
+   "text": "bcs 0x03a5d6"
+  },
+  {
+   "from": 239956,
+   "kind": "bcc",
+   "to": 239962,
+   "text": "beq 0x03a95a"
+  },
+  {
+   "from": 239964,
+   "kind": "bcc",
+   "to": 239994,
+   "text": "beq 0x03a97a"
+  },
+  {
+   "from": 240000,
+   "kind": "call",
+   "to": 178300,
+   "text": "jsr 0x02b87c"
+  },
+  {
+   "from": 239404,
+   "kind": "bcc",
+   "to": 239934,
+   "text": "bne 0x03a93e"
+  },
+  {
+   "from": 239446,
+   "kind": "call",
+   "to": 243086,
+   "text": "bsr 0x03b58e"
+  },
+  {
+   "from": 239472,
+   "kind": "call",
+   "to": 102110,
+   "text": "jsr 0x018ede"
+  },
+  {
+   "from": 239482,
+   "kind": "call",
+   "to": 100562,
+   "text": "jsr 0x0188d2"
+  },
+  {
+   "from": 239488,
+   "kind": "bcc",
+   "to": 239500,
+   "text": "beq 0x03a78c"
+  },
+  {
+   "from": 239496,
+   "kind": "jmp",
+   "to": 239934,
+   "text": "jmp 0x03a93e"
+  },
+  {
+   "from": 239548,
+   "kind": "call",
+   "to": 101918,
+   "text": "jsr 0x018e1e"
+  },
+  {
+   "from": 239586,
+   "kind": "call",
+   "to": 246164,
+   "text": "bsr 0x03c194"
+  },
+  {
+   "from": 239626,
+   "kind": "call",
+   "to": 102046,
+   "text": "jsr 0x018e9e"
+  },
+  {
+   "from": 239658,
+   "kind": "call",
+   "to": 99822,
+   "text": "jsr 0x0185ee"
+  },
+  {
+   "from": 239662,
+   "kind": "call",
+   "to": 100448,
+   "text": "jsr 0x018860"
+  },
+  {
+   "from": 239694,
+   "kind": "call",
+   "to": 241142,
+   "text": "bsr 0x03adf6"
+  },
+  {
+   "from": 239700,
+   "kind": "bcc",
+   "to": 239736,
+   "text": "bne 0x03a878"
+  },
+  {
+   "from": 239722,
+   "kind": "call",
+   "to": 243014,
+   "text": "bsr 0x03b546"
+  },
+  {
+   "from": 239728,
+   "kind": "bcc",
+   "to": 239934,
+   "text": "beq 0x03a93e"
+  },
+  {
+   "from": 239732,
+   "kind": "jmp",
+   "to": 239922,
+   "text": "jmp 0x03a932"
+  },
+  {
+   "from": 239750,
+   "kind": "bcc",
+   "to": 239934,
+   "text": "bne 0x03a93e"
+  },
+  {
+   "from": 239812,
+   "kind": "call",
+   "to": 243086,
+   "text": "bsr 0x03b58e"
+  },
+  {
+   "from": 239826,
+   "kind": "bcc",
+   "to": 239934,
+   "text": "bne 0x03a93e"
+  },
+  {
+   "from": 239858,
+   "kind": "call",
+   "to": 245066,
+   "text": "bsr 0x03bd4a"
+  },
+  {
+   "from": 239872,
+   "kind": "bcc",
+   "to": 239934,
+   "text": "bne 0x03a93e"
+  },
+  {
+   "from": 239886,
+   "kind": "call",
+   "to": 241142,
+   "text": "bsr 0x03adf6"
+  },
+  {
+   "from": 239892,
+   "kind": "bcc",
+   "to": 239922,
+   "text": "bne 0x03a932"
+  },
+  {
+   "from": 239914,
+   "kind": "call",
+   "to": 243014,
+   "text": "bsr 0x03b546"
+  },
+  {
+   "from": 239920,
+   "kind": "bcc",
+   "to": 239934,
+   "text": "beq 0x03a93e"
+  }
+ ],
+ "B0->027F24": [
+  {
+   "from": 163632,
+   "kind": "call",
+   "to": 178300,
+   "text": "jsr 0x02b87c"
+  },
+  {
+   "from": 163636,
+   "kind": "call",
+   "to": 166252,
+   "text": "bsr 0x02896c"
+  },
+  {
+   "from": 163640,
+   "kind": "call",
+   "to": 163652,
+   "text": "bsr 0x027f44"
+  },
+  {
+   "from": 163644,
+   "kind": "call",
+   "to": 178300,
+   "text": "jsr 0x02b87c"
+  }
+ ],
+ "C1->02BA24": [
+  {
+   "from": 178730,
+   "kind": "jmp",
+   "to": 178300,
+   "text": "jmp 0x02b87c"
+  },
+  {
+   "from": 178316,
+   "kind": "bcc",
+   "to": 178404,
+   "text": "beq 0x02b8e4"
+  },
+  {
+   "from": 178328,
+   "kind": "bcc",
+   "to": 178404,
+   "text": "beq 0x02b8e4"
+  },
+  {
+   "from": 178338,
+   "kind": "bcc",
+   "to": 178404,
+   "text": "beq 0x02b8e4"
+  },
+  {
+   "from": 178352,
+   "kind": "bcc",
+   "to": 178370,
+   "text": "bcc 0x02b8c2"
+  },
+  {
+   "from": 178358,
+   "kind": "call",
+   "to": 178410,
+   "text": "bsr 0x02b8ea"
+  },
+  {
+   "from": 178360,
+   "kind": "call",
+   "to": 178218,
+   "text": "bsr 0x02b82a"
+  },
+  {
+   "from": 178366,
+   "kind": "bcc",
+   "to": 178306,
+   "text": "beq 0x02b882"
+  },
+  {
+   "from": 178368,
+   "kind": "jmp",
+   "to": 178404,
+   "text": "bt 0x02b8e4"
+  },
+  {
+   "from": 178380,
+   "kind": "call",
+   "to": 178410,
+   "text": "bsr 0x02b8ea"
+  },
+  {
+   "from": 178382,
+   "kind": "call",
+   "to": 178218,
+   "text": "bsr 0x02b82a"
+  },
+  {
+   "from": 178388,
+   "kind": "bcc",
+   "to": 178306,
+   "text": "beq 0x02b882"
+  },
+  {
+   "from": 178394,
+   "kind": "call",
+   "to": 178410,
+   "text": "bsr 0x02b8ea"
+  },
+  {
+   "from": 178396,
+   "kind": "call",
+   "to": 178218,
+   "text": "bsr 0x02b82a"
+  },
+  {
+   "from": 178402,
+   "kind": "bcc",
+   "to": 178306,
+   "text": "beq 0x02b882"
+  }
+ ],
+ "D0->02866E": [
+  {
+   "from": 165488,
+   "kind": "call",
+   "to": 163268,
+   "text": "bsr 0x027dc4"
+  }
+ ],
+ "80->028722": [],
+ "B3->02BBAE": [
+  {
+   "from": 179128,
+   "kind": "call",
+   "to": 96896,
+   "text": "jsr 0x017a80"
+  },
+  {
+   "from": 179132,
+   "kind": "call",
+   "to": 93838,
+   "text": "jsr 0x016e8e"
+  },
+  {
+   "from": 179312,
+   "kind": "bcc",
+   "to": 179292,
+   "text": "bcs 0x02bc5c"
+  },
+  {
+   "from": 179328,
+   "kind": "call",
+   "to": 68562,
+   "text": "jsr 0x010bd2"
+  },
+  {
+   "from": 179350,
+   "kind": "call",
+   "to": 96888,
+   "text": "jsr 0x017a78"
+  },
+  {
+   "from": 179354,
+   "kind": "call",
+   "to": 68568,
+   "text": "jsr 0x010bd8"
+  },
+  {
+   "from": 179374,
+   "kind": "call",
+   "to": 68562,
+   "text": "jsr 0x010bd2"
+  },
+  {
+   "from": 179378,
+   "kind": "call",
+   "to": 96892,
+   "text": "jsr 0x017a7c"
+  },
+  {
+   "from": 179394,
+   "kind": "call",
+   "to": 68568,
+   "text": "jsr 0x010bd8"
+  },
+  {
+   "from": 179398,
+   "kind": "call",
+   "to": 179406,
+   "text": "bsr 0x02bcce"
+  }
+ ],
+ "00->028722": []
+}

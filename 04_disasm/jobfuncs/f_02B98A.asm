@@ -1,0 +1,49 @@
+0x02B98A  mov.w     r3, @-sp
+0x02B98C  stm.l     er4-er6, @-sp
+0x02B990  mov.w     @0x400402, r0
+0x02B996  cmp.w     #0x0120, r0
+0x02B99A  beq       0x02ba1c
+0x02B99E  mov.w     @0x400402, r0
+0x02B9A4  cmp.w     #0x0121, r0
+0x02B9A8  beq       0x02ba1c
+0x02B9AA  mov.l     #0x00400408, er6
+0x02B9B0  mov.w     @0x400410, r0
+0x02B9B6  bne       0x02b9c8
+0x02B9B8  sub.b     r1l, r1l
+0x02B9BA  mov.w     #0x0032, e0
+0x02B9BE  mov.w     @(0x2,er6), r0
+0x02B9C2  bsr       0x02b8ea
+0x02B9C6  bt        0x02ba12
+0x02B9C8  mov.l     #0x004202e0, er5
+0x02B9CE  mov.w     @(0x2,er6), r0
+0x02B9D2  mov.w     @er5, r1
+0x02B9D4  cmp.w     r1, r0
+0x02B9D6  beq       0x02ba1c
+0x02B9D8  mov.w     @(0x2,er6), r0
+0x02B9DC  mov.w     @er5, r1
+0x02B9DE  cmp.w     r1, r0
+0x02B9E0  bls       0x02b9ee
+0x02B9E2  mov.b     #0x01, r3l
+0x02B9E4  mov.w     @(0x2,er6), r4
+0x02B9E8  mov.w     @er5, r5
+0x02B9EA  sub.w     r5, r4
+0x02B9EC  bt        0x02b9f8
+0x02B9EE  sub.b     r3l, r3l
+0x02B9F0  mov.w     @er5, r4
+0x02B9F2  mov.w     @(0x2,er6), r6
+0x02B9F6  sub.w     r6, r4
+0x02B9F8  mov.b     #0x04, r0l
+0x02B9FA  mov.w     r0, @-sp
+0x02B9FC  sub.b     r0h, r0h
+0x02B9FE  mov.w     #0x0032, e1
+0x02BA02  mov.w     @0x400410, r1
+0x02BA08  mov.w     r4, e0
+0x02BA0A  mov.b     r3l, r0l
+0x02BA0C  bsr       0x02b276
+0x02BA10  adds.l    #2, sp
+0x02BA12  bsr       0x02b82a
+0x02BA16  mov.b     r0l, r0l
+0x02BA18  beq       0x02b990
+0x02BA1C  ldm.l     @sp+, er4-er6
+0x02BA20  mov.w     @sp+, r3
+0x02BA22  rts       

@@ -1,0 +1,9051 @@
+{
+"meta": {
+"file": "D:\\DS\\TEST\\LS8000\\driver\\LS8000.md3",
+"size": 958464,
+"imagebase": "0x10000000",
+"timestamp": 1170779456,
+"timestamp_utc": "2007-02-06",
+"note": "LS8000.md3 = Nikon Scan 的 LS-8000(E) 扫描仪 MAID 模块；本文件仅静态数据，不含代码语义结论"
+},
+"exports": [
+{
+"ord": 1,
+"name": "?NkCtrlEntry@@YGFFFFPAX@Z",
+"va": "0x10091850"
+},
+{
+"ord": 2,
+"name": "MAIDEntryPoint",
+"va": "0x10027600"
+},
+{
+"ord": 3,
+"name": "NkMDCtrlEntry",
+"va": "0x1000b520"
+}
+],
+"imports": [
+{
+"dll": "SHFOLDER.dll",
+"name": "SHGetFolderPathA",
+"iat_va": "0x200be17c"
+},
+{
+"dll": "SETUPAPI.dll",
+"name": "SetupDiGetDeviceRegistryPropertyA",
+"iat_va": "0x200be164"
+},
+{
+"dll": "SETUPAPI.dll",
+"name": "SetupDiEnumDeviceInfo",
+"iat_va": "0x200be168"
+},
+{
+"dll": "SETUPAPI.dll",
+"name": "SetupDiGetClassDevsA",
+"iat_va": "0x200be16c"
+},
+{
+"dll": "SETUPAPI.dll",
+"name": "SetupDiClassGuidsFromNameA",
+"iat_va": "0x200be170"
+},
+{
+"dll": "SETUPAPI.dll",
+"name": "SetupDiDestroyDeviceInfoList",
+"iat_va": "0x200be174"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetCurrentProcessId",
+"iat_va": "0x200be018"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetTickCount",
+"iat_va": "0x200be01c"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "FreeLibrary",
+"iat_va": "0x200be020"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetProcAddress",
+"iat_va": "0x200be024"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "LoadLibraryA",
+"iat_va": "0x200be028"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "lstrlenA",
+"iat_va": "0x200be02c"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetModuleFileNameA",
+"iat_va": "0x200be030"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "CreateDirectoryA",
+"iat_va": "0x200be034"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetLastError",
+"iat_va": "0x200be038"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetVersionExA",
+"iat_va": "0x200be03c"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "InitializeCriticalSection",
+"iat_va": "0x200be040"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "DeleteCriticalSection",
+"iat_va": "0x200be044"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "EnterCriticalSection",
+"iat_va": "0x200be048"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "LeaveCriticalSection",
+"iat_va": "0x200be04c"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "CloseHandle",
+"iat_va": "0x200be050"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "WaitForSingleObject",
+"iat_va": "0x200be054"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "LocalFree",
+"iat_va": "0x200be058"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "LocalAlloc",
+"iat_va": "0x200be05c"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "Sleep",
+"iat_va": "0x200be060"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "lstrcpyA",
+"iat_va": "0x200be064"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "lstrcatA",
+"iat_va": "0x200be068"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "SetEndOfFile",
+"iat_va": "0x200be06c"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "RaiseException",
+"iat_va": "0x200be070"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "CreateFileA",
+"iat_va": "0x200be074"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "LoadResource",
+"iat_va": "0x200be078"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "FindResourceA",
+"iat_va": "0x200be07c"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "QueryPerformanceCounter",
+"iat_va": "0x200be080"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetStringTypeW",
+"iat_va": "0x200be084"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetStringTypeA",
+"iat_va": "0x200be088"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetLocaleInfoA",
+"iat_va": "0x200be08c"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "FlushFileBuffers",
+"iat_va": "0x200be090"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "SetStdHandle",
+"iat_va": "0x200be094"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "CreateThread",
+"iat_va": "0x200be098"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetCPInfo",
+"iat_va": "0x200be09c"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetOEMCP",
+"iat_va": "0x200be0a0"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "HeapAlloc",
+"iat_va": "0x200be0a4"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "RtlUnwind",
+"iat_va": "0x200be0a8"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "HeapFree",
+"iat_va": "0x200be0ac"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetSystemTimeAsFileTime",
+"iat_va": "0x200be0b0"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "ExitThread",
+"iat_va": "0x200be0b4"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetCurrentThreadId",
+"iat_va": "0x200be0b8"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "TlsSetValue",
+"iat_va": "0x200be0bc"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "TlsGetValue",
+"iat_va": "0x200be0c0"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "DeleteFileA",
+"iat_va": "0x200be0c4"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetCommandLineA",
+"iat_va": "0x200be0c8"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "HeapDestroy",
+"iat_va": "0x200be0cc"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "HeapCreate",
+"iat_va": "0x200be0d0"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "VirtualFree",
+"iat_va": "0x200be0d4"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "VirtualAlloc",
+"iat_va": "0x200be0d8"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "HeapReAlloc",
+"iat_va": "0x200be0dc"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "IsBadWritePtr",
+"iat_va": "0x200be0e0"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "TlsFree",
+"iat_va": "0x200be0e4"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "SetLastError",
+"iat_va": "0x200be0e8"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "TlsAlloc",
+"iat_va": "0x200be0ec"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "SetUnhandledExceptionFilter",
+"iat_va": "0x200be0f0"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "ExitProcess",
+"iat_va": "0x200be0f4"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetModuleHandleA",
+"iat_va": "0x200be0f8"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "TerminateProcess",
+"iat_va": "0x200be0fc"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetCurrentProcess",
+"iat_va": "0x200be100"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "HeapSize",
+"iat_va": "0x200be104"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "VirtualProtect",
+"iat_va": "0x200be108"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetSystemInfo",
+"iat_va": "0x200be10c"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "VirtualQuery",
+"iat_va": "0x200be110"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "LCMapStringA",
+"iat_va": "0x200be114"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "WideCharToMultiByte",
+"iat_va": "0x200be118"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "MultiByteToWideChar",
+"iat_va": "0x200be11c"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "LCMapStringW",
+"iat_va": "0x200be120"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "UnhandledExceptionFilter",
+"iat_va": "0x200be124"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "ReadFile",
+"iat_va": "0x200be128"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "WriteFile",
+"iat_va": "0x200be12c"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "SetFilePointer",
+"iat_va": "0x200be130"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "SetHandleCount",
+"iat_va": "0x200be134"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetStdHandle",
+"iat_va": "0x200be138"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetFileType",
+"iat_va": "0x200be13c"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetStartupInfoA",
+"iat_va": "0x200be140"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "FreeEnvironmentStringsA",
+"iat_va": "0x200be144"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetEnvironmentStrings",
+"iat_va": "0x200be148"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "FreeEnvironmentStringsW",
+"iat_va": "0x200be14c"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetEnvironmentStringsW",
+"iat_va": "0x200be150"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "IsBadReadPtr",
+"iat_va": "0x200be154"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "IsBadCodePtr",
+"iat_va": "0x200be158"
+},
+{
+"dll": "KERNEL32.dll",
+"name": "GetACP",
+"iat_va": "0x200be15c"
+},
+{
+"dll": "USER32.dll",
+"name": "CreateWindowExA",
+"iat_va": "0x200be184"
+},
+{
+"dll": "USER32.dll",
+"name": "DefWindowProcA",
+"iat_va": "0x200be188"
+},
+{
+"dll": "USER32.dll",
+"name": "RegisterClassA",
+"iat_va": "0x200be18c"
+},
+{
+"dll": "USER32.dll",
+"name": "GetMessageA",
+"iat_va": "0x200be190"
+},
+{
+"dll": "USER32.dll",
+"name": "DispatchMessageA",
+"iat_va": "0x200be194"
+},
+{
+"dll": "USER32.dll",
+"name": "TranslateMessage",
+"iat_va": "0x200be198"
+},
+{
+"dll": "USER32.dll",
+"name": "PostMessageA",
+"iat_va": "0x200be19c"
+},
+{
+"dll": "USER32.dll",
+"name": "LoadCursorA",
+"iat_va": "0x200be1a0"
+},
+{
+"dll": "USER32.dll",
+"name": "LoadIconA",
+"iat_va": "0x200be1a4"
+},
+{
+"dll": "USER32.dll",
+"name": "UnregisterClassA",
+"iat_va": "0x200be1a8"
+},
+{
+"dll": "USER32.dll",
+"name": "LoadStringA",
+"iat_va": "0x200be1ac"
+},
+{
+"dll": "USER32.dll",
+"name": "PostQuitMessage",
+"iat_va": "0x200be1b0"
+},
+{
+"dll": "GDI32.dll",
+"name": "GetStockObject",
+"iat_va": "0x200be010"
+},
+{
+"dll": "ADVAPI32.dll",
+"name": "RegQueryValueExA",
+"iat_va": "0x200be000"
+},
+{
+"dll": "ADVAPI32.dll",
+"name": "RegCloseKey",
+"iat_va": "0x200be004"
+},
+{
+"dll": "ADVAPI32.dll",
+"name": "RegOpenKeyExA",
+"iat_va": "0x200be008"
+},
+{
+"dll": "WINMM.dll",
+"name": "timeGetTime",
+"iat_va": "0x200be1b8"
+}
+],
+"dynamic_loads": [
+{
+"dll": "ICEDLL.dll",
+"site": "0x10002A55",
+"gpa": "0x10002A86",
+"funcs": [
+"DICELoad(0x100BE548)",
+"DICEUnload",
+"DICEVersion",
+"DICENew",
+"DICEDelete",
+"DICEInit",
+"DICEBegin",
+"DICEEnd",
+"DICEAbort",
+"DICEProcess",
+"DICEComplete",
+"DICEQueueInputBuff",
+"DICEQueueOutputBuff",
+"DICEDequeueInputBuff",
+"DICEDequeueOutputBuff",
+"DICENeedInputBuff",
+"DICENeedOutputBuff",
+"DICEGetDefectPercent"
+],
+"hmod_global": "0x100D8440"
+},
+{
+"dll": "Nkduscan.dll",
+"site": "0x1009A5F5",
+"gpa": "0x10099F64",
+"funcs": [
+"NkDriverEntry(0x100C2578)"
+],
+"hmod": "[obj+8]",
+"proc": "[obj+4]"
+},
+{
+"dll": "Nkdsbp2.dll",
+"site": "0x1009A615",
+"gpa": "0x10099F64",
+"funcs": [
+"NkDriverEntry(0x100C2578)"
+],
+"hmod": "[obj+8]",
+"proc": "[obj+4]"
+},
+{
+"dll": "user32.dll",
+"site": "0x100B777B",
+"gpa": "0x100B778B",
+"funcs": [
+"MessageBoxA",
+"GetActiveWindow",
+"GetLastActivePopup",
+"GetUserObjectInformationA",
+"GetProcessWindowStation"
+]
+}
+],
+"scsi_api_scan": {
+"DeviceIoControl": 0,
+"SCSI_PASS_THROUGH": 0,
+"IOCTL_SCSISCAN": 0,
+"\\\\\\\\.\\\\": 0,
+"conclusion": "全文件 0 命中：md3 不直接下发 SCSI，全部经 Nkduscan.dll/Nkdsbp2.dll 的 NkDriverEntry [实证]"
+},
+"version": {
+"va": "0x100DAAF8",
+"size": 840,
+"FixedFileInfo": {
+"FileVersion": "1, 3, 0, 3003",
+"ProductVersion": "4, 0, 0, 0"
+},
+"StringFileInfo": {
+"040901B5": {
+"Comments": "Nikon Scan Driver",
+"CompanyName": "Nikon Corporation",
+"FileDescription": "Nikon Scan Driver",
+"FileVersion": "1, 3, 0, 3003",
+"InternalName": "LS8000",
+"LegalCopyright": "Copyright (C) Nikon Corporation. 1995 - 2007",
+"OriginalFilename": "LS8000.MD3",
+"ProductName": "Nikon Scan",
+"ProductVersion": "4, 0, 0, 0"
+}
+},
+"Translation": "0x0409 0x01B5（但实际资源语言为 1041 日语）"
+},
+"module_descriptor": {
+"va": "0x100D0780",
+"layout": "+0x00 u32=1 | +0x04 u32=3 | +0x08 u32=3 | +0x0C -> 0x100D0798(RVA[3]) | +0x10 -> 0x100D07A4(name*[3]) | +0x14 -> 0x100D07B0(u16[3]+\"LS8000.md3\")"
+},
+"signature_check": {
+"string_va": "0x100BE708",
+"text": "Nikon MD3.01IILS8000  ",
+"len": 23,
+"sites": [
+"0x10008BB3",
+"0x10009C02",
+"0x1001A42A",
+"0x1001AC3B",
+"0x1001AED1"
+],
+"note": "5 处 memcmp(...,23) 校验模块型号签名，单机型硬绑定 [实证]"
+},
+"strings": [
+{
+"va": "0x100be43c",
+"text": "DICEGetDefectPercent",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002c33"
+]
+},
+{
+"va": "0x100be454",
+"text": "DICENeedOutputBuff",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002c1c"
+]
+},
+{
+"va": "0x100be468",
+"text": "DICENeedInputBuff",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002c05"
+]
+},
+{
+"va": "0x100be47c",
+"text": "DICEDequeueOutputBuff",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002bef"
+]
+},
+{
+"va": "0x100be494",
+"text": "DICEDequeueInputBuff",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002bd8"
+]
+},
+{
+"va": "0x100be4ac",
+"text": "DICEQueueOutputBuff",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002bc1"
+]
+},
+{
+"va": "0x100be4c0",
+"text": "DICEQueueInputBuff",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002ba7"
+]
+},
+{
+"va": "0x100be4d4",
+"text": "DICEComplete",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002b8c"
+]
+},
+{
+"va": "0x100be4e4",
+"text": "DICEProcess",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002b71"
+]
+},
+{
+"va": "0x100be4f0",
+"text": "DICEAbort",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002b57"
+]
+},
+{
+"va": "0x100be4fc",
+"text": "DICEEnd",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002b3c"
+]
+},
+{
+"va": "0x100be504",
+"text": "DICEBegin",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002b21"
+]
+},
+{
+"va": "0x100be510",
+"text": "DICEInit",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002b07"
+]
+},
+{
+"va": "0x100be51c",
+"text": "DICEDelete",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002aec"
+]
+},
+{
+"va": "0x100be528",
+"text": "DICENew",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002ad1"
+]
+},
+{
+"va": "0x100be530",
+"text": "DICEVersion",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002ab7"
+]
+},
+{
+"va": "0x100be53c",
+"text": "DICEUnload",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002a9c"
+]
+},
+{
+"va": "0x100be548",
+"text": "DICELoad",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10002a81"
+]
+},
+{
+"va": "0x100be554",
+"text": "map/set<T> too long",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100033a8",
+"0x100033cb",
+"0x10006328",
+"0x1000634b",
+"0x1000a5a8",
+"0x1000a5cb",
+"0x10016828",
+"0x1001684b",
+"0x10021d88",
+"0x10021dab",
+"0x100220a8",
+"0x100220cb",
+"0x10022da8",
+"0x10022dcb",
+"0x1004c7a8",
+"0x1004c7cb",
+"0x1004ebf8",
+"0x1004ec1b",
+"0x1006fad8",
+"0x1006fafb",
+"0x100758d8",
+"0x100758fb",
+"0x100802f8",
+"0x1008031b",
+"0x10087228",
+"0x1008724b",
+"0x1008c578",
+"0x1008c59b",
+"0x10091fe8",
+"0x1009200b",
+"0x10096435",
+"0x1009645b",
+"0x10096618",
+"0x1009663b",
+"0x1009b188",
+"0x1009b1ab",
+"0x1009dbb8",
+"0x1009dbdb"
+]
+},
+{
+"va": "0x100be568",
+"text": "invalid map/set<T> iterator",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100035fc",
+"0x1000361f",
+"0x1000667c",
+"0x1000669f",
+"0x1000a78c",
+"0x1000a7af",
+"0x10016a0c",
+"0x10016a2f",
+"0x1002228c",
+"0x100222af",
+"0x1002255c",
+"0x1002257f",
+"0x1004c98c",
+"0x1004c9af",
+"0x1004e92c",
+"0x1004e94f",
+"0x10061edc",
+"0x10061eff",
+"0x1006f80c",
+"0x1006f82f",
+"0x10075b7c",
+"0x10075b9f",
+"0x1008002c",
+"0x1008004f",
+"0x100874cc",
+"0x100874ef",
+"0x1009228c",
+"0x100922af",
+"0x100967fc",
+"0x1009681f",
+"0x10096acc",
+"0x10096aef",
+"0x1009b42c",
+"0x1009b44f",
+"0x1009de5c",
+"0x1009de7f"
+]
+},
+{
+"va": "0x100be58f",
+"text": "@list<T> too long",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100065cd",
+"0x100065fb",
+"0x100102ad",
+"0x100102db",
+"0x10021ffd",
+"0x1002202b",
+"0x1004c3fd",
+"0x1004c42b",
+"0x1004ef5d",
+"0x1004ef8b",
+"0x100552ad",
+"0x100552db",
+"0x1006ceed",
+"0x1006cf1b"
+]
+},
+{
+"va": "0x100be707",
+"text": "ANikon MD3.01IILS8000  ",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10008bb3",
+"0x10009c02",
+"0x1001a42a",
+"0x1001ac3b",
+"0x1001aed1"
+]
+},
+{
+"va": "0x100be724",
+"text": "\\Settings",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10008a1e",
+"0x1006abfa"
+]
+},
+{
+"va": "0x100be730",
+"text": "\\MaidMods",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10008a02",
+"0x1001a2a9",
+"0x1006abec"
+]
+},
+{
+"va": "0x100be73c",
+"text": "\\Nikon",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100089d6",
+"0x1001a284",
+"0x1006abde"
+]
+},
+{
+"va": "0x100be778",
+"text": "1000",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x1000b23d"
+]
+},
+{
+"va": "0x100be7bf",
+"text": "?vector<T> too long",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x1000cd79",
+"0x1000cda0",
+"0x10014cd9",
+"0x10014d00",
+"0x10080949",
+"0x10080970"
+]
+},
+{
+"va": "0x100be828",
+"text": "deque<T> too long",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x1000dad9",
+"0x1000db00",
+"0x10016799",
+"0x100167c0",
+"0x1004ddc9",
+"0x1004ddf0",
+"0x10055349",
+"0x10055370",
+"0x1006e939",
+"0x1006e960",
+"0x10079349",
+"0x10079370",
+"0x1009fa99",
+"0x1009fac0"
+]
+},
+{
+"va": "0x100be8a0",
+"text": "ffffff",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10010b90"
+]
+},
+{
+"va": "0x100be90f",
+"text": "@333333",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10012bff",
+"0x10012c1a",
+"0x10012c34",
+"0x10012fb8",
+"0x10012fd3",
+"0x10012ff5"
+]
+},
+{
+"va": "0x100be936",
+"text": "o@333333",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100136c3",
+"0x100136db"
+]
+},
+{
+"va": "0x100be93f",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10013650",
+"0x10013656",
+"0x10013665",
+"0x10013672"
+]
+},
+{
+"va": "0x100be957",
+"text": "?333333",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100135c0",
+"0x100135e9",
+"0x10013603"
+]
+},
+{
+"va": "0x100be98c",
+"text": "Image",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10014b22",
+"0x10014b35"
+]
+},
+{
+"va": "0x100be994",
+"text": "HardWareKey",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10014a78"
+]
+},
+{
+"va": "0x100be9a0",
+"text": "Config Manager\\Enum\\%X",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10014a36"
+]
+},
+{
+"va": "0x100be9b8",
+"text": "Nikon LS-8000 Plag and Play",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10014c56"
+]
+},
+{
+"va": "0x100be9d4",
+"text": "DEVCHANGEL8K",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10014c1b",
+"0x10014c5b",
+"0x10014c9d"
+]
+},
+{
+"va": "0x100bea68",
+"text": "\\Cache",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x1001a2c8"
+]
+},
+{
+"va": "0x100bedbc",
+"text": "1011",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x1002e446",
+"0x1002e6f6",
+"0x10061ad8",
+"0x1006c3ff"
+]
+},
+{
+"va": "0x100bedc4",
+"text": "FMDF",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x1002e436",
+"0x1002e6d0",
+"0x10061ac8",
+"0x1006c3ef"
+]
+},
+{
+"va": "0x100bedcc",
+"text": "1010",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x1002e70e"
+]
+},
+{
+"va": "0x100bf36c",
+"text": "CommonFilesDir",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10037f5d"
+]
+},
+{
+"va": "0x100bf37c",
+"text": "Software\\Microsoft\\Windows\\CurrentVersion",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10037f16"
+]
+},
+{
+"va": "0x100bf64f",
+"text": "??5^",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10041b5a"
+]
+},
+{
+"va": "0x100bf657",
+"text": "??5^",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10041acd",
+"0x10041b36"
+]
+},
+{
+"va": "0x100c005c",
+"text": "Nikon",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10063b7e"
+]
+},
+{
+"va": "0x100c0064",
+"text": "PID_%04X",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100638fc"
+]
+},
+{
+"va": "0x100c0070",
+"text": "VID_%04X",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100638e6"
+]
+},
+{
+"va": "0x100c0114",
+"text": "%s HA:%02d ID:%02d",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10064ed1"
+]
+},
+{
+"va": "0x100c1d94",
+"text": "36Strip",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10076668",
+"0x100a559c",
+"0x100a819e"
+]
+},
+{
+"va": "0x100c1d9c",
+"text": "6Strip",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10076660",
+"0x100a5594",
+"0x100a8196"
+]
+},
+{
+"va": "0x100c1da4",
+"text": "Feeder",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10076658",
+"0x100a558c",
+"0x100a818e"
+]
+},
+{
+"va": "0x100c1db0",
+"text": "Strip",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10076648",
+"0x100a557c",
+"0x100a817e"
+]
+},
+{
+"va": "0x100c1db8",
+"text": "Mount",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10076640",
+"0x100a5574",
+"0x100a8176"
+]
+},
+{
+"va": "0x100c1dc0",
+"text": "FH-A1",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x1007670f"
+]
+},
+{
+"va": "0x100c1dc8",
+"text": "FH-G1",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10076707"
+]
+},
+{
+"va": "0x100c1dd0",
+"text": "FH-3",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100766ff"
+]
+},
+{
+"va": "0x100c2578",
+"text": "NkDriverEntry",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10099f5f"
+]
+},
+{
+"va": "0x100c2588",
+"text": "1200",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10099ff2"
+]
+},
+{
+"va": "0x100c25f0",
+"text": "Nkduscan.dll",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x1009a5f5"
+]
+},
+{
+"va": "0x100c2600",
+"text": "Nkdsbp2.dll",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x1009a615"
+]
+},
+{
+"va": "0x100c2dac",
+"text": "Panorama 65 Film",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a56ff",
+"0x100a82c2"
+]
+},
+{
+"va": "0x100c2dc0",
+"text": "Panorama 58 Film",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a56f4",
+"0x100a82ba"
+]
+},
+{
+"va": "0x100c2dd4",
+"text": "6*9 Film",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a56ec",
+"0x100a82b2"
+]
+},
+{
+"va": "0x100c2de0",
+"text": "6*8 Film",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a56e4",
+"0x100a82aa"
+]
+},
+{
+"va": "0x100c2dec",
+"text": "6*7 Film",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a56dc",
+"0x100a82a2"
+]
+},
+{
+"va": "0x100c2df8",
+"text": "6*6 Film",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a56d4",
+"0x100a829a"
+]
+},
+{
+"va": "0x100c2e04",
+"text": "6*4.5 Film",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a56cc",
+"0x100a8292"
+]
+},
+{
+"va": "0x100c2e10",
+"text": "Brownie Strip Film with G",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a56c4",
+"0x100a828a"
+]
+},
+{
+"va": "0x100c2e2c",
+"text": "Brownie Strip Film",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a56bc",
+"0x100a8282"
+]
+},
+{
+"va": "0x100c2e40",
+"text": "Brownie Mount Film",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a56b4",
+"0x100a827a"
+]
+},
+{
+"va": "0x100c2e54",
+"text": "35mm Strip Film",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a56ac",
+"0x100a8272"
+]
+},
+{
+"va": "0x100c2e64",
+"text": "35mm Mount Film",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a56a4",
+"0x100a826a"
+]
+},
+{
+"va": "0x100c2e74",
+"text": "Praparat",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a569c",
+"0x100a8262"
+]
+},
+{
+"va": "0x100c2e80",
+"text": "16mm Film",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a5694",
+"0x100a825a"
+]
+},
+{
+"va": "0x100c2e8c",
+"text": "SL-1",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100a55a4",
+"0x100a81a6"
+]
+},
+{
+"va": "0x100c3128",
+"text": "invalid string position",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100ab2b2"
+]
+},
+{
+"va": "0x100c3140",
+"text": "string too long",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100ab2f2"
+]
+},
+{
+"va": "0x100c315c",
+"text": "bad allocation",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100ab390"
+]
+},
+{
+"va": "0x100c31a8",
+"text": "Unknown exception",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100abd4d"
+]
+},
+{
+"va": "0x100c33bc",
+"text": "CorExitProcess",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100af595"
+]
+},
+{
+"va": "0x100c33cc",
+"text": "mscoree.dll",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100af586"
+]
+},
+{
+"va": "0x100c33e4",
+"text": "e+000",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100af8e4"
+]
+},
+{
+"va": "0x100c33fe",
+"text": "GAIsProcessorFeaturePresent",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100afc0a",
+"0x100afe95"
+]
+},
+{
+"va": "0x100c341c",
+"text": "KERNEL32",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100afbfb"
+]
+},
+{
+"va": "0x100c3449",
+"text": " (8PX",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3451",
+"text": "700WP",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3461",
+"text": "`h````",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3469",
+"text": "ppxxxx",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3494",
+"text": "(null)",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3508",
+"text": "atan",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b0814"
+]
+},
+{
+"va": "0x100c3510",
+"text": "ceil",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b080b"
+]
+},
+{
+"va": "0x100c3518",
+"text": "floor",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b0802"
+]
+},
+{
+"va": "0x100c3520",
+"text": "modf",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b07ea"
+]
+},
+{
+"va": "0x100c3528",
+"text": "exp2",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b078c"
+]
+},
+{
+"va": "0x100c3530",
+"text": "exp10",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b077c"
+]
+},
+{
+"va": "0x100c3538",
+"text": "log2",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b0759",
+"0x100b076c"
+]
+},
+{
+"va": "0x100c3548",
+"text": "log10",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b0647",
+"0x100b0656",
+"0x100b0741"
+]
+},
+{
+"va": "0x100c3a57",
+"text": "?X&eB",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3a87",
+"text": "?Ltm",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3aa2",
+"text": "tLVv",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3ab7",
+"text": "?h6_~",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3afc",
+"text": "37.=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3b37",
+"text": "?7Tf(",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3bdb",
+"text": "=\\uI=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3be9",
+"text": "g:\"(",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3bfc",
+"text": "$O1=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3c5c",
+"text": "uXO=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3c6c",
+"text": "1w<=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3c72",
+"text": ">'eH",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3cfc",
+"text": "pnJ=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c3d61",
+"text": "Ht=c",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4119",
+"text": "]vQ<)8",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4172",
+"text": "z1}B",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c419b",
+"text": "X4I+",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c45e3",
+"text": "|)P!?Ua0",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c45f4",
+"text": "+34?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4606",
+"text": "??7;",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4624",
+"text": "MkK?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4654",
+"text": "R_V?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4674",
+"text": "9&\\?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c468a",
+"text": "Eb2]A=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c469c",
+"text": "f#I=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c46a5",
+"text": "hb?O2",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c46ac",
+"text": "H`3=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c46b6",
+"text": "c?e2",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c46c5",
+"text": "Le?2",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x10062f2a",
+"0x10070eec",
+"0x1007134c"
+]
+},
+{
+"va": "0x100c46e5",
+"text": "0h?[",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c46eb",
+"text": "2ieO=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c472b",
+"text": "|W8A=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4745",
+"text": "np?z ",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4754",
+"text": ")(q?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4779",
+"text": "}~:f",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4796",
+"text": "t?,&",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c47b6",
+"text": "u?^p?o4",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c47c4",
+"text": "!9v?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c47dc",
+"text": "GYM=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c47f4",
+"text": "Pex?0",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4834",
+"text": "6K{?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c485c",
+"text": "X-F=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4865",
+"text": "w}?0",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4874",
+"text": "y1~?|\"",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c48cb",
+"text": "V%A+=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c496c",
+"text": "4';=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4b03",
+"text": "#D5p",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4ba3",
+"text": "La8i",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4be3",
+"text": "{4Wf",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4cf3",
+"text": "Ai0T",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4d13",
+"text": "@VNQ",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c4d48",
+"text": "p4\"%",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c565c",
+"text": "P'E=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c575c",
+"text": "ls1=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5797",
+"text": "?PiB",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c579c",
+"text": "{^C=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c58cc",
+"text": "n{;=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c590c",
+"text": "3<L=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5977",
+"text": "?|I7Z#",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c598c",
+"text": "aDJ=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c599a",
+"text": ">,'1D=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c59ac",
+"text": "+NB=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5a07",
+"text": "?g)([|X>=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5a57",
+"text": "?|[{",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5a5c",
+"text": "~*L=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5a8c",
+"text": "u!K=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5b07",
+"text": "?IT$7",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5b94",
+"text": "-8 ?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5ba4",
+"text": ".h ?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5be4",
+"text": "2 !?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5bf4",
+"text": "4P!?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5c3a",
+"text": "!y##",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5c44",
+"text": "98\"?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5c54",
+"text": ":h\"?bC",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5c94",
+"text": "? #?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5ca4",
+"text": "@H#?43",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5cb4",
+"text": "Ax#?uN}*",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5cca",
+"text": "r7Yr7=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5cdb",
+"text": ".K=\"=",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5cf4",
+"text": "F0$?3=1",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5d04",
+"text": "H`$?h|",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5d46",
+"text": "%?uY",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5d54",
+"text": "NH%?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5d64",
+"text": "Px%?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5d76",
+"text": "%?\\9",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5d96",
+"text": "&?~YK|",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5da3",
+"text": "sU0&?W",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5db4",
+"text": "VX&?",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5ea8",
+"text": "4g%6",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5f3a",
+"text": ":]=O>",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5f48",
+"text": "#w_j",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5f5b",
+"text": "(+E ",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c5f6a",
+"text": "V~|_",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c60c8",
+"text": "!|.4",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c60e8",
+"text": "G\"jm",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6328",
+"text": "6(`J",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c637b",
+"text": "k:UG",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c649b",
+"text": "UY =",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c651b",
+"text": "Bfe9",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c65aa",
+"text": "CqTR;",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6619",
+"text": "AiFC.",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6697",
+"text": "?5a1",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c671f",
+"text": "<{Q}<",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6749",
+"text": "hI{L[",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c679f",
+"text": "<8bunz8",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c680f",
+"text": "<V/>",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6857",
+"text": "?(FN\\",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c691f",
+"text": "<'*6",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6937",
+"text": "?3xj",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c699f",
+"text": "<)TH",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c69bd",
+"text": "K<<H!",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6a89",
+"text": "m1WY$",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6b57",
+"text": "?#%X.y",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6bac",
+"text": "F||<##",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6bbd",
+"text": "$x<e",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6bdf",
+"text": "<]%>",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6c6a",
+"text": "T~OXu",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6c77",
+"text": "?.)T",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6d09",
+"text": "zyC7",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6dd2",
+"text": "k7+%",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c6ddf",
+"text": "<@En[vP",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c705f",
+"text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c712c",
+"text": "runtime error ",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7140",
+"text": "TLOSS error",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7150",
+"text": "SING error",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7160",
+"text": "DOMAIN error",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7170",
+"text": "R6028",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7177",
+"text": "- unable to initialize heap",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7198",
+"text": "R6027",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c719f",
+"text": "- not enough space for lowio initialization",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c71d0",
+"text": "R6026",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c71d7",
+"text": "- not enough space for stdio initialization",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7208",
+"text": "R6025",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c720f",
+"text": "- pure virtual function call",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7230",
+"text": "R6024",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7237",
+"text": "- not enough space for _onexit/atexit table",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7268",
+"text": "R6019",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c726f",
+"text": "- unable to open console device",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7294",
+"text": "R6018",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c729b",
+"text": "- unexpected heap error",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c72b8",
+"text": "R6017",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c72bf",
+"text": "- unexpected multithread lock error",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c72e8",
+"text": "R6016",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c72ef",
+"text": "- not enough space for thread data",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c731a",
+"text": "This application has requested the Runtime to terminate it in an unusual way.",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7368",
+"text": "Please contact the application's support team for more information.",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c73b0",
+"text": "R6009",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c73b7",
+"text": "- not enough space for environment",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c73dc",
+"text": "R6008",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c73e3",
+"text": "- not enough space for arguments",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7408",
+"text": "R6002",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c740f",
+"text": "- floating point not loaded",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7430",
+"text": "Microsoft Visual C++ Runtime Library",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b3ec6",
+"0x100b841a"
+]
+},
+{
+"va": "0x100c745c",
+"text": "Runtime Error!",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b3e98"
+]
+},
+{
+"va": "0x100c746c",
+"text": "Program: ",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c747c",
+"text": "<program name unknown>",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b3e23",
+"0x100b836e"
+]
+},
+{
+"va": "0x100c7494",
+"text": "InitializeCriticalSectionAndSpinCount",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b3f87"
+]
+},
+{
+"va": "0x100c74bc",
+"text": "kernel32.dll",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b3f78"
+]
+},
+{
+"va": "0x100c790c",
+"text": "_nextafter",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7918",
+"text": "_logb",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c792c",
+"text": "frexp",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7934",
+"text": "fmod",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c793c",
+"text": "_hypot",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7944",
+"text": "_cabs",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c794c",
+"text": "ldexp",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7954",
+"text": "fabs",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7968",
+"text": "sqrt",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7970",
+"text": "atan2",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7978",
+"text": "acos",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7980",
+"text": "asin",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7988",
+"text": "tanh",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7990",
+"text": "cosh",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7998",
+"text": "sinh",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c79dc",
+"text": "HH:mm:ss",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c79e8",
+"text": "dddd, MMMM dd, yyyy",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c79fc",
+"text": "MM/dd/yy",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7a10",
+"text": "December",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7a1c",
+"text": "November",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7a28",
+"text": "October",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7a30",
+"text": "September",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7a3c",
+"text": "August",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7a44",
+"text": "July",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7a4c",
+"text": "June",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7a54",
+"text": "April",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7a5c",
+"text": "March",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7a64",
+"text": "February",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7a70",
+"text": "January",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7aa8",
+"text": "Saturday",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7ab4",
+"text": "Friday",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7abc",
+"text": "Thursday",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7ac8",
+"text": "Wednesday",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7ad4",
+"text": "Tuesday",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7adc",
+"text": "Monday",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7ae4",
+"text": "Sunday",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7b14",
+"text": "GetProcessWindowStation",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b77d7"
+]
+},
+{
+"va": "0x100c7b2c",
+"text": "GetUserObjectInformationA",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b77c6"
+]
+},
+{
+"va": "0x100c7b48",
+"text": "GetLastActivePopup",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b77ab"
+]
+},
+{
+"va": "0x100c7b5c",
+"text": "GetActiveWindow",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b77a3"
+]
+},
+{
+"va": "0x100c7b6c",
+"text": "MessageBoxA",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b7792"
+]
+},
+{
+"va": "0x100c7b78",
+"text": "user32.dll",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b7777"
+]
+},
+{
+"va": "0x100c7b94",
+"text": "1#QNAN",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b80eb"
+]
+},
+{
+"va": "0x100c7b9c",
+"text": "1#INF",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b80ce"
+]
+},
+{
+"va": "0x100c7ba4",
+"text": "1#IND",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b80bd"
+]
+},
+{
+"va": "0x100c7bac",
+"text": "1#SNAN",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b80a3"
+]
+},
+{
+"va": "0x100c7bb4",
+"text": "Program: ",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b83f3"
+]
+},
+{
+"va": "0x100c7bc0",
+"text": "A buffer overrun has been detected which has corrupted the program's",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b834a"
+]
+},
+{
+"va": "0x100c7c05",
+"text": "internal state.  The program cannot safely continue execution and must",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7c4c",
+"text": "now be terminated.",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7c60",
+"text": "Buffer overrun detected!",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b8343"
+]
+},
+{
+"va": "0x100c7c80",
+"text": "A security error of unknown cause has been detected which has",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b8337"
+]
+},
+{
+"va": "0x100c7cbe",
+"text": "corrupted the program's internal state.  The program cannot safely",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7d01",
+"text": "continue execution and must now be terminated.",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7d34",
+"text": "Unknown security failure detected!",
+"enc": "A",
+"sec": ".rdata",
+"refs": [
+"0x100b8330"
+]
+},
+{
+"va": "0x100c7d64",
+"text": "SunMonTueWedThuFriSat",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100c7d7c",
+"text": "JanFebMarAprMayJunJulAugSepOctNovDec",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100cffd2",
+"text": "SHGetFolderPathA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100cffe4",
+"text": "SHFOLDER.dll",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100cfff4",
+"text": "SetupDiDestroyDeviceInfoList",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0014",
+"text": "SetupDiGetDeviceRegistryPropertyA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0038",
+"text": "SetupDiEnumDeviceInfo",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0050",
+"text": "SetupDiGetClassDevsA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0068",
+"text": "SetupDiClassGuidsFromNameA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0084",
+"text": "SETUPAPI.dll",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0094",
+"text": "FreeLibrary",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d00a2",
+"text": "GetProcAddress",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d00b4",
+"text": "LoadLibraryA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d00c4",
+"text": "lstrlenA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d00d0",
+"text": "GetModuleFileNameA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d00e6",
+"text": "CreateDirectoryA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d00fa",
+"text": "GetLastError",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d010a",
+"text": "GetVersionExA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d011a",
+"text": "InitializeCriticalSection",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0136",
+"text": "DeleteCriticalSection",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d014e",
+"text": "EnterCriticalSection",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0166",
+"text": "LeaveCriticalSection",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d017e",
+"text": "CloseHandle",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d018c",
+"text": "WaitForSingleObject",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d01a2",
+"text": "LocalFree",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d01ae",
+"text": "LocalAlloc",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d01bc",
+"text": "Sleep",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d01c4",
+"text": "lstrcpyA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d01d0",
+"text": "lstrcatA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d01dc",
+"text": "RaiseException",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d01ee",
+"text": "CreateFileA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d01fc",
+"text": "LoadResource",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d020c",
+"text": "FindResourceA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d021a",
+"text": "KERNEL32.dll",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d022a",
+"text": "PostMessageA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d023a",
+"text": "TranslateMessage",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d024e",
+"text": "DispatchMessageA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0262",
+"text": "GetMessageA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0270",
+"text": "PostQuitMessage",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0282",
+"text": "DefWindowProcA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0294",
+"text": "CreateWindowExA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d02a6",
+"text": "RegisterClassA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d02b8",
+"text": "LoadCursorA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d02c6",
+"text": "LoadIconA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d02d2",
+"text": "UnregisterClassA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d02e6",
+"text": "LoadStringA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d02f2",
+"text": "USER32.dll",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0300",
+"text": "GetStockObject",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0310",
+"text": "GDI32.dll",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d031c",
+"text": "RegCloseKey",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d032a",
+"text": "RegQueryValueExA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d033e",
+"text": "RegOpenKeyExA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d034c",
+"text": "ADVAPI32.dll",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d035c",
+"text": "timeGetTime",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0368",
+"text": "WINMM.dll",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0374",
+"text": "HeapAlloc",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0380",
+"text": "RtlUnwind",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d038c",
+"text": "HeapFree",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0398",
+"text": "GetSystemTimeAsFileTime",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d03b2",
+"text": "ExitThread",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d03c0",
+"text": "GetCurrentThreadId",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d03d6",
+"text": "TlsSetValue",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d03e4",
+"text": "TlsGetValue",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d03f2",
+"text": "CreateThread",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0402",
+"text": "DeleteFileA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0410",
+"text": "GetCommandLineA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0422",
+"text": "HeapDestroy",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0430",
+"text": "HeapCreate",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d043e",
+"text": "VirtualFree",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d044c",
+"text": "VirtualAlloc",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d045c",
+"text": "HeapReAlloc",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d046a",
+"text": "IsBadWritePtr",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d047a",
+"text": "TlsFree",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0484",
+"text": "SetLastError",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0494",
+"text": "TlsAlloc",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d04a0",
+"text": "SetUnhandledExceptionFilter",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d04be",
+"text": "ExitProcess",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d04cc",
+"text": "GetModuleHandleA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d04e0",
+"text": "TerminateProcess",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d04f4",
+"text": "GetCurrentProcess",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0508",
+"text": "HeapSize",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0514",
+"text": "VirtualProtect",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0526",
+"text": "GetSystemInfo",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0536",
+"text": "VirtualQuery",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0546",
+"text": "LCMapStringA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0556",
+"text": "WideCharToMultiByte",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d056c",
+"text": "MultiByteToWideChar",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0582",
+"text": "LCMapStringW",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0592",
+"text": "UnhandledExceptionFilter",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d05ae",
+"text": "ReadFile",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d05ba",
+"text": "WriteFile",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d05c6",
+"text": "SetFilePointer",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d05d8",
+"text": "SetHandleCount",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d05ea",
+"text": "GetStdHandle",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d05fa",
+"text": "GetFileType",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0608",
+"text": "GetStartupInfoA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d061a",
+"text": "FreeEnvironmentStringsA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0634",
+"text": "GetEnvironmentStrings",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d064c",
+"text": "FreeEnvironmentStringsW",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0666",
+"text": "GetEnvironmentStringsW",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0680",
+"text": "IsBadReadPtr",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0690",
+"text": "IsBadCodePtr",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d06a0",
+"text": "GetACP",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d06aa",
+"text": "GetOEMCP",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d06b6",
+"text": "GetCPInfo",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d06c2",
+"text": "SetStdHandle",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d06d2",
+"text": "FlushFileBuffers",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d06e6",
+"text": "GetLocaleInfoA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d06f8",
+"text": "GetStringTypeA",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d070a",
+"text": "GetStringTypeW",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d071c",
+"text": "QueryPerformanceCounter",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0736",
+"text": "GetTickCount",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d0746",
+"text": "GetCurrentProcessId",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d075c",
+"text": "SetEndOfFile",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d07b6",
+"text": "LS8000.md3",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d07c1",
+"text": "?NkCtrlEntry@@YGFFFFPAX@Z",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d07db",
+"text": "MAIDEntryPoint",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d07ea",
+"text": "NkMDCtrlEntry",
+"enc": "A",
+"sec": ".rdata",
+"refs": []
+},
+{
+"va": "0x100d1091",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d10d9",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1121",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1170",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1190",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1198",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d11b0",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d11c0",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d11d8",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d11f8",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d122f",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1237",
+"text": "?333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1247",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1271",
+"text": "9#J{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d12ef",
+"text": "?2w-!",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d133f",
+"text": "@U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d13b7",
+"text": "?2U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d13d7",
+"text": "?9EGr",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1447",
+"text": "@h\"lxz",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d148f",
+"text": "?mV}",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d14c2",
+"text": "h\"lx",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1517",
+"text": "@h\"lxz%",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1537",
+"text": "@|a2U0",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1569",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d15a8",
+"text": ".?AVexception@@",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d15c0",
+"text": ".?AVlogic_error@std@@",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d15e0",
+"text": ".?AVlength_error@std@@",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1600",
+"text": ".?AVout_of_range@std@@",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1629",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1671",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d16b9",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1708",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1728",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1730",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1748",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1758",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1770",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1790",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d17c7",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d17cf",
+"text": "?333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d17df",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1809",
+"text": "9#J{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1887",
+"text": "?2w-!",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d18d7",
+"text": "@U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d194f",
+"text": "?2U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d196f",
+"text": "?9EGr",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d19df",
+"text": "@h\"lxz",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1a27",
+"text": "?mV}",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1a5a",
+"text": "h\"lx",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1aaf",
+"text": "@h\"lxz%",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1acf",
+"text": "@|a2U0",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1b01",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1b49",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1b91",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1be0",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1c00",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1c08",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1c20",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1c30",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1c48",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1c68",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1c9f",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1ca7",
+"text": "?333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1cb7",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1ce1",
+"text": "9#J{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1d5f",
+"text": "?2w-!",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1daf",
+"text": "@U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1e27",
+"text": "?2U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1e47",
+"text": "?9EGr",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1eb7",
+"text": "@h\"lxz",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1eff",
+"text": "?mV}",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1f32",
+"text": "h\"lx",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1f87",
+"text": "@h\"lxz%",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1fa7",
+"text": "@|a2U0",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d1fe1",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2029",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2071",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d20b9",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2101",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2149",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2191",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d21d9",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2239",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2288",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d22a8",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d22b0",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d22c8",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d22d8",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d22f0",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2310",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2347",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d234f",
+"text": "?333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d235f",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2389",
+"text": "9#J{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2407",
+"text": "?2w-!",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2457",
+"text": "@U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d24cf",
+"text": "?2U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d24ef",
+"text": "?9EGr",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d255f",
+"text": "@h\"lxz",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d25a7",
+"text": "?mV}",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d25da",
+"text": "h\"lx",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d262f",
+"text": "@h\"lxz%",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d264f",
+"text": "@|a2U0",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d26b7",
+"text": "?YLl>",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d26ff",
+"text": "@@M-[",
+"enc": "A",
+"sec": ".data",
+"refs": [
+"0x1003e4f0"
+]
+},
+{
+"va": "0x100d2779",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d27c8",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d27e8",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d27f0",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2808",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2818",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2830",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2850",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2887",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d288f",
+"text": "?333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d289f",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d28c9",
+"text": "9#J{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2947",
+"text": "?2w-!",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2997",
+"text": "@U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2a0f",
+"text": "?2U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2a2f",
+"text": "?9EGr",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2a9f",
+"text": "@h\"lxz",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2ae7",
+"text": "?mV}",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2b1a",
+"text": "h\"lx",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2b6f",
+"text": "@h\"lxz%",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2b8f",
+"text": "@|a2U0",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2bc8",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2be8",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2bf0",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2c08",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2c18",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2c30",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2c50",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2c87",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2c8f",
+"text": "?333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2c9f",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2cc9",
+"text": "9#J{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2d47",
+"text": "?2w-!",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2d97",
+"text": "@U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2e0f",
+"text": "?2U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2e2f",
+"text": "?9EGr",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2e9f",
+"text": "@h\"lxz",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2ee7",
+"text": "?mV}",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2f1a",
+"text": "h\"lx",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2f6f",
+"text": "@h\"lxz%",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2f8f",
+"text": "@|a2U0",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d2fc1",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3009",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3058",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3078",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3080",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3098",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d30a8",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d30c0",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d30e0",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3117",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d311f",
+"text": "?333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d312f",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3159",
+"text": "9#J{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d31d7",
+"text": "?2w-!",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3227",
+"text": "@U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d329f",
+"text": "?2U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d32bf",
+"text": "?9EGr",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d332f",
+"text": "@h\"lxz",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3377",
+"text": "?mV}",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d33aa",
+"text": "h\"lx",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d33ff",
+"text": "@h\"lxz%",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d341f",
+"text": "@|a2U0",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3451",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3499",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d34e1",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3529",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3578",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3598",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d35a0",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d35b8",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d35c8",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d35e0",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3600",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3637",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d363f",
+"text": "?333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d364f",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3679",
+"text": "9#J{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d36f7",
+"text": "?2w-!",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3747",
+"text": "@U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d37bf",
+"text": "?2U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d37df",
+"text": "?9EGr",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d384f",
+"text": "@h\"lxz",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3897",
+"text": "?mV}",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d38ca",
+"text": "h\"lx",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d391f",
+"text": "@h\"lxz%",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d393f",
+"text": "@|a2U0",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3971",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3cd9",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3d41",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3d89",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3e01",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3e50",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3e70",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3e78",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3e90",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3ea0",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3eb8",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3ed8",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3f0f",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3f17",
+"text": "?333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3f27",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3f51",
+"text": "9#J{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d3fcf",
+"text": "?2w-!",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d401f",
+"text": "@U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4097",
+"text": "?2U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d40b7",
+"text": "?9EGr",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4127",
+"text": "@h\"lxz",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d416f",
+"text": "?mV}",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d41a2",
+"text": "h\"lx",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d41f7",
+"text": "@h\"lxz%",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4217",
+"text": "@|a2U0",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4249",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4491",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d44e0",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4500",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4508",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4520",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4530",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4548",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4568",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d459f",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d45a7",
+"text": "?333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d45b7",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d45e1",
+"text": "9#J{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d465f",
+"text": "?2w-!",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d46af",
+"text": "@U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4727",
+"text": "?2U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4747",
+"text": "?9EGr",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d47b7",
+"text": "@h\"lxz",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d47ff",
+"text": "?mV}",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4832",
+"text": "h\"lx",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4887",
+"text": "@h\"lxz%",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d48a7",
+"text": "@|a2U0",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d48d9",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d49e1",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4a29",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4a78",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4a98",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4aa0",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4ab8",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4ac8",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4ae0",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4b00",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4b37",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4b3f",
+"text": "?333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4b4f",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4b79",
+"text": "9#J{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4bf7",
+"text": "?2w-!",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4c47",
+"text": "@U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4cbf",
+"text": "?2U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4cdf",
+"text": "?9EGr",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4d4f",
+"text": "@h\"lxz",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4d97",
+"text": "?mV}",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4dca",
+"text": "h\"lx",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4e1f",
+"text": "@h\"lxz%",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4e3f",
+"text": "@|a2U0",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4e71",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d4ed1",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d5f20",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d5f40",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d5f48",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d5f60",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d5f70",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d5f88",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d5fa8",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d5fdf",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d5fe7",
+"text": "?333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d5ff7",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6021",
+"text": "9#J{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d609f",
+"text": "?2w-!",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d60ef",
+"text": "@U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6167",
+"text": "?2U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6187",
+"text": "?9EGr",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d61f7",
+"text": "@h\"lxz",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d623f",
+"text": "?mV}",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6272",
+"text": "h\"lx",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d62c7",
+"text": "@h\"lxz%",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d62e7",
+"text": "@|a2U0",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6380",
+"text": "~}|{zyxwvusrqponmlkjihgfdcba`_^]\\[ZYXVUTSRQPONMLKJIGFEDCBA@?>=<;:876543210/.-,*)('&%$#\"! ",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6463",
+"text": "~}|{yxwvutsrqponmljihgfedcba`_^][ZYXWVUTSRQPOMLKJIHGFEDCBA@>=<;:987654321/.-,+*)('&%$#! ",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d655a",
+"text": "~}|{zyxwutsrqponmlkjigfedcba`_^]\\[ZXWVUTSRQPONMLKIHGFEDCBA@?>=;:9876543210/.,+*)('&%$#\"! ",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6620",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6640",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6648",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6660",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6670",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6688",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d66a8",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d66df",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d66e7",
+"text": "?333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d66f7",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6721",
+"text": "9#J{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d679f",
+"text": "?2w-!",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d67ef",
+"text": "@U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6867",
+"text": "?2U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6887",
+"text": "?9EGr",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d68f7",
+"text": "@h\"lxz",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d693f",
+"text": "?mV}",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6972",
+"text": "h\"lx",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d69c7",
+"text": "@h\"lxz%",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d69e7",
+"text": "@|a2U0",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6a80",
+"text": "~}|{zyxwvusrqponmlkjihgfdcba`_^]\\[ZYXVUTSRQPONMLKJIGFEDCBA@?>=<;:876543210/.-,*)('&%$#\"! ",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6b63",
+"text": "~}|{yxwvutsrqponmljihgfedcba`_^][ZYXWVUTSRQPOMLKJIHGFEDCBA@>=<;:987654321/.-,+*)('&%$#! ",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6c5a",
+"text": "~}|{zyxwutsrqponmlkjigfedcba`_^]\\[ZXWVUTSRQPONMLKIHGFEDCBA@?>=;:9876543210/.,+*)('&%$#\"! ",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6d20",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6d40",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6d48",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6d60",
+"text": "333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6d70",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6d88",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6da8",
+"text": "ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6ddf",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6de7",
+"text": "?333333",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6df7",
+"text": "?ffffff",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6e21",
+"text": "9#J{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6e9f",
+"text": "?2w-!",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6eef",
+"text": "@U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6f67",
+"text": "?2U0*",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6f87",
+"text": "?9EGr",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d6ff7",
+"text": "@h\"lxz",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d703f",
+"text": "?mV}",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d7072",
+"text": "h\"lx",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d70c7",
+"text": "@h\"lxz%",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d70e7",
+"text": "@|a2U0",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d7240",
+"text": ".?AVbad_alloc@std@@",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d727c",
+"text": ".?AVtype_info@@",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d72a7",
+"text": "?pow",
+"enc": "A",
+"sec": ".data",
+"refs": [
+"0x100ac567",
+"0x100ac584"
+]
+},
+{
+"va": "0x100d8232",
+"text": "kU'9",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d8282",
+"text": "HMXB",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d82e7",
+"text": "?Zd;",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d832f",
+"text": "?/L[",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d833e",
+"text": "S;uD",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d835e",
+"text": "z?aUY",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d8376",
+"text": "D?$?",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d838e",
+"text": "U>c{",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d83a0",
+"text": "zc%C1",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d83ca",
+"text": ".:3q",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d83f3",
+"text": "-64OS",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100d8414",
+"text": "NKeb",
+"enc": "A",
+"sec": ".data",
+"refs": []
+},
+{
+"va": "0x100dae54",
+"text": "Async Rate",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1001,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dae6a",
+"text": "Progress Proc",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1002,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dae86",
+"text": "Event Proc",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1003,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dae9c",
+"text": "Data Proc",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1004,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100daeb0",
+"text": "UI Request Proc",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1005,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100daed0",
+"text": "Is Alive",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1006,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100daee2",
+"text": "Children",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1007,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100daefa",
+"text": "State",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1008,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100daf06",
+"text": "Name",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1009,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100daf12",
+"text": "Interface",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1011,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100daf26",
+"text": "Data Types",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1012,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100daf40",
+"text": "Eject",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1015,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100daf4c",
+"text": "Feed",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1016,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100daf5a",
+"text": "Acquire",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1019,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100daf76",
+"text": "Prescan",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1026,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100daf86",
+"text": "Auto Focus",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1027,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100daf9c",
+"text": "AF Position",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1028,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dafb4",
+"text": "Focus",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1029,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dafc0",
+"text": "Coords",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1030,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dafce",
+"text": "Resolution",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1031,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dafe4",
+"text": "Preview",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1032,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100daff4",
+"text": "Negative",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1033,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db006",
+"text": "Color Space",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1034,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db01e",
+"text": "Scan Bit Depth\u0000Bit Depth\u0000Bit Depth",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1035,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db064",
+"text": "Planar",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1036,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db072",
+"text": "Lut",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1037,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db082",
+"text": "Pixels",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1040,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db090",
+"text": "Force Scan",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1041,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db0a6",
+"text": "Force Prescan",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1042,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db0c2",
+"text": "Force AutoFocus",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1043,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db0e2",
+"text": "NegativeDefault",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1044,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db102",
+"text": "Firmware",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1045,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db13a",
+"text": "AdvancedMode",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1800,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db162",
+"text": "Strip Film Offset",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1856,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db186",
+"text": "Reload Thumbnail",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1857,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db1a8",
+"text": "Classic",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1858,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db1b8",
+"text": "Panorama",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1859,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db1ca",
+"text": "Hivision",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1860,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db1dc",
+"text": "Aspect Type",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1861,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db1f4",
+"text": "Slide Feeder",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1862,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db20e",
+"text": "Default Orientation",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1863,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db236",
+"text": "Reset",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1864,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db242",
+"text": "ClearTimer",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1865,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db258",
+"text": "ExposureOnly",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1866,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db272",
+"text": "Calibrate",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1867,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db286",
+"text": "Red",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1868,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db28e",
+"text": "Green",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1869,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db29a",
+"text": "Blue",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1870,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db2a4",
+"text": "Gray",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1871,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db2b6",
+"text": "Selected",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1890,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db2c8",
+"text": "Reset Prescan",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1891,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db2e4",
+"text": "Maximum Children",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1892,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db306",
+"text": "Adaptor Index",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1893,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db322",
+"text": "Reverse State",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1894,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db33e",
+"text": "Negative Scan Mode",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1895,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db37a",
+"text": "Analog Gain",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2000,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db392",
+"text": "Master",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2001,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db3a0",
+"text": "Red",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2002,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db3a8",
+"text": "Green",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2003,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db3b4",
+"text": "Blue",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2004,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db3be",
+"text": "Gray",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2005,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db3c8",
+"text": "Help",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2006,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db3ea",
+"text": "5",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2080,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db3ee",
+"text": "These adjustments control the gain setting of the analog amplifiers in the scanner hardware. The gain settings of these amplifiers determine the exposure of the Red, Green and Blue channels. ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2081,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db56e",
+"text": "The software normally determines these settings without user interaction. However when you have a film that has extreme conditions such as over or under exposure, ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2082,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db6b6",
+"text": "there is a chance to produce better scan result by changing these settings manually.  Please note that use of this control may provide unexpected results. ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2083,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db7ee",
+"text": "The units are displayed in EV (Exposure Value). ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2084,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db850",
+"text": "To view the results of this adjustment, please press the \"Redraw\" button. A simulated result will be displayed in both the \"Natural\" and \"Processed\" preview screens.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2085,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db9bc",
+"text": "Boundary Offset",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1829,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db9dc",
+"text": "Large",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1830,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db9e8",
+"text": "Precise",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1831,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100db9f8",
+"text": "Direction",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1832,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dba0c",
+"text": "+",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1833,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dba10",
+"text": "-",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1834,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dba14",
+"text": "Help",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1835,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dba1e",
+"text": "Please push \"Large\" or \"Precise\" button until the pushing board of FD attachment appears. ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1836,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbad4",
+"text": "After putting on or off an attachment, please push an \"Eject\" button.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1837,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbb60",
+"text": "Base Move",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1838,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbb8c",
+"text": "Prescan Mode",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1849,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbba6",
+"text": "Normal",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1850,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbbb4",
+"text": "Alternative",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1851,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbbcc",
+"text": "Output Bits",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1852,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbbe4",
+"text": "Ir Process",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1853,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbbfa",
+"text": "Mearge",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1854,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbc08",
+"text": "Threshold",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1855,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbc2c",
+"text": "Lo-Cont. Neutral",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1877,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbc4e",
+"text": "Lo-Cont. Highkey",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1878,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbc70",
+"text": "Lo-Cont. Lowkey",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1879,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbc90",
+"text": "Automatic",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1880,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbcba",
+"text": "Multi Sample Scanning\u0000MultiScan\u0000MultiScan",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2100,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbd0e",
+"text": "Mode",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2101,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbd18",
+"text": "Normal (1x)\u00001x\u00001x",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2102,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbd3c",
+"text": "Fine (2x)\u00002x\u00002x",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2103,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbd5c",
+"text": "Fine (4x)\u00004x\u00004x",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2104,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbd7c",
+"text": "Super Fine (8x)\u00008x\u00008x",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2105,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbda8",
+"text": "Super Fine (16x)\u000016x\u000016x",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2106,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbdda",
+"text": "Help",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2107,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbdfa",
+"text": "7",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2180,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbdfe",
+"text": "In the normal (1X Sampling) mode, image data is taken directly from the 14bit A/D converter. ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2181,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbeba",
+"text": "In multisample mode, successive identical scans are combined to reduce the CCD noise level. ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2182,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dbf74",
+"text": "This results in longer scanning times. To view the results of this adjustment a new preview ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2183,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc02e",
+"text": "should be made. \n",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2184,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc052",
+"text": "Note that there is a check box called \"Settings to be applied to preview / Multi Sampling\"",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2185,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc108",
+"text": "in the \"Preview Settings\" in the Preferences. Result will not be seen until you have turned ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2186,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc1c2",
+"text": "on this function. (Factory default is off)",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2187,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc236",
+"text": "File Format",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1930,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc24e",
+"text": "16mm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1931,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc258",
+"text": "Medical Slide",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1932,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc274",
+"text": "35mm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1933,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc27e",
+"text": "Medium Format",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1934,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc29a",
+"text": "6 x 4.5 (cm)",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1935,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc2ba",
+"text": "6 x 6 (cm)",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1936,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc2d0",
+"text": "6 x 7 (cm)",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1937,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc2e6",
+"text": "6 x 8 (cm)",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1938,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc2fc",
+"text": "6 x 9 (cm)",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1939,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc312",
+"text": "24 x 58 (mm)",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1940,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc32c",
+"text": "24 x 65 (mm)",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1941,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc346",
+"text": "No Film Holder",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1942,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc368",
+"text": "Super Fine Scan",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1945,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc388",
+"text": "CCD Scan Mode\u0000CCD Scan Mode",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1946,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc3c0",
+"text": "Help",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1947,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc3ca",
+"text": "4",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1948,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc3ce",
+"text": "If you turn on \"Super Fine Scan\" check box, the scanner will scan using only one ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1949,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc472",
+"text": "line of the three line CCD. Please be advised that this mode may reduce streaking ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1950,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc518",
+"text": "only when you have applied an extreme contrast enhancement. The scanning time will ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1951,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc5c2",
+"text": "become approximately three times longer than the normal scan mode.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1952,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc66a",
+"text": "Self Auto Focus\u0000SelfAF",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2400,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc698",
+"text": "Auto focus when film is inserted",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2401,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc6da",
+"text": "Help",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2402,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc6e4",
+"text": "1",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2403,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc70a",
+"text": "Interpolation Method",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8100,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc734",
+"text": "Bilinear",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8101,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc746",
+"text": "Neighbor",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8102,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc758",
+"text": "None",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8103,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc762",
+"text": "Bicubic",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8104,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc792",
+"text": "Sharpening",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8200,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc7a8",
+"text": "Sharpen More",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8201,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc7c2",
+"text": "Sharpen",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8202,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc7d2",
+"text": "None",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8203,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc7dc",
+"text": "Blur",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8204,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc7e6",
+"text": "Blur More",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8205,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc802",
+"text": "Help",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8000,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc83a",
+"text": "12",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8040,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc842",
+"text": "3",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8042,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc854",
+"text": "The \"Auto focus when film is inserted\" is the default setting, ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8081,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc8d4",
+"text": "so that as soon as a holder (one of FH-835M, FH-835S, FH-869M, FH-869GR, FH-816 or FH-8G1) ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8082,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dc98c",
+"text": "is inserted into the SUPER COOLSCAN 8000 ED, the scanner will immediately perform an auto focus operation ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8083,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dca62",
+"text": "for the first frame of the film. When you press the preview or the scan button in this case, ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8084,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dcb1e",
+"text": "the scanner will not perform an additional auto focus operation. If you would prefer to ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8085,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dcbd0",
+"text": "perform an auto focus at the time you press the preview or the scan button, please turn this ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8086,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dcc8c",
+"text": "check box off. Please also refer to the \"auto focus\" check boxes that are located in three ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8087,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dcd44",
+"text": "different tab pages in the preference setting for the \"Single Scans\", \"Batch Scans\" and ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8088,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dcdf6",
+"text": "\"Preview settings\" operational modes. \n\n",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8089,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dce48",
+"text": "When you press the \"Calibrate\" button, a scanner calibration is performed. The scanner calibration is automatically performed any time the film is changed. ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8090,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dcf82",
+"text": "If you do not change the film for a long period of time, and if the scanner environment, such as room temperature, is changing rapidly, the scanner calibration may drift. ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8091,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd0da",
+"text": "This may result in banding noise on the scanned image. Please press the calibration button if you notice this phenomenon and then rescan your image. ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8092,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd22a",
+"text": "DigitalICE\u0000DICE\u0000DICE",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8300,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd25a",
+"text": "Mode",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8320,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd264",
+"text": "Off\u0000Off\u0000Off",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8321,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd280",
+"text": "On (Normal)\u0000Normal\u0000Normal",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8324,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd2b4",
+"text": "On (Fine)\u0000Fine\u0000Fine",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8325,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd2e4",
+"text": "CleanImage Result",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8330,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd308",
+"text": "SDC Preview",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8331,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd320",
+"text": "Help",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8332,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd33a",
+"text": "2",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8340,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd33e",
+"text": "CleanImage automatically fixes defects on the film surface, such as scratches and/or dust. As a result of this process, the scanning speed will be slower. If the resulting scans look soft, try the \"Sharpen\" mode. ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8341,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd4ea",
+"text": "This function incorporates Digital ICE(TM) technology developed by Applied Science Fiction Inc. (ICE=Image Correction Enhancement)",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8342,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd61a",
+"text": "ROC/GEM",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8380,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd62a",
+"text": "BaseArea",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8381,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd63c",
+"text": "ROC/GEM Area",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8382,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd65a",
+"text": "ROC/GEM Mode",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8384,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd69c",
+"text": "IntegratedPreview",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1061,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd6c0",
+"text": "Monochrome",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1062,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd6d6",
+"text": "Monochrome Default",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1063,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd6fc",
+"text": "Kodachrome",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1064,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd712",
+"text": "Kodachrome Default",
+"enc": "U",
+"sec": ".rsrc",
+"id": 1065,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd74a",
+"text": "Color Matching",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8400,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd77a",
+"text": "Mode",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8410,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd784",
+"text": "Draft",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8411,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd790",
+"text": "Proof",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8412,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd7aa",
+"text": "CML Input Profile",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8420,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd7ce",
+"text": "CML Output Profile",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8421,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd81a",
+"text": "Manual Focus Adjustment",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2200,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd84a",
+"text": "Position",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2201,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd85c",
+"text": "Help",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2202,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd882",
+"text": "2",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2280,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd886",
+"text": "This control allows manual adjustment of the focus setting. This may be helpful if you are attempting to scan film that is warped. ",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2281,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dd98e",
+"text": "NOTE: You will need to perform a new preview scan in order to observe the results of the change in focus setting.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2282,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dda9a",
+"text": "Duration time for film eject",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2300,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100ddad4",
+"text": "Time(min)",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2301,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100ddae8",
+"text": "Help",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2302,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100ddb12",
+"text": "2",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2380,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100ddb16",
+"text": "This is the setting to specify a duration by the minute before the scanner begins to eject an inserted film.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2381,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100ddbf0",
+"text": "This timer is reset whenever you operate the scanner to perform autofocus, thumbnail scan, preview scan and final scan.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2382,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100ddcf0",
+"text": "2",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2503,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100ddcf4",
+"text": "Note: The calibration function has been chosen. While it is performed, the LED indicator on the scanner will blink. During this time, your mouse and keyboard will not respond.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2504,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dde54",
+"text": "The calibration will take 2 minutes to complete. Do you want to proceed?",
+"enc": "U",
+"sec": ".rsrc",
+"id": 2505,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100ddf02",
+"text": "The film has been rewound due to inactivity. Do you want to reload it?",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5000,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100ddf90",
+"text": "The scanner does not appear to be powered on. Please make sure that it is connected to an AC power source and is switched on, then try again.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5001,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100de0ac",
+"text": "The scanner has reported a hardware error. Please reset the scanner by switching on and off. If this does not work, please contact your local Nikon Service or Support office.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5002,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100de20a",
+"text": "The scanner reports that the autofocus has failed. Hold down the \"Control\" key and press the autofocus button on the screen, then click to select a new focus area in the preview window.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5003,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100de37e",
+"text": "The scanner could not load the film. Please consult your user's manual.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5004,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100de40e",
+"text": "The stage locking screw is still in place. Please remove it.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5005,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100de488",
+"text": "Please remove the film holder and press the \"OK\" button on screen to try again.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5006,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100de528",
+"text": "There is no film in the scanner.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5007,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100de56a",
+"text": "Please place film in the loader and press the \"Feed\"  button on the screen.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5008,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100de602",
+"text": "The scanner has reported that it could not load the film. If there is film in the scanner and it has failed to load, please consult your user's manual.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5009,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100de732",
+"text": "The crop area that you have selected is too small. Please make it larger.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5010,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100de7c6",
+"text": "Please remove the film holder and press the \"OK\" button on screen to try again.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5011,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100de866",
+"text": "The film will be rewound before calibration. Do you want to proceed?",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5012,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100de8f0",
+"text": "The scanner has detected more than 6 frames on the strip film. To scan film of more than 6 frames, the SA-30 Spool Unit accessory is required.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5013,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dea0e",
+"text": "The number of frames on the film strip is too few or too many. The film strip should have more than 2 frames and less than 6 frames for the SA-21, or less than 40 frames for the SA-30.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5014,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100deb80",
+"text": "The scanner has reported that it could not load the film. The film may be too short or too long.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5015,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dec42",
+"text": "The scanner could not eject the film. Please press the \"OK\" button to unlock the adapter and  remove it from the scanner, then remove the film from the adapter. Please consult your user's manual for information.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5016,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dedea",
+"text": "Could not find the selected frame on the film strip.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5017,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dee54",
+"text": "This scanner does not support the adapter that is currently inserted. Please consult your user's manual for a list of supported adapters.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5018,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100def68",
+"text": "A data transfer error has been detected. Please try again. Note that another device on the same interface (1394 OR USB) may be the cause of the problem.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5019,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df09a",
+"text": "The film adapter may be loose. Please make sure that it is correctly inserted.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5020,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df138",
+"text": "Please eject the film before you attempt to change the film adapter. Please return the adapter back to the original position.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5021,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df234",
+"text": "The scanner has reported problem with the firmware. Please download the latest firmware from the list of Nikon Technical Support web sites or contact your local Nikon Service or Support office.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5022,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df3b8",
+"text": "An error has occurred while executing a command.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5023,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df41a",
+"text": "Make sure that the holder slot cover is completely open.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5024,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df48c",
+"text": "Install the supplied black mask when using the FH-869GR glass holder. The scanner has detected that the mask is not in place.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5025,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df588",
+"text": "The scanner has detected an Unknown film holder model. Make sure the square holes located at the front end of the film holder are clear. If this message appears again, try another holder. If this message still appears, please contact Nikon service.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5026,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df77c",
+"text": "The autofocus operation has failed. To manually select a point on which to focus. hold down the Control key and press the autofocus button. Then click on the desired point in the preview image.",
+"enc": "U",
+"sec": ".rsrc",
+"id": 5028,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df92a",
+"text": "NKsRGB.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 15000,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df940",
+"text": "NKSWOP_CMYK.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 15001,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df960",
+"text": "NKLch.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 15002,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df974",
+"text": "NKApple.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 15003,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df98c",
+"text": "NKCMatch.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 15004,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df9a6",
+"text": "NKNTSC.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 15005,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df9bc",
+"text": "NKBruce.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 15006,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df9d4",
+"text": "NKAdobe.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 15007,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100df9f2",
+"text": "NKCIE.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 15008,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfa06",
+"text": "NKWide.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 15009,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfa1c",
+"text": "NKApple_CPS.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 15010,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfa3c",
+"text": "%_NKWide_CPS.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 15011,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfa82",
+"text": "0.3",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8500,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfa8a",
+"text": "0.4",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8501,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfa92",
+"text": "0.3",
+"enc": "U",
+"sec": ".rsrc",
+"id": 8502,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfac0",
+"text": "MA-20",
+"enc": "U",
+"sec": ".rsrc",
+"id": 6951,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfacc",
+"text": "SF-200",
+"enc": "U",
+"sec": ".rsrc",
+"id": 6952,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfada",
+"text": "SA-20",
+"enc": "U",
+"sec": ".rsrc",
+"id": 6953,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfae6",
+"text": "IA-20",
+"enc": "U",
+"sec": ".rsrc",
+"id": 6954,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfb0c",
+"text": "SCSI",
+"enc": "U",
+"sec": ".rsrc",
+"id": 6901,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfb16",
+"text": "COM Port",
+"enc": "U",
+"sec": ".rsrc",
+"id": 6902,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfb28",
+"text": "USB",
+"enc": "U",
+"sec": ".rsrc",
+"id": 6903,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfb30",
+"text": "IEEE1394",
+"enc": "U",
+"sec": ".rsrc",
+"id": 6904,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfb62",
+"text": "Nikon\\Profiles\\",
+"enc": "U",
+"sec": ".rsrc",
+"id": 7000,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfb82",
+"text": "CML2.DLL",
+"enc": "U",
+"sec": ".rsrc",
+"id": 7001,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfb94",
+"text": "SDCLW32.DLL",
+"enc": "U",
+"sec": ".rsrc",
+"id": 7002,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfbbe",
+"text": "~$LS8000.TMP",
+"enc": "U",
+"sec": ".rsrc",
+"id": 7010,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfbd8",
+"text": "LS8K%02d%02d.DAT",
+"enc": "U",
+"sec": ".rsrc",
+"id": 7011,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfbfa",
+"text": "Nikon\\MaidMods\\Settings\\",
+"enc": "U",
+"sec": ".rsrc",
+"id": 7012,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfc3e",
+"text": "ICENKNL1.dll",
+"enc": "U",
+"sec": ".rsrc",
+"id": 7022,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfc66",
+"text": "FilmData.nfd",
+"enc": "U",
+"sec": ".rsrc",
+"id": 7030,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfc92",
+"text": "LS8KTHUMB%02d%02d.DAT",
+"enc": "U",
+"sec": ".rsrc",
+"id": 7040,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfcbe",
+"text": "Nikon\\MaidMods\\Cache\\",
+"enc": "U",
+"sec": ".rsrc",
+"id": 7041,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfd0c",
+"text": "Nikon",
+"enc": "U",
+"sec": ".rsrc",
+"id": 6001,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfd44",
+"text": "LS-8000 ED",
+"enc": "U",
+"sec": ".rsrc",
+"id": 6501,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfd8c",
+"text": "SUPER COOLSCAN 8000 ED",
+"enc": "U",
+"sec": ".rsrc",
+"id": 6701,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfdd2",
+"text": "NKLS8000_R.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11256,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfdf0",
+"text": "NKLS8000_P.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11257,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfe0e",
+"text": "NKLS8000_P.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11258,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfe2c",
+"text": "NKLS8000_N.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11259,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfe4a",
+"text": "NKLS8000_N.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11260,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfe68",
+"text": "NKLS8000_K.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11261,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfe86",
+"text": "NKLS8000_K.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11262,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfeac",
+"text": "NKLS8000_P.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11265,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfeca",
+"text": "NKLS8000_P.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11266,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dfee8",
+"text": "NKLS8000_N.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11267,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dff06",
+"text": "NKLS8000_N.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11268,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dff24",
+"text": "NKLS8000_K.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11269,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dff42",
+"text": "NKLS8000_K.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11270,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dff82",
+"text": "NKLS8000_R.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11512,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dffa0",
+"text": "NKLSMED.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11513,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dffb8",
+"text": "NKLSMED.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11514,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dffd0",
+"text": "NKLSPRAP.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11515,
+"src": "RT_STRING",
+"refs": []
+},
+{
+"va": "0x100dffea",
+"text": "NKLSPRAP.icm",
+"enc": "U",
+"sec": ".rsrc",
+"id": 11516,
+"src": "RT_STRING",
+"refs": []
+}
+],
+"tables": [
+{
+"va": "0x100D0798",
+"count": 3,
+"width": 4,
+"kind": "u32 RVA[]",
+"note": "导出函数 RVA 表 {0x91850 NkCtrlEntry, 0x27600 MAIDEntryPoint, 0xB520 NkMDCtrlEntry}；被 0x100D0780 描述符 +0x0C 指向",
+"refs": []
+},
+{
+"va": "0x100D07A4",
+"count": 3,
+"width": 4,
+"kind": "char*[]",
+"note": "导出名指针表 {0x100D07C1 \"?NkCtrlEntry@@YGFFFFPAX@Z\", 0x100D07DB \"MAIDEntryPoint\", 0x100D07EA \"NkMDCtrlEntry\"}",
+"refs": []
+},
+{
+"va": "0x100D07B0",
+"count": 1,
+"width": 6,
+"kind": "u16[3]+char[]",
+"note": "{0,1,2} + \"LS8000.md3\"，模块名/序号描述符",
+"refs": []
+},
+{
+"va": "0x100D1000",
+"count": 15,
+"width": 4,
+"kind": "vftable",
+"note": "首项 0，后 13 项为 .text 函数指针（0x100B828F…0x100BD900），末项 0",
+"refs": [
+"0x100af608"
+]
+},
+{
+"va": "0x100D1158",
+"count": 128,
+"width": 8,
+"kind": "double[128]",
+"note": "EV/增益阶梯：4 段 × 32 项；[0..31] 为 EV 设定 -3.00…+1.30（步长 0.15），[32..] 为对应增益倍数 0.316…3.11 / 0.737…3.425 / 0.886…4.038",
+"refs": []
+},
+{
+"va": "0x100C7040",
+"count": 128,
+"width": 1,
+"kind": "u8[128]",
+"note": "0x00..0x7F 递增字节表（CRT ctype 区，非 Nikon 参数）",
+"refs": []
+}
+]
+}

@@ -1,0 +1,262 @@
+[
+  {
+    "op": "0x0000", "handler": "0x025CC0", "len": 1,
+    "params": "er0=表项指针(0x3EBC0+0)；r1=末索引(见 §2)；栈参=&已消费字节数。字段值取自 [0x400316]+0x00 的 1 字节，硬编码判定 <=4 或 ==9",
+    "writes": ["*栈参=1"],
+    "calls": [],
+    "waits": false,
+    "name": "CHK_BLK_ID",
+    "grade": "实证",
+    "note": "表声明 range 0..0，代码实际允许 {0..4, 9}，两者不一致"
+  },
+  {
+    "op": "0x0001", "handler": "0x025ADA", "len": 1,
+    "params": "取自 [0x400316]+0x01 的 1 字节；与表项 +0x0B（range_lo 最低字节=0）做相等比较，须为 0",
+    "writes": ["*栈参 += 1/字节"],
+    "calls": [],
+    "waits": false,
+    "name": "CHK_RSVD01",
+    "grade": "实证",
+    "note": "与 0x16/0x1D/0x20 共用；只比 lo 不比 hi"
+  },
+  {
+    "op": "0x0002", "handler": "0x025D08", "len": 4,
+    "params": "取自 [0x400316]+0x02 的 **u16**（0x25D36→0x01605A），非 4 字节；表 range 666..4000 与 0x25D52/0x25D58 的 lo/hi 比较一致；额外约束 4000/value 必须整除、n∈{1,2,3,4,6}，[blk+0x2A] bit1 置位时改判 ==0x53",
+    "writes": ["0x400436(=4, 0x25DA2)", "blk+0x04?(0x25D98 偏移参数异常, 见报告 §4.3)"],
+    "calls": ["0x01605A=read_u16", "0x0160DE=write_u16"],
+    "waits": false,
+    "name": "CHK_RES_MAIN",
+    "grade": "实证",
+    "note": "声明 len=4 但只校验低 u16、上报消费 2 字节；高 u16 是写回的“生效 dpi”"
+  },
+  {
+    "op": "0x0004", "handler": "0x025DF8", "len": 4,
+    "params": "取自 [0x400316]+0x04 的 u16；range 333..4000 与表一致；整除 4000、n∈{1,2,3,4,6,12}，[blk+0x2C] bit6 置位时放开 n 集",
+    "writes": ["0x400436(=4, 0x25E96)", "blk+0x06(u16 生效值, 0x25E8C)"],
+    "calls": ["0x01605A=read_u16", "0x0160DE=write_u16"],
+    "waits": false,
+    "name": "CHK_RES_SUB",
+    "grade": "实证",
+    "note": "入参 u16 在 +0x04、出参 u16 在 +0x06，故 len=4 自洽"
+  },
+  {
+    "op": "0x0006", "handler": "0x025EEE", "len": 4,
+    "params": "取自 [0x400316]+0x06 的 u32（0x016022）；只与全局 [0x400C64] 比较，不用表 range(0/0)；[0x4003FB]==0x15 时追加 >=[0x400C64]/2 并复制 4 个 word",
+    "writes": ["0x400EC6..0x400ECD(4×u16, 0x25F70)", "0x400436?（无，仅失败返回 0）"],
+    "calls": ["0x016022=read_u32"],
+    "waits": false,
+    "name": "CHK_PIX_W",
+    "grade": "推断",
+    "note": "上限 0x400C64 = 63.5mm 光学窗口在当前 dpi 下的像素数(1200→2999, 4000→9999)"
+  },
+  {
+    "op": "0x000A", "handler": "0x025F94", "len": 4,
+    "params": "取自 [0x400316]+0x0A 的 u32；上限二选一：[blk+0x32]&1==1 时用硬编码 0xA616(=42518, 当 [0x4007BE]==4000) 或 0x31D2(=12754)，否则用 [0x400C78]",
+    "writes": ["*栈参=4"],
+    "calls": ["0x016022=read_u32"],
+    "waits": false,
+    "name": "CHK_PIX_H",
+    "grade": "实证",
+    "note": "0x25FD0 的 `cmp #0x32` 门限使 0x400680 查表分支在本表下永不执行"
+  },
+  {
+    "op": "0x000E", "handler": "0x02604A", "len": 4,
+    "params": "取自 [0x400316]+0x0E 的 u32；要求 >=1 且 <=[0x400C64]+1（0x26084/0x2608C）；不用表 range",
+    "writes": ["*栈参=4"],
+    "calls": ["0x016022=read_u32"],
+    "waits": false,
+    "name": "CHK_OFS_X",
+    "grade": "推断",
+    "note": "与 0x06 共用 0x400C64 上限，+1 说明是“起点+宽度”的闭区间语义"
+  },
+  {
+    "op": "0x0012", "handler": "0x0260AA", "len": 4,
+    "params": "取自 [0x400316]+0x12 的 u32；上限 [0x400C8C]（1200→12850, 4000→42834）；[blk+0x2A]bit0 且 [blk+0x2C]bit6 且 flag==0 时按 4000/res、/36、*36、*res/4000 做 36 行量化",
+    "writes": ["blk+0x12(u32 量化回写, 0x261D2)", "0x400436(=4, 0x261DE)"],
+    "calls": ["0x016022=read_u32", "0x018E1E=mul32", "0x01872E=div32", "0x0160A8=write_u32"],
+    "waits": false,
+    "name": "CHK_OFS_Y",
+    "grade": "实证",
+    "note": "唯一同时调乘、除、写回三条子函数的字段"
+  },
+  {
+    "op": "0x0016", "handler": "0x025ADA", "len": 3,
+    "params": "逐字节取 [0x400316]+0x16/+0x17/+0x18，各须 ==0（3 次迭代，0x25B14 每次 +1）",
+    "writes": ["*栈参 += 3"],
+    "calls": [],
+    "waits": false,
+    "name": "CHK_RSVD16",
+    "grade": "实证",
+    "note": "len=3 与 3 次单字节迭代严格吻合，len 的“字节跨度”语义由此坐实"
+  },
+  {
+    "op": "0x0019", "handler": "0x0261FE", "len": 1,
+    "params": "取自 [0x400316]+0x19 的 1 字节；硬编码只接受 2 或 5（0x262226/0x26222A）",
+    "writes": ["*栈参=1"],
+    "calls": [],
+    "waits": false,
+    "name": "CHK_SEL_2_5",
+    "grade": "实证",
+    "note": "二值枚举；2/5 的物理含义未证"
+  },
+  {
+    "op": "0x001A", "handler": "0x026246", "len": 1,
+    "params": "取自 [0x400316]+0x1A 的 1 字节；硬编码只接受 8 或 0x0E（0x26226E/0x262272）",
+    "writes": ["*栈参=1"],
+    "calls": [],
+    "waits": false,
+    "name": "CHK_BITDEPTH",
+    "grade": "推断",
+    "note": "{8,14} 与 8bit/14bit 输出位深一致，但无直接交叉证据"
+  },
+  {
+    "op": "0x001B", "handler": "0x025B8A", "len": 2,
+    "params": "用 0x01605A 取 [0x400316]+0x1B 的 u16，与表项 +0x0A（range_lo 低字=0）做**相等**比较",
+    "writes": ["*栈参 += 2"],
+    "calls": ["0x01605A=read_u16"],
+    "waits": false,
+    "name": "CHK_RSVD1B",
+    "grade": "实证",
+    "note": "与 0x1E 共用一个 handler；hi 字段被完全忽略"
+  },
+  {
+    "op": "0x001D", "handler": "0x025ADA", "len": 1,
+    "params": "取自 [0x400316]+0x1D 的 1 字节，须 ==0",
+    "writes": ["*栈参 += 1"],
+    "calls": [],
+    "waits": false,
+    "name": "CHK_RSVD1D",
+    "grade": "实证",
+    "note": "同 0x01 的通用路径"
+  },
+  {
+    "op": "0x001E", "handler": "0x025B8A", "len": 2,
+    "params": "用 0x01605A 取 [0x400316]+0x1E 的 u16，须 ==0",
+    "writes": ["*栈参 += 2"],
+    "calls": ["0x01605A=read_u16"],
+    "waits": false,
+    "name": "CHK_RSVD1E",
+    "grade": "实证",
+    "note": "与 0x1B 同码"
+  },
+  {
+    "op": "0x0020", "handler": "0x025ADA", "len": 8,
+    "params": "逐字节取 [0x400316]+0x20..+0x27，共 8 次迭代，每字节须 ==0",
+    "writes": ["*栈参 += 8"],
+    "calls": [],
+    "waits": false,
+    "name": "CHK_RSVD20",
+    "grade": "实证",
+    "note": "8 字节保留区清零校验；len=8 与 8 次迭代吻合"
+  },
+  {
+    "op": "0x0028", "handler": "0x02628E", "len": 1,
+    "params": "取自 [0x400316]+0x28 的 1 字节，取低半字节（and #0x0F）后须 <=4（0x2622B6）",
+    "writes": ["*栈参=1"],
+    "calls": [],
+    "waits": false,
+    "name": "CHK_NIB28",
+    "grade": "实证",
+    "note": "高半字节不受约束，是“低 4 位枚举 + 高 4 位标志”的打包字节"
+  },
+  {
+    "op": "0x0029", "handler": "0x0262D4", "len": 1,
+    "params": "取自 [0x400316]+0x29 的 1 字节：and #0x1E 必须为 0（bit1..bit4 保留）；bit4 置位且 [blk+0x2B]bit2 或 [blk+0x2C]bit6 置位时清 bit7 并写回",
+    "writes": ["blk+0x29(清 bit7, 0x2632A / 0x26344)"],
+    "calls": [],
+    "waits": false,
+    "name": "CHK_FLAG29",
+    "grade": "实证",
+    "note": "少数会就地改写字段的校验器，写回条件是“别处已允许”"
+  },
+  {
+    "op": "0x002A", "handler": "0x02635E", "len": 1,
+    "params": "取自 [0x400316]+0x2A 的 1 字节：and #0x88 必须为 0；再 and #0x77 后必须属于 {1,2,4,0x10,0x20,0x40}（0x2638C..0x263A4）",
+    "writes": ["*栈参=1"],
+    "calls": [],
+    "waits": false,
+    "name": "CHK_ONESHOT",
+    "grade": "实证",
+    "note": "严格的 one-hot 选项字节，禁止 bit3/bit7，且只能置一位"
+  },
+  {
+    "op": "0x002B", "handler": "0x0263BE", "len": 1,
+    "params": "取自 [0x400316]+0x2B 的 1 字节：and #0xE9 必须为 0（允许 bit1/2/4）；若 [blk+0x2A]bit1 置位则 bit4 也被禁止（互斥）",
+    "writes": ["*栈参=1"],
+    "calls": [],
+    "waits": false,
+    "name": "CHK_OPT2B",
+    "grade": "实证",
+    "note": "位掩码校验 + 与 0x2A 的跨字段互斥"
+  },
+  {
+    "op": "0x002C", "handler": "0x026418", "len": 1,
+    "params": "取自 [0x400316]+0x2C 的 1 字节：and #0xBD 必须为 0（允许 bit1/bit6）；[blk+0x2A]bit1 置位时 bit6 被禁止",
+    "writes": ["*栈参=1"],
+    "calls": [],
+    "waits": false,
+    "name": "CHK_OPT2C",
+    "grade": "实证",
+    "note": "0x2B/0x2C 各自与 0x2A bit1 互斥，构成一组三选一开关"
+  },
+  {
+    "op": "0x002D", "handler": "0x026472", "len": 1,
+    "params": "取自 [0x400316]+0x2D 的 1 字节；**必须等于 0**，随后立即写 0xFF（0x264AA/0x264AC）；表声明 range 0..255，实际只接受 0",
+    "writes": ["blk+0x2D(=0xFF, 0x264AC)"],
+    "calls": [],
+    "waits": false,
+    "name": "SET_ARM2D",
+    "grade": "实证",
+    "note": "唯一有“置位”副作用的字段，语义是一发式触发/挂起标志；表 range 与实现不一致"
+  },
+  {
+    "op": "0x002E", "handler": "0x025C4C", "len": 4,
+    "params": "用 0x016022 取 [0x400316]+0x2E 的 u32，与表项 +0x08/+0x0C 的 lo/hi 比较；0..0x7FFFFFF",
+    "writes": ["*栈参 += 4"],
+    "calls": ["0x016022=read_u32"],
+    "waits": false,
+    "name": "CHK_POS32A",
+    "grade": "实证",
+    "note": "与 0x35 共用 handler，靠表项自身 lo/hi 区分，不读“当前 op”"
+  },
+  {
+    "op": "0x0032", "handler": "0x0264C2", "len": 1,
+    "params": "取自 [0x400316]+0x32 的 1 字节：and #0x9C 必须为 0（允许 bit0/1/5/6）",
+    "writes": ["*栈参=1"],
+    "calls": [],
+    "waits": false,
+    "name": "CHK_OPT32",
+    "grade": "实证",
+    "note": "bit0 被 0x25F94/0x260AA 读作“长行程/半分辨率”开关"
+  },
+  {
+    "op": "0x0033", "handler": "0x025BE6", "len": 2,
+    "params": "用 0x01605A 取 [0x400316]+0x33 的 u16，与表项 +0x0A/+0x0E 比较，0..512",
+    "writes": ["*栈参 += 2"],
+    "calls": ["0x01605A=read_u16"],
+    "waits": false,
+    "name": "CHK_CNT512",
+    "grade": "实证",
+    "note": "唯一 hi>255 的 16 位字段，故必须用字比较；与 0x1B/0x1E 的“只比 lo”形成对照"
+  },
+  {
+    "op": "0x0035", "handler": "0x025C4C", "len": 4,
+    "params": "用 0x016022 取 [0x400316]+0x35 的 u32，与表项 lo/hi 比较；0..0x3FFFFFF",
+    "writes": ["*栈参 += 4"],
+    "calls": ["0x016022=read_u32"],
+    "waits": false,
+    "name": "CHK_POS32B",
+    "grade": "实证",
+    "note": "与 0x2E 同码；hi 差 1 bit（26 bit vs 27 bit）"
+  },
+  {
+    "op": "0x0039", "handler": "0x025B2C", "len": 1,
+    "params": "取自 [0x400316]+0x39 的 1 字节，与表项 +0x0B(lo=0) / +0x0F(hi=2) 做**字节**区间比较，0..2 三选一",
+    "writes": ["*栈参=1"],
+    "calls": [],
+    "waits": false,
+    "name": "CHK_MODE3",
+    "grade": "实证",
+    "note": "唯一“字节区间”用例；表尾字段，0x39+1 恰为块末尾 0x3A"
+  }
+]

@@ -1,0 +1,4 @@
+0x0391B4  bsr       0x0391c0
+0x0391B6  sub.b     r0l, r0l
+0x0391B8  mov.b     r0l, @0x400eb4
+0x0391BE  rts       

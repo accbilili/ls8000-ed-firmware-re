@@ -1,0 +1,269 @@
+cap_id,group,handler,class,exit,evidence
+0x05F2,0x05,0x10037150,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x1100,0x11,0x10064380,B,local_vtable:0x100C0104,[推断] vt=0x100C0104 slots=4；ctor+全部slots正向BFS4(56节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x1200,0x12,0x1006B640,B,local_vtable:0x100C02A4,[推断] vt=0x100C02A4 slots=4；ctor+全部slots正向BFS4(30节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x1300,0x13,0x10062EE0,B,local_vtable:0x100C004C,[推断] vt=0x100C004C slots=4；ctor+全部slots正向BFS4(30节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x1400,0x14,0x100625F0,B,local_vtable:0x100BFFBC,[推断] vt=0x100BFFBC slots=4；ctor+全部slots正向BFS4(30节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x1500,0x15,0x1006C830,B,local_vtable:0x100C02F0,[推断] vt=0x100C02F0 slots=4；ctor+全部slots正向BFS4(30节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x4000,0x40,0x1004BC10,B,local_vtable:0x100BF864,[推断] vt=0x100BF864 slots=6；ctor+全部slots正向BFS4(14节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x4001,0x40,0x1004BA90,B,local_vtable:0x100BF80C,[推断] vt=0x100BF80C slots=6；ctor+全部slots正向BFS4(14节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x4002,0x40,0x100706C0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x4003,0x40,0x1004BE00,B,local_vtable:0x100BF894,[推断] vt=0x100BF894 slots=6；ctor+全部slots正向BFS4(14节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x4004,0x40,0x1004BF20,B,local_vtable:0x100BF8C4,[推断] vt=0x100BF8C4 slots=6；ctor+全部slots正向BFS4(14节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x4005,0x40,0x100705C0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x4006,0x40,0x100706E0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x4007,0x40,0x10047130,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x4008,0x40,0x1004C070,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x400D,0x40,0x1004C1A0,B,local_vtable:0x100BF934,[推断] vt=0x100BF934 slots=6；ctor+全部slots正向BFS4(25节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5005,0x50,0x1002A8B0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5006,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5007,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5008,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5009,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x500A,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x500B,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x500C,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x500D,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x500E,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x500F,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5010,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5011,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5012,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5013,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5014,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5015,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5016,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5017,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5018,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5019,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x501A,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x501B,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x501C,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x501D,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x501E,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x501F,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5020,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5021,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5022,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5023,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5024,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5025,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5026,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5027,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5028,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5029,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x502A,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x502B,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x502C,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x502D,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x502E,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x502F,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5030,0x50,0x1002DDA0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5031,0x50,0x100714B0,B,local_vtable:0x100C1ACC,[推断] vt=0x100C1ACC slots=12；ctor+全部slots正向BFS4(52节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5035,0x50,0x10001570,B,local_vtable:0x100BE2D4,[推断] vt=0x100BE2D4 slots=12；ctor+全部slots正向BFS4(52节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5036,0x50,0x10070F80,B,local_vtable:0x100C1298,[推断] vt=0x100C1298 slots=13；ctor+全部slots正向BFS4(231节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5037,0x50,0x10061490,B,local_vtable:0x100BFD20,[推断] vt=0x100BFD20 slots=12；ctor+全部slots正向BFS4(52节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5038,0x50,0x10070640,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5039,0x50,0x100707F0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x503A,0x50,0x10070FC0,B,local_vtable:0x100C1308,[推断] vt=0x100C1308 slots=13；ctor+全部slots正向BFS4(223节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x503B,0x50,0x10071080,B,local_vtable:0x100C1450,[推断] vt=0x100C1450 slots=12；ctor+全部slots正向BFS4(215节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x503C,0x50,0x100706A0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x503D,0x50,0x10070890,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x503E,0x50,0x10070790,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x503F,0x50,0x10070E70,B,local_vtable:0x100C106C,[推断] vt=0x100C106C slots=13；ctor+全部slots正向BFS4(223节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5040,0x50,0x1006D990,B,local_vtable:0x100C038C,[推断] vt=0x100C038C slots=11；ctor+全部slots正向BFS4(200节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5041,0x50,0x100705E0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5042,0x50,0x10002310,B,local_vtable:0x100BE3AC,[推断] vt=0x100BE3AC slots=12；ctor+全部slots正向BFS4(52节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5043,0x50,0x10070EA0,B,local_vtable:0x100C10E0,[推断] vt=0x100C10E0 slots=12；ctor+全部slots正向BFS4(222节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5044,0x50,0x10070ED0,B,local_vtable:0x100C1150,[推断] vt=0x100C1150 slots=12；ctor+全部slots正向BFS4(222节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5045,0x50,0x100022E0,B,local_vtable:0x100BE340,[推断] vt=0x100BE340 slots=12；ctor+全部slots正向BFS4(52节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5046,0x50,0x10070A20,B,local_vtable:0x100C0A68,[推断] vt=0x100C0A68 slots=12；ctor+全部slots正向BFS4(228节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5047,0x50,0x10070F00,B,local_vtable:0x100C11BC,[推断] vt=0x100C11BC slots=12；ctor+全部slots正向BFS4(226节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5048,0x50,0x10071360,B,local_vtable:0x100C17B8,[推断] vt=0x100C17B8 slots=14；ctor+全部slots正向BFS4(225节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5049,0x50,0x10071390,B,local_vtable:0x100C182C,[推断] vt=0x100C182C slots=14；ctor+全部slots正向BFS4(225节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x504A,0x50,0x100713C0,B,local_vtable:0x100C18A0,[推断] vt=0x100C18A0 slots=14；ctor+全部slots正向BFS4(225节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x504B,0x50,0x100713F0,B,local_vtable:0x100C1914,[推断] vt=0x100C1914 slots=14；ctor+全部slots正向BFS4(225节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x504C,0x50,0x10070600,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x504D,0x50,0x100707B0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x504E,0x50,0x10070F50,B,local_vtable:0x100C1228,[推断] vt=0x100C1228 slots=13；ctor+全部slots正向BFS4(226节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x504F,0x50,0x10070620,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5050,0x50,0x100707D0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5051,0x50,0x10070810,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5052,0x50,0x1005EFC0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5053,0x50,0x10070660,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5054,0x50,0x10001490,B,local_vtable:0x100BE268,[推断] vt=0x100BE268 slots=12；ctor+全部slots正向BFS4(56节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5055,0x50,0x10070680,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5056,0x50,0x10070830,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5057,0x50,0x10070850,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5058,0x50,0x10070FF0,B,local_vtable:0x100C1378,[推断] vt=0x100C1378 slots=12；ctor+全部slots正向BFS4(227节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5059,0x50,0x10037010,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5088,0x50,0x10071050,B,local_vtable:0x100C13E4,[推断] vt=0x100C13E4 slots=12；ctor+全部slots正向BFS4(222节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x508A,0x50,0x1005E510,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x508B,0x50,0x10070870,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x508E,0x50,0x10067310,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5090,0x50,0x10067370,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5091,0x50,0x100536C0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5092,0x50,0x100714E0,B,local_vtable:0x100C1BA4,[推断] vt=0x100C1BA4 slots=12；ctor+全部slots正向BFS4(52节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5093,0x50,0x10070730,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5094,0x50,0x100709C0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5095,0x50,0x100709E0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5096,0x50,0x10070C30,B,local_vtable:0x100C0AD8,[推断] vt=0x100C0AD8 slots=12；ctor+全部slots正向BFS4(222节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5097,0x50,0x10067280,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5098,0x50,0x10070CE0,B,local_vtable:0x100C0C90,[推断] vt=0x100C0C90 slots=13；ctor+全部slots正向BFS4(223节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5099,0x50,0x10070D50,B,local_vtable:0x100C0DC8,[推断] vt=0x100C0DC8 slots=13；ctor+全部slots正向BFS4(223节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x509A,0x50,0x10070E10,B,local_vtable:0x100C0F94,[推断] vt=0x100C0F94 slots=12；ctor+全部slots正向BFS4(222节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x50BC,0x50,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x50BD,0x50,0x1005F340,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x50BE,0x50,0x10061260,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x50BF,0x50,0x10060E30,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x50C0,0x50,0x1005D570,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x50C1,0x50,0x10070C60,B,local_vtable:0x100C0B48,[推断] vt=0x100C0B48 slots=12；ctor+全部slots正向BFS4(222节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x50C2,0x50,0x10060F10,B,local_vtable:0x100BFC64,[推断] vt=0x100BFC64 slots=15；ctor+全部slots正向BFS4(227节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x50C3,0x50,0x10071240,B,local_vtable:0x100C1530,[推断] vt=0x100C1530 slots=12；ctor+全部slots正向BFS4(52节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x50CC,0x50,0x10070D80,B,local_vtable:0x100C0E40,[推断] vt=0x100C0E40 slots=13；ctor+全部slots正向BFS4(228节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x50CD,0x50,0x10070770,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x50CE,0x50,0x1005F340,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x50CF,0x50,0x10070C90,B,local_vtable:0x100C0BB8,[推断] vt=0x100C0BB8 slots=12；ctor+全部slots正向BFS4(222节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x50E6,0x50,0x10033670,B,local_vtable:0x100BE1FC,[推断] vt=0x100BE1FC slots=12；ctor+全部slots正向BFS4(60节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x50E7,0x50,0x10071050,B,local_vtable:0x100C13E4,[推断] vt=0x100C13E4 slots=12；ctor+全部slots正向BFS4(222节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x50E9,0x50,0x1005E510,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x50EA,0x50,0x10070870,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x50ED,0x50,0x10067310,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x50EF,0x50,0x10067370,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x50F0,0x50,0x100536C0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x50F1,0x50,0x100714E0,B,local_vtable:0x100C1BA4,[推断] vt=0x100C1BA4 slots=12；ctor+全部slots正向BFS4(52节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5101,0x51,0x1002A7F0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5208,0x52,0x10070730,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5209,0x52,0x100709C0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x520A,0x52,0x100709E0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x520B,0x52,0x10070C30,B,local_vtable:0x100C0AD8,[推断] vt=0x100C0AD8 slots=12；ctor+全部slots正向BFS4(222节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x520C,0x52,0x10067280,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x520D,0x52,0x10070CE0,B,local_vtable:0x100C0C90,[推断] vt=0x100C0C90 slots=13；ctor+全部slots正向BFS4(223节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x520E,0x52,0x10070D50,B,local_vtable:0x100C0DC8,[推断] vt=0x100C0DC8 slots=13；ctor+全部slots正向BFS4(223节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x520F,0x52,0x10070E10,B,local_vtable:0x100C0F94,[推断] vt=0x100C0F94 slots=12；ctor+全部slots正向BFS4(222节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5231,0x52,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5232,0x52,0x1005F340,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5233,0x52,0x10061260,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5234,0x52,0x10060E30,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5235,0x52,0x1005D570,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5236,0x52,0x10070C60,B,local_vtable:0x100C0B48,[推断] vt=0x100C0B48 slots=12；ctor+全部slots正向BFS4(222节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5237,0x52,0x10060F10,B,local_vtable:0x100BFC64,[推断] vt=0x100BFC64 slots=15；ctor+全部slots正向BFS4(227节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5238,0x52,0x10071240,B,local_vtable:0x100C1530,[推断] vt=0x100C1530 slots=12；ctor+全部slots正向BFS4(52节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5241,0x52,0x10070D80,B,local_vtable:0x100C0E40,[推断] vt=0x100C0E40 slots=13；ctor+全部slots正向BFS4(228节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5242,0x52,0x10070770,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5243,0x52,0x1005F340,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5244,0x52,0x10070C90,B,local_vtable:0x100C0BB8,[推断] vt=0x100C0BB8 slots=12；ctor+全部slots正向BFS4(222节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5285,0x52,0x10070E40,B,local_vtable:0x100C1000,[推断] vt=0x100C1000 slots=12；ctor+全部slots正向BFS4(222节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5408,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5409,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x540A,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x540B,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x540C,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x540D,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x540E,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x540F,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5410,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5411,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5412,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5413,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5414,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5415,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5416,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5417,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5418,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5419,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x541A,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x541B,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x541C,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x541D,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x541E,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x541F,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5420,0x54,0x10070750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5422,0x54,0x10070D10,B,local_vtable:0x100C0CF4,[推断] vt=0x100C0CF4 slots=13；ctor+全部slots正向BFS4(224节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5423,0x54,0x10070D80,B,local_vtable:0x100C0E40,[推断] vt=0x100C0E40 slots=13；ctor+全部slots正向BFS4(228节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5424,0x54,0x10070770,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5425,0x54,0x1005F340,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5426,0x54,0x10070C90,B,local_vtable:0x100C0BB8,[推断] vt=0x100C0BB8 slots=12；ctor+全部slots正向BFS4(222节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5467,0x54,0x1003FF40,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5468,0x54,0x1003F350,B,local_vtable:0x100BF488,[推断] vt=0x100BF488 slots=8；ctor+全部slots正向BFS4(27节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5469,0x54,0x1000D230,B,local_vtable:0x100BE7D4,[推断] vt=0x100BE7D4 slots=8；ctor+全部slots正向BFS4(61节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x546C,0x54,0x10027E80,B,local_vtable:0x100BEABC,[推断] vt=0x100BEABC slots=8；ctor+全部slots正向BFS4(13节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x546E,0x54,0x10050990,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x546F,0x54,0x1003F490,B,local_vtable:0x100BF4E8,[推断] vt=0x100BF4E8 slots=8；ctor+全部slots正向BFS4(34节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5471,0x54,0x1006E650,B,local_vtable:0x100C0434,[推断] vt=0x100C0434 slots=8；ctor+全部slots正向BFS4(33节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5472,0x54,0x1006E650,B,local_vtable:0x100C0434,[推断] vt=0x100C0434 slots=8；ctor+全部slots正向BFS4(33节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5473,0x54,0x1003F4D0,B,local_vtable:0x100BF508,[推断] vt=0x100BF508 slots=8；ctor+全部slots正向BFS4(13节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5474,0x54,0x1003F3E0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5476,0x54,0x1003F6B0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5477,0x54,0x10071510,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5478,0x54,0x1003DB50,B,local_vtable:0x100BF3F8,[推断] vt=0x100BF3F8 slots=8；ctor+全部slots正向BFS4(67节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x547A,0x54,0x1000B7B0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x547B,0x54,0x1003F0C0,B,local_vtable:0x100BF438,[推断] vt=0x100BF438 slots=8；ctor+全部slots正向BFS4(45节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x547C,0x54,0x1003F1A0,B,local_vtable:0x100BF468,[推断] vt=0x100BF468 slots=8；ctor+全部slots正向BFS4(45节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x547D,0x54,0x1003F3A0,B,local_vtable:0x100BF4A8,[推断] vt=0x100BF4A8 slots=8；ctor+全部slots正向BFS4(34节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x547E,0x54,0x1003F540,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x547F,0x54,0x1006E560,B,local_vtable:0x100C03DC,[推断] vt=0x100C03DC slots=8；ctor+全部slots正向BFS4(13节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5480,0x54,0x1003D750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5481,0x54,0x1004F4B0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5482,0x54,0x1000EF40,B,local_vtable:0x100BE83C,[推断] vt=0x100BE83C slots=8；ctor+全部slots正向BFS4(48节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5483,0x54,0x1000DA80,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5484,0x54,0x1004DBE0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5485,0x54,0x1004D290,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5486,0x54,0x10050330,B,local_vtable:0x100BF9D8,[推断] vt=0x100BF9D8 slots=8；ctor+全部slots正向BFS4(35节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5487,0x54,0x1003F710,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x5488,0x54,0x1006D4A0,B,local_vtable:0x100C0358,[推断] vt=0x100C0358 slots=7；ctor+全部slots正向BFS4(10节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x548A,0x54,0x10053100,B,local_vtable:0x100BFA2C,[推断] vt=0x100BFA2C slots=7；ctor+全部slots正向BFS4(208节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x548C,0x54,0x100734EF,B,local_vtable:0x100C08F0,[推断] vt=0x100C08F0 slots=5；ctor+全部slots正向BFS4(7节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x548F,0x54,0x1004B8A0,B,local_vtable:0x100BF7A4,[推断] vt=0x100BF7A4 slots=6；ctor+全部slots正向BFS4(14节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5490,0x54,0x10002CF0,B,local_vtable:0x100BE3E0,[推断] vt=0x100BE3E0 slots=23；ctor+全部slots正向BFS4(223节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5491,0x54,0x10019C30,B,local_vtable:0x100BEA18,[推断] vt=0x100BEA18 slots=20；ctor+全部slots正向BFS4(314节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5493,0x54,0x10014740,B,local_vtable:0x100BE970,[推断] vt=0x100BE970 slots=7；ctor+全部slots正向BFS4(41节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5494,0x54,0x1006F450,B,local_vtable:0x100C049C,[推断] vt=0x100C049C slots=8；ctor+全部slots正向BFS4(242节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5495,0x54,0x1006F430,B,local_vtable:0x100C0474,[推断] vt=0x100C0474 slots=10；ctor+全部slots正向BFS4(261节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5496,0x54,0x10006F90,B,local_vtable:0x100BE5A8,[推断] vt=0x100BE5A8 slots=85；ctor+全部slots正向BFS4(395节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5497,0x54,0x1000FEC0,B,local_vtable:0x100BE880,[推断] vt=0x100BE880 slots=7；ctor+全部slots正向BFS4(240节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x5498,0x54,0x1000B190,B,local_vtable:0x100BE750,[推断] vt=0x100BE750 slots=10；ctor+全部slots正向BFS4(225节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x551F,0x55,0x10070CC0,B,local_vtable:0x100C0C18,[推断] vt=0x100C0C18 slots=15；ctor+全部slots正向BFS4(226节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x6003,0x60,0x1003F800,B,local_vtable:0x100BF5AC,[推断] vt=0x100BF5AC slots=8；ctor+全部slots正向BFS4(37节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x6004,0x60,0x1003FF40,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x6005,0x60,0x1003F350,B,local_vtable:0x100BF488,[推断] vt=0x100BF488 slots=8；ctor+全部slots正向BFS4(27节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x6006,0x60,0x1000D230,B,local_vtable:0x100BE7D4,[推断] vt=0x100BE7D4 slots=8；ctor+全部slots正向BFS4(61节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x6009,0x60,0x10027E80,B,local_vtable:0x100BEABC,[推断] vt=0x100BEABC slots=8；ctor+全部slots正向BFS4(13节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x600B,0x60,0x10050990,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x600C,0x60,0x1003F490,B,local_vtable:0x100BF4E8,[推断] vt=0x100BF4E8 slots=8；ctor+全部slots正向BFS4(34节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x600E,0x60,0x1006E650,B,local_vtable:0x100C0434,[推断] vt=0x100C0434 slots=8；ctor+全部slots正向BFS4(33节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x600F,0x60,0x1006E650,B,local_vtable:0x100C0434,[推断] vt=0x100C0434 slots=8；ctor+全部slots正向BFS4(33节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x6013,0x60,0x1003FAB0,B,local_vtable:0x100BF5CC,[推断] vt=0x100BF5CC slots=8；ctor+全部slots正向BFS4(25节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x6016,0x60,0x1003F4D0,B,local_vtable:0x100BF508,[推断] vt=0x100BF508 slots=8；ctor+全部slots正向BFS4(13节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x6017,0x60,0x1003F3E0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x6019,0x60,0x1003F6B0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x601A,0x60,0x10071510,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x601B,0x60,0x1003DB50,B,local_vtable:0x100BF3F8,[推断] vt=0x100BF3F8 slots=8；ctor+全部slots正向BFS4(67节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x601D,0x60,0x1000B7B0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x601E,0x60,0x1003F0C0,B,local_vtable:0x100BF438,[推断] vt=0x100BF438 slots=8；ctor+全部slots正向BFS4(45节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x601F,0x60,0x1003F1A0,B,local_vtable:0x100BF468,[推断] vt=0x100BF468 slots=8；ctor+全部slots正向BFS4(45节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x6020,0x60,0x1003F3A0,B,local_vtable:0x100BF4A8,[推断] vt=0x100BF4A8 slots=8；ctor+全部slots正向BFS4(34节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x6021,0x60,0x1003F540,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x6022,0x60,0x1006E560,B,local_vtable:0x100C03DC,[推断] vt=0x100C03DC slots=8；ctor+全部slots正向BFS4(13节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x6023,0x60,0x1003D750,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x6024,0x60,0x1004F4B0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x6025,0x60,0x1000EF40,B,local_vtable:0x100BE83C,[推断] vt=0x100BE83C slots=8；ctor+全部slots正向BFS4(48节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x6026,0x60,0x1000DA80,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x6027,0x60,0x1004DBE0,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x6028,0x60,0x1004D290,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x6029,0x60,0x10050330,B,local_vtable:0x100BF9D8,[推断] vt=0x100BF9D8 slots=8；ctor+全部slots正向BFS4(35节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x602A,0x60,0x1003F710,A,cdb_or_transport:0x10053720,[实证] ctor+vtable 正向BFS4命中 0x10053720
+0x8000,0x80,0x10024530,B,local_vtable:0x100BEA70,[推断] vt=0x100BEA70 slots=8；ctor+全部slots正向BFS4(56节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x8003,0x80,0x1006D4A0,B,local_vtable:0x100C0358,[推断] vt=0x100C0358 slots=7；ctor+全部slots正向BFS4(10节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x8005,0x80,0x10053100,B,local_vtable:0x100BFA2C,[推断] vt=0x100BFA2C slots=7；ctor+全部slots正向BFS4(208节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x8007,0x80,0x100734EF,B,local_vtable:0x100C08F0,[推断] vt=0x100C08F0 slots=5；ctor+全部slots正向BFS4(7节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x800A,0x80,0x1004B8A0,B,local_vtable:0x100BF7A4,[推断] vt=0x100BF7A4 slots=6；ctor+全部slots正向BFS4(14节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x800B,0x80,0x10002CF0,B,local_vtable:0x100BE3E0,[推断] vt=0x100BE3E0 slots=23；ctor+全部slots正向BFS4(223节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x800C,0x80,0x10019C30,B,local_vtable:0x100BEA18,[推断] vt=0x100BEA18 slots=20；ctor+全部slots正向BFS4(314节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x800E,0x80,0x10014740,B,local_vtable:0x100BE970,[推断] vt=0x100BE970 slots=7；ctor+全部slots正向BFS4(41节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x8100,0x81,0x1006F2D0,B,local_vtable:0x100C0454,[推断] vt=0x100C0454 slots=8；ctor+全部slots正向BFS4(33节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x8101,0x81,0x1006F450,B,local_vtable:0x100C049C,[推断] vt=0x100C049C slots=8；ctor+全部slots正向BFS4(242节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x8102,0x81,0x1006F430,B,local_vtable:0x100C0474,[推断] vt=0x100C0474 slots=10；ctor+全部slots正向BFS4(261节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x8103,0x81,0x10006F90,B,local_vtable:0x100BE5A8,[推断] vt=0x100BE5A8 slots=85；ctor+全部slots正向BFS4(395节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x8104,0x81,0x1000FEC0,B,local_vtable:0x100BE880,[推断] vt=0x100BE880 slots=7；ctor+全部slots正向BFS4(240节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界
+0x8105,0x81,0x1000B190,B,local_vtable:0x100BE750,[推断] vt=0x100BE750 slots=10；ctor+全部slots正向BFS4(225节点)未抵18个BuildCDB/构造器/传输锚点；未解析的他对象虚调用仍是覆盖边界

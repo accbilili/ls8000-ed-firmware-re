@@ -1,0 +1,1726 @@
+; Nikon LS-8000 ED firmware 1.11 -- disassembly extract for calibration/error-code task
+; image : D:\DS\TEST\LS8000\LS8000_111_ROM.bin  (228345 B, addr = file offset + 0x10000)
+; disasm: D:\DS\TEST\LS8000\h8dis.py + h8tab.py + h8.lst  (H8/300H, big endian)
+; NOTE  : linear decode, no CFG repair. Some "bt" after flag-neutral instructions
+;         are stale-T artifacts of the decoder/compiler; see md report 5.3.
+
+; ==========================================================================
+; A0  task body head: setup of er3/er5/er6, cancel gate   0x02740A .. 0x0274BC
+; ==========================================================================
+0x02740A  mov.l    er3, @-sp
+0x02740E  stm.l    er4-er6, @-sp
+0x027412  mov.l    #0x00400400, er3
+0x027418  mov.l    #0x00400404, er5
+0x02741E  mov.l    #0x00400406, er6
+0x027424  mov.b    @0x4207f8, r0l
+0x02742A  cmp.b    #0x01, r0l
+0x02742C  beq      0x0274b0
+0x027430  mov.w    @0x400402, r0
+0x027436  cmp.w    #0x0010, r0
+0x02743A  bne      0x02744e
+0x02743C  mov.w    #0x2000, r0
+0x027440  mov.w    r0, @er5
+0x027442  mov.b    #0x02, r0l
+0x027444  bsr      0x027a54
+0x027448  jsr      0x010b56
+0x02744C  bt       0x027448
+0x02744E  mov.b    @0x4206ec, r0l
+0x027454  bne      0x02747a
+0x027456  mov.b    @0x420245, r0l
+0x02745C  cmp.b    #0x01, r0l
+0x02745E  beq      0x027470
+0x027460  jsr      0x02dc38
+0x027464  jsr      0x02ed14
+0x027468  mov.b    #0x01, r0l
+0x02746A  mov.b    r0l, @0x420245
+0x027470  bsr      0x027b1e
+0x027474  bsr      0x027afa
+0x027478  bt       0x0274b4
+0x02747A  mov.b    @0x4206ec, r0l
+0x027480  cmp.b    #0x01, r0l
+0x027482  beq      0x027488
+0x027484  cmp.b    #0x05, r0l
+0x027486  bne      0x0274b4
+0x027488  jsr      0x0208c2
+0x02748C  mov.w    @0x400402, r0
+0x027492  cmp.w    #0x0010, r0
+0x027496  bne      0x0274aa
+0x027498  mov.w    #0x2000, r0
+0x02749C  mov.w    r0, @er5
+0x02749E  mov.b    #0x02, r0l
+0x0274A0  bsr      0x027a54
+0x0274A4  jsr      0x010b56
+0x0274A8  bt       0x0274a4
+0x0274AA  jsr      0x03a130
+0x0274AE  bt       0x0274b4
+0x0274B0  bsr      0x0283dc
+0x0274B4  mov.w    @er6, r0
+0x0274B6  and.w    #0xff00, r0
+0x0274BA  bset     #0, r0l
+
+; ==========================================================================
+; A1  tail of A0, falls into 0x02753E loop   0x0274BC .. 0x02753E
+; ==========================================================================
+0x0274BC  mov.w    r0, @er6
+0x0274BE  mov.b    #0x01, r0l
+0x0274C0  mov.b    r0l, @0x4207f8
+0x0274C6  mov.b    @0x4206ec, r0l
+0x0274CC  beq      0x0274d8
+0x0274CE  mov.b    #0xff, r0l
+0x0274D0  mov.b    r0l, @0x200042
+0x0274D6  bt       0x027526
+0x0274D8  mov.w    @er5, r0
+0x0274DA  cmp.w    #0x2000, r0
+0x0274DE  beq      0x0274ea
+0x0274E0  mov.b    @0x40041c, r0l
+0x0274E6  cmp.b    #0x01, r0l
+0x0274E8  bne      0x027526
+0x0274EA  mov.w    @0x400402, r0
+0x0274F0  cmp.w    #0x0110, r0
+0x0274F4  beq      0x027518
+0x0274F6  mov.w    @0x400402, r0
+0x0274FC  cmp.w    #0x0120, r0
+0x027500  beq      0x027518
+0x027502  mov.w    @0x400402, r0
+0x027508  cmp.w    #0x0121, r0
+0x02750C  beq      0x027518
+0x02750E  mov.b    @0x40041c, r0l
+0x027514  cmp.b    #0x01, r0l
+0x027516  bne      0x027526
+0x027518  bclr     #1, @0xffff2e
+0x027520  jsr      0x010b56
+0x027524  bt       0x027520
+0x027526  mov.w    @0x4202a2, r0
+0x02752C  mov.w    r0, @0x4202b2
+0x027532  mov.w    @0x4202ec, r0
+0x027538  mov.w    r0, @0x4202fc
+
+; ==========================================================================
+; B0  main loop head: error gates -> 0x9000 / 0x5000 / 0x1100 / 0   0x02753E .. 0x0275B8
+; ==========================================================================
+0x02753E  mov.b    @0x40041c, r0l
+0x027544  cmp.b    #0x01, r0l
+0x027546  bne      0x027556
+0x027548  bclr     #1, @0xffff2e
+0x027550  jsr      0x010b56
+0x027554  bt       0x027550
+0x027556  mov.b    @0x4206ec, r0l
+0x02755C  bne      0x0275b4
+0x02755E  bsr      0x027676
+0x027562  mov.w    @er5, r0
+0x027564  cmp.w    #0x0e10, r0
+0x027568  beq      0x0275b8
+0x02756A  mov.w    @er5, r0
+0x02756C  cmp.w    #0x3000, r0
+0x027570  beq      0x0275b8
+0x027572  mov.w    @er5, r0
+0x027574  cmp.w    #0x2000, r0
+0x027578  beq      0x0275b8
+0x02757A  mov.b    @0x400d72, r0l
+0x027580  cmp.b    #0x01, r0l
+0x027582  beq      0x02758c
+0x027584  mov.w    #0x9000, r0
+0x027588  mov.w    r0, @er5
+0x02758A  bt       0x0275b8
+0x02758C  mov.b    @0x400d79, r0l
+0x027592  cmp.b    #0x01, r0l
+0x027594  beq      0x02759e
+0x027596  mov.w    #0x5000, r0
+0x02759A  mov.w    r0, @er5
+0x02759C  bt       0x0275b2
+0x02759E  mov.b    @0x4003fb, r0l
+0x0275A4  cmp.b    #0x10, r0l
+0x0275A6  bne      0x0275ae
+0x0275A8  mov.w    #0x1100, r0
+0x0275AC  bt       0x0275b0
+0x0275AE  sub.w    r0, r0
+0x0275B0  mov.w    r0, @er5
+0x0275B2  bt       0x0275b8
+0x0275B4  jsr      0x03c31e
+
+; ==========================================================================
+; B1  main loop: 0x400400.6 gate, command table walk, callback   0x0275B8 .. 0x027676
+; ==========================================================================
+0x0275B8  btst     #6, @er3
+0x0275BC  beq      0x027668
+0x0275C0  mov.b    #0x01, r0l
+0x0275C2  bsr      0x027a54
+0x0275C6  sub.w    r0, r0
+0x0275C8  mov.w    r0, @0x400402
+0x0275CE  mov.w    @er5, r0
+0x0275D0  cmp.w    #0x2000, r0
+0x0275D4  beq      0x0275de
+0x0275D6  mov.w    @er5, r0
+0x0275D8  cmp.w    #0x3000, r0
+0x0275DC  bne      0x0275f2
+0x0275DE  mov.b    @0x400d72, r0l
+0x0275E4  cmp.b    #0x01, r0l
+0x0275E6  bne      0x0275ec
+0x0275E8  sub.w    r0, r0
+0x0275EA  bt       0x0275f0
+0x0275EC  mov.w    #0x9000, r0
+0x0275F0  mov.w    r0, @er5
+0x0275F2  mov.l    #0x0003ede8, er4
+0x0275F8  bt       0x02760e
+0x0275FA  mov.w    @er3, r0
+0x0275FC  and.w    #0x00ff, r0
+0x027600  mov.b    @er4, r1l
+0x027602  extu.w   r1
+0x027604  cmp.w    r0, r1
+0x027606  beq      0x027612
+0x027608  add.l    #0x00000006, er4
+0x02760E  mov.b    @er4, r0l
+0x027610  bne      0x0275fa
+0x027612  mov.b    @er4, r0l
+0x027614  bne      0x027628
+0x027616  mov.w    @er3, r0
+0x027618  and.w    #0x3fff, r0
+0x02761C  mov.w    r0, @er3
+0x02761E  mov.w    @er6, r0
+0x027620  and.w    #0xff00, r0
+0x027624  bset     #0, r0l
+0x027626  mov.w    r0, @er6
+0x027628  mov.w    @er6, r0
+0x02762A  and.w    #0xff00, r0
+0x02762E  mov.w    r0, @er6
+0x027630  mov.w    @er3, r0
+0x027632  and.w    #0x00ff, r0
+0x027636  mov.w    @er6, r1
+0x027638  or.w     r0, r1
+0x02763A  mov.w    r1, @er6
+0x02763C  mov.l    @(0x2,er4), er4
+0x027642  jsr      er4
+0x027644  mov.w    @er3, r0
+0x027646  and.w    #0x3fff, r0
+0x02764A  mov.w    r0, @er3
+0x02764C  mov.w    @0x400402, r0
+0x027652  beq      0x02765a
+0x027654  mov.w    #0x3000, r0
+0x027658  mov.w    r0, @er5
+0x02765A  mov.w    @er6, r0
+0x02765C  and.w    #0xff00, r0
+0x027660  bset     #0, r0l
+0x027662  mov.w    r0, @er6
+0x027664  bsr      0x027afa
+0x027668  bsr      0x0288f6
+0x02766C  jsr      0x010b56
+0x027670  jmp      0x02753e
+0x027674  rts      
+
+; ==========================================================================
+; C0  calibration step dispatcher (calls 0x0277CE and 0x027DC4)   0x027676 .. 0x0277CE
+; ==========================================================================
+0x027676  stm.l    er4-er6, @-sp
+0x02767A  mov.b    #0x02, r4l
+0x02767C  mov.l    #0x004207fa, er5
+0x027682  mov.l    #0x00400404, er6
+0x027688  bset     #3, @0xffff2e
+0x027690  mov.b    @0x400d72, r0l
+0x027696  cmp.b    #0x05, r0l
+0x027698  bne      0x02770e
+0x02769A  bsr      0x0277ce
+0x02769E  mov.w    @er6, r0
+0x0276A0  cmp.w    #0x2000, r0
+0x0276A4  beq      0x0276b8
+0x0276A6  bsr      0x02898c
+0x0276AA  mov.b    r0l, r0l
+0x0276AC  bne      0x0276b4
+0x0276AE  mov.w    #0x0e10, r0
+0x0276B2  bt       0x0276b6
+0x0276B4  sub.w    r0, r0
+0x0276B6  mov.w    r0, @er6
+0x0276B8  mov.b    @0x420300, r0l
+0x0276BE  beq      0x0276cc
+0x0276C0  mov.b    @0x420300, r0l
+0x0276C6  cmp.b    #0x01, r0l
+0x0276C8  bne      0x02777a
+0x0276CC  jsr      0x02cfa0
+0x0276D0  cmp.b    #0x01, r0l
+0x0276D2  bne      0x027704
+0x0276D4  mov.b    @0x4202fe, r0l
+0x0276DA  cmp.b    #0x01, r0l
+0x0276DC  beq      0x0276fa
+0x0276DE  mov.b    @er5, r0l
+0x0276E0  cmp.b    #0x01, r0l
+0x0276E2  bne      0x0276f2
+0x0276E4  jsr      0x02cfc0
+0x0276E8  cmp.b    #0x01, r0l
+0x0276EA  bne      0x0276f2
+0x0276EC  mov.b    r4l, r0l
+0x0276EE  bsr      0x027dc4
+0x0276F2  sub.b    r0l, r0l
+0x0276F4  mov.b    r0l, @er5
+0x0276F6  jmp      0x0277c8
+0x0276FA  bsr      0x027930
+0x0276FE  sub.b    r0l, r0l
+0x027700  mov.b    r0l, @er5
+0x027702  bt       0x02777a
+0x027704  mov.b    #0x01, r0l
+0x027706  mov.b    r0l, @0x4202fe
+0x02770C  bt       0x02777a
+0x02770E  bsr      0x02898c
+0x027712  mov.b    r0l, r0l
+0x027714  bne      0x02773a
+0x027716  mov.w    #0x0e10, r0
+0x02771A  mov.w    r0, @er6
+0x02771C  mov.b    r4l, r0l
+0x02771E  bsr      0x027a54
+0x027722  bsr      0x02898c
+0x027726  mov.b    r0l, r0l
+0x027728  bne      0x027730
+0x02772A  jsr      0x010b56
+0x02772E  bt       0x027722
+0x027730  sub.w    r0, r0
+0x027732  mov.w    r0, @er6
+0x027734  sub.b    r0l, r0l
+0x027736  bsr      0x027a54
+0x02773A  mov.b    @er5, r0l
+0x02773C  cmp.b    #0x01, r0l
+0x02773E  bne      0x02775c
+0x027740  jsr      0x02cfc0
+0x027744  cmp.b    #0x01, r0l
+0x027746  bne      0x02775c
+0x027748  mov.b    #0x01, r0l
+0x02774A  bsr      0x027dc4
+0x02774E  sub.b    r0l, r0l
+0x027750  mov.b    r0l, @er5
+0x027752  mov.b    #0xff, r0l
+0x027754  mov.b    r0l, @0x420244
+0x02775A  bt       0x02777a
+0x02775C  jsr      0x02cf60
+0x027760  mov.b    r0l, r0l
+0x027762  bne      0x02777a
+0x027764  jsr      0x02cfa0
+0x027768  mov.b    r0l, r0l
+0x02776A  bne      0x02777a
+0x02776C  mov.b    #0x01, r0l
+0x02776E  bsr      0x027dc4
+0x027772  mov.b    #0xff, r0l
+0x027774  mov.b    r0l, @0x420244
+0x02777A  mov.b    @0x400d77, r0l
+0x027780  cmp.b    #0x01, r0l
+0x027782  bne      0x0277c8
+0x027784  jsr      0x029cd8
+0x027788  mov.b    r0l, r0l
+0x02778A  bne      0x0277b0
+0x02778C  mov.w    #0x0e00, r0
+0x027790  mov.w    r0, @er6
+0x027792  mov.b    r4l, r0l
+0x027794  bsr      0x027a54
+0x027798  jsr      0x029cd8
+0x02779C  mov.b    r0l, r0l
+0x02779E  bne      0x0277a6
+0x0277A0  jsr      0x010b56
+0x0277A4  bt       0x027798
+0x0277A6  sub.w    r0, r0
+0x0277A8  mov.w    r0, @er6
+0x0277AA  sub.b    r0l, r0l
+0x0277AC  bsr      0x027a54
+0x0277B0  jsr      0x02b0e8
+0x0277B4  jsr      0x02ce40
+0x0277B8  sub.b    r0l, r0l
+0x0277BA  mov.b    r0l, @0x400d77
+0x0277C0  sub.b    r0l, r0l
+0x0277C2  mov.b    r0l, @0x400d78
+0x0277C8  ldm.l    @sp+, er4-er6
+0x0277CC  rts      
+
+; ==========================================================================
+; D0  calibration sub-state machine (states 0,3,4,5 in 0x420300)   0x0277CE .. 0x027930
+; ==========================================================================
+0x0277CE  mov.l    er3, @-sp
+0x0277D2  stm.l    er4-er6, @-sp
+0x0277D6  sub.w    e4, e4
+0x0277D8  mov.l    #0x000186a0, er3
+0x0277DE  sub.b    r4l, r4l
+0x0277E0  mov.l    #0x004202a2, er5
+0x0277E6  mov.l    #0x00420300, er6
+0x0277EC  jsr      0x02cfa0
+0x0277F0  mov.b    r0l, r0l
+0x0277F2  bne      0x027808
+0x0277F4  jsr      0x02cf60
+0x0277F8  mov.b    r0l, r0l
+0x0277FA  bne      0x027808
+0x0277FC  jsr      0x02cfe0
+0x027800  mov.b    r0l, r0l
+0x027802  bne      0x027808
+0x027804  sub.b    r4h, r4h
+0x027806  bt       0x02780a
+0x027808  mov.b    #0x01, r4h
+0x02780A  mov.b    @er6, r0l
+0x02780C  bne      0x02782e
+0x02780E  mov.b    r4h, r4h
+0x027810  bne      0x02782e
+0x027812  jsr      0x02d000
+0x027816  mov.b    r0l, r0l
+0x027818  bne      0x02782e
+0x02781A  mov.b    #0x03, r0l
+0x02781C  mov.b    r0l, @er6
+0x02781E  mov.l    @0x4003f6, er0
+0x027826  mov.l    er0, @0x420302
+0x02782E  mov.b    @er6, r0l
+0x027830  cmp.b    #0x03, r0l
+0x027832  bne      0x0278a2
+0x027834  mov.b    r4h, r4h
+0x027836  bne      0x02789e
+0x027838  jsr      0x02d000
+0x02783C  mov.b    r0l, r0l
+0x02783E  bne      0x02789e
+0x027840  mov.l    @0x4003f6, er0
+0x027848  mov.l    @0x420302, er1
+0x027850  sub.l    er1, er0
+0x027852  cmp.l    #0x000004b0, er0
+0x027858  bcs      0x0278a2
+0x02785A  mov.b    #0x01, r0l
+0x02785C  bsr      0x027a54
+0x027860  bt       0x027872
+0x027862  mov.w    r4, @-sp
+0x027864  mov.l    er3, er1
+0x027866  mov.w    e4, r0
+0x027868  jsr      0x02adce
+0x02786C  adds.l   #2, sp
+0x02786E  jsr      0x02acba
+0x027872  mov.w    @er5, r0
+0x027874  bne      0x027862
+0x027876  mov.w    #0x07ff, r0
+0x02787A  mov.w    r0, @er5
+0x02787C  bt       0x02788e
+0x02787E  mov.w    r4, @-sp
+0x027880  mov.l    er3, er1
+0x027882  mov.w    e4, r0
+0x027884  jsr      0x02adce
+0x027888  adds.l   #2, sp
+0x02788A  jsr      0x02acba
+0x02788E  mov.w    @er5, r0
+0x027890  bne      0x02787e
+0x027892  mov.b    #0x04, r0l
+0x027894  mov.b    r0l, @er6
+0x027896  mov.b    r4l, r0l
+0x027898  bsr      0x027a54
+0x02789C  bt       0x0278a2
+0x02789E  sub.b    r0l, r0l
+0x0278A0  mov.b    r0l, @er6
+0x0278A2  mov.b    @er6, r0l
+0x0278A4  cmp.b    #0x04, r0l
+0x0278A6  bne      0x0278c4
+0x0278A8  jsr      0x02d000
+0x0278AC  cmp.b    #0x01, r0l
+0x0278AE  bne      0x0278c4
+0x0278B0  mov.b    #0x05, r0l
+0x0278B2  mov.b    r0l, @er6
+0x0278B4  mov.l    @0x4003f6, er0
+0x0278BC  mov.l    er0, @0x420302
+0x0278C4  mov.b    @er6, r0l
+0x0278C6  cmp.b    #0x05, r0l
+0x0278C8  bne      0x027926
+0x0278CA  jsr      0x02d000
+0x0278CE  cmp.b    #0x01, r0l
+0x0278D0  bne      0x027922
+0x0278D2  mov.l    @0x4003f6, er0
+0x0278DA  mov.l    @0x420302, er1
+0x0278E2  sub.l    er1, er0
+0x0278E4  cmp.l    #0x000001f4, er0
+0x0278EA  bcs      0x027926
+0x0278EC  mov.b    #0x01, r0l
+0x0278EE  bsr      0x027a54
+0x0278F2  sub.w    r0, r0
+0x0278F4  mov.w    r0, @er5
+0x0278F6  bt       0x02790a
+0x0278F8  mov.w    r4, @-sp
+0x0278FA  mov.l    er3, er1
+0x0278FC  mov.w    #0x07ff, r0
+0x027900  jsr      0x02adce
+0x027904  adds.l   #2, sp
+0x027906  jsr      0x02acba
+0x02790A  mov.w    @er5, r0
+0x02790C  cmp.w    #0x07ff, r0
+0x027910  bne      0x0278f8
+0x027912  jsr      0x02b038
+0x027916  sub.b    r0l, r0l
+0x027918  mov.b    r0l, @er6
+0x02791A  sub.b    r0l, r0l
+0x02791C  bsr      0x027a54
+0x027920  bt       0x027926
+0x027922  mov.b    #0x04, r0l
+0x027924  mov.b    r0l, @er6
+0x027926  ldm.l    @sp+, er4-er6
+0x02792A  mov.l    @sp+, er3
+0x02792E  rts      
+
+; ==========================================================================
+; E0  unload/abort routine   0x027930 .. 0x027A54
+; ==========================================================================
+0x027930  mov.l    er3, @-sp
+0x027934  stm.l    er4-er6, @-sp
+0x027938  mov.l    #0x004003fb, er5
+0x02793E  mov.l    #0x00400406, er6
+0x027944  mov.b    #0x01, r0l
+0x027946  bsr      0x027a54
+0x02794A  mov.b    #0x01, r0l
+0x02794C  mov.b    r0l, @0x4007cb
+0x027952  mov.w    #0xffff, r0
+0x027956  mov.w    r0, @0x4007cc
+0x02795C  mov.w    r0, @0x4007ce
+0x027962  mov.l    #0x00420244, er4
+0x027968  sub.b    r0l, r0l
+0x02796A  mov.b    r0l, @er4
+0x02796C  mov.l    #0x000001f4, er0
+0x027972  jsr      0x015ffc
+0x027976  mov.w    @er6, r0
+0x027978  and.w    #0xff00, r0
+0x02797C  or.w     #0x00f0, r0
+0x027980  mov.w    r0, @er6
+0x027982  jsr      0x02cc04
+0x027986  mov.l    #0x004202ec, er3
+0x02798C  mov.w    @er3, r0
+0x02798E  mov.w    r0, @0x4202fc
+0x027994  jsr      0x02cf60
+0x027998  cmp.b    #0x01, r0l
+0x02799A  bne      0x0279de
+0x02799C  jsr      0x0289b4
+0x0279A0  mov.w    @0x400402, r0
+0x0279A6  beq      0x0279b8
+0x0279A8  mov.b    #0x03, r0l
+0x0279AA  bsr      0x027a54
+0x0279AE  mov.w    #0x3000, r0
+0x0279B2  mov.w    r0, @0x400404
+0x0279B8  bset     #3, @er6
+0x0279BC  mov.b    @0x4003fc, r0l
+0x0279C2  mov.b    @er5, r1l
+0x0279C4  cmp.b    r1l, r0l
+0x0279C6  beq      0x0279d4
+0x0279C8  mov.b    @er5, r0l
+0x0279CA  mov.b    r0l, @0x4003fc
+0x0279D0  bset     #4, @er6
+0x0279D4  mov.b    #0x01, r0l
+0x0279D6  mov.b    r0l, @0x400d72
+0x0279DC  bt       0x027a32
+0x0279DE  jsr      0x02cfa0
+0x0279E2  cmp.b    #0x01, r0l
+0x0279E4  bne      0x027a10
+0x0279E6  mov.l    #0x000001f4, er0
+0x0279EC  jsr      0x015ffc
+0x0279F0  mov.w    #0x00ab, r0
+0x0279F4  mov.w    r0, @er3
+0x0279F6  sub.b    r0l, r0l
+0x0279F8  mov.w    r0, @-sp
+0x0279FA  mov.l    #0x000186a0, er1
+0x027A00  sub.w    r0, r0
+0x027A02  jsr      0x02c9e4
+0x027A06  adds.l   #2, sp
+0x027A08  mov.w    @er3, r3
+0x027A0A  mov.w    r3, @0x4202fc
+0x027A10  mov.w    #0x9000, r0
+0x027A14  mov.w    r0, @0x400404
+0x027A1A  mov.b    #0x05, r0l
+0x027A1C  mov.b    r0l, @0x400d72
+0x027A22  mov.b    #0x10, r0l
+0x027A24  mov.b    r0l, @er5
+0x027A26  sub.b    r0l, r0l
+0x027A28  mov.b    r0l, @0x4202fe
+0x027A2E  mov.b    #0x01, r0l
+0x027A30  mov.b    r0l, @er4
+0x027A32  mov.w    @er6, r0
+0x027A34  and.w    #0xff00, r0
+0x027A38  bset     #0, r0l
+0x027A3A  mov.w    r0, @er6
+0x027A3C  mov.b    @0x4206c8, r0l
+0x027A42  cmp.b    #0x03, r0l
+0x027A44  beq      0x027a4a
+0x027A46  sub.b    r0l, r0l
+0x027A48  bsr      0x027a54
+0x027A4A  ldm.l    @sp+, er4-er6
+0x027A4E  mov.l    @sp+, er3
+0x027A52  rts      
+
+; ==========================================================================
+; E1  watchdog/timeout arm  +  0x027AFA   0x027A54 .. 0x027B1E
+; ==========================================================================
+0x027A54  mov.w    r2, @-sp
+0x027A56  stm.l    er4-er6, @-sp
+0x027A5A  mov.b    r0l, r2l
+0x027A5C  jsr      0x010bde
+0x027A60  mov.b    r0l, r2h
+0x027A62  jsr      0x010bd2
+0x027A66  mov.b    r2l, @0x4206c8
+0x027A6C  mov.l    #0x004206ca, er6
+0x027A72  mov.l    #0x004206ce, er4
+0x027A78  mov.l    #0x00ffff6f, er5
+0x027A7E  mov.l    #0x004003f6, er1
+0x027A84  mov.b    r2l, r0l
+0x027A86  beq      0x027a96
+0x027A88  cmp.b    #0x01, r0l
+0x027A8A  beq      0x027a9c
+0x027A8C  cmp.b    #0x02, r0l
+0x027A8E  beq      0x027aa4
+0x027A90  cmp.b    #0x03, r0l
+0x027A92  beq      0x027abc
+0x027A94  bt       0x027aec
+0x027A96  bset     #0, @er5
+0x027A9A  bt       0x027aec
+0x027A9C  mov.l    #0x00000313, er0
+0x027AA2  bt       0x027aaa
+0x027AA4  mov.l    #0x00000064, er0
+0x027AAA  mov.l    er0, @er4
+0x027AAE  bclr     #0, @er5
+0x027AB2  mov.l    @er1, er1
+0x027AB6  mov.l    er1, @er6
+0x027ABA  bt       0x027aec
+0x027ABC  mov.l    #0x00000064, er0
+0x027AC2  mov.l    er0, @er4
+0x027AC6  bclr     #0, @er5
+0x027ACA  mov.l    @er1, er0
+0x027ACE  mov.l    er0, @er6
+0x027AD2  mov.l    @er1, er1
+0x027AD6  mov.l    er1, @0x4206d2
+0x027ADE  mov.l    #0x00000fa0, er0
+0x027AE4  mov.l    er0, @0x4206d6
+0x027AEC  mov.b    r2h, r0l
+0x027AEE  jsr      0x010be2
+0x027AF2  ldm.l    @sp+, er4-er6
+0x027AF6  mov.w    @sp+, r2
+0x027AF8  rts      
+0x027AFA  mov.w    @0x400402, r0
+0x027B00  beq      0x027b0e
+0x027B02  mov.b    @0x4206c9, r0l
+0x027B08  bne      0x027b0e
+0x027B0A  mov.b    #0x03, r0l
+0x027B0C  bt       0x027b10
+0x027B0E  sub.b    r0l, r0l
+0x027B10  bsr      0x027a54
+0x027B14  sub.b    r0l, r0l
+0x027B16  mov.b    r0l, @0x4206c9
+0x027B1C  rts      
+
+; ==========================================================================
+; E2  parameter reset (writes 0x4003FB=0x10)   0x027B1E .. 0x027BD0
+; ==========================================================================
+0x027B1E  mov.l    er3, @-sp
+0x027B22  stm.l    er4-er6, @-sp
+0x027B26  mov.l    #0x0040041c, er5
+0x027B2C  mov.l    #0x00400402, er6
+0x027B32  sub.w    r0, r0
+0x027B34  mov.w    r0, @0x400404
+0x027B3A  mov.l    #0x00400406, er4
+0x027B40  mov.w    @er4, r0
+0x027B42  and.w    #0xff00, r0
+0x027B46  bset     #7, r0l
+0x027B48  mov.w    r0, @er4
+0x027B4A  sub.w    r0, r0
+0x027B4C  mov.w    r0, @er6
+0x027B4E  mov.b    #0x10, r0l
+0x027B50  mov.b    r0l, @0x4003fb
+0x027B56  mov.b    r0l, @0x4003fc
+0x027B5C  mov.b    #0x01, r0l
+0x027B5E  mov.b    r0l, @0x42029e
+0x027B64  sub.b    r0l, r0l
+0x027B66  mov.b    r0l, @0x42029f
+0x027B6C  mov.b    r0l, @0x4007c9
+0x027B72  sub.b    r0l, r0l
+0x027B74  mov.b    r0l, @0x4007ca
+0x027B7A  mov.b    #0x01, r0l
+0x027B7C  mov.b    r0l, @0x4007cb
+0x027B82  mov.w    #0xffff, r0
+0x027B86  mov.w    r0, @0x4007cc
+0x027B8C  mov.w    r0, @0x4007ce
+0x027B92  sub.b    r0l, r0l
+0x027B94  mov.b    r0l, @0x4007d0
+0x027B9A  mov.l    #0x00007530, er0
+0x027BA0  mov.l    er0, @0x4206e8
+0x027BA8  mov.b    #0x01, r0l
+0x027BAA  mov.b    r0l, @0x420244
+0x027BB0  sub.l    er0, er0
+0x027BB2  mov.l    er0, @0x420240
+0x027BBA  sub.w    r0, r0
+0x027BBC  mov.w    r0, @0x4202b4
+0x027BC2  sub.b    r0l, r0l
+0x027BC4  mov.b    r0l, @0x400d77
+0x027BCA  mov.b    r0l, @0x400d78
+
+; ==========================================================================
+; F0  feed state machine (REFERENCE ONLY - owned by another task)   0x027DC4 .. 0x027F42
+; ==========================================================================
+0x027DC4  mov.l    er3, @-sp
+0x027DC8  stm.l    er4-er6, @-sp
+0x027DCC  mov.w    #0x9000, e6
+0x027DD0  sub.b    r6h, r6h
+0x027DD2  mov.l    #0x004202b4, er3
+0x027DD8  mov.l    #0x00400406, er4
+0x027DDE  mov.l    #0x00400404, er5
+0x027DE4  mov.b    r0l, r6l
+0x027DE6  jsr      0x029cd8
+0x027DEA  mov.b    r0l, r0l
+0x027DEC  bne      0x027df4
+0x027DEE  mov.w    #0x0e00, r0
+0x027DF2  bt       0x027e00
+0x027DF4  bsr      0x02898c
+0x027DF8  mov.b    r0l, r0l
+0x027DFA  bne      0x027e0e
+0x027DFC  mov.w    #0x0e10, r0
+0x027E00  mov.w    r0, @er5
+0x027E02  mov.b    #0x03, r0l
+0x027E04  bsr      0x027a54
+0x027E08  sub.b    r0l, r0l
+0x027E0A  jmp      0x027f1a
+0x027E0E  cmp.b    #0x01, r6l
+0x027E10  bne      0x027e5e
+0x027E12  mov.b    #0x01, r0l
+0x027E14  bsr      0x027a54
+0x027E18  bset     #1, @er4
+0x027E1C  mov.w    e6, @er5
+0x027E1E  mov.b    #0x10, r0l
+0x027E20  mov.b    r0l, @0x4003fb
+0x027E26  mov.b    #0x05, r0l
+0x027E28  mov.b    r0l, @0x400d72
+0x027E2E  mov.b    #0x01, r0l
+0x027E30  mov.b    r0l, @0x400d79
+0x027E36  sub.b    r0l, r0l
+0x027E38  mov.b    r0l, @0x40041a
+0x027E3E  mov.b    #0x01, r0l
+0x027E40  mov.b    r0l, @0x400d78
+0x027E46  bt       0x027e5e
+0x027E48  mov.b    r6h, r0l
+0x027E4A  mov.w    r0, @-sp
+0x027E4C  mov.l    #0x000186a0, er1
+0x027E52  mov.w    @er3, r0
+0x027E54  jsr      0x02adce
+0x027E58  adds.l   #2, sp
+0x027E5A  jsr      0x02ace6
+0x027E5E  mov.w    @0x4202a2, r0
+0x027E64  mov.w    @er3, r1
+0x027E66  cmp.w    r1, r0
+0x027E68  bne      0x027e48
+0x027E6A  mov.l    #0x004202ec, er0
+0x027E70  mov.w    @er0, r1
+0x027E72  add.w    #0x0055, r1
+0x027E76  mov.w    r1, @er0
+0x027E78  mov.b    r6h, r0l
+0x027E7A  mov.w    r0, @-sp
+0x027E7C  mov.l    #0x000186a0, er1
+0x027E82  sub.w    r0, r0
+0x027E84  jsr      0x02c9e4
+0x027E88  adds.l   #2, sp
+0x027E8A  jsr      0x02c8e0
+0x027E8E  cmp.b    #0x01, r6l
+0x027E90  bne      0x027e9a
+0x027E92  sub.b    r0l, r0l
+0x027E94  mov.b    r0l, @0x400d78
+0x027E9A  cmp.b    #0x02, r6l
+0x027E9C  beq      0x027f18
+0x027E9E  mov.b    #0x10, r0l
+0x027EA0  mov.b    r0l, @0x4003fb
+0x027EA6  mov.w    e6, @er5
+0x027EA8  mov.b    r6l, r6l
+0x027EAA  bne      0x027ed2
+0x027EAC  bset     #0, @er4
+0x027EB0  mov.w    e6, @er5
+0x027EB2  mov.b    #0x10, r0l
+0x027EB4  mov.b    r0l, @0x4003fb
+0x027EBA  mov.b    #0x05, r0l
+0x027EBC  mov.b    r0l, @0x400d72
+0x027EC2  mov.b    #0x01, r0l
+0x027EC4  mov.b    r0l, @0x400d79
+0x027ECA  sub.b    r0l, r0l
+0x027ECC  mov.b    r0l, @0x40041a
+0x027ED2  sub.b    r0l, r0l
+0x027ED4  mov.b    r0l, @0x4202fe
+0x027EDA  mov.b    r0l, @0x4207fa
+0x027EE0  mov.w    @0x4202a2, r0
+0x027EE6  mov.w    r0, @0x4202b2
+0x027EEC  mov.w    @0x4202ec, r0
+0x027EF2  mov.w    r0, @0x4202fc
+0x027EF8  mov.b    @0x42029f, r0l
+0x027EFE  cmp.b    #0x01, r0l
+0x027F00  bne      0x027f0e
+0x027F02  mov.b    @0x4207f8, r0l
+0x027F08  cmp.b    #0x01, r0l
+0x027F0A  bne      0x027f0e
+0x027F0C  bsr      0x027f24
+0x027F0E  cmp.b    #0x01, r6l
+0x027F10  bne      0x027f18
+0x027F12  mov.b    r6h, r0l
+0x027F14  bsr      0x027a54
+0x027F18  mov.b    #0x01, r0l
+0x027F1A  ldm.l    @sp+, er4-er6
+0x027F1E  mov.l    @sp+, er3
+0x027F22  rts      
+0x027F24  mov.w    r6, @-sp
+0x027F26  mov.w    @0x4202e0, r6
+0x027F2C  mov.w    #0x00e2, r0
+0x027F30  jsr      0x02b87c
+0x027F34  bsr      0x02896c
+0x027F38  bsr      0x027f44
+0x027F3A  mov.w    r6, r0
+0x027F3C  jsr      0x02b87c
+0x027F40  mov.w    @sp+, r6
+
+; ==========================================================================
+; F1  helper called from 0x027DC4   0x027F24 .. 0x027F9C
+; ==========================================================================
+0x027F24  mov.w    r6, @-sp
+0x027F26  mov.w    @0x4202e0, r6
+0x027F2C  mov.w    #0x00e2, r0
+0x027F30  jsr      0x02b87c
+0x027F34  bsr      0x02896c
+0x027F38  bsr      0x027f44
+0x027F3A  mov.w    r6, r0
+0x027F3C  jsr      0x02b87c
+0x027F40  mov.w    @sp+, r6
+0x027F42  rts      
+0x027F44  stm.l    er2-er3, @-sp
+0x027F48  stm.l    er4-er6, @-sp
+0x027F4C  sub.l    #0x00000010, sp
+0x027F52  mov.l    #0x00400402, er4
+0x027F58  mov.l    #0x004007ca, er6
+0x027F5E  sub.b    r0l, r0l
+0x027F60  mov.b    r0l, @0x41ffa6
+0x027F66  mov.b    #0x01, r0l
+0x027F68  mov.b    r0l, @0x4007c9
+0x027F6E  sub.b    r0l, r0l
+0x027F70  mov.b    r0l, @er6
+0x027F72  bsr      0x028148
+0x027F76  mov.b    #0x02, r0l
+0x027F78  mov.b    r0l, @er6
+0x027F7A  bsr      0x028148
+0x027F7E  mov.b    #0x03, r0l
+0x027F80  mov.b    r0l, @er6
+0x027F82  bsr      0x028148
+0x027F86  mov.b    #0x04, r0l
+0x027F88  mov.b    r0l, @er6
+0x027F8A  bsr      0x028148
+0x027F8E  mov.l    #0x008cc000, er2
+0x027F94  mov.l    #0x004207fe, er5
+0x027F9A  sub.w    r3, r3
+
+; ==========================================================================
+; G0  sync primitive 0x010B56 (device-ready wait, trapa #0)   0x010B56 .. 0x010BD2
+; ==========================================================================
+0x010B56  stm.l    er4-er6, @-sp
+0x010B5A  mov.l    #0x00400d5c, er5
+0x010B60  mov.l    #0x00ffff2e, er6
+0x010B66  mov.w    @0x4003ec, r0
+0x010B6C  beq      0x010b72
+0x010B6E  jmp      0x010bb2
+0x010B72  mov.b    @er5, r0l
+0x010B74  cmp.b    #0x01, r0l
+0x010B76  beq      0x010b7c
+0x010B78  jmp      0x010b8e
+0x010B7C  sub.b    r0l, r0l
+0x010B7E  mov.b    r0l, @er5
+0x010B80  mov.b    @0x400515, r0l
+0x010B86  and.b    #0x10, r0l
+0x010B88  mov.b    @er6, r1l
+0x010B8A  or.b     r0l, r1l
+0x010B8C  mov.b    r1l, @er6
+0x010B8E  jsr      0x010bce
+0x010B92  mov.b    @er5, r0l
+0x010B94  cmp.b    #0x01, r0l
+0x010B96  beq      0x010b9c
+0x010B98  jmp      0x010bc8
+0x010B9C  sub.b    r0l, r0l
+0x010B9E  mov.b    r0l, @er5
+0x010BA0  mov.b    @0x400515, r0l
+0x010BA6  and.b    #0x10, r0l
+0x010BA8  mov.b    @er6, r1l
+0x010BAA  or.b     r0l, r1l
+0x010BAC  mov.b    r1l, @er6
+0x010BAE  jmp      0x010bc8
+0x010BB2  mov.b    @er6, r4l
+0x010BB4  mov.b    r4l, r0l
+0x010BB6  and.b    #0xbe, r0l
+0x010BB8  mov.b    r0l, @er6
+0x010BBA  jsr      0x010bce
+0x010BBE  mov.b    @er6, r0l
+0x010BC0  and.b    #0xbe, r0l
+0x010BC2  and.b    #0x41, r4l
+0x010BC4  or.b     r4l, r0l
+0x010BC6  mov.b    r0l, @er6
+0x010BC8  ldm.l    @sp+, er4-er6
+0x010BCC  rts      
+0x010BCE  trapa    #0
+0x010BD0  rts      
+
+; ==========================================================================
+; G1  critical section primitives   0x010BDE .. 0x010C00
+; ==========================================================================
+0x010BDE  stc      exr, r0l
+0x010BE0  rts      
+0x010BE2  ldc      r0l, exr
+0x010BE4  rts      
+0x010BE6  sub.l    er0, er0
+0x010BE8  mov.l    er0, @0x4003f6
+0x010BF0  mov.w    #0x61a8, r0
+0x010BF4  mov.w    r0, @0xfffe98
+0x010BFA  bset     #0, @0xfffe94
+
+; ==========================================================================
+; G2  boot: alternate-mode branch before task table   0x010900 .. 0x010920
+; ==========================================================================
+0x010900  bne      0x01090a
+0x010902  jsr      0x02dc38
+0x010906  jsr      0x02ed14
+0x01090A  ldm.l    @sp+, er4-er6
+0x01090E  rts      
+0x010910  mov.b    @0x4206ec, r0l
+0x010916  bne      0x01091e
+0x010918  mov.b    #0x01, r0l
+0x01091A  jsr      0x027a54
+0x01091E  rts      
+
+; ==========================================================================
+; G3  task creation loop (2 tasks, 10-byte records)   0x010946 .. 0x0109B0
+; ==========================================================================
+0x010946  nop      
+0x010948  mov.b    @0x4003fa, r1l
+0x01094E  bne      0x01095c
+0x010952  mov.l    #0x00010920, er0
+0x010958  bt       0x010962
+0x01095C  mov.l    #0x00010934, er0
+0x010962  mov.l    #0x004003ee, er1
+0x010968  mov.w    #0x0002, r2
+0x01096C  mov.l    @er0+, er3
+0x010970  mov.l    @er0+, er4
+0x010974  mov.l    er4, @-er3
+0x010978  mov.w    @er0+, r4
+0x01097A  mov.w    r4, @-er3
+0x01097C  sub.l    er4, er4
+0x01097E  mov.l    er4, @-er3
+0x010982  mov.l    er4, @-er3
+0x010986  mov.l    er4, @-er3
+0x01098A  mov.l    er4, @-er3
+0x01098E  mov.l    er4, @-er3
+0x010992  mov.l    er4, @-er3
+0x010996  mov.l    er4, @-er3
+0x01099A  mov.l    er3, @er1
+0x01099E  inc.l    #2, er1
+0x0109A0  inc.l    #2, er1
+0x0109A2  dec.b    #1, r2l
+0x0109A4  bne      0x01096c
+0x0109A6  sub.w    r0, r0
+0x0109A8  mov.w    r0, @0x4003ec
+0x0109AE  mov.l    #0x004003ee, er0
+
+; ==========================================================================
+; H0  status-bit poll helpers (0xFFFF55 / 0xFFFF54), 20 tries   0x02CF40 .. 0x02D030
+; ==========================================================================
+0x02CF40  sub.b    r1l, r1l
+0x02CF42  sub.w    r0, r0
+0x02CF44  bt       0x02cf56
+0x02CF46  btst     #3, @0xffff55
+0x02CF4E  bne      0x02cf54
+0x02CF50  mov.b    #0x01, r1l
+0x02CF52  bt       0x02cf5c
+0x02CF54  inc.w    #1, r0
+0x02CF56  cmp.w    #0x0014, r0
+0x02CF5A  blt      0x02cf46
+0x02CF5C  mov.b    r1l, r0l
+0x02CF5E  rts      
+0x02CF60  sub.b    r1l, r1l
+0x02CF62  sub.w    r0, r0
+0x02CF64  bt       0x02cf76
+0x02CF66  btst     #2, @0xffff55
+0x02CF6E  bne      0x02cf74
+0x02CF70  mov.b    #0x01, r1l
+0x02CF72  bt       0x02cf7c
+0x02CF74  inc.w    #1, r0
+0x02CF76  cmp.w    #0x0014, r0
+0x02CF7A  blt      0x02cf66
+0x02CF7C  mov.b    r1l, r0l
+0x02CF7E  rts      
+0x02CF80  sub.b    r1l, r1l
+0x02CF82  sub.w    r0, r0
+0x02CF84  bt       0x02cf96
+0x02CF86  btst     #6, @0xffff55
+0x02CF8E  bne      0x02cf94
+0x02CF90  mov.b    #0x01, r1l
+0x02CF92  bt       0x02cf9c
+0x02CF94  inc.w    #1, r0
+0x02CF96  cmp.w    #0x0014, r0
+0x02CF9A  blt      0x02cf86
+0x02CF9C  mov.b    r1l, r0l
+0x02CF9E  rts      
+0x02CFA0  sub.b    r1l, r1l
+0x02CFA2  sub.w    r0, r0
+0x02CFA4  bt       0x02cfb6
+0x02CFA6  btst     #5, @0xffff55
+0x02CFAE  bne      0x02cfb4
+0x02CFB0  mov.b    #0x01, r1l
+0x02CFB2  bt       0x02cfbc
+0x02CFB4  inc.w    #1, r0
+0x02CFB6  cmp.w    #0x0014, r0
+0x02CFBA  blt      0x02cfa6
+0x02CFBC  mov.b    r1l, r0l
+0x02CFBE  rts      
+0x02CFC0  mov.b    #0x01, r1l
+0x02CFC2  sub.w    r0, r0
+0x02CFC4  bt       0x02cfd6
+0x02CFC6  btst     #7, @0xffff55
+0x02CFCE  beq      0x02cfd4
+0x02CFD0  sub.b    r1l, r1l
+0x02CFD2  bt       0x02cfdc
+0x02CFD4  inc.w    #1, r0
+0x02CFD6  cmp.w    #0x0014, r0
+0x02CFDA  blt      0x02cfc6
+0x02CFDC  mov.b    r1l, r0l
+0x02CFDE  rts      
+0x02CFE0  sub.b    r1l, r1l
+0x02CFE2  sub.w    r0, r0
+0x02CFE4  bt       0x02cff6
+0x02CFE6  btst     #4, @0xffff55
+0x02CFEE  bne      0x02cff4
+0x02CFF0  mov.b    #0x01, r1l
+0x02CFF2  bt       0x02cffc
+0x02CFF4  inc.w    #1, r0
+0x02CFF6  cmp.w    #0x0014, r0
+0x02CFFA  blt      0x02cfe6
+0x02CFFC  mov.b    r1l, r0l
+0x02CFFE  rts      
+0x02D000  sub.b    r0h, r0h
+0x02D002  sub.w    e0, e0
+0x02D004  bt       0x02d018
+0x02D006  mov.b    @0xffff54, r0l
+0x02D00C  and.b    #0x04, r0l
+0x02D00E  cmp.b    #0x04, r0l
+0x02D010  bne      0x02d016
+0x02D012  mov.b    #0x01, r0h
+0x02D014  bt       0x02d01e
+0x02D016  inc.w    #1, e0
+0x02D018  cmp.w    #0x0014, e0
+0x02D01C  blt      0x02d006
+0x02D01E  mov.b    r0h, r0l
+0x02D020  rts      
+0x02D022  bsr      0x02d200
+0x02D026  mov.b    #0xe2, r0l
+0x02D028  mov.b    r0l, @0x200102
+0x02D02E  sub.w    r0, r0
+
+; ==========================================================================
+; H1  "film advanced to limit?" predicate   0x029CD8 .. 0x029D2A
+; ==========================================================================
+0x029CD8  bclr     #0, @0xffff2f
+0x029CE0  sub.b    r0l, r0l
+0x029CE2  mov.b    r0l, @0x4202ff
+0x029CE8  bclr     #0, @0xffff2e
+0x029CF0  mov.w    @0x4202ec, r0
+0x029CF6  mov.w    #0x000c, e0
+0x029CFA  mulxu.w  e0, er0
+0x029CFC  mov.w    @0x4202a2, r1
+0x029D02  add.w    r0, r1
+0x029D04  sub.l    er0, er0
+0x029D06  mov.b    @0x4003fb, r0l
+0x029D0C  shll.l   er0
+0x029D0E  mov.w    @(0x3ee10,er0), r0
+0x029D16  cmp.w    r0, r1
+0x029D18  bcs      0x029d26
+0x029D1A  jsr      0x02cfe0
+0x029D1E  cmp.b    #0x01, r0l
+0x029D20  bne      0x029d26
+0x029D22  sub.b    r0l, r0l
+0x029D24  rts      
+0x029D26  mov.b    #0x01, r0l
+0x029D28  rts      
+
+; ==========================================================================
+; H2  motor move primitive (target 0x440E40, timeout in er1)   0x02ADCE .. 0x02AE60
+; ==========================================================================
+0x02ADCE  mov.l    er3, @-sp
+0x02ADD2  stm.l    er4-er6, @-sp
+0x02ADD6  mov.w    r0, r5
+0x02ADD8  mov.l    er1, er3
+0x02ADDA  mov.l    #0x00440e40, er6
+0x02ADE0  mov.w    r5, @er6
+0x02ADE2  mov.l    #0x004202a2, er5
+0x02ADE8  mov.w    @er6, r0
+0x02ADEA  mov.w    @er5, r1
+0x02ADEC  cmp.w    r1, r0
+0x02ADEE  beq      0x02ae48
+0x02ADF0  mov.w    @er6, r0
+0x02ADF2  mov.w    @er5, r1
+0x02ADF4  cmp.w    r1, r0
+0x02ADF6  bls      0x02ae12
+0x02ADF8  mov.b    #0x01, r4l
+0x02ADFA  mov.w    @er6, r6
+0x02ADFC  mov.w    @er5, r5
+0x02ADFE  sub.w    r5, r6
+0x02AE00  cmp.w    #0x0172, r6
+0x02AE04  bcs      0x02ae0c
+0x02AE06  mov.w    #0x2710, e6
+0x02AE0A  bt       0x02ae2c
+0x02AE0C  mov.w    #0x09c4, e6
+0x02AE10  bt       0x02ae2c
+0x02AE12  sub.b    r4l, r4l
+0x02AE14  mov.w    @er5, r5
+0x02AE16  mov.w    @er6, r6
+0x02AE18  sub.w    r6, r5
+0x02AE1A  mov.w    r5, r6
+0x02AE1C  cmp.w    #0x0172, r6
+0x02AE20  bcs      0x02ae28
+0x02AE22  mov.w    #0x2710, e6
+0x02AE26  bt       0x02ae2c
+0x02AE28  mov.w    #0x09c4, e6
+0x02AE2C  sub.l    er5, er5
+0x02AE2E  mov.l    er3, @-sp
+0x02AE32  mov.l    er5, @-sp
+0x02AE36  mov.b    @(0x1d,sp), r0h
+0x02AE3A  mov.w    e6, r1
+0x02AE3C  mov.w    r6, e0
+0x02AE3E  mov.b    r4l, r0l
+0x02AE40  bsr      0x02a2f6
+0x02AE44  adds.l   #4, sp
+0x02AE46  adds.l   #4, sp
+0x02AE48  ldm.l    @sp+, er4-er6
+0x02AE4C  mov.l    @sp+, er3
+0x02AE50  rts      
+0x02AE52  mov.l    er3, @-sp
+0x02AE56  stm.l    er4-er6, @-sp
+0x02AE5A  mov.b    r0l, r5l
+0x02AE5C  mov.w    e0, r6
+0x02AE5E  mov.l    er1, er3
+
+; ==========================================================================
+; H3  move to 0x4202B2 and wait   0x02B0E8 .. 0x02B11A
+; ==========================================================================
+0x02B0E8  mov.l    er6, @-sp
+0x02B0EC  mov.l    #0x004202b2, er6
+0x02B0F2  sub.b    r0l, r0l
+0x02B0F4  mov.w    r0, @-sp
+0x02B0F6  mov.l    #0x000186a0, er1
+0x02B0FC  mov.w    @er6, r0
+0x02B0FE  bsr      0x02adce
+0x02B102  adds.l   #2, sp
+0x02B104  bsr      0x02acba
+0x02B108  mov.w    @er6, r0
+0x02B10A  mov.w    @0x4202a2, r1
+0x02B110  cmp.w    r1, r0
+0x02B112  bne      0x02b0f2
+0x02B114  mov.l    @sp+, er6
+0x02B118  rts      
+
+; ==========================================================================
+; H4  move to 0x4202FC and wait   0x02CE40 .. 0x02CE74
+; ==========================================================================
+0x02CE40  mov.l    er6, @-sp
+0x02CE44  mov.l    #0x004202fc, er6
+0x02CE4A  bt       0x02ce62
+0x02CE4C  sub.b    r0l, r0l
+0x02CE4E  mov.w    r0, @-sp
+0x02CE50  mov.l    #0x000186a0, er1
+0x02CE56  mov.w    @er6, r0
+0x02CE58  bsr      0x02c9e4
+0x02CE5C  adds.l   #2, sp
+0x02CE5E  bsr      0x02c8b4
+0x02CE62  mov.w    @0x4202ec, r0
+0x02CE68  mov.w    @er6, r1
+0x02CE6A  cmp.w    r1, r0
+0x02CE6C  bne      0x02ce4c
+0x02CE6E  mov.l    @sp+, er6
+0x02CE72  rts      
+
+; ==========================================================================
+; H5  pulse/timer block after home   0x02B038 .. 0x02B0B0
+; ==========================================================================
+0x02B038  mov.l    #0x00ffff48, er0
+0x02B03E  mov.w    @er0, r1
+0x02B040  and.w    #0xff00, r1
+0x02B044  mov.w    r1, @er0
+0x02B046  mov.l    #0x00ffff4b, er0
+0x02B04C  mov.w    @er0, r1
+0x02B04E  or.w     #0x00fc, r1
+0x02B052  mov.w    r1, @er0
+0x02B054  mov.l    #0x00ffff48, er0
+0x02B05A  mov.w    @er0, r1
+0x02B05C  or.w     #0x00ff, r1
+0x02B060  mov.w    r1, @er0
+0x02B062  mov.b    @0x03f0e8, r0l
+0x02B068  mov.b    r0l, @0x440846
+0x02B06E  jsr      0x02cf40
+0x02B072  mov.b    r0l, r0l
+0x02B074  bne      0x02b0ae
+0x02B076  sub.b    r0l, r0l
+0x02B078  mov.b    r0l, @0x4202a8
+0x02B07E  mov.l    #0x000186a0, er0
+0x02B084  mov.l    er0, @-sp
+0x02B088  sub.l    er0, er0
+0x02B08A  mov.l    er0, @-sp
+0x02B08E  sub.b    r0h, r0h
+0x02B090  mov.w    #0x2710, r1
+0x02B094  mov.w    #0x4517, e0
+0x02B098  sub.b    r0l, r0l
+0x02B09A  bsr      0x02a2f6
+0x02B09E  adds.l   #4, sp
+0x02B0A0  adds.l   #4, sp
+0x02B0A2  bsr      0x02afa4
+0x02B0A6  sub.w    r0, r0
+0x02B0A8  mov.w    r0, @0x4202a2
+0x02B0AE  mov.l    #0x000186a0, er0
+
+; ==========================================================================
+; I0  event notify: hard-coded sense 02 04 03 07 when 0x449AF0==0x10   0x016AB0 .. 0x016B80
+; ==========================================================================
+0x016AB0  mov.l    er6, @-sp
+0x016AB4  mov.l    sp, er6
+0x016AB6  mov.w    r5, @-sp
+0x016AB8  sub.l    #0x00000020, sp
+0x016ABE  mov.w    r0, r5
+0x016AC0  bsr      0x016c10
+0x016AC4  btst     #0, r5l
+0x016AC6  beq      0x016ad8
+0x016AC8  mov.l    #0x00449ae0, er0
+0x016ACE  mov.l    @er0, er1
+0x016AD2  inc.l    #1, er1
+0x016AD4  mov.l    er1, @er0
+0x016AD8  btst     #1, r5l
+0x016ADA  beq      0x016aec
+0x016ADC  mov.l    #0x00449ae4, er0
+0x016AE2  mov.l    @er0, er1
+0x016AE6  inc.l    #1, er1
+0x016AE8  mov.l    er1, @er0
+0x016AEC  btst     #2, r5l
+0x016AEE  beq      0x016b00
+0x016AF0  mov.l    #0x00449ae8, er0
+0x016AF6  mov.l    @er0, er1
+0x016AFA  inc.l    #1, er1
+0x016AFC  mov.l    er1, @er0
+0x016B00  btst     #3, r5l
+0x016B02  beq      0x016b10
+0x016B04  mov.l    #0x00449aec, er0
+0x016B0A  mov.w    @er0, r1
+0x016B0C  inc.w    #1, r1
+0x016B0E  mov.w    r1, @er0
+0x016B10  btst     #4, r5l
+0x016B12  beq      0x016b4c
+0x016B14  mov.l    #0x00449aee, er0
+0x016B1A  mov.w    @er0, r1
+0x016B1C  inc.w    #1, r1
+0x016B1E  mov.w    r1, @er0
+0x016B20  mov.b    @0x449af0, r0l
+0x016B26  cmp.b    #0x10, r0l
+0x016B28  bne      0x016b4c
+0x016B2A  mov.b    #0x02, r0l
+0x016B2C  mov.b    r0l, @0x449af1
+0x016B32  mov.b    #0x04, r0l
+0x016B34  mov.b    r0l, @0x449af2
+0x016B3A  mov.b    #0x03, r0l
+0x016B3C  mov.b    r0l, @0x449af3
+0x016B42  mov.b    #0x07, r0l
+0x016B44  mov.b    r0l, @0x449af4
+0x016B4A  bset     #5, r5l
+0x016B4C  btst     #5, r5l
+0x016B4E  bne      0x016b70
+0x016B50  sub.b    r0l, r0l
+0x016B52  mov.b    r0l, @0x449af1
+0x016B58  sub.b    r0l, r0l
+0x016B5A  mov.b    r0l, @0x449af2
+0x016B60  sub.b    r0l, r0l
+0x016B62  mov.b    r0l, @0x449af3
+0x016B68  sub.b    r0l, r0l
+0x016B6A  mov.b    r0l, @0x449af4
+0x016B70  mov.l    #0xffffffde, er0
+0x016B76  add.l    er6, er0
+0x016B78  bsr      0x016f46
+0x016B7C  mov.l    #0xffffffde, er0
+
+; ==========================================================================
+; I1  sync 0x4003FB -> 0x449AF0   0x016C10 .. 0x016C46
+; ==========================================================================
+0x016C10  mov.l    er6, @-sp
+0x016C14  mov.l    sp, er6
+0x016C16  mov.b    @0x4003fb, r0l
+0x016C1C  cmp.b    #0x11, r0l
+0x016C1E  bcs      0x016c38
+0x016C20  mov.b    @0x4003fb, r0l
+0x016C26  cmp.b    #0x1f, r0l
+0x016C28  bhi      0x016c38
+0x016C2A  mov.b    @0x4003fb, r0l
+0x016C30  mov.b    r0l, @0x449af0
+0x016C36  bt       0x016c40
+0x016C38  mov.b    #0x10, r0l
+0x016C3A  mov.b    r0l, @0x449af0
+0x016C40  mov.l    @sp+, er6
+0x016C44  rts      
+
+; ==========================================================================
+; I2  status-change notifier (e5=0x400404, r5=0x400402)   0x0174BC .. 0x0175B0
+; ==========================================================================
+0x0174BC  mov.l    er6, @-sp
+0x0174C0  mov.l    sp, er6
+0x0174C2  mov.l    er5, @-sp
+0x0174C6  subs.l   #4, sp
+0x0174C8  subs.l   #4, sp
+0x0174CA  mov.w    r0, r5
+0x0174CC  mov.w    e0, e5
+0x0174CE  mov.b    @0x449b0e, r0l
+0x0174D4  beq      0x0174ea
+0x0174D6  mov.w    #0x0002, r0
+0x0174DA  bsr      0x016ab0
+0x0174DE  mov.l    #0x00449b0e, er0
+0x0174E4  mov.b    @er0, r1l
+0x0174E6  dec.b    #1, r1l
+0x0174E8  mov.b    r1l, @er0
+0x0174EA  mov.w    @0x449b0a, r0
+0x0174F0  cmp.w    e5, r0
+0x0174F2  bne      0x017500
+0x0174F4  mov.w    @0x449b08, r0
+0x0174FA  cmp.w    r5, r0
+0x0174FC  beq      0x0175a4
+0x017500  mov.w    e5, e5
+0x017502  beq      0x01759c
+0x017506  mov.w    r5, r5
+0x017508  beq      0x01759c
+0x01750C  mov.w    e5, r0
+0x01750E  jsr      0x0211b6
+0x017512  mov.w    r0, @(0xfff4,er6)
+0x017516  mov.w    @(0xfff4,er6), r0
+0x01751A  mov.w    #0x0005, e0
+0x01751E  mulxu.w  e0, er0
+0x017520  add.l    #0x0001914a, er0
+0x017526  mov.l    er0, @(0xfff6,er6)
+0x01752C  mov.l    @(0xfff6,er6), er0
+0x017532  mov.b    @er0, r0l
+0x017534  mov.b    r0l, @(0xfffb,er6)
+0x017538  mov.b    @(0xfffb,er6), r0l
+0x01753C  extu.w   r0
+0x01753E  btst     #7, r0l
+0x017540  bne      0x017594
+0x017542  mov.b    @(0xfffb,er6), r0l
+0x017546  extu.w   r0
+0x017548  btst     #1, r0l
+0x01754A  beq      0x017594
+0x01754C  mov.l    @(0xfff6,er6), er0
+0x017552  mov.b    @(0x1,er0), r0l
+0x017556  mov.b    r0l, @0x449af1
+0x01755C  mov.l    @(0xfff6,er6), er0
+0x017562  mov.b    @(0x2,er0), r0l
+0x017566  mov.b    r0l, @0x449af2
+0x01756C  mov.l    @(0xfff6,er6), er0
+0x017572  mov.b    @(0x3,er0), r0l
+0x017576  mov.b    r0l, @0x449af3
+0x01757C  mov.l    @(0xfff6,er6), er0
+0x017582  mov.b    @(0x4,er0), r0l
+0x017586  mov.b    r0l, @0x449af4
+0x01758C  mov.w    #0x0020, r0
+0x017590  bsr      0x016ab0
+0x017594  mov.w    e5, @0x449b0a
+0x01759A  bt       0x0175a4
+0x01759C  sub.w    r0, r0
+0x01759E  mov.w    r0, @0x449b0a
+0x0175A4  mov.w    @0x449b08, r0
+0x0175AA  cmp.w    r5, r0
+0x0175AC  beq      0x017690
+
+; ==========================================================================
+; I3  host_code -> internal index lookup over 0x03E390   0x0211B6 .. 0x0211D2
+; ==========================================================================
+0x0211B6  mov.w    r0, e0
+0x0211B8  mov.l    #0x0003e390, er1
+0x0211BE  bt       0x0211c8
+0x0211C0  mov.w    @er1, r0
+0x0211C2  cmp.w    e0, r0
+0x0211C4  beq      0x0211cc
+0x0211C6  adds.l   #4, er1
+0x0211C8  mov.w    @er1, r0
+0x0211CA  bne      0x0211c0
+0x0211CC  mov.w    @(0x2,er1), r0
+0x0211D0  rts      
+
+; ==========================================================================
+; I4  TEST UNIT READY: consumes 0x400404, writes 0x400436   0x02159C .. 0x021768
+; ==========================================================================
+0x02159C  mov.l    er3, @-sp
+0x0215A0  stm.l    er4-er6, @-sp
+0x0215A4  mov.l    #0x00400404, er3
+0x0215AA  mov.l    #0x00400402, er5
+0x0215B0  mov.l    #0x00400436, er6
+0x0215B6  mov.b    @0x40043d, r0l
+0x0215BC  and.b    #0x1f, r0l
+0x0215BE  bne      0x0215d4
+0x0215C0  mov.b    #0x02, r4l
+0x0215C2  bt       0x0215e0
+0x0215C4  mov.b    r4l, r0l
+0x0215C6  extu.w   r0
+0x0215C8  extu.l   er0
+0x0215CA  mov.b    @(0x40043c,er0), r1l
+0x0215D2  beq      0x0215de
+0x0215D4  mov.w    #0x0050, r0
+0x0215D8  mov.w    r0, @er6
+0x0215DA  jmp      0x02175e
+0x0215DE  inc.b    #1, r4l
+0x0215E0  cmp.b    #0x06, r4l
+0x0215E2  bcs      0x0215c4
+0x0215E4  mov.l    #0x00400406, er4
+0x0215EA  mov.w    @er4, r0
+0x0215EC  and.w    #0x00ff, r0
+0x0215F0  bne      0x021608
+0x0215F2  mov.w    @er5, r0
+0x0215F4  cmp.w    #0x0010, r0
+0x0215F8  bne      0x02175e
+0x0215FC  mov.w    @er5, r0
+0x0215FE  jsr      0x0211b6
+0x021602  mov.w    r0, @er6
+0x021604  jmp      0x02175e
+0x021608  mov.w    @er4, r0
+0x02160A  and.w    #0x00ff, r0
+0x02160E  cmp.w    #0x0080, r0
+0x021612  bne      0x02161e
+0x021614  mov.w    #0x000d, r0
+0x021618  mov.w    r0, @er6
+0x02161A  jmp      0x02175e
+0x02161E  mov.w    @er4, r0
+0x021620  and.w    #0x00ff, r0
+0x021624  cmp.w    #0x0001, r0
+0x021628  beq      0x021692
+0x02162A  mov.w    @er4, r0
+0x02162C  and.w    #0x00f0, r0
+0x021630  cmp.w    #0x0020, r0
+0x021634  beq      0x021692
+0x021636  mov.w    @er4, r0
+0x021638  and.w    #0x00ff, r0
+0x02163C  cmp.w    #0x00f0, r0
+0x021640  bne      0x02164c
+0x021642  mov.w    #0x0008, r0
+0x021646  mov.w    r0, @er6
+0x021648  jmp      0x02175e
+0x02164C  mov.w    @er4, r0
+0x02164E  and.w    #0x00ff, r0
+0x021652  cmp.w    #0x00f1, r0
+0x021656  bne      0x021662
+0x021658  mov.w    #0x0009, r0
+0x02165C  mov.w    r0, @er6
+0x02165E  jmp      0x02175e
+0x021662  mov.w    @er4, r0
+0x021664  and.w    #0x00ff, r0
+0x021668  cmp.w    #0x00f3, r0
+0x02166C  bne      0x021676
+0x02166E  mov.w    #0x007a, r0
+0x021672  mov.w    r0, @er6
+0x021674  bt       0x02168e
+0x021676  mov.w    @er4, r4
+0x021678  and.w    #0x00ff, r4
+0x02167C  cmp.w    #0x00f4, r4
+0x021680  bne      0x021688
+0x021682  mov.w    #0x007b, r0
+0x021686  bt       0x02168c
+0x021688  mov.w    #0x0007, r0
+0x02168C  mov.w    r0, @er6
+0x02168E  jmp      0x02175e
+0x021692  mov.w    @er4, r4
+0x021694  and.w    #0x00ff, r4
+0x021698  cmp.w    #0x0001, r4
+0x02169C  bne      0x02175e
+0x0216A0  mov.w    @0x400400, r0
+0x0216A6  and.w    #0x4000, r0
+0x0216AA  cmp.w    #0x4000, r0
+0x0216AE  bne      0x0216ba
+0x0216B0  mov.w    #0x0007, r0
+0x0216B4  mov.w    r0, @er6
+0x0216B6  jmp      0x02175e
+0x0216BA  mov.b    @0x400d55, r0l
+0x0216C0  cmp.b    #0x01, r0l
+0x0216C2  bne      0x0216d4
+0x0216C4  mov.w    @0x400404, r0
+0x0216CA  cmp.w    #0x9000, r0
+0x0216CE  bne      0x0216d4
+0x0216D0  sub.w    r0, r0
+0x0216D2  bt       0x0216da
+0x0216D4  mov.w    @er3, r0
+0x0216D6  jsr      0x0211b6
+0x0216DA  mov.w    r0, @er6
+0x0216DC  mov.w    @er3, r0
+0x0216DE  cmp.w    #0x3000, r0
+0x0216E2  bne      0x0216ea
+0x0216E4  sub.w    r0, r0
+0x0216E6  mov.w    r0, @er3
+0x0216E8  bt       0x02170e
+0x0216EA  mov.w    @er3, r0
+0x0216EC  cmp.w    #0x2000, r0
+0x0216F0  bne      0x02170e
+0x0216F2  mov.w    @er5, r0
+0x0216F4  cmp.w    #0x0110, r0
+0x0216F8  beq      0x02170e
+0x0216FA  mov.w    @er5, r0
+0x0216FC  cmp.w    #0x0120, r0
+0x021700  beq      0x02170e
+0x021702  mov.w    @er5, r0
+0x021704  cmp.w    #0x0121, r0
+0x021708  beq      0x02170e
+0x02170A  sub.w    r0, r0
+0x02170C  mov.w    r0, @er3
+0x02170E  mov.w    @er6, r0
+0x021710  cmp.w    #0x000a, r0
+0x021714  beq      0x021726
+0x021716  mov.w    @er6, r0
+0x021718  cmp.w    #0x0071, r0
+0x02171C  beq      0x021726
+0x02171E  mov.w    @er6, r0
+0x021720  cmp.w    #0x000f, r0
+0x021724  bne      0x021732
+0x021726  mov.w    @er5, r0
+0x021728  jsr      0x0211b6
+0x02172C  mov.w    r0, @0x400438
+0x021732  mov.w    @er6, r0
+0x021734  cmp.w    #0x000a, r0
+0x021738  beq      0x021742
+0x02173A  mov.w    @er6, r0
+0x02173C  cmp.w    #0x0071, r0
+0x021740  bne      0x02175e
+0x021742  mov.w    @er5, r0
+0x021744  cmp.w    #0x0110, r0
+0x021748  beq      0x02175e
+0x02174A  mov.w    @er5, r0
+0x02174C  cmp.w    #0x0120, r0
+0x021750  beq      0x02175e
+0x021752  mov.w    @er5, r0
+0x021754  cmp.w    #0x0121, r0
+0x021758  beq      0x02175e
+0x02175A  sub.w    r0, r0
+0x02175C  mov.w    r0, @er5
+0x02175E  ldm.l    @sp+, er4-er6
+0x021762  mov.l    @sp+, er3
+0x021766  rts      
+
+; ==========================================================================
+; I5  REQUEST SENSE: 19-byte sense from 0x400464+n*0x13   0x021768 .. 0x021840
+; ==========================================================================
+0x021768  mov.l    er3, @-sp
+0x02176C  stm.l    er4-er6, @-sp
+0x021770  sub.l    #0x00000100, sp
+0x021776  mov.l    #0x0040043c, er4
+0x02177C  mov.l    sp, er5
+0x02177E  mov.b    @(0x1,er4), r0l
+0x021782  and.b    #0x1f, r0l
+0x021784  bne      0x0217a2
+0x021786  mov.b    #0x02, r6l
+0x021788  bt       0x021798
+0x02178A  mov.b    r6l, r0l
+0x02178C  extu.w   r0
+0x02178E  extu.l   er0
+0x021790  add.l    er4, er0
+0x021792  mov.b    @er0, r1l
+0x021794  bne      0x0217a2
+0x021796  inc.b    #1, r6l
+0x021798  cmp.b    #0x04, r6l
+0x02179A  bcs      0x02178a
+0x02179C  mov.b    @(0x5,er4), r0l
+0x0217A0  beq      0x0217b0
+0x0217A2  mov.w    #0x0050, r0
+0x0217A6  mov.w    r0, @0x400436
+0x0217AC  jmp      0x021830
+0x0217B0  mov.b    @0x4004ff, r0l
+0x0217B6  beq      0x0217c0
+0x0217B8  mov.b    @0x400509, r6l
+0x0217BE  bt       0x0217c6
+0x0217C0  mov.b    @(0x1,er4), r6l
+0x0217C4  and.b    #0xe0, r6l
+0x0217C6  mov.b    r6l, r6l
+0x0217C8  beq      0x0217d6
+0x0217CA  mov.w    #0x0052, r1
+0x0217CE  mov.l    er5, er0
+0x0217D0  jsr      0x011708
+0x0217D4  bt       0x021802
+0x0217D6  sub.b    r6l, r6l
+0x0217D8  mov.b    r6l, r3l
+0x0217DA  extu.w   r3
+0x0217DC  extu.l   er3
+0x0217DE  mov.l    er5, er0
+0x0217E0  add.l    er3, er0
+0x0217E2  mov.b    @0x400508, r1l
+0x0217E8  extu.w   r1
+0x0217EA  mov.w    #0x0013, e1
+0x0217EE  mulxu.w  e1, er1
+0x0217F0  add.l    #0x00400464, er1
+0x0217F6  add.l    er3, er1
+0x0217F8  mov.b    @er1, r1l
+0x0217FA  mov.b    r1l, @er0
+0x0217FC  inc.b    #1, r6l
+0x0217FE  cmp.b    #0x13, r6l
+0x021800  bcs      0x0217d8
+0x021802  mov.b    @(0x4,er4), r0l
+0x021806  extu.w   r0
+0x021808  mov.w    r0, e6
+0x02180A  cmp.w    #0x0013, r0
+0x02180E  bls      0x021828
+0x021810  mov.b    #0x13, r6l
+0x021812  bt       0x021822
+0x021814  mov.b    r6l, r0l
+0x021816  extu.w   r0
+0x021818  extu.l   er0
+0x02181A  add.l    er5, er0
+0x02181C  sub.b    r1l, r1l
+0x02181E  mov.b    r1l, @er0
+0x021820  inc.b    #1, r6l
+0x021822  extu.w   r6
+0x021824  cmp.w    e6, r6
+0x021826  bcs      0x021814
+0x021828  mov.w    e6, r1
+0x02182A  mov.l    er5, er0
+0x02182C  jsr      0x011900
+0x021830  add.l    #0x00000100, sp
+0x021836  ldm.l    @sp+, er4-er6
+0x02183A  mov.l    @sp+, er3
+0x02183E  rts      
+
+; ==========================================================================
+; I6  main loop: passes 0x400404/0x400402 to 0x0174BC   0x020BC2 .. 0x020BD0
+; ==========================================================================
+0x020BC2  mov.w    @0x400404, e0
+0x020BC8  mov.w    @0x400402, r0
+0x020BCE  jsr      0x0174bc
+
+; ==========================================================================
+; DATA task table: {u32 stack, u32 entry, u16 flags} x2, two variants   0x010920 .. 0x010950
+; ==========================================================================
+0x010920  00 48 00 00 00 02 0A 5A 00 00 00 47 00 00 00 02
+0x010930  74 0A 00 00 00 48 00 00 00 01 0F 5C 00 00 00 47
+0x010940  00 00 00 02 74 0A 00 00 6A 29 00 40 03 FA 58 60
+
+; ==========================================================================
+; DATA event record table: 5 bytes/index, indexed by internal index   0x01914A .. 0x019420
+; ==========================================================================
+0x01914A  00 00 00 00 00 C0 00 00 00 00 80 00 00 00 00 80
+0x01915A  00 00 00 00 00 01 37 00 00 03 01 61 02 01 03 01
+0x01916A  61 02 02 00 02 04 01 00 00 02 04 01 01 00 02 04
+0x01917A  01 02 02 02 04 02 00 00 02 04 03 00 00 02 04 03
+0x01918A  01 00 02 05 00 00 00 02 3A 00 00 00 02 3A 00 01
+0x01919A  00 03 11 00 00 00 03 11 00 10 00 03 11 00 20 00
+0x0191AA  03 11 00 30 00 03 11 00 90 03 03 11 00 01 03 03
+0x0191BA  11 00 11 03 03 11 00 21 03 03 11 00 31 03 03 11
+0x0191CA  00 91 03 03 11 00 02 03 03 11 00 12 03 03 11 00
+0x0191DA  22 03 03 11 00 32 03 03 11 00 92 00 04 03 00 00
+0x0191EA  00 04 03 00 01 02 04 08 01 00 03 04 11 01 00 03
+0x0191FA  04 11 01 01 03 04 11 01 11 03 04 11 01 21 03 04
+0x01920A  11 01 31 03 04 11 01 91 00 04 15 00 00 03 04 15
+0x01921A  01 00 03 04 15 01 01 03 04 15 01 04 00 04 15 01
+0x01922A  05 00 04 44 00 00 00 04 44 00 01 00 04 44 00 02
+0x01923A  03 04 53 00 00 03 04 53 00 01 03 04 53 00 02 03
+0x01924A  04 60 00 01 03 04 60 00 11 03 04 60 00 21 03 04
+0x01925A  60 00 31 03 04 60 00 91 03 04 60 00 02 03 04 60
+0x01926A  00 12 03 04 60 00 22 03 04 60 00 32 03 04 60 00
+0x01927A  92 00 04 60 00 03 00 04 60 00 13 00 04 60 00 23
+0x01928A  00 04 60 00 33 00 04 60 00 93 03 04 60 00 04 03
+0x01929A  04 60 00 14 03 04 60 00 24 03 04 60 00 34 03 04
+0x0192AA  60 00 94 03 04 60 00 07 03 04 60 00 17 03 04 60
+0x0192BA  00 27 03 04 60 00 37 03 04 60 00 97 03 04 62 00
+0x0192CA  00 06 05 00 05 00 06 05 1A 00 00 06 05 20 00 00
+0x0192DA  00 05 24 00 00 06 05 25 00 00 06 05 25 00 00 06
+0x0192EA  05 26 00 00 06 05 26 01 00 06 05 26 02 00 06 05
+0x0192FA  2C 00 00 06 05 2C 01 00 06 05 2C 02 00 06 05 39
+0x01930A  00 00 46 05 3D 00 00 00 06 28 00 00 00 06 29 00
+0x01931A  00 00 06 2A 00 00 00 06 2A 01 00 00 06 3F 00 00
+0x01932A  00 06 3F 01 00 00 06 3F 03 00 00 09 80 01 02 00
+0x01933A  09 80 01 04 00 09 80 02 00 00 0B 08 00 00 00 0B
+0x01934A  3E 00 00 46 0B 43 00 00 06 0B 45 00 00 46 0B 47
+0x01935A  00 00 46 0B 47 00 00 46 0B 47 00 00 40 0B 48 00
+0x01936A  00 40 0B 49 00 00 06 0B 4A 00 00 36 0B 4B 00 00
+0x01937A  06 0B 4E 00 00 02 02 04 02 00 03 04 4C 00 01 03
+0x01938A  04 15 01 06 03 04 15 01 07 00 06 28 00 01 00 09
+0x01939A  80 01 04 00 04 15 01 08 00 09 80 04 01 00 09 80
+0x0193AA  05 00 00 02 04 01 03 00 02 04 01 04 40 0B 47 80
+0x0193BA  00 00 09 80 06 00 03 01 61 02 03 03 04 60 00 1A
+0x0193CA  03 04 60 00 2A 03 04 60 00 3A 03 04 60 00 9A 03
+0x0193DA  04 60 00 18 03 04 60 00 28 03 04 60 00 38 03 04
+0x0193EA  60 00 98 03 04 60 00 19 03 04 60 00 29 03 04 60
+0x0193FA  00 39 03 04 60 00 99 03 01 61 02 04 00 02 04 03
+0x01940A  05 00 02 04 03 06 00 02 04 03 07 FF 80 20 21 22
+0x01941A  00 0A 0B 03 02 23 FF 00 FF FF 06 80 02 02 1F 00
+
+; ==========================================================================
+; DATA tail of host_code table 0x03E390 (0x0E10/0x5000/0x1100) + terminator   0x03E4E0 .. 0x03E4F0
+; ==========================================================================
+0x03E4E0  11 00 00 8E 00 00 00 00 00 80 00 00 00 80 80 00
+
+; ---- host_code table 0x03E390 : 85 entries, [u16 host_code][u16 internal_index] ----
+;  [ 0] off=0x000 host=0x0920 -> idx=0x0005 (  5)
+;  [ 1] off=0x004 host=0x0930 -> idx=0x0006 (  6)
+;  [ 2] off=0x008 host=0x0940 -> idx=0x007E (126)
+;  [ 3] off=0x00C host=0x0950 -> idx=0x008B (139)
+;  [ 4] off=0x010 host=0x2000 -> idx=0x000A ( 10)
+;  [ 5] off=0x014 host=0x3000 -> idx=0x0071 (113)
+;  [ 6] off=0x018 host=0x1000 -> idx=0x000B ( 11)
+;  [ 7] off=0x01C host=0x4000 -> idx=0x000E ( 14)
+;  [ 8] off=0x020 host=0x9000 -> idx=0x000F ( 15)
+;  [ 9] off=0x024 host=0x0600 -> idx=0x0010 ( 16)
+;  [10] off=0x028 host=0x0601 -> idx=0x0011 ( 17)
+;  [11] off=0x02C host=0x0602 -> idx=0x0012 ( 18)
+;  [12] off=0x030 host=0x0603 -> idx=0x0013 ( 19)
+;  [13] off=0x034 host=0x0604 -> idx=0x0014 ( 20)
+;  [14] off=0x038 host=0x0830 -> idx=0x0015 ( 21)
+;  [15] off=0x03C host=0x0831 -> idx=0x0016 ( 22)
+;  [16] off=0x040 host=0x0832 -> idx=0x0017 ( 23)
+;  [17] off=0x044 host=0x0833 -> idx=0x0018 ( 24)
+;  [18] off=0x048 host=0x0834 -> idx=0x0019 ( 25)
+;  [19] off=0x04C host=0x0910 -> idx=0x001A ( 26)
+;  [20] off=0x050 host=0x0911 -> idx=0x001B ( 27)
+;  [21] off=0x054 host=0x0912 -> idx=0x001C ( 28)
+;  [22] off=0x058 host=0x0913 -> idx=0x001D ( 29)
+;  [23] off=0x05C host=0x0914 -> idx=0x001E ( 30)
+;  [24] off=0x060 host=0x0F10 -> idx=0x0020 ( 32)
+;  [25] off=0x064 host=0x0F20 -> idx=0x0021 ( 33)
+;  [26] off=0x068 host=0x0800 -> idx=0x0022 ( 34)
+;  [27] off=0x06C host=0x0810 -> idx=0x0022 ( 34)
+;  [28] off=0x070 host=0x0850 -> idx=0x0023 ( 35)
+;  [29] off=0x074 host=0x0851 -> idx=0x0024 ( 36)
+;  [30] off=0x078 host=0x0852 -> idx=0x0025 ( 37)
+;  [31] off=0x07C host=0x0853 -> idx=0x0026 ( 38)
+;  [32] off=0x080 host=0x0854 -> idx=0x0027 ( 39)
+;  [33] off=0x084 host=0x0F30 -> idx=0x0028 ( 40)
+;  [34] off=0x088 host=0x0120 -> idx=0x0029 ( 41)
+;  [35] off=0x08C host=0x0121 -> idx=0x002A ( 42)
+;  [36] off=0x090 host=0x0430 -> idx=0x002C ( 44)
+;  [37] off=0x094 host=0x0F40 -> idx=0x002D ( 45)
+;  [38] off=0x098 host=0x0F50 -> idx=0x002E ( 46)
+;  [39] off=0x09C host=0x0F60 -> idx=0x002F ( 47)
+;  [40] off=0x0A0 host=0x0502 -> idx=0x0030 ( 48)
+;  [41] off=0x0A4 host=0x0500 -> idx=0x0031 ( 49)
+;  [42] off=0x0A8 host=0x0501 -> idx=0x0032 ( 50)
+;  [43] off=0x0AC host=0x0860 -> idx=0x0033 ( 51)
+;  [44] off=0x0B0 host=0x0861 -> idx=0x0034 ( 52)
+;  [45] off=0x0B4 host=0x0862 -> idx=0x0035 ( 53)
+;  [46] off=0x0B8 host=0x0863 -> idx=0x0036 ( 54)
+;  [47] off=0x0BC host=0x0864 -> idx=0x0037 ( 55)
+;  [48] off=0x0C0 host=0x0870 -> idx=0x0038 ( 56)
+;  [49] off=0x0C4 host=0x0871 -> idx=0x0039 ( 57)
+;  [50] off=0x0C8 host=0x0872 -> idx=0x003A ( 58)
+;  [51] off=0x0CC host=0x0873 -> idx=0x003B ( 59)
+;  [52] off=0x0D0 host=0x0874 -> idx=0x003C ( 60)
+;  [53] off=0x0D4 host=0x0610 -> idx=0x003D ( 61)
+;  [54] off=0x0D8 host=0x0611 -> idx=0x003E ( 62)
+;  [55] off=0x0DC host=0x0612 -> idx=0x003F ( 63)
+;  [56] off=0x0E0 host=0x0613 -> idx=0x0040 ( 64)
+;  [57] off=0x0E4 host=0x0614 -> idx=0x0041 ( 65)
+;  [58] off=0x0E8 host=0x0840 -> idx=0x0042 ( 66)
+;  [59] off=0x0EC host=0x0841 -> idx=0x0043 ( 67)
+;  [60] off=0x0F0 host=0x0842 -> idx=0x0044 ( 68)
+;  [61] off=0x0F4 host=0x0843 -> idx=0x0045 ( 69)
+;  [62] off=0x0F8 host=0x0844 -> idx=0x0046 ( 70)
+;  [63] off=0x0FC host=0x0880 -> idx=0x0047 ( 71)
+;  [64] off=0x100 host=0x0881 -> idx=0x0048 ( 72)
+;  [65] off=0x104 host=0x0882 -> idx=0x0049 ( 73)
+;  [66] off=0x108 host=0x0883 -> idx=0x004A ( 74)
+;  [67] off=0x10C host=0x0884 -> idx=0x004B ( 75)
+;  [68] off=0x110 host=0x0110 -> idx=0x004C ( 76)
+;  [69] off=0x114 host=0x0122 -> idx=0x0077 (119)
+;  [70] off=0x118 host=0x0891 -> idx=0x007F (127)
+;  [71] off=0x11C host=0x0892 -> idx=0x0080 (128)
+;  [72] off=0x120 host=0x0893 -> idx=0x0081 (129)
+;  [73] off=0x124 host=0x0894 -> idx=0x0082 (130)
+;  [74] off=0x128 host=0x08A1 -> idx=0x0083 (131)
+;  [75] off=0x12C host=0x08A2 -> idx=0x0084 (132)
+;  [76] off=0x130 host=0x08A3 -> idx=0x0085 (133)
+;  [77] off=0x134 host=0x08A4 -> idx=0x0086 (134)
+;  [78] off=0x138 host=0x08B1 -> idx=0x0087 (135)
+;  [79] off=0x13C host=0x08B2 -> idx=0x0088 (136)
+;  [80] off=0x140 host=0x08B3 -> idx=0x0089 (137)
+;  [81] off=0x144 host=0x08B4 -> idx=0x008A (138)
+;  [82] off=0x148 host=0x0E10 -> idx=0x008C (140)
+;  [83] off=0x14C host=0x5000 -> idx=0x008D (141)
+;  [84] off=0x150 host=0x1100 -> idx=0x008E (142)
+;  terminator @0x03E4E4 : 00 00 00 00  (lookup miss returns idx 0)
+
+; ---- event records for the codes used in this region ----
+;  host=0x0E00 idx=  0 @0x01914A : 00 00 00 00 00
+;  host=0x0E10 idx=140 @0x019406 : 00 02 04 03 05
+;  host=0x2000 idx= 10 @0x01917C : 02 02 04 02 00
+;  host=0x3000 idx=113 @0x01937F : 02 02 04 02 00
+;  host=0x9000 idx= 15 @0x019195 : 00 02 3A 00 01
+;  host=0x5000 idx=141 @0x01940B : 00 02 04 03 06
+;  host=0x1100 idx=142 @0x019410 : 00 02 04 03 07

@@ -1,0 +1,9815 @@
+[
+{
+"va": "0x100be43c",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICEGetDefectPercent",
+"refs": [
+"0x10002c33"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be454",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICENeedOutputBuff",
+"refs": [
+"0x10002c1c"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be468",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICENeedInputBuff",
+"refs": [
+"0x10002c05"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be47c",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICEDequeueOutputBuff",
+"refs": [
+"0x10002bef"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be494",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICEDequeueInputBuff",
+"refs": [
+"0x10002bd8"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be4ac",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICEQueueOutputBuff",
+"refs": [
+"0x10002bc1"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be4c0",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICEQueueInputBuff",
+"refs": [
+"0x10002ba7"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be4d4",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICEComplete",
+"refs": [
+"0x10002b8c"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be4e4",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICEProcess",
+"refs": [
+"0x10002b71"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be4f0",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICEAbort",
+"refs": [
+"0x10002b57"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be4fc",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICEEnd",
+"refs": [
+"0x10002b3c"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be504",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICEBegin",
+"refs": [
+"0x10002b21"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be510",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICEInit",
+"refs": [
+"0x10002b07"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be51c",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICEDelete",
+"refs": [
+"0x10002aec"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be528",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICENew",
+"refs": [
+"0x10002ad1"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be530",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICEVersion",
+"refs": [
+"0x10002ab7"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be53c",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICEUnload",
+"refs": [
+"0x10002a9c"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be548",
+"enc": "A",
+"sec": ".rdata",
+"text": "DICELoad",
+"refs": [
+"0x10002a81"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be554",
+"enc": "A",
+"sec": ".rdata",
+"text": "map/set<T> too long",
+"refs": [
+"0x100033a8",
+"0x100033cb",
+"0x10006328",
+"0x1000634b",
+"0x1000a5a8",
+"0x1000a5cb",
+"0x10016828",
+"0x1001684b",
+"0x10021d88",
+"0x10021dab",
+"0x100220a8",
+"0x100220cb",
+"0x10022da8",
+"0x10022dcb",
+"0x1004c7a8",
+"0x1004c7cb",
+"0x1004ebf8",
+"0x1004ec1b",
+"0x1006fad8",
+"0x1006fafb",
+"0x100758d8",
+"0x100758fb",
+"0x100802f8",
+"0x1008031b",
+"0x10087228",
+"0x1008724b",
+"0x1008c578",
+"0x1008c59b",
+"0x10091fe8",
+"0x1009200b",
+"0x10096435",
+"0x1009645b",
+"0x10096618",
+"0x1009663b",
+"0x1009b188",
+"0x1009b1ab",
+"0x1009dbb8",
+"0x1009dbdb"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be568",
+"enc": "A",
+"sec": ".rdata",
+"text": "invalid map/set<T> iterator",
+"refs": [
+"0x100035fc",
+"0x1000361f",
+"0x1000667c",
+"0x1000669f",
+"0x1000a78c",
+"0x1000a7af",
+"0x10016a0c",
+"0x10016a2f",
+"0x1002228c",
+"0x100222af",
+"0x1002255c",
+"0x1002257f",
+"0x1004c98c",
+"0x1004c9af",
+"0x1004e92c",
+"0x1004e94f",
+"0x10061edc",
+"0x10061eff",
+"0x1006f80c",
+"0x1006f82f",
+"0x10075b7c",
+"0x10075b9f",
+"0x1008002c",
+"0x1008004f",
+"0x100874cc",
+"0x100874ef",
+"0x1009228c",
+"0x100922af",
+"0x100967fc",
+"0x1009681f",
+"0x10096acc",
+"0x10096aef",
+"0x1009b42c",
+"0x1009b44f",
+"0x1009de5c",
+"0x1009de7f"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be58f",
+"enc": "A",
+"sec": ".rdata",
+"text": "@list<T> too long",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be707",
+"enc": "A",
+"sec": ".rdata",
+"text": "ANikon MD3.01IILS8000  ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be724",
+"enc": "A",
+"sec": ".rdata",
+"text": "\\Settings",
+"refs": [
+"0x10008a1e",
+"0x1006abfa"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be730",
+"enc": "A",
+"sec": ".rdata",
+"text": "\\MaidMods",
+"refs": [
+"0x10008a02",
+"0x1001a2a9",
+"0x1006abec"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be73c",
+"enc": "A",
+"sec": ".rdata",
+"text": "\\Nikon",
+"refs": [
+"0x100089d6",
+"0x1001a284",
+"0x1006abde"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be778",
+"enc": "A",
+"sec": ".rdata",
+"text": "1000",
+"refs": [
+"0x1000b23d"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be7bf",
+"enc": "A",
+"sec": ".rdata",
+"text": "?vector<T> too long",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be828",
+"enc": "A",
+"sec": ".rdata",
+"text": "deque<T> too long",
+"refs": [
+"0x1000dad9",
+"0x1000db00",
+"0x10016799",
+"0x100167c0",
+"0x1004ddc9",
+"0x1004ddf0",
+"0x10055349",
+"0x10055370",
+"0x1006e939",
+"0x1006e960",
+"0x10079349",
+"0x10079370",
+"0x1009fa99",
+"0x1009fac0"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be8a0",
+"enc": "A",
+"sec": ".rdata",
+"text": "ffffff",
+"refs": [
+"0x10010b90"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be90f",
+"enc": "A",
+"sec": ".rdata",
+"text": "@333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be936",
+"enc": "A",
+"sec": ".rdata",
+"text": "o@333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be93f",
+"enc": "A",
+"sec": ".rdata",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be957",
+"enc": "A",
+"sec": ".rdata",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be98c",
+"enc": "A",
+"sec": ".rdata",
+"text": "Image",
+"refs": [
+"0x10014b22",
+"0x10014b35"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be994",
+"enc": "A",
+"sec": ".rdata",
+"text": "HardWareKey",
+"refs": [
+"0x10014a78"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be9a0",
+"enc": "A",
+"sec": ".rdata",
+"text": "Config Manager\\Enum\\%X",
+"refs": [
+"0x10014a36"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be9b8",
+"enc": "A",
+"sec": ".rdata",
+"text": "Nikon LS-8000 Plag and Play",
+"refs": [
+"0x10014c56"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100be9d4",
+"enc": "A",
+"sec": ".rdata",
+"text": "DEVCHANGEL8K",
+"refs": [
+"0x10014c1b",
+"0x10014c5b",
+"0x10014c9d"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100bea68",
+"enc": "A",
+"sec": ".rdata",
+"text": "\\Cache",
+"refs": [
+"0x1001a2c8"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100bedbc",
+"enc": "A",
+"sec": ".rdata",
+"text": "1011",
+"refs": [
+"0x1002e446",
+"0x1002e6f6",
+"0x10061ad8",
+"0x1006c3ff"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100bedc4",
+"enc": "A",
+"sec": ".rdata",
+"text": "FMDF",
+"refs": [
+"0x1002e436",
+"0x1002e6d0",
+"0x10061ac8",
+"0x1006c3ef"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100bedcc",
+"enc": "A",
+"sec": ".rdata",
+"text": "1010",
+"refs": [
+"0x1002e70e"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100bf36c",
+"enc": "A",
+"sec": ".rdata",
+"text": "CommonFilesDir",
+"refs": [
+"0x10037f5d"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100bf37c",
+"enc": "A",
+"sec": ".rdata",
+"text": "Software\\Microsoft\\Windows\\CurrentVersion",
+"refs": [
+"0x10037f16"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100bf64f",
+"enc": "A",
+"sec": ".rdata",
+"text": "??5^",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100bf657",
+"enc": "A",
+"sec": ".rdata",
+"text": "??5^",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c005c",
+"enc": "A",
+"sec": ".rdata",
+"text": "Nikon",
+"refs": [
+"0x10063b7e"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c0064",
+"enc": "A",
+"sec": ".rdata",
+"text": "PID_%04X",
+"refs": [
+"0x100638fc"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c0070",
+"enc": "A",
+"sec": ".rdata",
+"text": "VID_%04X",
+"refs": [
+"0x100638e6"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c0114",
+"enc": "A",
+"sec": ".rdata",
+"text": "%s HA:%02d ID:%02d",
+"refs": [
+"0x10064ed1"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c1d94",
+"enc": "A",
+"sec": ".rdata",
+"text": "36Strip",
+"refs": [
+"0x10076668",
+"0x100a559c",
+"0x100a819e"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c1d9c",
+"enc": "A",
+"sec": ".rdata",
+"text": "6Strip",
+"refs": [
+"0x10076660",
+"0x100a5594",
+"0x100a8196"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c1da4",
+"enc": "A",
+"sec": ".rdata",
+"text": "Feeder",
+"refs": [
+"0x10076658",
+"0x100a558c",
+"0x100a818e"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c1db0",
+"enc": "A",
+"sec": ".rdata",
+"text": "Strip",
+"refs": [
+"0x10076648",
+"0x100a557c",
+"0x100a817e"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c1db8",
+"enc": "A",
+"sec": ".rdata",
+"text": "Mount",
+"refs": [
+"0x10076640",
+"0x100a5574",
+"0x100a8176"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c1dc0",
+"enc": "A",
+"sec": ".rdata",
+"text": "FH-A1",
+"refs": [
+"0x1007670f"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c1dc8",
+"enc": "A",
+"sec": ".rdata",
+"text": "FH-G1",
+"refs": [
+"0x10076707"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c1dd0",
+"enc": "A",
+"sec": ".rdata",
+"text": "FH-3",
+"refs": [
+"0x100766ff"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2578",
+"enc": "A",
+"sec": ".rdata",
+"text": "NkDriverEntry",
+"refs": [
+"0x10099f5f"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2588",
+"enc": "A",
+"sec": ".rdata",
+"text": "1200",
+"refs": [
+"0x10099ff2"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c25f0",
+"enc": "A",
+"sec": ".rdata",
+"text": "Nkduscan.dll",
+"refs": [
+"0x1009a5f5"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2600",
+"enc": "A",
+"sec": ".rdata",
+"text": "Nkdsbp2.dll",
+"refs": [
+"0x1009a615"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2dac",
+"enc": "A",
+"sec": ".rdata",
+"text": "Panorama 65 Film",
+"refs": [
+"0x100a56ff",
+"0x100a82c2"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2dc0",
+"enc": "A",
+"sec": ".rdata",
+"text": "Panorama 58 Film",
+"refs": [
+"0x100a56f4",
+"0x100a82ba"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2dd4",
+"enc": "A",
+"sec": ".rdata",
+"text": "6*9 Film",
+"refs": [
+"0x100a56ec",
+"0x100a82b2"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2de0",
+"enc": "A",
+"sec": ".rdata",
+"text": "6*8 Film",
+"refs": [
+"0x100a56e4",
+"0x100a82aa"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2dec",
+"enc": "A",
+"sec": ".rdata",
+"text": "6*7 Film",
+"refs": [
+"0x100a56dc",
+"0x100a82a2"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2df8",
+"enc": "A",
+"sec": ".rdata",
+"text": "6*6 Film",
+"refs": [
+"0x100a56d4",
+"0x100a829a"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2e04",
+"enc": "A",
+"sec": ".rdata",
+"text": "6*4.5 Film",
+"refs": [
+"0x100a56cc",
+"0x100a8292"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2e10",
+"enc": "A",
+"sec": ".rdata",
+"text": "Brownie Strip Film with G",
+"refs": [
+"0x100a56c4",
+"0x100a828a"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2e2c",
+"enc": "A",
+"sec": ".rdata",
+"text": "Brownie Strip Film",
+"refs": [
+"0x100a56bc",
+"0x100a8282"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2e40",
+"enc": "A",
+"sec": ".rdata",
+"text": "Brownie Mount Film",
+"refs": [
+"0x100a56b4",
+"0x100a827a"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2e54",
+"enc": "A",
+"sec": ".rdata",
+"text": "35mm Strip Film",
+"refs": [
+"0x100a56ac",
+"0x100a8272"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2e64",
+"enc": "A",
+"sec": ".rdata",
+"text": "35mm Mount Film",
+"refs": [
+"0x100a56a4",
+"0x100a826a"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2e74",
+"enc": "A",
+"sec": ".rdata",
+"text": "Praparat",
+"refs": [
+"0x100a569c",
+"0x100a8262"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2e80",
+"enc": "A",
+"sec": ".rdata",
+"text": "16mm Film",
+"refs": [
+"0x100a5694",
+"0x100a825a"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c2e8c",
+"enc": "A",
+"sec": ".rdata",
+"text": "SL-1",
+"refs": [
+"0x100a55a4",
+"0x100a81a6"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3128",
+"enc": "A",
+"sec": ".rdata",
+"text": "invalid string position",
+"refs": [
+"0x100ab2b2"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3140",
+"enc": "A",
+"sec": ".rdata",
+"text": "string too long",
+"refs": [
+"0x100ab2f2"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c315c",
+"enc": "A",
+"sec": ".rdata",
+"text": "bad allocation",
+"refs": [
+"0x100ab390"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c31a8",
+"enc": "A",
+"sec": ".rdata",
+"text": "Unknown exception",
+"refs": [
+"0x100abd4d"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c33bc",
+"enc": "A",
+"sec": ".rdata",
+"text": "CorExitProcess",
+"refs": [
+"0x100af595"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c33cc",
+"enc": "A",
+"sec": ".rdata",
+"text": "mscoree.dll",
+"refs": [
+"0x100af586"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c33e4",
+"enc": "A",
+"sec": ".rdata",
+"text": "e+000",
+"refs": [
+"0x100af8e4"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c33fe",
+"enc": "A",
+"sec": ".rdata",
+"text": "GAIsProcessorFeaturePresent",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c341c",
+"enc": "A",
+"sec": ".rdata",
+"text": "KERNEL32",
+"refs": [
+"0x100afbfb"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3449",
+"enc": "A",
+"sec": ".rdata",
+"text": " (8PX",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3451",
+"enc": "A",
+"sec": ".rdata",
+"text": "700WP",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3461",
+"enc": "A",
+"sec": ".rdata",
+"text": "`h````",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3469",
+"enc": "A",
+"sec": ".rdata",
+"text": "ppxxxx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3484",
+"enc": "U",
+"sec": ".rdata",
+"text": "(null)",
+"refs": [],
+"ptr": [
+"0x100d7414"
+],
+"refs2": [
+"0x100b00ec"
+]
+},
+{
+"va": "0x100c3494",
+"enc": "A",
+"sec": ".rdata",
+"text": "(null)",
+"refs": [],
+"ptr": [
+"0x100d7410"
+],
+"refs2": [
+"0x100b0206",
+"0x100b0324"
+]
+},
+{
+"va": "0x100c3508",
+"enc": "A",
+"sec": ".rdata",
+"text": "atan",
+"refs": [
+"0x100b0814"
+],
+"ptr": [
+"0x100d7d14"
+],
+"refs2": []
+},
+{
+"va": "0x100c3510",
+"enc": "A",
+"sec": ".rdata",
+"text": "ceil",
+"refs": [
+"0x100b080b"
+],
+"ptr": [
+"0x100d7d44"
+],
+"refs2": []
+},
+{
+"va": "0x100c3518",
+"enc": "A",
+"sec": ".rdata",
+"text": "floor",
+"refs": [
+"0x100b0802"
+],
+"ptr": [
+"0x100d7d4c"
+],
+"refs2": []
+},
+{
+"va": "0x100c3520",
+"enc": "A",
+"sec": ".rdata",
+"text": "modf",
+"refs": [
+"0x100b07ea"
+],
+"ptr": [
+"0x100d7d5c"
+],
+"refs2": []
+},
+{
+"va": "0x100c3528",
+"enc": "A",
+"sec": ".rdata",
+"text": "exp2",
+"refs": [
+"0x100b078c"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3530",
+"enc": "A",
+"sec": ".rdata",
+"text": "exp10",
+"refs": [
+"0x100b077c"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3538",
+"enc": "A",
+"sec": ".rdata",
+"text": "log2",
+"refs": [
+"0x100b0759",
+"0x100b076c"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3548",
+"enc": "A",
+"sec": ".rdata",
+"text": "log10",
+"refs": [
+"0x100b0647",
+"0x100b0656",
+"0x100b0741"
+],
+"ptr": [
+"0x100d7ce4"
+],
+"refs2": []
+},
+{
+"va": "0x100c3a57",
+"enc": "A",
+"sec": ".rdata",
+"text": "?X&eB",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3a87",
+"enc": "A",
+"sec": ".rdata",
+"text": "?Ltm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3aa2",
+"enc": "A",
+"sec": ".rdata",
+"text": "tLVv",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3ab7",
+"enc": "A",
+"sec": ".rdata",
+"text": "?h6_~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3afc",
+"enc": "A",
+"sec": ".rdata",
+"text": "37.=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3b37",
+"enc": "A",
+"sec": ".rdata",
+"text": "?7Tf(",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3bdb",
+"enc": "A",
+"sec": ".rdata",
+"text": "=\\uI=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3be9",
+"enc": "A",
+"sec": ".rdata",
+"text": "g:\"(",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3bfc",
+"enc": "A",
+"sec": ".rdata",
+"text": "$O1=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3c5c",
+"enc": "A",
+"sec": ".rdata",
+"text": "uXO=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3c6c",
+"enc": "A",
+"sec": ".rdata",
+"text": "1w<=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3c72",
+"enc": "A",
+"sec": ".rdata",
+"text": ">'eH",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3cfc",
+"enc": "A",
+"sec": ".rdata",
+"text": "pnJ=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c3d61",
+"enc": "A",
+"sec": ".rdata",
+"text": "Ht=c",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4119",
+"enc": "A",
+"sec": ".rdata",
+"text": "]vQ<)8",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4172",
+"enc": "A",
+"sec": ".rdata",
+"text": "z1}B",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c419b",
+"enc": "A",
+"sec": ".rdata",
+"text": "X4I+",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c45e3",
+"enc": "A",
+"sec": ".rdata",
+"text": "|)P!?Ua0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c45f4",
+"enc": "A",
+"sec": ".rdata",
+"text": "+34?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4606",
+"enc": "A",
+"sec": ".rdata",
+"text": "??7;",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4624",
+"enc": "A",
+"sec": ".rdata",
+"text": "MkK?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4654",
+"enc": "A",
+"sec": ".rdata",
+"text": "R_V?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4674",
+"enc": "A",
+"sec": ".rdata",
+"text": "9&\\?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c468a",
+"enc": "A",
+"sec": ".rdata",
+"text": "Eb2]A=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c469c",
+"enc": "A",
+"sec": ".rdata",
+"text": "f#I=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c46a5",
+"enc": "A",
+"sec": ".rdata",
+"text": "hb?O2",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c46ac",
+"enc": "A",
+"sec": ".rdata",
+"text": "H`3=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c46b6",
+"enc": "A",
+"sec": ".rdata",
+"text": "c?e2",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c46c5",
+"enc": "A",
+"sec": ".rdata",
+"text": "Le?2",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c46e5",
+"enc": "A",
+"sec": ".rdata",
+"text": "0h?[",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c46eb",
+"enc": "A",
+"sec": ".rdata",
+"text": "2ieO=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c472b",
+"enc": "A",
+"sec": ".rdata",
+"text": "|W8A=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4745",
+"enc": "A",
+"sec": ".rdata",
+"text": "np?z ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4754",
+"enc": "A",
+"sec": ".rdata",
+"text": ")(q?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4779",
+"enc": "A",
+"sec": ".rdata",
+"text": "}~:f",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4796",
+"enc": "A",
+"sec": ".rdata",
+"text": "t?,&",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c47b6",
+"enc": "A",
+"sec": ".rdata",
+"text": "u?^p?o4",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c47c4",
+"enc": "A",
+"sec": ".rdata",
+"text": "!9v?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c47dc",
+"enc": "A",
+"sec": ".rdata",
+"text": "GYM=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c47f4",
+"enc": "A",
+"sec": ".rdata",
+"text": "Pex?0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4834",
+"enc": "A",
+"sec": ".rdata",
+"text": "6K{?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c485c",
+"enc": "A",
+"sec": ".rdata",
+"text": "X-F=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4865",
+"enc": "A",
+"sec": ".rdata",
+"text": "w}?0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4874",
+"enc": "A",
+"sec": ".rdata",
+"text": "y1~?|\"",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c48cb",
+"enc": "A",
+"sec": ".rdata",
+"text": "V%A+=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c496c",
+"enc": "A",
+"sec": ".rdata",
+"text": "4';=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4b03",
+"enc": "A",
+"sec": ".rdata",
+"text": "#D5p",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4ba3",
+"enc": "A",
+"sec": ".rdata",
+"text": "La8i",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4be3",
+"enc": "A",
+"sec": ".rdata",
+"text": "{4Wf",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4cf3",
+"enc": "A",
+"sec": ".rdata",
+"text": "Ai0T",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4d13",
+"enc": "A",
+"sec": ".rdata",
+"text": "@VNQ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c4d48",
+"enc": "A",
+"sec": ".rdata",
+"text": "p4\"%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c565c",
+"enc": "A",
+"sec": ".rdata",
+"text": "P'E=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c575c",
+"enc": "A",
+"sec": ".rdata",
+"text": "ls1=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5797",
+"enc": "A",
+"sec": ".rdata",
+"text": "?PiB",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c579c",
+"enc": "A",
+"sec": ".rdata",
+"text": "{^C=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c58cc",
+"enc": "A",
+"sec": ".rdata",
+"text": "n{;=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c590c",
+"enc": "A",
+"sec": ".rdata",
+"text": "3<L=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5977",
+"enc": "A",
+"sec": ".rdata",
+"text": "?|I7Z#",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c598c",
+"enc": "A",
+"sec": ".rdata",
+"text": "aDJ=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c599a",
+"enc": "A",
+"sec": ".rdata",
+"text": ">,'1D=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c59ac",
+"enc": "A",
+"sec": ".rdata",
+"text": "+NB=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5a07",
+"enc": "A",
+"sec": ".rdata",
+"text": "?g)([|X>=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5a57",
+"enc": "A",
+"sec": ".rdata",
+"text": "?|[{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5a5c",
+"enc": "A",
+"sec": ".rdata",
+"text": "~*L=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5a8c",
+"enc": "A",
+"sec": ".rdata",
+"text": "u!K=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5b07",
+"enc": "A",
+"sec": ".rdata",
+"text": "?IT$7",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5b94",
+"enc": "A",
+"sec": ".rdata",
+"text": "-8 ?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5ba4",
+"enc": "A",
+"sec": ".rdata",
+"text": ".h ?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5be4",
+"enc": "A",
+"sec": ".rdata",
+"text": "2 !?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5bf4",
+"enc": "A",
+"sec": ".rdata",
+"text": "4P!?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5c3a",
+"enc": "A",
+"sec": ".rdata",
+"text": "!y##",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5c44",
+"enc": "A",
+"sec": ".rdata",
+"text": "98\"?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5c54",
+"enc": "A",
+"sec": ".rdata",
+"text": ":h\"?bC",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5c94",
+"enc": "A",
+"sec": ".rdata",
+"text": "? #?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5ca4",
+"enc": "A",
+"sec": ".rdata",
+"text": "@H#?43",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5cb4",
+"enc": "A",
+"sec": ".rdata",
+"text": "Ax#?uN}*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5cca",
+"enc": "A",
+"sec": ".rdata",
+"text": "r7Yr7=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5cdb",
+"enc": "A",
+"sec": ".rdata",
+"text": ".K=\"=",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5cf4",
+"enc": "A",
+"sec": ".rdata",
+"text": "F0$?3=1",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5d04",
+"enc": "A",
+"sec": ".rdata",
+"text": "H`$?h|",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5d46",
+"enc": "A",
+"sec": ".rdata",
+"text": "%?uY",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5d54",
+"enc": "A",
+"sec": ".rdata",
+"text": "NH%?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5d64",
+"enc": "A",
+"sec": ".rdata",
+"text": "Px%?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5d76",
+"enc": "A",
+"sec": ".rdata",
+"text": "%?\\9",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5d96",
+"enc": "A",
+"sec": ".rdata",
+"text": "&?~YK|",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5da3",
+"enc": "A",
+"sec": ".rdata",
+"text": "sU0&?W",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5db4",
+"enc": "A",
+"sec": ".rdata",
+"text": "VX&?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5ea8",
+"enc": "A",
+"sec": ".rdata",
+"text": "4g%6",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5f3a",
+"enc": "A",
+"sec": ".rdata",
+"text": ":]=O>",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5f48",
+"enc": "A",
+"sec": ".rdata",
+"text": "#w_j",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5f5b",
+"enc": "A",
+"sec": ".rdata",
+"text": "(+E ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c5f6a",
+"enc": "A",
+"sec": ".rdata",
+"text": "V~|_",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c60c8",
+"enc": "A",
+"sec": ".rdata",
+"text": "!|.4",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c60e8",
+"enc": "A",
+"sec": ".rdata",
+"text": "G\"jm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6328",
+"enc": "A",
+"sec": ".rdata",
+"text": "6(`J",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c637b",
+"enc": "A",
+"sec": ".rdata",
+"text": "k:UG",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c649b",
+"enc": "A",
+"sec": ".rdata",
+"text": "UY =",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c651b",
+"enc": "A",
+"sec": ".rdata",
+"text": "Bfe9",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c65aa",
+"enc": "A",
+"sec": ".rdata",
+"text": "CqTR;",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6619",
+"enc": "A",
+"sec": ".rdata",
+"text": "AiFC.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6697",
+"enc": "A",
+"sec": ".rdata",
+"text": "?5a1",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c671f",
+"enc": "A",
+"sec": ".rdata",
+"text": "<{Q}<",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6749",
+"enc": "A",
+"sec": ".rdata",
+"text": "hI{L[",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c679f",
+"enc": "A",
+"sec": ".rdata",
+"text": "<8bunz8",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c680f",
+"enc": "A",
+"sec": ".rdata",
+"text": "<V/>",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6857",
+"enc": "A",
+"sec": ".rdata",
+"text": "?(FN\\",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c691f",
+"enc": "A",
+"sec": ".rdata",
+"text": "<'*6",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6937",
+"enc": "A",
+"sec": ".rdata",
+"text": "?3xj",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c699f",
+"enc": "A",
+"sec": ".rdata",
+"text": "<)TH",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c69bd",
+"enc": "A",
+"sec": ".rdata",
+"text": "K<<H!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6a89",
+"enc": "A",
+"sec": ".rdata",
+"text": "m1WY$",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6b57",
+"enc": "A",
+"sec": ".rdata",
+"text": "?#%X.y",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6bac",
+"enc": "A",
+"sec": ".rdata",
+"text": "F||<##",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6bbd",
+"enc": "A",
+"sec": ".rdata",
+"text": "$x<e",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6bdf",
+"enc": "A",
+"sec": ".rdata",
+"text": "<]%>",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6c6a",
+"enc": "A",
+"sec": ".rdata",
+"text": "T~OXu",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6c77",
+"enc": "A",
+"sec": ".rdata",
+"text": "?.)T",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6d09",
+"enc": "A",
+"sec": ".rdata",
+"text": "zyC7",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6dd2",
+"enc": "A",
+"sec": ".rdata",
+"text": "k7+%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6ddf",
+"enc": "A",
+"sec": ".rdata",
+"text": "<@En[vP",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c6f40",
+"enc": "U",
+"sec": ".rdata",
+"text": "        h((((                  H",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c705f",
+"enc": "A",
+"sec": ".rdata",
+"text": " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c712c",
+"enc": "A",
+"sec": ".rdata",
+"text": "runtime error ",
+"refs": [],
+"ptr": [
+"0x100d7b74"
+],
+"refs2": []
+},
+{
+"va": "0x100c7140",
+"enc": "A",
+"sec": ".rdata",
+"text": "TLOSS error",
+"refs": [],
+"ptr": [
+"0x100d7b64"
+],
+"refs2": []
+},
+{
+"va": "0x100c7150",
+"enc": "A",
+"sec": ".rdata",
+"text": "SING error",
+"refs": [],
+"ptr": [
+"0x100d7b5c"
+],
+"refs2": []
+},
+{
+"va": "0x100c7160",
+"enc": "A",
+"sec": ".rdata",
+"text": "DOMAIN error",
+"refs": [],
+"ptr": [
+"0x100d7b54"
+],
+"refs2": []
+},
+{
+"va": "0x100c7170",
+"enc": "A",
+"sec": ".rdata",
+"text": "R6028",
+"refs": [],
+"ptr": [
+"0x100d7b4c"
+],
+"refs2": []
+},
+{
+"va": "0x100c7177",
+"enc": "A",
+"sec": ".rdata",
+"text": "- unable to initialize heap",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7198",
+"enc": "A",
+"sec": ".rdata",
+"text": "R6027",
+"refs": [],
+"ptr": [
+"0x100d7b44"
+],
+"refs2": []
+},
+{
+"va": "0x100c719f",
+"enc": "A",
+"sec": ".rdata",
+"text": "- not enough space for lowio initialization",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c71d0",
+"enc": "A",
+"sec": ".rdata",
+"text": "R6026",
+"refs": [],
+"ptr": [
+"0x100d7b3c"
+],
+"refs2": []
+},
+{
+"va": "0x100c71d7",
+"enc": "A",
+"sec": ".rdata",
+"text": "- not enough space for stdio initialization",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7208",
+"enc": "A",
+"sec": ".rdata",
+"text": "R6025",
+"refs": [],
+"ptr": [
+"0x100d7b34"
+],
+"refs2": []
+},
+{
+"va": "0x100c720f",
+"enc": "A",
+"sec": ".rdata",
+"text": "- pure virtual function call",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7230",
+"enc": "A",
+"sec": ".rdata",
+"text": "R6024",
+"refs": [],
+"ptr": [
+"0x100d7b2c"
+],
+"refs2": []
+},
+{
+"va": "0x100c7237",
+"enc": "A",
+"sec": ".rdata",
+"text": "- not enough space for _onexit/atexit table",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7268",
+"enc": "A",
+"sec": ".rdata",
+"text": "R6019",
+"refs": [],
+"ptr": [
+"0x100d7b24"
+],
+"refs2": []
+},
+{
+"va": "0x100c726f",
+"enc": "A",
+"sec": ".rdata",
+"text": "- unable to open console device",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7294",
+"enc": "A",
+"sec": ".rdata",
+"text": "R6018",
+"refs": [],
+"ptr": [
+"0x100d7b1c"
+],
+"refs2": []
+},
+{
+"va": "0x100c729b",
+"enc": "A",
+"sec": ".rdata",
+"text": "- unexpected heap error",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c72b8",
+"enc": "A",
+"sec": ".rdata",
+"text": "R6017",
+"refs": [],
+"ptr": [
+"0x100d7b14"
+],
+"refs2": []
+},
+{
+"va": "0x100c72bf",
+"enc": "A",
+"sec": ".rdata",
+"text": "- unexpected multithread lock error",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c72e8",
+"enc": "A",
+"sec": ".rdata",
+"text": "R6016",
+"refs": [],
+"ptr": [
+"0x100d7b0c"
+],
+"refs2": []
+},
+{
+"va": "0x100c72ef",
+"enc": "A",
+"sec": ".rdata",
+"text": "- not enough space for thread data",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c731a",
+"enc": "A",
+"sec": ".rdata",
+"text": "This application has requested the Runtime to terminate it in an unusual way.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7368",
+"enc": "A",
+"sec": ".rdata",
+"text": "Please contact the application's support team for more information.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c73b0",
+"enc": "A",
+"sec": ".rdata",
+"text": "R6009",
+"refs": [],
+"ptr": [
+"0x100d7afc"
+],
+"refs2": []
+},
+{
+"va": "0x100c73b7",
+"enc": "A",
+"sec": ".rdata",
+"text": "- not enough space for environment",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c73dc",
+"enc": "A",
+"sec": ".rdata",
+"text": "R6008",
+"refs": [],
+"ptr": [
+"0x100d7af4"
+],
+"refs2": []
+},
+{
+"va": "0x100c73e3",
+"enc": "A",
+"sec": ".rdata",
+"text": "- not enough space for arguments",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7408",
+"enc": "A",
+"sec": ".rdata",
+"text": "R6002",
+"refs": [],
+"ptr": [
+"0x100d7aec"
+],
+"refs2": [
+"0x100b3e79",
+"0x100b3eb6",
+"0x100b3edc"
+]
+},
+{
+"va": "0x100c740f",
+"enc": "A",
+"sec": ".rdata",
+"text": "- floating point not loaded",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7430",
+"enc": "A",
+"sec": ".rdata",
+"text": "Microsoft Visual C++ Runtime Library",
+"refs": [
+"0x100b3ec6",
+"0x100b841a"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c745c",
+"enc": "A",
+"sec": ".rdata",
+"text": "Runtime Error!",
+"refs": [
+"0x100b3e98"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c746c",
+"enc": "A",
+"sec": ".rdata",
+"text": "Program: ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c747c",
+"enc": "A",
+"sec": ".rdata",
+"text": "<program name unknown>",
+"refs": [
+"0x100b3e23",
+"0x100b836e"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7494",
+"enc": "A",
+"sec": ".rdata",
+"text": "InitializeCriticalSectionAndSpinCount",
+"refs": [
+"0x100b3f87"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c74bc",
+"enc": "A",
+"sec": ".rdata",
+"text": "kernel32.dll",
+"refs": [
+"0x100b3f78"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7502",
+"enc": "U",
+"sec": ".rdata",
+"text": "         (((((                  H",
+"refs": [],
+"ptr": [
+"0x100d78f0",
+"0x100d7cb0"
+],
+"refs2": [
+"0x100b0040"
+]
+},
+{
+"va": "0x100c770a",
+"enc": "U",
+"sec": ".rdata",
+"text": "         h((((                  H",
+"refs": [],
+"ptr": [
+"0x100d7cb4"
+],
+"refs2": []
+},
+{
+"va": "0x100c7808",
+"enc": "U",
+"sec": ".rdata",
+"text": "                                 H",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c790c",
+"enc": "A",
+"sec": ".rdata",
+"text": "_nextafter",
+"refs": [],
+"ptr": [
+"0x100d7dac"
+],
+"refs2": []
+},
+{
+"va": "0x100c7918",
+"enc": "A",
+"sec": ".rdata",
+"text": "_logb",
+"refs": [],
+"ptr": [
+"0x100d7da4"
+],
+"refs2": []
+},
+{
+"va": "0x100c792c",
+"enc": "A",
+"sec": ".rdata",
+"text": "frexp",
+"refs": [],
+"ptr": [
+"0x100d7d84"
+],
+"refs2": []
+},
+{
+"va": "0x100c7934",
+"enc": "A",
+"sec": ".rdata",
+"text": "fmod",
+"refs": [],
+"ptr": [
+"0x100d7d7c"
+],
+"refs2": []
+},
+{
+"va": "0x100c793c",
+"enc": "A",
+"sec": ".rdata",
+"text": "_hypot",
+"refs": [],
+"ptr": [
+"0x100d7d74"
+],
+"refs2": []
+},
+{
+"va": "0x100c7944",
+"enc": "A",
+"sec": ".rdata",
+"text": "_cabs",
+"refs": [],
+"ptr": [
+"0x100d7d6c"
+],
+"refs2": []
+},
+{
+"va": "0x100c794c",
+"enc": "A",
+"sec": ".rdata",
+"text": "ldexp",
+"refs": [],
+"ptr": [
+"0x100d7d64"
+],
+"refs2": []
+},
+{
+"va": "0x100c7954",
+"enc": "A",
+"sec": ".rdata",
+"text": "fabs",
+"refs": [],
+"ptr": [
+"0x100d7d54"
+],
+"refs2": []
+},
+{
+"va": "0x100c7968",
+"enc": "A",
+"sec": ".rdata",
+"text": "sqrt",
+"refs": [],
+"ptr": [
+"0x100d7d24"
+],
+"refs2": []
+},
+{
+"va": "0x100c7970",
+"enc": "A",
+"sec": ".rdata",
+"text": "atan2",
+"refs": [],
+"ptr": [
+"0x100d7d1c"
+],
+"refs2": []
+},
+{
+"va": "0x100c7978",
+"enc": "A",
+"sec": ".rdata",
+"text": "acos",
+"refs": [],
+"ptr": [
+"0x100d7d0c"
+],
+"refs2": []
+},
+{
+"va": "0x100c7980",
+"enc": "A",
+"sec": ".rdata",
+"text": "asin",
+"refs": [],
+"ptr": [
+"0x100d7d04"
+],
+"refs2": []
+},
+{
+"va": "0x100c7988",
+"enc": "A",
+"sec": ".rdata",
+"text": "tanh",
+"refs": [],
+"ptr": [
+"0x100d7cfc"
+],
+"refs2": []
+},
+{
+"va": "0x100c7990",
+"enc": "A",
+"sec": ".rdata",
+"text": "cosh",
+"refs": [],
+"ptr": [
+"0x100d7cf4"
+],
+"refs2": []
+},
+{
+"va": "0x100c7998",
+"enc": "A",
+"sec": ".rdata",
+"text": "sinh",
+"refs": [],
+"ptr": [
+"0x100d7cec"
+],
+"refs2": []
+},
+{
+"va": "0x100c79dc",
+"enc": "A",
+"sec": ".rdata",
+"text": "HH:mm:ss",
+"refs": [],
+"ptr": [
+"0x100d8000"
+],
+"refs2": []
+},
+{
+"va": "0x100c79e8",
+"enc": "A",
+"sec": ".rdata",
+"text": "dddd, MMMM dd, yyyy",
+"refs": [],
+"ptr": [
+"0x100d7ffc"
+],
+"refs2": []
+},
+{
+"va": "0x100c79fc",
+"enc": "A",
+"sec": ".rdata",
+"text": "MM/dd/yy",
+"refs": [],
+"ptr": [
+"0x100d7ff8"
+],
+"refs2": []
+},
+{
+"va": "0x100c7a10",
+"enc": "A",
+"sec": ".rdata",
+"text": "December",
+"refs": [],
+"ptr": [
+"0x100d7fec"
+],
+"refs2": []
+},
+{
+"va": "0x100c7a1c",
+"enc": "A",
+"sec": ".rdata",
+"text": "November",
+"refs": [],
+"ptr": [
+"0x100d7fe8"
+],
+"refs2": []
+},
+{
+"va": "0x100c7a28",
+"enc": "A",
+"sec": ".rdata",
+"text": "October",
+"refs": [],
+"ptr": [
+"0x100d7fe4"
+],
+"refs2": []
+},
+{
+"va": "0x100c7a30",
+"enc": "A",
+"sec": ".rdata",
+"text": "September",
+"refs": [],
+"ptr": [
+"0x100d7fe0"
+],
+"refs2": []
+},
+{
+"va": "0x100c7a3c",
+"enc": "A",
+"sec": ".rdata",
+"text": "August",
+"refs": [],
+"ptr": [
+"0x100d7fdc"
+],
+"refs2": []
+},
+{
+"va": "0x100c7a44",
+"enc": "A",
+"sec": ".rdata",
+"text": "July",
+"refs": [],
+"ptr": [
+"0x100d7fd8"
+],
+"refs2": []
+},
+{
+"va": "0x100c7a4c",
+"enc": "A",
+"sec": ".rdata",
+"text": "June",
+"refs": [],
+"ptr": [
+"0x100d7fd4"
+],
+"refs2": []
+},
+{
+"va": "0x100c7a54",
+"enc": "A",
+"sec": ".rdata",
+"text": "April",
+"refs": [],
+"ptr": [
+"0x100d7fcc"
+],
+"refs2": []
+},
+{
+"va": "0x100c7a5c",
+"enc": "A",
+"sec": ".rdata",
+"text": "March",
+"refs": [],
+"ptr": [
+"0x100d7fc8"
+],
+"refs2": []
+},
+{
+"va": "0x100c7a64",
+"enc": "A",
+"sec": ".rdata",
+"text": "February",
+"refs": [],
+"ptr": [
+"0x100d7fc4"
+],
+"refs2": []
+},
+{
+"va": "0x100c7a70",
+"enc": "A",
+"sec": ".rdata",
+"text": "January",
+"refs": [],
+"ptr": [
+"0x100d7fc0"
+],
+"refs2": []
+},
+{
+"va": "0x100c7aa8",
+"enc": "A",
+"sec": ".rdata",
+"text": "Saturday",
+"refs": [],
+"ptr": [
+"0x100d7f8c"
+],
+"refs2": []
+},
+{
+"va": "0x100c7ab4",
+"enc": "A",
+"sec": ".rdata",
+"text": "Friday",
+"refs": [],
+"ptr": [
+"0x100d7f88"
+],
+"refs2": []
+},
+{
+"va": "0x100c7abc",
+"enc": "A",
+"sec": ".rdata",
+"text": "Thursday",
+"refs": [],
+"ptr": [
+"0x100d7f84"
+],
+"refs2": []
+},
+{
+"va": "0x100c7ac8",
+"enc": "A",
+"sec": ".rdata",
+"text": "Wednesday",
+"refs": [],
+"ptr": [
+"0x100d7f80"
+],
+"refs2": []
+},
+{
+"va": "0x100c7ad4",
+"enc": "A",
+"sec": ".rdata",
+"text": "Tuesday",
+"refs": [],
+"ptr": [
+"0x100d7f7c"
+],
+"refs2": []
+},
+{
+"va": "0x100c7adc",
+"enc": "A",
+"sec": ".rdata",
+"text": "Monday",
+"refs": [],
+"ptr": [
+"0x100d7f78"
+],
+"refs2": []
+},
+{
+"va": "0x100c7ae4",
+"enc": "A",
+"sec": ".rdata",
+"text": "Sunday",
+"refs": [],
+"ptr": [
+"0x100d7f74"
+],
+"refs2": []
+},
+{
+"va": "0x100c7b14",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetProcessWindowStation",
+"refs": [
+"0x100b77d7"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7b2c",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetUserObjectInformationA",
+"refs": [
+"0x100b77c6"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7b48",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetLastActivePopup",
+"refs": [
+"0x100b77ab"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7b5c",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetActiveWindow",
+"refs": [
+"0x100b77a3"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7b6c",
+"enc": "A",
+"sec": ".rdata",
+"text": "MessageBoxA",
+"refs": [
+"0x100b7792"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7b78",
+"enc": "A",
+"sec": ".rdata",
+"text": "user32.dll",
+"refs": [
+"0x100b7777"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7b94",
+"enc": "A",
+"sec": ".rdata",
+"text": "1#QNAN",
+"refs": [
+"0x100b80eb"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7b9c",
+"enc": "A",
+"sec": ".rdata",
+"text": "1#INF",
+"refs": [
+"0x100b80ce"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7ba4",
+"enc": "A",
+"sec": ".rdata",
+"text": "1#IND",
+"refs": [
+"0x100b80bd"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7bac",
+"enc": "A",
+"sec": ".rdata",
+"text": "1#SNAN",
+"refs": [
+"0x100b80a3"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7bb4",
+"enc": "A",
+"sec": ".rdata",
+"text": "Program: ",
+"refs": [
+"0x100b83f3"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7bc0",
+"enc": "A",
+"sec": ".rdata",
+"text": "A buffer overrun has been detected which has corrupted the program's",
+"refs": [
+"0x100b834a"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7c05",
+"enc": "A",
+"sec": ".rdata",
+"text": "internal state.  The program cannot safely continue execution and must",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7c4c",
+"enc": "A",
+"sec": ".rdata",
+"text": "now be terminated.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7c60",
+"enc": "A",
+"sec": ".rdata",
+"text": "Buffer overrun detected!",
+"refs": [
+"0x100b8343"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7c80",
+"enc": "A",
+"sec": ".rdata",
+"text": "A security error of unknown cause has been detected which has",
+"refs": [
+"0x100b8337"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7cbe",
+"enc": "A",
+"sec": ".rdata",
+"text": "corrupted the program's internal state.  The program cannot safely",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7d01",
+"enc": "A",
+"sec": ".rdata",
+"text": "continue execution and must now be terminated.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7d34",
+"enc": "A",
+"sec": ".rdata",
+"text": "Unknown security failure detected!",
+"refs": [
+"0x100b8330"
+],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7d64",
+"enc": "A",
+"sec": ".rdata",
+"text": "SunMonTueWedThuFriSat",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100c7d7c",
+"enc": "A",
+"sec": ".rdata",
+"text": "JanFebMarAprMayJunJulAugSepOctNovDec",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100cffd2",
+"enc": "A",
+"sec": ".rdata",
+"text": "SHGetFolderPathA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100cffe4",
+"enc": "A",
+"sec": ".rdata",
+"text": "SHFOLDER.dll",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100cfff4",
+"enc": "A",
+"sec": ".rdata",
+"text": "SetupDiDestroyDeviceInfoList",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0014",
+"enc": "A",
+"sec": ".rdata",
+"text": "SetupDiGetDeviceRegistryPropertyA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0038",
+"enc": "A",
+"sec": ".rdata",
+"text": "SetupDiEnumDeviceInfo",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0050",
+"enc": "A",
+"sec": ".rdata",
+"text": "SetupDiGetClassDevsA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0068",
+"enc": "A",
+"sec": ".rdata",
+"text": "SetupDiClassGuidsFromNameA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0084",
+"enc": "A",
+"sec": ".rdata",
+"text": "SETUPAPI.dll",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0094",
+"enc": "A",
+"sec": ".rdata",
+"text": "FreeLibrary",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d00a2",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetProcAddress",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d00b4",
+"enc": "A",
+"sec": ".rdata",
+"text": "LoadLibraryA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d00c4",
+"enc": "A",
+"sec": ".rdata",
+"text": "lstrlenA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d00d0",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetModuleFileNameA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d00e6",
+"enc": "A",
+"sec": ".rdata",
+"text": "CreateDirectoryA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d00fa",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetLastError",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d010a",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetVersionExA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d011a",
+"enc": "A",
+"sec": ".rdata",
+"text": "InitializeCriticalSection",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0136",
+"enc": "A",
+"sec": ".rdata",
+"text": "DeleteCriticalSection",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d014e",
+"enc": "A",
+"sec": ".rdata",
+"text": "EnterCriticalSection",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0166",
+"enc": "A",
+"sec": ".rdata",
+"text": "LeaveCriticalSection",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d017e",
+"enc": "A",
+"sec": ".rdata",
+"text": "CloseHandle",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d018c",
+"enc": "A",
+"sec": ".rdata",
+"text": "WaitForSingleObject",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d01a2",
+"enc": "A",
+"sec": ".rdata",
+"text": "LocalFree",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d01ae",
+"enc": "A",
+"sec": ".rdata",
+"text": "LocalAlloc",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d01bc",
+"enc": "A",
+"sec": ".rdata",
+"text": "Sleep",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d01c4",
+"enc": "A",
+"sec": ".rdata",
+"text": "lstrcpyA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d01d0",
+"enc": "A",
+"sec": ".rdata",
+"text": "lstrcatA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d01dc",
+"enc": "A",
+"sec": ".rdata",
+"text": "RaiseException",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d01ee",
+"enc": "A",
+"sec": ".rdata",
+"text": "CreateFileA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d01fc",
+"enc": "A",
+"sec": ".rdata",
+"text": "LoadResource",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d020c",
+"enc": "A",
+"sec": ".rdata",
+"text": "FindResourceA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d021a",
+"enc": "A",
+"sec": ".rdata",
+"text": "KERNEL32.dll",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d022a",
+"enc": "A",
+"sec": ".rdata",
+"text": "PostMessageA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d023a",
+"enc": "A",
+"sec": ".rdata",
+"text": "TranslateMessage",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d024e",
+"enc": "A",
+"sec": ".rdata",
+"text": "DispatchMessageA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0262",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetMessageA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0270",
+"enc": "A",
+"sec": ".rdata",
+"text": "PostQuitMessage",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0282",
+"enc": "A",
+"sec": ".rdata",
+"text": "DefWindowProcA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0294",
+"enc": "A",
+"sec": ".rdata",
+"text": "CreateWindowExA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d02a6",
+"enc": "A",
+"sec": ".rdata",
+"text": "RegisterClassA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d02b8",
+"enc": "A",
+"sec": ".rdata",
+"text": "LoadCursorA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d02c6",
+"enc": "A",
+"sec": ".rdata",
+"text": "LoadIconA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d02d2",
+"enc": "A",
+"sec": ".rdata",
+"text": "UnregisterClassA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d02e6",
+"enc": "A",
+"sec": ".rdata",
+"text": "LoadStringA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d02f2",
+"enc": "A",
+"sec": ".rdata",
+"text": "USER32.dll",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0300",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetStockObject",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0310",
+"enc": "A",
+"sec": ".rdata",
+"text": "GDI32.dll",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d031c",
+"enc": "A",
+"sec": ".rdata",
+"text": "RegCloseKey",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d032a",
+"enc": "A",
+"sec": ".rdata",
+"text": "RegQueryValueExA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d033e",
+"enc": "A",
+"sec": ".rdata",
+"text": "RegOpenKeyExA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d034c",
+"enc": "A",
+"sec": ".rdata",
+"text": "ADVAPI32.dll",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d035c",
+"enc": "A",
+"sec": ".rdata",
+"text": "timeGetTime",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0368",
+"enc": "A",
+"sec": ".rdata",
+"text": "WINMM.dll",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0374",
+"enc": "A",
+"sec": ".rdata",
+"text": "HeapAlloc",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0380",
+"enc": "A",
+"sec": ".rdata",
+"text": "RtlUnwind",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d038c",
+"enc": "A",
+"sec": ".rdata",
+"text": "HeapFree",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0398",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetSystemTimeAsFileTime",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d03b2",
+"enc": "A",
+"sec": ".rdata",
+"text": "ExitThread",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d03c0",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetCurrentThreadId",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d03d6",
+"enc": "A",
+"sec": ".rdata",
+"text": "TlsSetValue",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d03e4",
+"enc": "A",
+"sec": ".rdata",
+"text": "TlsGetValue",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d03f2",
+"enc": "A",
+"sec": ".rdata",
+"text": "CreateThread",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0402",
+"enc": "A",
+"sec": ".rdata",
+"text": "DeleteFileA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0410",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetCommandLineA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0422",
+"enc": "A",
+"sec": ".rdata",
+"text": "HeapDestroy",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0430",
+"enc": "A",
+"sec": ".rdata",
+"text": "HeapCreate",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d043e",
+"enc": "A",
+"sec": ".rdata",
+"text": "VirtualFree",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d044c",
+"enc": "A",
+"sec": ".rdata",
+"text": "VirtualAlloc",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d045c",
+"enc": "A",
+"sec": ".rdata",
+"text": "HeapReAlloc",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d046a",
+"enc": "A",
+"sec": ".rdata",
+"text": "IsBadWritePtr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d047a",
+"enc": "A",
+"sec": ".rdata",
+"text": "TlsFree",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0484",
+"enc": "A",
+"sec": ".rdata",
+"text": "SetLastError",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0494",
+"enc": "A",
+"sec": ".rdata",
+"text": "TlsAlloc",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d04a0",
+"enc": "A",
+"sec": ".rdata",
+"text": "SetUnhandledExceptionFilter",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d04be",
+"enc": "A",
+"sec": ".rdata",
+"text": "ExitProcess",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d04cc",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetModuleHandleA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d04e0",
+"enc": "A",
+"sec": ".rdata",
+"text": "TerminateProcess",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d04f4",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetCurrentProcess",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0508",
+"enc": "A",
+"sec": ".rdata",
+"text": "HeapSize",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0514",
+"enc": "A",
+"sec": ".rdata",
+"text": "VirtualProtect",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0526",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetSystemInfo",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0536",
+"enc": "A",
+"sec": ".rdata",
+"text": "VirtualQuery",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0546",
+"enc": "A",
+"sec": ".rdata",
+"text": "LCMapStringA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0556",
+"enc": "A",
+"sec": ".rdata",
+"text": "WideCharToMultiByte",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d056c",
+"enc": "A",
+"sec": ".rdata",
+"text": "MultiByteToWideChar",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0582",
+"enc": "A",
+"sec": ".rdata",
+"text": "LCMapStringW",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0592",
+"enc": "A",
+"sec": ".rdata",
+"text": "UnhandledExceptionFilter",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d05ae",
+"enc": "A",
+"sec": ".rdata",
+"text": "ReadFile",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d05ba",
+"enc": "A",
+"sec": ".rdata",
+"text": "WriteFile",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d05c6",
+"enc": "A",
+"sec": ".rdata",
+"text": "SetFilePointer",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d05d8",
+"enc": "A",
+"sec": ".rdata",
+"text": "SetHandleCount",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d05ea",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetStdHandle",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d05fa",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetFileType",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0608",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetStartupInfoA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d061a",
+"enc": "A",
+"sec": ".rdata",
+"text": "FreeEnvironmentStringsA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0634",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetEnvironmentStrings",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d064c",
+"enc": "A",
+"sec": ".rdata",
+"text": "FreeEnvironmentStringsW",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0666",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetEnvironmentStringsW",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0680",
+"enc": "A",
+"sec": ".rdata",
+"text": "IsBadReadPtr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0690",
+"enc": "A",
+"sec": ".rdata",
+"text": "IsBadCodePtr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d06a0",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetACP",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d06aa",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetOEMCP",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d06b6",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetCPInfo",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d06c2",
+"enc": "A",
+"sec": ".rdata",
+"text": "SetStdHandle",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d06d2",
+"enc": "A",
+"sec": ".rdata",
+"text": "FlushFileBuffers",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d06e6",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetLocaleInfoA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d06f8",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetStringTypeA",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d070a",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetStringTypeW",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d071c",
+"enc": "A",
+"sec": ".rdata",
+"text": "QueryPerformanceCounter",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0736",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetTickCount",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d0746",
+"enc": "A",
+"sec": ".rdata",
+"text": "GetCurrentProcessId",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d075c",
+"enc": "A",
+"sec": ".rdata",
+"text": "SetEndOfFile",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d07b6",
+"enc": "A",
+"sec": ".rdata",
+"text": "LS8000.md3",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d07c1",
+"enc": "A",
+"sec": ".rdata",
+"text": "?NkCtrlEntry@@YGFFFFPAX@Z",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d07db",
+"enc": "A",
+"sec": ".rdata",
+"text": "MAIDEntryPoint",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d07ea",
+"enc": "A",
+"sec": ".rdata",
+"text": "NkMDCtrlEntry",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1091",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d10d9",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1121",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1170",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1190",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1198",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d11b0",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d11c0",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d11d8",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d11f8",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d122f",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1237",
+"enc": "A",
+"sec": ".data",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1247",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1271",
+"enc": "A",
+"sec": ".data",
+"text": "9#J{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d12ef",
+"enc": "A",
+"sec": ".data",
+"text": "?2w-!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d133f",
+"enc": "A",
+"sec": ".data",
+"text": "@U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d13b7",
+"enc": "A",
+"sec": ".data",
+"text": "?2U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d13d7",
+"enc": "A",
+"sec": ".data",
+"text": "?9EGr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1447",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d148f",
+"enc": "A",
+"sec": ".data",
+"text": "?mV}",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d14c2",
+"enc": "A",
+"sec": ".data",
+"text": "h\"lx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1517",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1537",
+"enc": "A",
+"sec": ".data",
+"text": "@|a2U0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1569",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d15a8",
+"enc": "A",
+"sec": ".data",
+"text": ".?AVexception@@",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d15c0",
+"enc": "A",
+"sec": ".data",
+"text": ".?AVlogic_error@std@@",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d15e0",
+"enc": "A",
+"sec": ".data",
+"text": ".?AVlength_error@std@@",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1600",
+"enc": "A",
+"sec": ".data",
+"text": ".?AVout_of_range@std@@",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1629",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1671",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d16b9",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1708",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1728",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1730",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1748",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1758",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1770",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1790",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d17c7",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d17cf",
+"enc": "A",
+"sec": ".data",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d17df",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1809",
+"enc": "A",
+"sec": ".data",
+"text": "9#J{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1887",
+"enc": "A",
+"sec": ".data",
+"text": "?2w-!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d18d7",
+"enc": "A",
+"sec": ".data",
+"text": "@U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d194f",
+"enc": "A",
+"sec": ".data",
+"text": "?2U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d196f",
+"enc": "A",
+"sec": ".data",
+"text": "?9EGr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d19df",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1a27",
+"enc": "A",
+"sec": ".data",
+"text": "?mV}",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1a5a",
+"enc": "A",
+"sec": ".data",
+"text": "h\"lx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1aaf",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1acf",
+"enc": "A",
+"sec": ".data",
+"text": "@|a2U0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1b01",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1b49",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1b91",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1be0",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1c00",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1c08",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1c20",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1c30",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1c48",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1c68",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1c9f",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1ca7",
+"enc": "A",
+"sec": ".data",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1cb7",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1ce1",
+"enc": "A",
+"sec": ".data",
+"text": "9#J{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1d5f",
+"enc": "A",
+"sec": ".data",
+"text": "?2w-!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1daf",
+"enc": "A",
+"sec": ".data",
+"text": "@U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1e27",
+"enc": "A",
+"sec": ".data",
+"text": "?2U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1e47",
+"enc": "A",
+"sec": ".data",
+"text": "?9EGr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1eb7",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1eff",
+"enc": "A",
+"sec": ".data",
+"text": "?mV}",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1f32",
+"enc": "A",
+"sec": ".data",
+"text": "h\"lx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1f87",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1fa7",
+"enc": "A",
+"sec": ".data",
+"text": "@|a2U0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d1fe1",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2029",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2071",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d20b9",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2101",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2149",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2191",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d21d9",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2239",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2288",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d22a8",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d22b0",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d22c8",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d22d8",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d22f0",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2310",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2347",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d234f",
+"enc": "A",
+"sec": ".data",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d235f",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2389",
+"enc": "A",
+"sec": ".data",
+"text": "9#J{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2407",
+"enc": "A",
+"sec": ".data",
+"text": "?2w-!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2457",
+"enc": "A",
+"sec": ".data",
+"text": "@U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d24cf",
+"enc": "A",
+"sec": ".data",
+"text": "?2U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d24ef",
+"enc": "A",
+"sec": ".data",
+"text": "?9EGr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d255f",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d25a7",
+"enc": "A",
+"sec": ".data",
+"text": "?mV}",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d25da",
+"enc": "A",
+"sec": ".data",
+"text": "h\"lx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d262f",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d264f",
+"enc": "A",
+"sec": ".data",
+"text": "@|a2U0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d26b7",
+"enc": "A",
+"sec": ".data",
+"text": "?YLl>",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d26ff",
+"enc": "A",
+"sec": ".data",
+"text": "@@M-[",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2779",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d27c8",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d27e8",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d27f0",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2808",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2818",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2830",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2850",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2887",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d288f",
+"enc": "A",
+"sec": ".data",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d289f",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d28c9",
+"enc": "A",
+"sec": ".data",
+"text": "9#J{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2947",
+"enc": "A",
+"sec": ".data",
+"text": "?2w-!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2997",
+"enc": "A",
+"sec": ".data",
+"text": "@U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2a0f",
+"enc": "A",
+"sec": ".data",
+"text": "?2U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2a2f",
+"enc": "A",
+"sec": ".data",
+"text": "?9EGr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2a9f",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2ae7",
+"enc": "A",
+"sec": ".data",
+"text": "?mV}",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2b1a",
+"enc": "A",
+"sec": ".data",
+"text": "h\"lx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2b6f",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2b8f",
+"enc": "A",
+"sec": ".data",
+"text": "@|a2U0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2bc8",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2be8",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2bf0",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2c08",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2c18",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2c30",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2c50",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2c87",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2c8f",
+"enc": "A",
+"sec": ".data",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2c9f",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2cc9",
+"enc": "A",
+"sec": ".data",
+"text": "9#J{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2d47",
+"enc": "A",
+"sec": ".data",
+"text": "?2w-!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2d97",
+"enc": "A",
+"sec": ".data",
+"text": "@U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2e0f",
+"enc": "A",
+"sec": ".data",
+"text": "?2U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2e2f",
+"enc": "A",
+"sec": ".data",
+"text": "?9EGr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2e9f",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2ee7",
+"enc": "A",
+"sec": ".data",
+"text": "?mV}",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2f1a",
+"enc": "A",
+"sec": ".data",
+"text": "h\"lx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2f6f",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2f8f",
+"enc": "A",
+"sec": ".data",
+"text": "@|a2U0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d2fc1",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3009",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3058",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3078",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3080",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3098",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d30a8",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d30c0",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d30e0",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3117",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d311f",
+"enc": "A",
+"sec": ".data",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d312f",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3159",
+"enc": "A",
+"sec": ".data",
+"text": "9#J{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d31d7",
+"enc": "A",
+"sec": ".data",
+"text": "?2w-!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3227",
+"enc": "A",
+"sec": ".data",
+"text": "@U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d329f",
+"enc": "A",
+"sec": ".data",
+"text": "?2U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d32bf",
+"enc": "A",
+"sec": ".data",
+"text": "?9EGr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d332f",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3377",
+"enc": "A",
+"sec": ".data",
+"text": "?mV}",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d33aa",
+"enc": "A",
+"sec": ".data",
+"text": "h\"lx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d33ff",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d341f",
+"enc": "A",
+"sec": ".data",
+"text": "@|a2U0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3451",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3499",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d34e1",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3529",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3578",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3598",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d35a0",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d35b8",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d35c8",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d35e0",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3600",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3637",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d363f",
+"enc": "A",
+"sec": ".data",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d364f",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3679",
+"enc": "A",
+"sec": ".data",
+"text": "9#J{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d36f7",
+"enc": "A",
+"sec": ".data",
+"text": "?2w-!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3747",
+"enc": "A",
+"sec": ".data",
+"text": "@U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d37bf",
+"enc": "A",
+"sec": ".data",
+"text": "?2U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d37df",
+"enc": "A",
+"sec": ".data",
+"text": "?9EGr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d384f",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3897",
+"enc": "A",
+"sec": ".data",
+"text": "?mV}",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d38ca",
+"enc": "A",
+"sec": ".data",
+"text": "h\"lx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d391f",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d393f",
+"enc": "A",
+"sec": ".data",
+"text": "@|a2U0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3971",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3cd9",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3d41",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3d89",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3e01",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3e50",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3e70",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3e78",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3e90",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3ea0",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3eb8",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3ed8",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3f0f",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3f17",
+"enc": "A",
+"sec": ".data",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3f27",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3f51",
+"enc": "A",
+"sec": ".data",
+"text": "9#J{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d3fcf",
+"enc": "A",
+"sec": ".data",
+"text": "?2w-!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d401f",
+"enc": "A",
+"sec": ".data",
+"text": "@U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4097",
+"enc": "A",
+"sec": ".data",
+"text": "?2U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d40b7",
+"enc": "A",
+"sec": ".data",
+"text": "?9EGr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4127",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d416f",
+"enc": "A",
+"sec": ".data",
+"text": "?mV}",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d41a2",
+"enc": "A",
+"sec": ".data",
+"text": "h\"lx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d41f7",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4217",
+"enc": "A",
+"sec": ".data",
+"text": "@|a2U0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4249",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4491",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d44e0",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4500",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4508",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4520",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4530",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4548",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4568",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d459f",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d45a7",
+"enc": "A",
+"sec": ".data",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d45b7",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d45e1",
+"enc": "A",
+"sec": ".data",
+"text": "9#J{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d465f",
+"enc": "A",
+"sec": ".data",
+"text": "?2w-!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d46af",
+"enc": "A",
+"sec": ".data",
+"text": "@U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4727",
+"enc": "A",
+"sec": ".data",
+"text": "?2U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4747",
+"enc": "A",
+"sec": ".data",
+"text": "?9EGr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d47b7",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d47ff",
+"enc": "A",
+"sec": ".data",
+"text": "?mV}",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4832",
+"enc": "A",
+"sec": ".data",
+"text": "h\"lx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4887",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d48a7",
+"enc": "A",
+"sec": ".data",
+"text": "@|a2U0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d48d9",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d49e1",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4a29",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4a78",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4a98",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4aa0",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4ab8",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4ac8",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4ae0",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4b00",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4b37",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4b3f",
+"enc": "A",
+"sec": ".data",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4b4f",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4b79",
+"enc": "A",
+"sec": ".data",
+"text": "9#J{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4bf7",
+"enc": "A",
+"sec": ".data",
+"text": "?2w-!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4c47",
+"enc": "A",
+"sec": ".data",
+"text": "@U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4cbf",
+"enc": "A",
+"sec": ".data",
+"text": "?2U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4cdf",
+"enc": "A",
+"sec": ".data",
+"text": "?9EGr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4d4f",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4d97",
+"enc": "A",
+"sec": ".data",
+"text": "?mV}",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4dca",
+"enc": "A",
+"sec": ".data",
+"text": "h\"lx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4e1f",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4e3f",
+"enc": "A",
+"sec": ".data",
+"text": "@|a2U0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4e71",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4ed1",
+"enc": "A",
+"sec": ".data",
+"text": " !\"#12567:;<PQRSTUVWXYZpqruvwxyz|}~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d4f80",
+"enc": "U",
+"sec": ".data",
+"text": "  !!\"##$$%%&&''(())**+,,--..//0011223445566778899::;;<==>>??@@AABBCCDEEFFGGHHIIJJKKLLMNNOOPPQQRRSSTTUVVWWXXYYZZ[[\\\\]]^__``aabbccddeefgghhiijjkkllmmnnoppqqrrssttuuvvwxxyyzz{{||}}~~",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d5f20",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d5f40",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d5f48",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d5f60",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d5f70",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d5f88",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d5fa8",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d5fdf",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d5fe7",
+"enc": "A",
+"sec": ".data",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d5ff7",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6021",
+"enc": "A",
+"sec": ".data",
+"text": "9#J{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d609f",
+"enc": "A",
+"sec": ".data",
+"text": "?2w-!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d60ef",
+"enc": "A",
+"sec": ".data",
+"text": "@U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6167",
+"enc": "A",
+"sec": ".data",
+"text": "?2U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6187",
+"enc": "A",
+"sec": ".data",
+"text": "?9EGr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d61f7",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d623f",
+"enc": "A",
+"sec": ".data",
+"text": "?mV}",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6272",
+"enc": "A",
+"sec": ".data",
+"text": "h\"lx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d62c7",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d62e7",
+"enc": "A",
+"sec": ".data",
+"text": "@|a2U0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6380",
+"enc": "A",
+"sec": ".data",
+"text": "~}|{zyxwvusrqponmlkjihgfdcba`_^]\\[ZYXVUTSRQPONMLKJIGFEDCBA@?>=<;:876543210/.-,*)('&%$#\"! ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6463",
+"enc": "A",
+"sec": ".data",
+"text": "~}|{yxwvutsrqponmljihgfedcba`_^][ZYXWVUTSRQPOMLKJIHGFEDCBA@>=<;:987654321/.-,+*)('&%$#! ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d655a",
+"enc": "A",
+"sec": ".data",
+"text": "~}|{zyxwutsrqponmlkjigfedcba`_^]\\[ZXWVUTSRQPONMLKIHGFEDCBA@?>=;:9876543210/.,+*)('&%$#\"! ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6620",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6640",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6648",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6660",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6670",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6688",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d66a8",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d66df",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d66e7",
+"enc": "A",
+"sec": ".data",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d66f7",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6721",
+"enc": "A",
+"sec": ".data",
+"text": "9#J{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d679f",
+"enc": "A",
+"sec": ".data",
+"text": "?2w-!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d67ef",
+"enc": "A",
+"sec": ".data",
+"text": "@U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6867",
+"enc": "A",
+"sec": ".data",
+"text": "?2U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6887",
+"enc": "A",
+"sec": ".data",
+"text": "?9EGr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d68f7",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d693f",
+"enc": "A",
+"sec": ".data",
+"text": "?mV}",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6972",
+"enc": "A",
+"sec": ".data",
+"text": "h\"lx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d69c7",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d69e7",
+"enc": "A",
+"sec": ".data",
+"text": "@|a2U0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6a80",
+"enc": "A",
+"sec": ".data",
+"text": "~}|{zyxwvusrqponmlkjihgfdcba`_^]\\[ZYXVUTSRQPONMLKJIGFEDCBA@?>=<;:876543210/.-,*)('&%$#\"! ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6b63",
+"enc": "A",
+"sec": ".data",
+"text": "~}|{yxwvutsrqponmljihgfedcba`_^][ZYXWVUTSRQPOMLKJIHGFEDCBA@>=<;:987654321/.-,+*)('&%$#! ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6c5a",
+"enc": "A",
+"sec": ".data",
+"text": "~}|{zyxwutsrqponmlkjigfedcba`_^]\\[ZXWVUTSRQPONMLKIHGFEDCBA@?>=;:9876543210/.,+*)('&%$#\"! ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6d20",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6d40",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6d48",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6d60",
+"enc": "A",
+"sec": ".data",
+"text": "333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6d70",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6d88",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6da8",
+"enc": "A",
+"sec": ".data",
+"text": "ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6ddf",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6de7",
+"enc": "A",
+"sec": ".data",
+"text": "?333333",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6df7",
+"enc": "A",
+"sec": ".data",
+"text": "?ffffff",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6e21",
+"enc": "A",
+"sec": ".data",
+"text": "9#J{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6e9f",
+"enc": "A",
+"sec": ".data",
+"text": "?2w-!",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6eef",
+"enc": "A",
+"sec": ".data",
+"text": "@U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6f67",
+"enc": "A",
+"sec": ".data",
+"text": "?2U0*",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6f87",
+"enc": "A",
+"sec": ".data",
+"text": "?9EGr",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d6ff7",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d703f",
+"enc": "A",
+"sec": ".data",
+"text": "?mV}",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d7072",
+"enc": "A",
+"sec": ".data",
+"text": "h\"lx",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d70c7",
+"enc": "A",
+"sec": ".data",
+"text": "@h\"lxz%",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d70e7",
+"enc": "A",
+"sec": ".data",
+"text": "@|a2U0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d7240",
+"enc": "A",
+"sec": ".data",
+"text": ".?AVbad_alloc@std@@",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d727c",
+"enc": "A",
+"sec": ".data",
+"text": ".?AVtype_info@@",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d72a7",
+"enc": "A",
+"sec": ".data",
+"text": "?pow",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d8232",
+"enc": "A",
+"sec": ".data",
+"text": "kU'9",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d8282",
+"enc": "A",
+"sec": ".data",
+"text": "HMXB",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d82e7",
+"enc": "A",
+"sec": ".data",
+"text": "?Zd;",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d832f",
+"enc": "A",
+"sec": ".data",
+"text": "?/L[",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d833e",
+"enc": "A",
+"sec": ".data",
+"text": "S;uD",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d835e",
+"enc": "A",
+"sec": ".data",
+"text": "z?aUY",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d8376",
+"enc": "A",
+"sec": ".data",
+"text": "D?$?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d838e",
+"enc": "A",
+"sec": ".data",
+"text": "U>c{",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d83a0",
+"enc": "A",
+"sec": ".data",
+"text": "zc%C1",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d83ca",
+"enc": "A",
+"sec": ".data",
+"text": ".:3q",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d83f3",
+"enc": "A",
+"sec": ".data",
+"text": "-64OS",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100d8414",
+"enc": "A",
+"sec": ".data",
+"text": "NKeb",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daafe",
+"enc": "U",
+"sec": ".rsrc",
+"text": "VS_VERSION_INFO",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dab5a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "StringFileInfo",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dab7e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "040901B5",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dab96",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Comments",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daba8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Nikon Scan Driver",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dabd2",
+"enc": "U",
+"sec": ".rsrc",
+"text": "CompanyName",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dabec",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Nikon Corporation",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dac16",
+"enc": "U",
+"sec": ".rsrc",
+"text": "FileDescription",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dac38",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Nikon Scan Driver",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dac62",
+"enc": "U",
+"sec": ".rsrc",
+"text": "FileVersion",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dac7c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "1, 3, 0, 3003",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dac9e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "InternalName",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dacb8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "LS8000",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dacce",
+"enc": "U",
+"sec": ".rsrc",
+"text": "LegalCopyright",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dacec",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Copyright (C) Nikon Corporation. 1995 - 2007",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dad4e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "OriginalFilename",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dad70",
+"enc": "U",
+"sec": ".rsrc",
+"text": "LS8000.MD3",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dad8e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "ProductName",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dada8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Nikon Scan",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dadc6",
+"enc": "U",
+"sec": ".rsrc",
+"text": "ProductVersion",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dade4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "4, 0, 0, 0",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dae02",
+"enc": "U",
+"sec": ".rsrc",
+"text": "VarFileInfo",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dae22",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Translation",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dae54",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Async Rate",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dae6a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Progress Proc",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dae86",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Event Proc",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dae9c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Data Proc",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daeb0",
+"enc": "U",
+"sec": ".rsrc",
+"text": "UI Request Proc",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daed0",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Is Alive",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daee2",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Children",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daefa",
+"enc": "U",
+"sec": ".rsrc",
+"text": "State",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daf06",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Name",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daf12",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Interface",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daf26",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Data Types",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daf40",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Eject",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daf4c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Feed",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daf5a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Acquire",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daf76",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Prescan",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daf86",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Auto Focus",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daf9c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "AF Position",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dafb4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Focus",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dafc0",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Coords",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dafce",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Resolution",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dafe4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Preview",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100daff4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Negative",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db006",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Color Space\"Scan Bit Depth",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db03c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Bit Depth",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db050",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Bit Depth",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db064",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Planar",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db082",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Pixels",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db090",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Force Scan",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db0a6",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Force Prescan",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db0c2",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Force AutoFocus",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db0e2",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NegativeDefault",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db102",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Firmware",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db13a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "AdvancedMode",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db162",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Strip Film Offset",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db186",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Reload Thumbnail",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db1a8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Classic",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db1b8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Panorama",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db1ca",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Hivision",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db1dc",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Aspect Type",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db1f4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Slide Feeder",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db20e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Default Orientation",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db236",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Reset",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db242",
+"enc": "U",
+"sec": ".rsrc",
+"text": "ClearTimer",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db258",
+"enc": "U",
+"sec": ".rsrc",
+"text": "ExposureOnly",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db272",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Calibrate",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db28e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Green",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db29a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Blue",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db2a4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Gray",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db2b6",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Selected",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db2c8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Reset Prescan",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db2e4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Maximum Children",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db306",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Adaptor Index",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db322",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Reverse State",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db33e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Negative Scan Mode",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db37a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Analog Gain",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db392",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Master",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db3a8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Green",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db3b4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Blue",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db3be",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Gray",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db3c8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Help",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db3ee",
+"enc": "U",
+"sec": ".rsrc",
+"text": "These adjustments control the gain setting of the analog amplifiers in the scanner hardware. The gain settings of these amplifiers determine the exposure of the Red, Green and Blue channels. ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db56e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "The software normally determines these settings without user interaction. However when you have a film that has extreme conditions such as over or under exposure, ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db6b6",
+"enc": "U",
+"sec": ".rsrc",
+"text": "there is a chance to produce better scan result by changing these settings manually.  Please note that use of this control may provide unexpected results. 0The units are displayed in EV (Exposure Value). ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db850",
+"enc": "U",
+"sec": ".rsrc",
+"text": "To view the results of this adjustment, please press the \"Redraw\" button. A simulated result will be displayed in both the \"Natural\" and \"Processed\" preview screens.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db9bc",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Boundary Offset",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db9dc",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Large",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db9e8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Precise",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100db9f8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Direction",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dba14",
+"enc": "U",
+"sec": ".rsrc",
+"text": "HelpZPlease push \"Large\" or \"Precise\" button until the pushing board of FD attachment appears. EAfter putting on or off an attachment, please push an \"Eject\" button.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbb60",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Base Move",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbb8c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Prescan Mode",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbba6",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Normal",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbbb4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Alternative",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbbcc",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Output Bits",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbbe4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Ir Process",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbbfa",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Mearge",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbc08",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Threshold",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbc2c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Lo-Cont. Neutral",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbc4e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Lo-Cont. Highkey",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbc70",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Lo-Cont. Lowkey",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbc90",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Automatic",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbcb8",
+"enc": "U",
+"sec": ".rsrc",
+"text": ")Multi Sample Scanning",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbce6",
+"enc": "U",
+"sec": ".rsrc",
+"text": "MultiScan",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbcfa",
+"enc": "U",
+"sec": ".rsrc",
+"text": "MultiScan",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbd0e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Mode",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbd18",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Normal (1x)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbd3c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Fine (2x)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbd5c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Fine (4x)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbd7c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Super Fine (8x)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbda8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Super Fine (16x)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbdda",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Help",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dbdfa",
+"enc": "U",
+"sec": ".rsrc",
+"text": "7]In the normal (1X Sampling) mode, image data is taken directly from the 14bit A/D converter. \\In multisample mode, successive identical scans are combined to reduce the CCD noise level. \\This results in longer scanning times. To view the results of this adjustment a new preview ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc02e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "should be made. ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc050",
+"enc": "U",
+"sec": ".rsrc",
+"text": "ZNote that there is a check box called \"Settings to be applied to preview / Multi Sampling\"\\in the \"Preview Settings\" in the Preferences. Result will not be seen until you have turned *on this function. (Factory default is off)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc236",
+"enc": "U",
+"sec": ".rsrc",
+"text": "File Format",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc24e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "16mm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc258",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Medical Slide",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc274",
+"enc": "U",
+"sec": ".rsrc",
+"text": "35mm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc27e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Medium Format",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc29a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "6 x 4.5 (cm)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc2ba",
+"enc": "U",
+"sec": ".rsrc",
+"text": "6 x 6 (cm)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc2d0",
+"enc": "U",
+"sec": ".rsrc",
+"text": "6 x 7 (cm)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc2e6",
+"enc": "U",
+"sec": ".rsrc",
+"text": "6 x 8 (cm)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc2fc",
+"enc": "U",
+"sec": ".rsrc",
+"text": "6 x 9 (cm)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc312",
+"enc": "U",
+"sec": ".rsrc",
+"text": "24 x 58 (mm)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc32c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "24 x 65 (mm)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc346",
+"enc": "U",
+"sec": ".rsrc",
+"text": "No Film Holder",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc368",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Super Fine Scan",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc388",
+"enc": "U",
+"sec": ".rsrc",
+"text": "CCD Scan Mode",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc3a4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "CCD Scan Mode",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc3c0",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Help",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc3ca",
+"enc": "U",
+"sec": ".rsrc",
+"text": "4QIf you turn on \"Super Fine Scan\" check box, the scanner will scan using only one Rline of the three line CCD. Please be advised that this mode may reduce streaking Sonly when you have applied an extreme contrast enhancement. The scanning time will ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc5c0",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Bbecome approximately three times longer than the normal scan mode.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc66a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Self Auto Focus",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc68a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "SelfAF Auto focus when film is inserted",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc6da",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Help",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc70a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Interpolation Method",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc734",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Bilinear",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc746",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Neighbor",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc758",
+"enc": "U",
+"sec": ".rsrc",
+"text": "None",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc762",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Bicubic",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc792",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Sharpening",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc7a8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Sharpen More",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc7c2",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Sharpen",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc7d2",
+"enc": "U",
+"sec": ".rsrc",
+"text": "None",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc7dc",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Blur",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc7e6",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Blur More",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc802",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Help",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dc852",
+"enc": "U",
+"sec": ".rsrc",
+"text": "?The \"Auto focus when film is inserted\" is the default setting, [so that as soon as a holder (one of FH-835M, FH-835S, FH-869M, FH-869GR, FH-816 or FH-8G1) jis inserted into the SUPER COOLSCAN 8000 ED, the scanner will immediately perform an auto focus operation ]for the first frame of the film. When you press the preview or the scan button in this case, Xthe scanner will not perform an additional auto focus operation. If you would prefer to ]perform an auto focus at the time you press the preview or the scan button, please turn this [check box off. Please also refer to the \"auto focus\" check boxes that are located in three Xdifferent tab pages in the preference setting for the \"Single Scans\", \"Batch Scans\" and (\"Preview settings\" operational modes. ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dce48",
+"enc": "U",
+"sec": ".rsrc",
+"text": "When you press the \"Calibrate\" button, a scanner calibration is performed. The scanner calibration is automatically performed any time the film is changed. ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dcf82",
+"enc": "U",
+"sec": ".rsrc",
+"text": "If you do not change the film for a long period of time, and if the scanner environment, such as room temperature, is changing rapidly, the scanner calibration may drift. ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd0da",
+"enc": "U",
+"sec": ".rsrc",
+"text": "This may result in banding noise on the scanned image. Please press the calibration button if you notice this phenomenon and then rescan your image. ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd22a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "DigitalICE",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd240",
+"enc": "U",
+"sec": ".rsrc",
+"text": "DICE",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd24a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "DICE",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd25a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Mode",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd280",
+"enc": "U",
+"sec": ".rsrc",
+"text": "On (Normal)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd298",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Normal",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd2a6",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Normal",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd2b4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "On (Fine)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd2c8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Fine",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd2d2",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Fine",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd2e4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "CleanImage Result",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd308",
+"enc": "U",
+"sec": ".rsrc",
+"text": "SDC Preview",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd320",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Help",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd33e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "CleanImage automatically fixes defects on the film surface, such as scratches and/or dust. As a result of this process, the scanning speed will be slower. If the resulting scans look soft, try the \"Sharpen\" mode. ",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd4ea",
+"enc": "U",
+"sec": ".rsrc",
+"text": "This function incorporates Digital ICE(TM) technology developed by Applied Science Fiction Inc. (ICE=Image Correction Enhancement)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd61a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "ROC/GEM",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd62a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "BaseArea",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd63c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "ROC/GEM Area",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd65a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "ROC/GEM Mode",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd69c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "IntegratedPreview",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd6c0",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Monochrome",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd6d6",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Monochrome Default",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd6fc",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Kodachrome",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd712",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Kodachrome Default",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd74a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Color Matching",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd77a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Mode",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd784",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Draft",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd790",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Proof",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd7aa",
+"enc": "U",
+"sec": ".rsrc",
+"text": "CML Input Profile",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd7ce",
+"enc": "U",
+"sec": ".rsrc",
+"text": "CML Output Profile",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd81a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Manual Focus Adjustment",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd84a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Position",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd85c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Help",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dd886",
+"enc": "U",
+"sec": ".rsrc",
+"text": "This control allows manual adjustment of the focus setting. This may be helpful if you are attempting to scan film that is warped. qNOTE: You will need to perform a new preview scan in order to observe the results of the change in focus setting.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dda9a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Duration time for film eject",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100ddad4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Time(min)",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100ddae8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Help",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100ddb12",
+"enc": "U",
+"sec": ".rsrc",
+"text": "2lThis is the setting to specify a duration by the minute before the scanner begins to eject an inserted film.wThis timer is reset whenever you operate the scanner to perform autofocus, thumbnail scan, preview scan and final scan.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100ddcf4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Note: The calibration function has been chosen. While it is performed, the LED indicator on the scanner will blink. During this time, your mouse and keyboard will not respond.HThe calibration will take 2 minutes to complete. Do you want to proceed?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100ddf00",
+"enc": "U",
+"sec": ".rsrc",
+"text": "FThe film has been rewound due to inactivity. Do you want to reload it?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100ddf90",
+"enc": "U",
+"sec": ".rsrc",
+"text": "The scanner does not appear to be powered on. Please make sure that it is connected to an AC power source and is switched on, then try again.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100de0ac",
+"enc": "U",
+"sec": ".rsrc",
+"text": "The scanner has reported a hardware error. Please reset the scanner by switching on and off. If this does not work, please contact your local Nikon Service or Support office.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100de20a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "The scanner reports that the autofocus has failed. Hold down the \"Control\" key and press the autofocus button on the screen, then click to select a new focus area in the preview window.GThe scanner could not load the film. Please consult your user's manual.<The stage locking screw is still in place. Please remove it.OPlease remove the film holder and press the \"OK\" button on screen to try again. There is no film in the scanner.KPlease place film in the loader and press the \"Feed\"  button on the screen.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100de602",
+"enc": "U",
+"sec": ".rsrc",
+"text": "The scanner has reported that it could not load the film. If there is film in the scanner and it has failed to load, please consult your user's manual.IThe crop area that you have selected is too small. Please make it larger.OPlease remove the film holder and press the \"OK\" button on screen to try again.DThe film will be rewound before calibration. Do you want to proceed?",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100de8f0",
+"enc": "U",
+"sec": ".rsrc",
+"text": "The scanner has detected more than 6 frames on the strip film. To scan film of more than 6 frames, the SA-30 Spool Unit accessory is required.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dea0e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "The number of frames on the film strip is too few or too many. The film strip should have more than 2 frames and less than 6 frames for the SA-21, or less than 40 frames for the SA-30.`The scanner has reported that it could not load the film. The film may be too short or too long.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dec42",
+"enc": "U",
+"sec": ".rsrc",
+"text": "The scanner could not eject the film. Please press the \"OK\" button to unlock the adapter and  remove it from the scanner, then remove the film from the adapter. Please consult your user's manual for information.4Could not find the selected frame on the film strip.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dee54",
+"enc": "U",
+"sec": ".rsrc",
+"text": "This scanner does not support the adapter that is currently inserted. Please consult your user's manual for a list of supported adapters.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100def68",
+"enc": "U",
+"sec": ".rsrc",
+"text": "A data transfer error has been detected. Please try again. Note that another device on the same interface (1394 OR USB) may be the cause of the problem.NThe film adapter may be loose. Please make sure that it is correctly inserted.}Please eject the film before you attempt to change the film adapter. Please return the adapter back to the original position.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100df234",
+"enc": "U",
+"sec": ".rsrc",
+"text": "The scanner has reported problem with the firmware. Please download the latest firmware from the list of Nikon Technical Support web sites or contact your local Nikon Service or Support office.0An error has occurred while executing a command.8Make sure that the holder slot cover is completely open.}Install the supplied black mask when using the FH-869GR glass holder. The scanner has detected that the mask is not in place.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100df588",
+"enc": "U",
+"sec": ".rsrc",
+"text": "The scanner has detected an Unknown film holder model. Make sure the square holes located at the front end of the film holder are clear. If this message appears again, try another holder. If this message still appears, please contact Nikon service.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100df77c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "The autofocus operation has failed. To manually select a point on which to focus. hold down the Control key and press the autofocus button. Then click on the desired point in the preview image.",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100df92a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKsRGB.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100df940",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKSWOP_CMYK.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100df960",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLch.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100df974",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKApple.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100df98c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKCMatch.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100df9a6",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKNTSC.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100df9bc",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKBruce.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100df9d4",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKAdobe.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100df9f2",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKCIE.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfa06",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKWide.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfa1c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKApple_CPS.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfa3c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "%_NKWide_CPS.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfac0",
+"enc": "U",
+"sec": ".rsrc",
+"text": "MA-20",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfacc",
+"enc": "U",
+"sec": ".rsrc",
+"text": "SF-200",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfada",
+"enc": "U",
+"sec": ".rsrc",
+"text": "SA-20",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfae6",
+"enc": "U",
+"sec": ".rsrc",
+"text": "IA-20",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfb0c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "SCSI",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfb16",
+"enc": "U",
+"sec": ".rsrc",
+"text": "COM Port",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfb30",
+"enc": "U",
+"sec": ".rsrc",
+"text": "IEEE1394",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfb62",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Nikon\\Profiles\\",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfb82",
+"enc": "U",
+"sec": ".rsrc",
+"text": "CML2.DLL",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfb94",
+"enc": "U",
+"sec": ".rsrc",
+"text": "SDCLW32.DLL",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfbbe",
+"enc": "U",
+"sec": ".rsrc",
+"text": "~$LS8000.TMP",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfbd8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "LS8K%02d%02d.DAT",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfbfa",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Nikon\\MaidMods\\Settings\\",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfc3e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "ICENKNL1.dll",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfc66",
+"enc": "U",
+"sec": ".rsrc",
+"text": "FilmData.nfd",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfc92",
+"enc": "U",
+"sec": ".rsrc",
+"text": "LS8KTHUMB%02d%02d.DAT",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfcbe",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Nikon\\MaidMods\\Cache\\",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfd0c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "Nikon",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfd44",
+"enc": "U",
+"sec": ".rsrc",
+"text": "LS-8000 ED",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfd8c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "SUPER COOLSCAN 8000 ED",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfdd2",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLS8000_R.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfdf0",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLS8000_P.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfe0e",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLS8000_P.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfe2c",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLS8000_N.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfe4a",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLS8000_N.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfe68",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLS8000_K.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfe86",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLS8000_K.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfeac",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLS8000_P.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfeca",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLS8000_P.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dfee8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLS8000_N.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dff06",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLS8000_N.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dff24",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLS8000_K.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dff42",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLS8000_K.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dff82",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLS8000_R.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dffa0",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLSMED.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dffb8",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLSMED.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dffd0",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLSPRAP.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+},
+{
+"va": "0x100dffea",
+"enc": "U",
+"sec": ".rsrc",
+"text": "NKLSPRAP.icm",
+"refs": [],
+"ptr": [],
+"refs2": []
+}
+]

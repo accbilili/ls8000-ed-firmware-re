@@ -1,0 +1,58 @@
+{
+ "0x1009FDB0": {
+  "name": "MODE SELECT 0x15",
+  "entry": null
+ },
+ "0x1009FE60": {
+  "name": "MODE SENSE 0x1A",
+  "entry": null
+ },
+ "0x100A0190": {
+  "name": "EXECUTE 0xC1",
+  "entry": null
+ },
+ "0x100A01A0": {
+  "name": "INQUIRY 0x12",
+  "entry": null
+ },
+ "0x100A01D0": {
+  "name": "GET WINDOW 0x25",
+  "entry": null
+ },
+ "0x100A0210": {
+  "name": "SET WINDOW 0x24",
+  "entry": null
+ },
+ "0x100A0230": {
+  "name": "E0",
+  "entry": null
+ },
+ "0x100A0260": {
+  "name": "E1",
+  "entry": null
+ },
+ "0x100A0290": {
+  "name": "START STOP 0x1B",
+  "entry": null
+ },
+ "0x100AAD00": {
+  "name": "READ 0x28",
+  "entry": null
+ },
+ "0x100AAD50": {
+  "name": "WRITE 0x2A",
+  "entry": null
+ },
+ "0x100AAD80": {
+  "name": "READ BUFFER 0x3C",
+  "entry": null
+ },
+ "0x100AADC0": {
+  "name": "WRITE BUFFER 0x3B",
+  "entry": null
+ },
+ "0x100AAE10": {
+  "name": "CANCEL 0xC0",
+  "entry": null
+ }
+}

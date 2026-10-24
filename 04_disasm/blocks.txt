@@ -1,0 +1,3 @@
+ram	ram:00010000	ram:00047bf8	228345	init=true	exec=true	write=true
+INT_RAM	ram:00fffd10	ram:00ffff0f	512	init=false	exec=false	write=true
+PREG	ram:00ffff1c	ram:00ffffff	228	init=false	exec=false	write=true

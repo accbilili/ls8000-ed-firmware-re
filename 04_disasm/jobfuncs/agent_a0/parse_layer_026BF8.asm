@@ -1,0 +1,485 @@
+0x026BF8  stm.l     er2-er3, @-sp
+0x026BFC  stm.l     er4-er6, @-sp
+0x026C00  sub.l     #0x0000001a, sp
+0x026C06  mov.l     #0x0040043c, er4
+0x026C0C  mov.l     #0x00000001, er5
+0x026C12  add.l     sp, er5
+0x026C14  mov.l     #0x00400436, er6
+0x026C1A  mov.b     @(0x1,er4), r0l
+0x026C1E  and.b     #0x1f, r0l
+0x026C20  bne       0x026cdc
+0x026C24  mov.b     #0x03, r3l
+0x026C26  bt        0x026c38
+0x026C28  mov.b     r3l, r0l
+0x026C2A  extu.w    r0
+0x026C2C  extu.l    er0
+0x026C2E  add.l     er4, er0
+0x026C30  mov.b     @er0, r1l
+0x026C32  bne       0x026cdc
+0x026C36  inc.b     #1, r3l
+0x026C38  cmp.b     #0x06, r3l
+0x026C3A  bcs       0x026c28
+0x026C3C  mov.b     @(0x9,er4), r0l
+0x026C40  bne       0x026cdc
+0x026C44  sub.b     r3l, r3l
+0x026C46  mov.l     er4, er0
+0x026C48  inc.l     #2, er0
+0x026C4A  mov.l     er0, @(0x16,sp)
+0x026C50  mov.l     @(0x16,sp), er0
+0x026C56  mov.b     r3l, r1l
+0x026C58  extu.w    r1
+0x026C5A  extu.l    er1
+0x026C5C  shll.l    er1
+0x026C5E  mov.b     @er0, r0l
+0x026C60  mov.b     @(0x3edb8,er1), r1l
+0x026C68  cmp.b     r1l, r0l
+0x026C6A  bne       0x026c7c
+0x026C6C  sub.l     er0, er0
+0x026C6E  mov.b     r3l, r0l
+0x026C70  shll.l    er0
+0x026C72  mov.b     @(0x3edb9,er0), r3h
+0x026C7A  bt        0x026c94
+0x026C7C  mov.b     r3l, r0l
+0x026C7E  extu.w    r0
+0x026C80  extu.l    er0
+0x026C82  shll.l    er0
+0x026C84  mov.b     @(0x3edb8,er0), r0l
+0x026C8C  cmp.b     #0xff, r0l
+0x026C8E  beq       0x026cdc
+0x026C90  inc.b     #1, r3l
+0x026C92  bt        0x026c50
+0x026C94  sub.l     er0, er0
+0x026C96  mov.b     @(0x6,er4), r0l
+0x026C9A  mov.w     r0, e0
+0x026C9C  sub.w     r0, r0
+0x026C9E  sub.l     er1, er1
+0x026CA0  mov.b     @(0x7,er4), r1l
+0x026CA4  shll.l    #2, er1
+0x026CA6  shll.l    #2, er1
+0x026CA8  shll.l    #2, er1
+0x026CAA  shll.l    #2, er1
+0x026CAC  add.l     er1, er0
+0x026CAE  sub.l     er1, er1
+0x026CB0  mov.b     @(0x8,er4), r1l
+0x026CB4  add.l     er1, er0
+0x026CB6  mov.l     er0, @(0x16,sp)
+0x026CBC  sub.l     er1, er1
+0x026CBE  mov.b     r3h, r1l
+0x026CC0  cmp.l     er1, er0
+0x026CC2  bcc       0x026cce
+0x026CC4  mov.w     #0x0050, r1
+0x026CC8  mov.w     r1, @er6
+0x026CCA  jmp       0x026eec
+0x026CCE  mov.l     @(0x16,sp), er0
+0x026CD4  cmp.l     #0x0000000d, er0
+0x026CDA  bls       0x026ce4
+0x026CDC  mov.w     #0x0050, r0
+0x026CE0  jmp       0x026eb2
+0x026CE4  sub.b     r3l, r3l
+0x026CE6  mov.b     r3l, r0l
+0x026CE8  extu.w    r0
+0x026CEA  extu.l    er0
+0x026CEC  add.l     er5, er0
+0x026CEE  sub.b     r1l, r1l
+0x026CF0  mov.b     r1l, @er0
+0x026CF2  inc.b     #1, r3l
+0x026CF4  cmp.b     #0x0d, r3l
+0x026CF6  bcs       0x026ce6
+0x026CF8  mov.l     @(0x16,sp), er0
+0x026CFE  beq       0x026d10
+0x026D00  mov.w     @(0x18,sp), r1
+0x026D04  mov.l     er5, er0
+0x026D06  jsr       0x0118d0
+0x026D0A  mov.w     @er6, r0
+0x026D0C  bne       0x026eec
+0x026D10  sub.l     er3, er3
+0x026D12  mov.b     @(0x1,er5), r3l
+0x026D16  mov.b     r3l, r3h
+0x026D18  sub.b     r3l, r3l
+0x026D1A  mov.w     r3, e3
+0x026D1C  sub.w     r3, r3
+0x026D1E  sub.l     er0, er0
+0x026D20  mov.b     @(0x2,er5), r0l
+0x026D24  mov.w     r0, e0
+0x026D26  sub.w     r0, r0
+0x026D28  add.l     er0, er3
+0x026D2A  sub.l     er0, er0
+0x026D2C  mov.b     @(0x3,er5), r0l
+0x026D30  shll.l    #2, er0
+0x026D32  shll.l    #2, er0
+0x026D34  shll.l    #2, er0
+0x026D36  shll.l    #2, er0
+0x026D38  add.l     er0, er3
+0x026D3A  sub.l     er0, er0
+0x026D3C  mov.b     @(0x4,er5), r0l
+0x026D40  add.l     er0, er3
+0x026D42  sub.l     er0, er0
+0x026D44  mov.b     @(0x5,er5), r0l
+0x026D48  mov.b     r0l, r0h
+0x026D4A  sub.b     r0l, r0l
+0x026D4C  mov.w     r0, e0
+0x026D4E  sub.w     r0, r0
+0x026D50  sub.l     er1, er1
+0x026D52  mov.b     @(0x6,er5), r1l
+0x026D56  mov.w     r1, e1
+0x026D58  sub.w     r1, r1
+0x026D5A  add.l     er1, er0
+0x026D5C  sub.l     er1, er1
+0x026D5E  mov.b     @(0x7,er5), r1l
+0x026D62  shll.l    #2, er1
+0x026D64  shll.l    #2, er1
+0x026D66  shll.l    #2, er1
+0x026D68  shll.l    #2, er1
+0x026D6A  add.l     er1, er0
+0x026D6C  sub.l     er1, er1
+0x026D6E  mov.b     @(0x8,er5), r1l
+0x026D72  add.l     er1, er0
+0x026D74  mov.l     er0, @(0xe,sp)
+0x026D7A  mov.w     @0x4007be, r0
+0x026D80  cmp.w     #0x04b0, r0
+0x026D84  bne       0x026d94
+0x026D86  mov.l     #0x000031d2, er0
+0x026D8C  mov.l     er0, @0x400c78
+0x026D94  mov.w     @0x4007be, r0
+0x026D9A  cmp.w     #0x0fa0, r0
+0x026D9E  bne       0x026dae
+0x026DA0  mov.l     #0x0000a616, er0
+0x026DA6  mov.l     er0, @0x400c78
+0x026DAE  mov.b     @(0x2,er4), r0l
+0x026DB2  cmp.b     #0x40, r0l
+0x026DB4  beq       0x026df8
+0x026DB6  cmp.b     #0x41, r0l
+0x026DB8  beq       0x026e0a
+0x026DBA  cmp.b     #0x42, r0l
+0x026DBC  beq       0x026e1c
+0x026DBE  cmp.b     #0x80, r0l
+0x026DC0  beq       0x026eb6
+0x026DC4  cmp.b     #0x81, r0l
+0x026DC6  beq       0x026eb6
+0x026DCA  cmp.b     #0x91, r0l
+0x026DCC  beq       0x026e9c
+0x026DD0  cmp.b     #0x92, r0l
+0x026DD2  beq       0x026e9c
+0x026DD6  cmp.b     #0xa0, r0l
+0x026DD8  beq       0x026e3e
+0x026DDA  cmp.b     #0xb0, r0l
+0x026DDC  beq       0x026eb6
+0x026DE0  cmp.b     #0xb3, r0l
+0x026DE2  beq       0x026e86
+0x026DE6  cmp.b     #0xc1, r0l
+0x026DE8  beq       0x026e2e
+0x026DEA  cmp.b     #0xd0, r0l
+0x026DEC  beq       0x026eb6
+0x026DF0  jmp       0x026eae
+0x026DF4  jmp       0x026eb6
+0x026DF8  cmp.l     #0x00003bfa, er3
+0x026DFE  bls       0x026eb6
+0x026E02  mov.w     #0x0053, r0
+0x026E06  jmp       0x026eb2
+0x026E0A  cmp.l     #0x000001c2, er3
+0x026E10  bls       0x026eb6
+0x026E14  mov.w     #0x0053, r0
+0x026E18  jmp       0x026eb2
+0x026E1C  cmp.l     #0x00000cd3, er3
+0x026E22  bls       0x026eb6
+0x026E26  mov.w     #0x0053, r0
+0x026E2A  jmp       0x026eb2
+0x026E2E  cmp.l     #0x000001c2, er3
+0x026E34  bls       0x026eb6
+0x026E38  mov.w     #0x0053, r0
+0x026E3C  bt        0x026eb2
+0x026E3E  mov.w     @0x4007be, r0
+0x026E44  extu.l    er0
+0x026E46  mov.l     er0, er2
+0x026E48  mov.l     #0x00002710, er1
+0x026E4E  jsr       0x018e1e
+0x026E52  mov.l     #0x00000fa0, er1
+0x026E58  jsr       0x01872e
+0x026E5C  cmp.l     er0, er3
+0x026E5E  bhi       0x026e80
+0x026E60  mov.l     er2, er0
+0x026E62  mov.l     #0x0000a6f3, er1
+0x026E68  jsr       0x018e1e
+0x026E6C  mov.l     #0x00000fa0, er1
+0x026E72  jsr       0x01872e
+0x026E76  mov.l     @(0xe,sp), er1
+0x026E7C  cmp.l     er0, er1
+0x026E7E  bls       0x026eb6
+0x026E80  mov.w     #0x0053, r0
+0x026E84  bt        0x026eb2
+0x026E86  cmp.l     #0xfffffed4, er3
+0x026E8C  blt       0x026e96
+0x026E8E  cmp.l     #0x0000012c, er3
+0x026E94  ble       0x026eb6
+0x026E96  mov.w     #0x0053, r0
+0x026E9A  bt        0x026eb2
+0x026E9C  mov.l     er3, er3
+0x026E9E  beq       0x026eb6
+0x026EA0  cmp.l     #0x00000001, er3
+0x026EA6  beq       0x026eb6
+0x026EA8  mov.w     #0x0053, r0
+0x026EAC  bt        0x026eb2
+0x026EAE  mov.w     #0x0050, r0
+0x026EB2  mov.w     r0, @er6
+0x026EB4  bt        0x026eec
+0x026EB6  mov.b     @(0x2,er4), r0l
+0x026EBA  mov.b     r0l, @0x400c55
+0x026EC0  sub.b     r3l, r3l
+0x026EC2  bt        0x026edc
+0x026EC4  mov.b     r3l, r0l
+0x026EC6  extu.w    r0
+0x026EC8  extu.l    er0
+0x026ECA  mov.l     er0, er2
+0x026ECC  mov.l     er2, er1
+0x026ECE  add.l     er5, er1
+0x026ED0  mov.b     @er1, r1l
+0x026ED2  mov.b     r1l, @(0x400c56,er0)
+0x026EDA  inc.b     #1, r3l
+0x026EDC  mov.b     r3l, r0l
+0x026EDE  extu.w    r0
+0x026EE0  extu.l    er0
+0x026EE2  mov.l     @(0x16,sp), er1
+0x026EE8  cmp.l     er1, er0
+0x026EEA  bcs       0x026ec4
+0x026EEC  add.l     #0x0000001a, sp
+0x026EF2  ldm.l     @sp+, er4-er6
+0x026EF6  ldm.l     @sp+, er2-er3
+0x026EFA  rts       
+0x026EFC  stm.l     er2-er3, @-sp
+0x026F00  stm.l     er4-er6, @-sp
+0x026F04  sub.l     #0x00000024, sp
+0x026F0A  mov.l     #0x0003edb8, er3
+0x026F10  mov.l     #0x00400436, er4
+0x026F16  mov.l     #0x0040043c, er5
+0x026F1C  mov.l     #0x00000001, er6
+0x026F22  add.l     sp, er6
+0x026F24  mov.b     @(0x1,er5), r0l
+0x026F28  and.b     #0x1f, r0l
+0x026F2A  bne       0x026fc4
+0x026F2E  mov.b     #0x03, r2h
+0x026F30  bt        0x026f44
+0x026F32  sub.l     er0, er0
+0x026F34  mov.b     r2h, r0l
+0x026F36  add.l     er5, er0
+0x026F38  mov.b     @er0, r1l
+0x026F3A  bne       0x026fc4
+0x026F3E  mov.b     r2h, r0l
+0x026F40  inc.b     #1, r0l
+0x026F42  mov.b     r0l, r2h
+0x026F44  mov.b     r2h, r0l
+0x026F46  cmp.b     #0x06, r0l
+0x026F48  bcs       0x026f32
+0x026F4A  mov.b     @(0x9,er5), r0l
+0x026F4E  bne       0x026fc4
+0x026F50  sub.b     r0l, r0l
+0x026F52  mov.b     r0l, r2l
+0x026F54  mov.l     er5, er0
+0x026F56  inc.l     #2, er0
+0x026F58  mov.l     er0, @(0xe,sp)
+0x026F5E  mov.l     @(0xe,sp), er0
+0x026F64  sub.l     er1, er1
+0x026F66  mov.b     r2l, r1l
+0x026F68  shll.l    er1
+0x026F6A  add.l     er3, er1
+0x026F6C  mov.b     @er0, r0l
+0x026F6E  mov.b     @er1, r1l
+0x026F70  cmp.b     r1l, r0l
+0x026F72  beq       0x026f8a
+0x026F74  sub.l     er0, er0
+0x026F76  mov.b     r2l, r0l
+0x026F78  shll.l    er0
+0x026F7A  add.l     er3, er0
+0x026F7C  mov.b     @er0, r0l
+0x026F7E  cmp.b     #0xff, r0l
+0x026F80  beq       0x026fc4
+0x026F82  mov.b     r2l, r0l
+0x026F84  inc.b     #1, r0l
+0x026F86  mov.b     r0l, r2l
+0x026F88  bt        0x026f5e
+0x026F8A  sub.l     er0, er0
+0x026F8C  mov.b     @(0x6,er5), r0l
+0x026F90  mov.w     r0, e0
+0x026F92  sub.w     r0, r0
+0x026F94  sub.l     er1, er1
+0x026F96  mov.b     @(0x7,er5), r1l
+0x026F9A  shll.l    #2, er1
+0x026F9C  shll.l    #2, er1
+0x026F9E  shll.l    #2, er1
+0x026FA0  shll.l    #2, er1
+0x026FA2  add.l     er1, er0
+0x026FA4  sub.l     er1, er1
+0x026FA6  mov.b     @(0x8,er5), r1l
+0x026FAA  add.l     er1, er0
+0x026FAC  mov.l     er0, @(0x20,sp)
+0x026FB2  beq       0x027250
+0x026FB6  mov.l     @(0x20,sp), er0
+0x026FBC  cmp.l     #0x0000000d, er0
+0x026FC2  bls       0x026fcc
+0x026FC4  mov.w     #0x0050, r0
+0x026FC8  jmp       0x027242
+0x026FCC  sub.b     r0l, r0l
+0x026FCE  mov.b     r0l, r2l
+0x026FD0  sub.l     er0, er0
+0x026FD2  mov.b     r2l, r0l
+0x026FD4  add.l     er6, er0
+0x026FD6  sub.b     r1l, r1l
+0x026FD8  mov.b     r1l, @er0
+0x026FDA  mov.b     r2l, r0l
+0x026FDC  inc.b     #1, r0l
+0x026FDE  mov.b     r0l, r2l
+0x026FE0  cmp.b     #0x0d, r0l
+0x026FE2  bcs       0x026fd0
+0x026FE4  mov.b     @(0x2,er5), r0l
+0x026FE8  cmp.b     #0x40, r0l
+0x026FEA  beq       0x027034
+0x026FEC  cmp.b     #0x41, r0l
+0x026FEE  beq       0x02705e
+0x026FF0  cmp.b     #0x42, r0l
+0x026FF2  beq       0x027088
+0x026FF6  cmp.b     #0x80, r0l
+0x026FF8  beq       0x027250
+0x026FFC  cmp.b     #0x81, r0l
+0x026FFE  beq       0x027250
+0x027002  cmp.b     #0x91, r0l
+0x027004  beq       0x02722a
+0x027008  cmp.b     #0x92, r0l
+0x02700A  beq       0x027232
+0x02700E  cmp.b     #0xa0, r0l
+0x027010  beq       0x0270ce
+0x027014  cmp.b     #0xb0, r0l
+0x027016  beq       0x027250
+0x02701A  cmp.b     #0xb3, r0l
+0x02701C  beq       0x027154
+0x027020  cmp.b     #0xc1, r0l
+0x027022  beq       0x0270b8
+0x027026  cmp.b     #0xd0, r0l
+0x027028  beq       0x027250
+0x02702C  jmp       0x02723e
+0x027030  jmp       0x027250
+0x027034  mov.b     @0x4202a2, r0l
+0x02703A  sub.b     r0h, r0h
+0x02703C  mov.b     r0l, @(0x3,er6)
+0x027040  mov.b     @0x4202a3, r0l
+0x027046  mov.b     r0l, @(0x4,er6)
+0x02704A  mov.b     @0x4202a0, r0l
+0x027050  sub.b     r0h, r0h
+0x027052  mov.b     r0l, @(0x9,er6)
+0x027056  mov.b     @0x4202a1, r0l
+0x02705C  bt        0x0270b0
+0x02705E  mov.b     @0x4202e0, r0l
+0x027064  sub.b     r0h, r0h
+0x027066  mov.b     r0l, @(0x3,er6)
+0x02706A  mov.b     @0x4202e1, r0l
+0x027070  mov.b     r0l, @(0x4,er6)
+0x027074  mov.b     @0x4202de, r0l
+0x02707A  sub.b     r0h, r0h
+0x02707C  mov.b     r0l, @(0x9,er6)
+0x027080  mov.b     @0x4202df, r0l
+0x027086  bt        0x0270b0
+0x027088  mov.b     @0x4202ec, r0l
+0x02708E  sub.b     r0h, r0h
+0x027090  mov.b     r0l, @(0x3,er6)
+0x027094  mov.b     @0x4202ed, r0l
+0x02709A  mov.b     r0l, @(0x4,er6)
+0x02709E  mov.b     @0x4202ea, r0l
+0x0270A4  sub.b     r0h, r0h
+0x0270A6  mov.b     r0l, @(0x9,er6)
+0x0270AA  mov.b     @0x4202eb, r0l
+0x0270B0  mov.b     r0l, @(0xa,er6)
+0x0270B4  jmp       0x027246
+0x0270B8  mov.b     @0x4202e0, r0l
+0x0270BE  sub.b     r0h, r0h
+0x0270C0  mov.b     r0l, @(0x3,er6)
+0x0270C4  mov.b     @0x4202e1, r0l
+0x0270CA  jmp       0x027238
+0x0270CE  mov.w     @0x420272, r0
+0x0270D4  mov.w     @0x4007be, e0
+0x0270DA  mulxu.w   e0, er0
+0x0270DC  mov.l     #0x00000fa0, er1
+0x0270E2  jsr       0x018708
+0x0270E6  mov.w     r0, @(0x12,sp)
+0x0270EA  mov.b     r0h, r0l
+0x0270EC  sub.b     r0h, r0h
+0x0270EE  mov.b     r0l, @(0x3,er6)
+0x0270F2  mov.b     @(0x13,sp), r0l
+0x0270F6  mov.b     r0l, @(0x4,er6)
+0x0270FA  mov.w     @0x4007be, r1
+0x027100  extu.l    er1
+0x027102  mov.l     @0x42026e, er0
+0x02710A  jsr       0x018e1e
+0x02710E  mov.l     #0x00000fa0, er1
+0x027114  jsr       0x018708
+0x027118  mov.l     er0, @(0x1a,sp)
+0x02711E  mov.w     e0, r0
+0x027120  sub.w     e0, e0
+0x027122  and.l     #0x0000ffff, er0
+0x027128  mov.l     er0, @(0x14,sp)
+0x02712E  mov.b     r0h, r0l
+0x027130  sub.b     r0h, r0h
+0x027132  mov.b     r0l, @(0x5,er6)
+0x027136  mov.b     @(0x17,sp), r0l
+0x02713A  mov.b     r0l, @(0x6,er6)
+0x02713E  mov.b     @(0x1c,sp), r0l
+0x027142  sub.b     r0h, r0h
+0x027144  mov.b     r0l, @(0x7,er6)
+0x027148  mov.b     @(0x1d,sp), r0l
+0x02714C  mov.b     r0l, @(0x8,er6)
+0x027150  jmp       0x027246
+0x027154  mov.b     @0x00600d, r0l
+0x02715A  bne       0x0271ee
+0x02715E  mov.b     @0x00600c, r0l
+0x027164  mov.b     r0l, @er6
+0x027166  mov.w     @0x006000, r0
+0x02716C  sub.w     e0, e0
+0x02716E  mov.b     r0h, r0l
+0x027170  sub.b     r0h, r0h
+0x027172  mov.b     r0l, @(0x1,er6)
+0x027176  mov.w     @0x006000, r0
+0x02717C  mov.b     r0l, @(0x2,er6)
+0x027180  mov.b     @0x006002, r0l
+0x027186  sub.b     r0h, r0h
+0x027188  mov.b     r0l, @(0x3,er6)
+0x02718C  mov.b     @0x006003, r0l
+0x027192  mov.b     r0l, @(0x4,er6)
+0x027196  mov.w     @0x006004, r0
+0x02719C  sub.w     e0, e0
+0x02719E  mov.b     r0h, r0l
+0x0271A0  sub.b     r0h, r0h
+0x0271A2  mov.b     r0l, @(0x5,er6)
+0x0271A6  mov.w     @0x006004, r0
+0x0271AC  mov.b     r0l, @(0x6,er6)
+0x0271B0  mov.b     @0x006006, r0l
+0x0271B6  sub.b     r0h, r0h
+0x0271B8  mov.b     r0l, @(0x7,er6)
+0x0271BC  mov.b     @0x006007, r0l
+0x0271C2  mov.b     r0l, @(0x8,er6)
+0x0271C6  mov.b     @0x006008, r0l
+0x0271CC  sub.b     r0h, r0h
+0x0271CE  mov.b     r0l, @(0x9,er6)
+0x0271D2  mov.b     @0x006009, r0l
+0x0271D8  mov.b     r0l, @(0xa,er6)
+0x0271DC  mov.b     @0x00600a, r0l
+0x0271E2  mov.b     r0l, @(0xb,er6)
+0x0271E6  mov.b     @0x00600b, r0l
+0x0271EC  bt        0x027224
+0x0271EE  sub.b     r0l, r0l
+0x0271F0  mov.b     r0l, @er6
+0x0271F2  mov.b     r0l, @(0x1,er6)
+0x0271F6  mov.b     r0l, @(0x2,er6)
+0x0271FA  mov.b     r0l, @(0x3,er6)
+0x0271FE  sub.b     r0l, r0l
+0x027200  mov.b     r0l, @(0x4,er6)
+0x027204  mov.b     r0l, @(0x5,er6)
+0x027208  mov.b     r0l, @(0x6,er6)
+0x02720C  mov.b     r0l, @(0x7,er6)
+0x027210  sub.b     r0l, r0l
+0x027212  mov.b     r0l, @(0x8,er6)
+0x027216  mov.b     r0l, @(0x9,er6)
+0x02721A  mov.b     r0l, @(0xa,er6)
+0x02721E  mov.b     r0l, @(0xb,er6)
+0x027222  sub.b     r0l, r0l
+0x027224  mov.b     r0l, @(0xc,er6)
+0x027228  bt        0x027246
+0x02722A  mov.b     @0x42029e, r0l
+0x027230  bt        0x027238
+0x027232  mov.b     @0x42029f, r0l

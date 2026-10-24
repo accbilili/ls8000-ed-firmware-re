@@ -1,0 +1,1050 @@
+; ======================================================================
+; Nikon LS-8000 ED  LS8000_111_ROM.bin  H8/300H
+; Listing for 0x027DC4 and its reachable call tree
+; ROM: D:\DS\TEST\LS8000\LS8000_111_ROM.bin  (addr = file offset + 0x10000)
+; Decoder: h8dis.py + h8.lst (mtime 2026-10)
+; NOTE: h8.lst names opcode 0x40xx "bt"; it is BRA. Marked "bra*".
+; NOTE: "mov.b r0l,r0l / bne" tests Z left over by the callee (MOV never
+;       touches CCR on H8). Flagged where it matters.
+; ======================================================================
+
+; ========================================================================================
+; MAIN   0x027DC4  load-step (mode 0/1/2)
+; range 0x027DC4 - 0x027F24  insns=104
+; ========================================================================================
+027DC4  01 00 6D F3      mov.l     er3, @-sp
+027DC8  01 20 6D F4      stm.l     er4-er6, @-sp
+027DCC  79 0E 90 00      mov.w     #0x9000, e6
+027DD0  18 66            sub.b     r6h, r6h
+027DD2  7A 03 00 42 02 B4 mov.l     #0x004202b4, er3
+027DD8  7A 04 00 40 04 06 mov.l     #0x00400406, er4
+027DDE  7A 05 00 40 04 04 mov.l     #0x00400404, er5
+027DE4  0C 8E            mov.b     r0l, r6l
+027DE6  5E 02 9C D8      jsr       0x029cd8
+027DEA  0C 88            mov.b     r0l, r0l
+027DEC  46 06            bne       0x027df4
+027DEE  79 00 0E 00      mov.w     #0x0e00, r0
+027DF2  40 0C            bra*      0x027e00
+027DF4  5C 00 0B 94      bsr       0x02898c
+027DF8  0C 88            mov.b     r0l, r0l
+027DFA  46 12            bne       0x027e0e
+027DFC  79 00 0E 10      mov.w     #0x0e10, r0
+027E00  69 D0            mov.w     r0, @er5
+027E02  F8 03            mov.b     #0x03, r0l
+027E04  5C 00 FC 4C      bsr       0x027a54
+027E08  18 88            sub.b     r0l, r0l
+027E0A  5A 02 7F 1A      jmp       0x027f1a
+027E0E  AE 01            cmp.b     #0x01, r6l
+027E10  46 4C            bne       0x027e5e
+027E12  F8 01            mov.b     #0x01, r0l
+027E14  5C 00 FC 3C      bsr       0x027a54
+027E18  7D 40 70 10      bset      #1, @er4
+027E1C  69 DE            mov.w     e6, @er5
+027E1E  F8 10            mov.b     #0x10, r0l
+027E20  6A A8 00 40 03 FB mov.b     r0l, @0x4003fb
+027E26  F8 05            mov.b     #0x05, r0l
+027E28  6A A8 00 40 0D 72 mov.b     r0l, @0x400d72
+027E2E  F8 01            mov.b     #0x01, r0l
+027E30  6A A8 00 40 0D 79 mov.b     r0l, @0x400d79
+027E36  18 88            sub.b     r0l, r0l
+027E38  6A A8 00 40 04 1A mov.b     r0l, @0x40041a
+027E3E  F8 01            mov.b     #0x01, r0l
+027E40  6A A8 00 40 0D 78 mov.b     r0l, @0x400d78
+027E46  40 16            bra*      0x027e5e
+027E48  0C 68            mov.b     r6h, r0l
+027E4A  6D F0            mov.w     r0, @-sp
+027E4C  7A 01 00 01 86 A0 mov.l     #0x000186a0, er1
+027E52  69 30            mov.w     @er3, r0
+027E54  5E 02 AD CE      jsr       0x02adce
+027E58  0B 87            adds.l    #2, sp
+027E5A  5E 02 AC E6      jsr       0x02ace6
+027E5E  6B 20 00 42 02 A2 mov.w     @0x4202a2, r0
+027E64  69 31            mov.w     @er3, r1
+027E66  1D 10            cmp.w     r1, r0
+027E68  46 DE            bne       0x027e48
+027E6A  7A 00 00 42 02 EC mov.l     #0x004202ec, er0
+027E70  69 01            mov.w     @er0, r1
+027E72  79 11 00 55      add.w     #0x0055, r1
+027E76  69 81            mov.w     r1, @er0
+027E78  0C 68            mov.b     r6h, r0l
+027E7A  6D F0            mov.w     r0, @-sp
+027E7C  7A 01 00 01 86 A0 mov.l     #0x000186a0, er1
+027E82  19 00            sub.w     r0, r0
+027E84  5E 02 C9 E4      jsr       0x02c9e4
+027E88  0B 87            adds.l    #2, sp
+027E8A  5E 02 C8 E0      jsr       0x02c8e0
+027E8E  AE 01            cmp.b     #0x01, r6l
+027E90  46 08            bne       0x027e9a
+027E92  18 88            sub.b     r0l, r0l
+027E94  6A A8 00 40 0D 78 mov.b     r0l, @0x400d78
+027E9A  AE 02            cmp.b     #0x02, r6l
+027E9C  47 7A            beq       0x027f18
+027E9E  F8 10            mov.b     #0x10, r0l
+027EA0  6A A8 00 40 03 FB mov.b     r0l, @0x4003fb
+027EA6  69 DE            mov.w     e6, @er5
+027EA8  0C EE            mov.b     r6l, r6l
+027EAA  46 26            bne       0x027ed2
+027EAC  7D 40 70 00      bset      #0, @er4
+027EB0  69 DE            mov.w     e6, @er5
+027EB2  F8 10            mov.b     #0x10, r0l
+027EB4  6A A8 00 40 03 FB mov.b     r0l, @0x4003fb
+027EBA  F8 05            mov.b     #0x05, r0l
+027EBC  6A A8 00 40 0D 72 mov.b     r0l, @0x400d72
+027EC2  F8 01            mov.b     #0x01, r0l
+027EC4  6A A8 00 40 0D 79 mov.b     r0l, @0x400d79
+027ECA  18 88            sub.b     r0l, r0l
+027ECC  6A A8 00 40 04 1A mov.b     r0l, @0x40041a
+027ED2  18 88            sub.b     r0l, r0l
+027ED4  6A A8 00 42 02 FE mov.b     r0l, @0x4202fe
+027EDA  6A A8 00 42 07 FA mov.b     r0l, @0x4207fa
+027EE0  6B 20 00 42 02 A2 mov.w     @0x4202a2, r0
+027EE6  6B A0 00 42 02 B2 mov.w     r0, @0x4202b2
+027EEC  6B 20 00 42 02 EC mov.w     @0x4202ec, r0
+027EF2  6B A0 00 42 02 FC mov.w     r0, @0x4202fc
+027EF8  6A 28 00 42 02 9F mov.b     @0x42029f, r0l
+027EFE  A8 01            cmp.b     #0x01, r0l
+027F00  46 0C            bne       0x027f0e
+027F02  6A 28 00 42 07 F8 mov.b     @0x4207f8, r0l
+027F08  A8 01            cmp.b     #0x01, r0l
+027F0A  46 02            bne       0x027f0e
+027F0C  55 16            bsr       0x027f24
+027F0E  AE 01            cmp.b     #0x01, r6l
+027F10  46 06            bne       0x027f18
+027F12  0C 68            mov.b     r6h, r0l
+027F14  5C 00 FB 3C      bsr       0x027a54
+027F18  F8 01            mov.b     #0x01, r0l
+027F1A  01 20 6D 76      ldm.l     @sp+, er4-er6
+027F1E  01 00 6D 73      mov.l     @sp+, er3
+027F22  54 70            rts       
+
+; ========================================================================================
+; SUB    0x029CD8  travel-limit guard
+; range 0x029CD8 - 0x029D2A  insns=22
+; ========================================================================================
+029CD8  6A 38 00 FF FF 2F 72 00 bclr      #0, @0xffff2f
+029CE0  18 88            sub.b     r0l, r0l
+029CE2  6A A8 00 42 02 FF mov.b     r0l, @0x4202ff
+029CE8  6A 38 00 FF FF 2E 72 00 bclr      #0, @0xffff2e
+029CF0  6B 20 00 42 02 EC mov.w     @0x4202ec, r0
+029CF6  79 08 00 0C      mov.w     #0x000c, e0
+029CFA  52 80            mulxu.w   e0, er0
+029CFC  6B 21 00 42 02 A2 mov.w     @0x4202a2, r1
+029D02  09 01            add.w     r0, r1
+029D04  1A 80            sub.l     er0, er0
+029D06  6A 28 00 40 03 FB mov.b     @0x4003fb, r0l
+029D0C  10 30            shll.l    er0
+029D0E  78 00 6B 20 00 03 EE 10 mov.w     @(0x3ee10,er0), r0
+029D16  1D 01            cmp.w     r0, r1
+029D18  45 0C            bcs       0x029d26
+029D1A  5E 02 CF E0      jsr       0x02cfe0
+029D1E  A8 01            cmp.b     #0x01, r0l
+029D20  46 04            bne       0x029d26
+029D22  18 88            sub.b     r0l, r0l
+029D24  54 70            rts       
+029D26  F8 01            mov.b     #0x01, r0l
+029D28  54 70            rts       
+
+; ========================================================================================
+; SUB    0x02898C  sensor-B debounce (0xFFFF2F bit6)
+; range 0x02898C - 0x0289B4  insns=11
+; ========================================================================================
+02898C  6A 38 00 FF FF 2F 72 60 bclr      #6, @0xffff2f
+028994  18 88            sub.b     r0l, r0l
+028996  6A A8 00 42 02 FF mov.b     r0l, @0x4202ff
+02899C  6A 38 00 FF FF 2E 72 60 bclr      #6, @0xffff2e
+0289A4  5E 02 D0 00      jsr       0x02d000
+0289A8  0C 88            mov.b     r0l, r0l
+0289AA  46 04            bne       0x0289b0
+0289AC  18 88            sub.b     r0l, r0l
+0289AE  54 70            rts       
+0289B0  F8 01            mov.b     #0x01, r0l
+0289B2  54 70            rts       
+
+; ========================================================================================
+; SUB    0x027A54  status/IRQ report
+; range 0x027A54 - 0x027AFA  insns=44
+; ========================================================================================
+027A54  6D F2            mov.w     r2, @-sp
+027A56  01 20 6D F4      stm.l     er4-er6, @-sp
+027A5A  0C 8A            mov.b     r0l, r2l
+027A5C  5E 01 0B DE      jsr       0x010bde
+027A60  0C 82            mov.b     r0l, r2h
+027A62  5E 01 0B D2      jsr       0x010bd2
+027A66  6A AA 00 42 06 C8 mov.b     r2l, @0x4206c8
+027A6C  7A 06 00 42 06 CA mov.l     #0x004206ca, er6
+027A72  7A 04 00 42 06 CE mov.l     #0x004206ce, er4
+027A78  7A 05 00 FF FF 6F mov.l     #0x00ffff6f, er5
+027A7E  7A 01 00 40 03 F6 mov.l     #0x004003f6, er1
+027A84  0C A8            mov.b     r2l, r0l
+027A86  47 0E            beq       0x027a96
+027A88  A8 01            cmp.b     #0x01, r0l
+027A8A  47 10            beq       0x027a9c
+027A8C  A8 02            cmp.b     #0x02, r0l
+027A8E  47 14            beq       0x027aa4
+027A90  A8 03            cmp.b     #0x03, r0l
+027A92  47 28            beq       0x027abc
+027A94  40 56            bra*      0x027aec
+027A96  7D 50 70 00      bset      #0, @er5
+027A9A  40 50            bra*      0x027aec
+027A9C  7A 00 00 00 03 13 mov.l     #0x00000313, er0
+027AA2  40 06            bra*      0x027aaa
+027AA4  7A 00 00 00 00 64 mov.l     #0x00000064, er0
+027AAA  01 00 69 C0      mov.l     er0, @er4
+027AAE  7D 50 72 00      bclr      #0, @er5
+027AB2  01 00 69 11      mov.l     @er1, er1
+027AB6  01 00 69 E1      mov.l     er1, @er6
+027ABA  40 30            bra*      0x027aec
+027ABC  7A 00 00 00 00 64 mov.l     #0x00000064, er0
+027AC2  01 00 69 C0      mov.l     er0, @er4
+027AC6  7D 50 72 00      bclr      #0, @er5
+027ACA  01 00 69 10      mov.l     @er1, er0
+027ACE  01 00 69 E0      mov.l     er0, @er6
+027AD2  01 00 69 11      mov.l     @er1, er1
+027AD6  01 00 6B A1 00 42 06 D2 mov.l     er1, @0x4206d2
+027ADE  7A 00 00 00 0F A0 mov.l     #0x00000fa0, er0
+027AE4  01 00 6B A0 00 42 06 D6 mov.l     er0, @0x4206d6
+027AEC  0C 28            mov.b     r2h, r0l
+027AEE  5E 01 0B E2      jsr       0x010be2
+027AF2  01 20 6D 76      ldm.l     @sp+, er4-er6
+027AF6  6D 72            mov.w     @sp+, r2
+027AF8  54 70            rts       
+
+; ========================================================================================
+; SUB    0x027F24  post-load hook
+; range 0x027F24 - 0x027F44  insns=10
+; ========================================================================================
+027F24  6D F6            mov.w     r6, @-sp
+027F26  6B 26 00 42 02 E0 mov.w     @0x4202e0, r6
+027F2C  79 00 00 E2      mov.w     #0x00e2, r0
+027F30  5E 02 B8 7C      jsr       0x02b87c
+027F34  5C 00 0A 34      bsr       0x02896c
+027F38  55 0A            bsr       0x027f44
+027F3A  0D 60            mov.w     r6, r0
+027F3C  5E 02 B8 7C      jsr       0x02b87c
+027F40  6D 76            mov.w     @sp+, r6
+027F42  54 70            rts       
+
+; ========================================================================================
+; SUB    0x02ADCE  axis-A move-and-wait
+; range 0x02ADCE - 0x02AE52  insns=48
+; ========================================================================================
+02ADCE  01 00 6D F3      mov.l     er3, @-sp
+02ADD2  01 20 6D F4      stm.l     er4-er6, @-sp
+02ADD6  0D 05            mov.w     r0, r5
+02ADD8  0F 93            mov.l     er1, er3
+02ADDA  7A 06 00 44 0E 40 mov.l     #0x00440e40, er6
+02ADE0  69 E5            mov.w     r5, @er6
+02ADE2  7A 05 00 42 02 A2 mov.l     #0x004202a2, er5
+02ADE8  69 60            mov.w     @er6, r0
+02ADEA  69 51            mov.w     @er5, r1
+02ADEC  1D 10            cmp.w     r1, r0
+02ADEE  47 58            beq       0x02ae48
+02ADF0  69 60            mov.w     @er6, r0
+02ADF2  69 51            mov.w     @er5, r1
+02ADF4  1D 10            cmp.w     r1, r0
+02ADF6  43 1A            bls       0x02ae12
+02ADF8  FC 01            mov.b     #0x01, r4l
+02ADFA  69 66            mov.w     @er6, r6
+02ADFC  69 55            mov.w     @er5, r5
+02ADFE  19 56            sub.w     r5, r6
+02AE00  79 26 01 72      cmp.w     #0x0172, r6
+02AE04  45 06            bcs       0x02ae0c
+02AE06  79 0E 27 10      mov.w     #0x2710, e6
+02AE0A  40 20            bra*      0x02ae2c
+02AE0C  79 0E 09 C4      mov.w     #0x09c4, e6
+02AE10  40 1A            bra*      0x02ae2c
+02AE12  18 CC            sub.b     r4l, r4l
+02AE14  69 55            mov.w     @er5, r5
+02AE16  69 66            mov.w     @er6, r6
+02AE18  19 65            sub.w     r6, r5
+02AE1A  0D 56            mov.w     r5, r6
+02AE1C  79 26 01 72      cmp.w     #0x0172, r6
+02AE20  45 06            bcs       0x02ae28
+02AE22  79 0E 27 10      mov.w     #0x2710, e6
+02AE26  40 04            bra*      0x02ae2c
+02AE28  79 0E 09 C4      mov.w     #0x09c4, e6
+02AE2C  1A D5            sub.l     er5, er5
+02AE2E  01 00 6D F3      mov.l     er3, @-sp
+02AE32  01 00 6D F5      mov.l     er5, @-sp
+02AE36  6E 70 00 1D      mov.b     @(0x1d,sp), r0h
+02AE3A  0D E1            mov.w     e6, r1
+02AE3C  0D 68            mov.w     r6, e0
+02AE3E  0C C8            mov.b     r4l, r0l
+02AE40  5C 00 F4 B2      bsr       0x02a2f6
+02AE44  0B 97            adds.l    #4, sp
+02AE46  0B 97            adds.l    #4, sp
+02AE48  01 20 6D 76      ldm.l     @sp+, er4-er6
+02AE4C  01 00 6D 73      mov.l     @sp+, er3
+02AE50  54 70            rts       
+
+; ========================================================================================
+; SUB    0x02ACE6  axis-A status wait
+; range 0x02ACE6 - 0x02AD0A  insns=13
+; ========================================================================================
+02ACE6  6D F6            mov.w     r6, @-sp
+02ACE8  6A 28 00 42 02 A9 mov.b     @0x4202a9, r0l
+02ACEE  46 04            bne       0x02acf4
+02ACF0  18 EE            sub.b     r6l, r6l
+02ACF2  40 08            bra*      0x02acfc
+02ACF4  FE 07            mov.b     #0x07, r6l
+02ACF6  40 04            bra*      0x02acfc
+02ACF8  5E 01 0B 56      jsr       0x010b56
+02ACFC  6A 28 00 42 02 A4 mov.b     @0x4202a4, r0l
+02AD02  1C E8            cmp.b     r6l, r0l
+02AD04  46 F2            bne       0x02acf8
+02AD06  6D 76            mov.w     @sp+, r6
+02AD08  54 70            rts       
+
+; ========================================================================================
+; SUB    0x02C9E4  axis-B move-and-wait
+; range 0x02C9E4 - 0x02CA78  insns=54
+; ========================================================================================
+02C9E4  01 10 6D F2      stm.l     er2-er3, @-sp
+02C9E8  01 20 6D F4      stm.l     er4-er6, @-sp
+02C9EC  7A 06 00 44 0F DA mov.l     #0x00440fda, er6
+02C9F2  0D 05            mov.w     r0, r5
+02C9F4  0F 92            mov.l     er1, er2
+02C9F6  79 25 0F 60      cmp.w     #0x0f60, r5
+02C9FA  43 08            bls       0x02ca04
+02C9FC  79 00 0F 60      mov.w     #0x0f60, r0
+02CA00  69 E0            mov.w     r0, @er6
+02CA02  40 02            bra*      0x02ca06
+02CA04  69 E5            mov.w     r5, @er6
+02CA06  7A 05 00 42 02 EC mov.l     #0x004202ec, er5
+02CA0C  69 60            mov.w     @er6, r0
+02CA0E  69 51            mov.w     @er5, r1
+02CA10  1D 10            cmp.w     r1, r0
+02CA12  47 5A            beq       0x02ca6e
+02CA14  69 60            mov.w     @er6, r0
+02CA16  69 51            mov.w     @er5, r1
+02CA18  1D 10            cmp.w     r1, r0
+02CA1A  43 1C            bls       0x02ca38
+02CA1C  18 CC            sub.b     r4l, r4l
+02CA1E  69 60            mov.w     @er6, r0
+02CA20  69 55            mov.w     @er5, r5
+02CA22  19 50            sub.w     r5, r0
+02CA24  0D 05            mov.w     r0, r5
+02CA26  79 20 01 2F      cmp.w     #0x012f, r0
+02CA2A  45 06            bcs       0x02ca32
+02CA2C  79 0D 02 BC      mov.w     #0x02bc, e5
+02CA30  40 1E            bra*      0x02ca50
+02CA32  79 0D 01 90      mov.w     #0x0190, e5
+02CA36  40 18            bra*      0x02ca50
+02CA38  FC 01            mov.b     #0x01, r4l
+02CA3A  69 55            mov.w     @er5, r5
+02CA3C  69 60            mov.w     @er6, r0
+02CA3E  19 05            sub.w     r0, r5
+02CA40  79 25 01 2F      cmp.w     #0x012f, r5
+02CA44  45 06            bcs       0x02ca4c
+02CA46  79 0D 02 BC      mov.w     #0x02bc, e5
+02CA4A  40 04            bra*      0x02ca50
+02CA4C  79 0D 01 90      mov.w     #0x0190, e5
+02CA50  1A B3            sub.l     er3, er3
+02CA52  0F A0            mov.l     er2, er0
+02CA54  01 00 6D F0      mov.l     er0, @-sp
+02CA58  01 00 6D F3      mov.l     er3, @-sp
+02CA5C  6E 70 00 21      mov.b     @(0x21,sp), r0h
+02CA60  0D D1            mov.w     e5, r1
+02CA62  0D 58            mov.w     r5, e0
+02CA64  0C C8            mov.b     r4l, r0l
+02CA66  5C 00 F3 C8      bsr       0x02be32
+02CA6A  0B 97            adds.l    #4, sp
+02CA6C  0B 97            adds.l    #4, sp
+02CA6E  01 20 6D 76      ldm.l     @sp+, er4-er6
+02CA72  01 10 6D 73      ldm.l     @sp+, er2-er3
+02CA76  54 70            rts       
+
+; ========================================================================================
+; SUB    0x02C8E0  axis-B status wait
+; range 0x02C8E0 - 0x02C904  insns=13
+; ========================================================================================
+02C8E0  6D F6            mov.w     r6, @-sp
+02C8E2  6A 28 00 42 02 F3 mov.b     @0x4202f3, r0l
+02C8E8  46 04            bne       0x02c8ee
+02C8EA  18 EE            sub.b     r6l, r6l
+02C8EC  40 08            bra*      0x02c8f6
+02C8EE  FE 07            mov.b     #0x07, r6l
+02C8F0  40 04            bra*      0x02c8f6
+02C8F2  5E 01 0B 56      jsr       0x010b56
+02C8F6  6A 28 00 42 02 EE mov.b     @0x4202ee, r0l
+02C8FC  1C E8            cmp.b     r6l, r0l
+02C8FE  46 F2            bne       0x02c8f2
+02C900  6D 76            mov.w     @sp+, r6
+02C902  54 70            rts       
+
+; ========================================================================================
+; DEP    0x02CFE0  debounce 0xFFFF55 bit4
+; range 0x02CFE0 - 0x02D000  insns=12
+; ========================================================================================
+02CFE0  18 99            sub.b     r1l, r1l
+02CFE2  19 00            sub.w     r0, r0
+02CFE4  40 10            bra*      0x02cff6
+02CFE6  6A 30 00 FF FF 55 73 40 btst      #4, @0xffff55
+02CFEE  46 04            bne       0x02cff4
+02CFF0  F9 01            mov.b     #0x01, r1l
+02CFF2  40 08            bra*      0x02cffc
+02CFF4  0B 50            inc.w     #1, r0
+02CFF6  79 20 00 14      cmp.w     #0x0014, r0
+02CFFA  4D EA            blt       0x02cfe6
+02CFFC  0C 98            mov.b     r1l, r0l
+02CFFE  54 70            rts       
+
+; ========================================================================================
+; DEP    0x02D000  debounce 0xFFFF54 bit2
+; range 0x02D000 - 0x02D022  insns=14
+; ========================================================================================
+02D000  18 00            sub.b     r0h, r0h
+02D002  19 88            sub.w     e0, e0
+02D004  40 12            bra*      0x02d018
+02D006  6A 28 00 FF FF 54 mov.b     @0xffff54, r0l
+02D00C  E8 04            and.b     #0x04, r0l
+02D00E  A8 04            cmp.b     #0x04, r0l
+02D010  46 04            bne       0x02d016
+02D012  F0 01            mov.b     #0x01, r0h
+02D014  40 08            bra*      0x02d01e
+02D016  0B 58            inc.w     #1, e0
+02D018  79 28 00 14      cmp.w     #0x0014, e0
+02D01C  4D E8            blt       0x02d006
+02D01E  0C 08            mov.b     r0h, r0l
+02D020  54 70            rts       
+
+; ========================================================================================
+; DEP    0x010B56  device-ready sync
+; range 0x010B56 - 0x010B80  insns=12
+; ========================================================================================
+010B56  01 20 6D F4      stm.l     er4-er6, @-sp
+010B5A  7A 05 00 40 0D 5C mov.l     #0x00400d5c, er5
+010B60  7A 06 00 FF FF 2E mov.l     #0x00ffff2e, er6
+010B66  6B 20 00 40 03 EC mov.w     @0x4003ec, r0
+010B6C  47 04            beq       0x010b72
+010B6E  5A 01 0B B2      jmp       0x010bb2
+010B72  68 58            mov.b     @er5, r0l
+010B74  A8 01            cmp.b     #0x01, r0l
+010B76  47 04            beq       0x010b7c
+010B78  5A 01 0B 8E      jmp       0x010b8e
+010B7C  18 88            sub.b     r0l, r0l
+010B7E  68 D8            mov.b     r0l, @er5
+
+; ========================================================================================
+; DEP    0x010BD2  irq-mask disable
+; range 0x010BD2 - 0x010BD8  insns=2
+; ========================================================================================
+010BD2  01 41 04 07      orc       #0x07, exr
+010BD6  54 70            rts       
+
+; ========================================================================================
+; DEP    0x010BDE  irq-mask save
+; range 0x010BDE - 0x010BE2  insns=2
+; ========================================================================================
+010BDE  02 18            stc       exr, r0l
+010BE0  54 70            rts       
+
+; ========================================================================================
+; DEP    0x010BE2  irq-mask restore
+; range 0x010BE2 - 0x010BE4  insns=1
+; ========================================================================================
+010BE2  03 18            ldc       r0l, exr
+
+; ========================================================================================
+; DEP    0x02A2F6  axis-A primitive
+; range 0x02A2F6 - 0x02A320  insns=14
+; ========================================================================================
+02A2F6  01 00 6D F3      mov.l     er3, @-sp
+02A2FA  01 20 6D F4      stm.l     er4-er6, @-sp
+02A2FE  7A 04 00 42 02 A4 mov.l     #0x004202a4, er4
+02A304  7A 06 00 44 0E 36 mov.l     #0x00440e36, er6
+02A30A  0C 8D            mov.b     r0l, r5l
+02A30C  0D 8D            mov.w     e0, e5
+02A30E  0D 13            mov.w     r1, r3
+02A310  0C 05            mov.b     r0h, r5h
+02A312  0C DD            mov.b     r5l, r5l
+02A314  46 06            bne       0x02a31c
+02A316  F8 01            mov.b     #0x01, r0l
+02A318  5E 02 9D 2A      jsr       0x029d2a
+02A31C  18 88            sub.b     r0l, r0l
+02A31E  6A A8 00 44 08 0F mov.b     r0l, @0x44080f
+
+; ========================================================================================
+; DEP    0x02BE32  axis-B primitive
+; range 0x02BE32 - 0x02BE50  insns=8
+; ========================================================================================
+02BE32  01 10 6D F2      stm.l     er2-er3, @-sp
+02BE36  01 20 6D F4      stm.l     er4-er6, @-sp
+02BE3A  7A 04 00 42 02 EE mov.l     #0x004202ee, er4
+02BE40  7A 06 00 44 0F CE mov.l     #0x00440fce, er6
+02BE46  0C 8D            mov.b     r0l, r5l
+02BE48  0D 8D            mov.w     e0, e5
+02BE4A  0D 12            mov.w     r1, r2
+02BE4C  01 00 6F 73 00 18 mov.l     @(0x18,sp), er3
+
+; ========================================================================================
+; DEP    0x02B87C  drive-profile loader
+; range 0x02B87C - 0x02B89C  insns=9
+; ========================================================================================
+02B87C  01 00 6D F6      mov.l     er6, @-sp
+02B880  0D 06            mov.w     r0, r6
+02B882  6B 20 00 40 04 02 mov.w     @0x400402, r0
+02B888  79 20 01 20      cmp.w     #0x0120, r0
+02B88C  47 56            beq       0x02b8e4
+02B88E  6B 20 00 40 04 02 mov.w     @0x400402, r0
+02B894  79 20 01 21      cmp.w     #0x0121, r0
+02B898  47 4A            beq       0x02b8e4
+02B89A  6B 20 00 42 02 E0 mov.w     @0x4202e0, r0
+
+; ========================================================================================
+; DEP    0x02896C  clear 10x34B slot array
+; range 0x02896C - 0x02898C  insns=12
+; ========================================================================================
+02896C  6D F6            mov.w     r6, @-sp
+02896E  18 EE            sub.b     r6l, r6l
+028970  17 56            extu.w    r6
+028972  79 00 00 22      mov.w     #0x0022, r0
+028976  52 60            mulxu.w   r6, er0
+028978  18 99            sub.b     r1l, r1l
+02897A  78 00 6A A9 00 41 FF D4 mov.b     r1l, @(0x41ffd4,er0)
+028982  0A 0E            inc.b     #1, r6l
+028984  AE 0A            cmp.b     #0x0a, r6l
+028986  45 E8            bcs       0x028970
+028988  6D 76            mov.w     @sp+, r6
+02898A  54 70            rts       
+
+; ========================================================================================
+; DEP    0x027F44  CCD/analog init hook
+; range 0x027F44 - 0x027F9C  insns=24
+; ========================================================================================
+027F44  01 10 6D F2      stm.l     er2-er3, @-sp
+027F48  01 20 6D F4      stm.l     er4-er6, @-sp
+027F4C  7A 37 00 00 00 10 sub.l     #0x00000010, sp
+027F52  7A 04 00 40 04 02 mov.l     #0x00400402, er4
+027F58  7A 06 00 40 07 CA mov.l     #0x004007ca, er6
+027F5E  18 88            sub.b     r0l, r0l
+027F60  6A A8 00 41 FF A6 mov.b     r0l, @0x41ffa6
+027F66  F8 01            mov.b     #0x01, r0l
+027F68  6A A8 00 40 07 C9 mov.b     r0l, @0x4007c9
+027F6E  18 88            sub.b     r0l, r0l
+027F70  68 E8            mov.b     r0l, @er6
+027F72  5C 00 01 D2      bsr       0x028148
+027F76  F8 02            mov.b     #0x02, r0l
+027F78  68 E8            mov.b     r0l, @er6
+027F7A  5C 00 01 CA      bsr       0x028148
+027F7E  F8 03            mov.b     #0x03, r0l
+027F80  68 E8            mov.b     r0l, @er6
+027F82  5C 00 01 C2      bsr       0x028148
+027F86  F8 04            mov.b     #0x04, r0l
+027F88  68 E8            mov.b     r0l, @er6
+027F8A  5C 00 01 BA      bsr       0x028148
+027F8E  7A 02 00 8C C0 00 mov.l     #0x008cc000, er2
+027F94  7A 05 00 42 07 FE mov.l     #0x004207fe, er5
+027F9A  19 33            sub.w     r3, r3
+
+; ========================================================================================
+; DEP    0x02CF60  debounce 0xFFFF55 bit2
+; range 0x02CF60 - 0x02CF92  insns=12
+; ========================================================================================
+02CF60  18 99            sub.b     r1l, r1l
+02CF62  19 00            sub.w     r0, r0
+02CF64  40 10            bra*      0x02cf76
+02CF66  6A 30 00 FF FF 55 73 20 btst      #2, @0xffff55
+02CF6E  46 04            bne       0x02cf74
+02CF70  F9 01            mov.b     #0x01, r1l
+02CF72  40 08            bra*      0x02cf7c
+02CF74  0B 50            inc.w     #1, r0
+02CF76  79 20 00 14      cmp.w     #0x0014, r0
+02CF7A  4D EA            blt       0x02cf66
+02CF7C  0C 98            mov.b     r1l, r0l
+02CF7E  54 70            rts       
+
+; ========================================================================================
+; DEP    0x02CFA0  debounce 0xFFFF55 bit5
+; range 0x02CFA0 - 0x02CFD2  insns=12
+; ========================================================================================
+02CFA0  18 99            sub.b     r1l, r1l
+02CFA2  19 00            sub.w     r0, r0
+02CFA4  40 10            bra*      0x02cfb6
+02CFA6  6A 30 00 FF FF 55 73 50 btst      #5, @0xffff55
+02CFAE  46 04            bne       0x02cfb4
+02CFB0  F9 01            mov.b     #0x01, r1l
+02CFB2  40 08            bra*      0x02cfbc
+02CFB4  0B 50            inc.w     #1, r0
+02CFB6  79 20 00 14      cmp.w     #0x0014, r0
+02CFBA  4D EA            blt       0x02cfa6
+02CFBC  0C 98            mov.b     r1l, r0l
+02CFBE  54 70            rts       
+
+; ========================================================================================
+; DEP    0x02CFC0  debounce 0xFFFF55 bit7
+; range 0x02CFC0 - 0x02CFDE  insns=11
+; ========================================================================================
+02CFC0  F9 01            mov.b     #0x01, r1l
+02CFC2  19 00            sub.w     r0, r0
+02CFC4  40 10            bra*      0x02cfd6
+02CFC6  6A 30 00 FF FF 55 73 70 btst      #7, @0xffff55
+02CFCE  47 04            beq       0x02cfd4
+02CFD0  18 99            sub.b     r1l, r1l
+02CFD2  40 08            bra*      0x02cfdc
+02CFD4  0B 50            inc.w     #1, r0
+02CFD6  79 20 00 14      cmp.w     #0x0014, r0
+02CFDA  4D EA            blt       0x02cfc6
+02CFDC  0C 98            mov.b     r1l, r0l
+
+; ========================================================================================
+; DEP    0x02ACBA  axis-A settle
+; range 0x02ACBA - 0x02ACE6  insns=16
+; ========================================================================================
+02ACBA  6D F6            mov.w     r6, @-sp
+02ACBC  6A 28 00 42 02 A9 mov.b     @0x4202a9, r0l
+02ACC2  46 04            bne       0x02acc8
+02ACC4  18 EE            sub.b     r6l, r6l
+02ACC6  40 08            bra*      0x02acd0
+02ACC8  FE 07            mov.b     #0x07, r6l
+02ACCA  40 04            bra*      0x02acd0
+02ACCC  5E 01 0B 56      jsr       0x010b56
+02ACD0  6A 28 00 42 02 A4 mov.b     @0x4202a4, r0l
+02ACD6  1C E8            cmp.b     r6l, r0l
+02ACD8  46 F2            bne       0x02accc
+02ACDA  18 88            sub.b     r0l, r0l
+02ACDC  5E 02 9D 2A      jsr       0x029d2a
+02ACE0  F8 01            mov.b     #0x01, r0l
+02ACE2  6D 76            mov.w     @sp+, r6
+02ACE4  54 70            rts       
+
+; ========================================================================================
+; CTX    0x027676  load driver (E0 worker step)
+; range 0x027676 - 0x0277CE  insns=114
+; ========================================================================================
+027676  01 20 6D F4      stm.l     er4-er6, @-sp
+02767A  FC 02            mov.b     #0x02, r4l
+02767C  7A 05 00 42 07 FA mov.l     #0x004207fa, er5
+027682  7A 06 00 40 04 04 mov.l     #0x00400404, er6
+027688  6A 38 00 FF FF 2E 70 30 bset      #3, @0xffff2e
+027690  6A 28 00 40 0D 72 mov.b     @0x400d72, r0l
+027696  A8 05            cmp.b     #0x05, r0l
+027698  46 74            bne       0x02770e
+02769A  5C 00 01 30      bsr       0x0277ce
+02769E  69 60            mov.w     @er6, r0
+0276A0  79 20 20 00      cmp.w     #0x2000, r0
+0276A4  47 12            beq       0x0276b8
+0276A6  5C 00 12 E2      bsr       0x02898c
+0276AA  0C 88            mov.b     r0l, r0l
+0276AC  46 06            bne       0x0276b4
+0276AE  79 00 0E 10      mov.w     #0x0e10, r0
+0276B2  40 02            bra*      0x0276b6
+0276B4  19 00            sub.w     r0, r0
+0276B6  69 E0            mov.w     r0, @er6
+0276B8  6A 28 00 42 03 00 mov.b     @0x420300, r0l
+0276BE  47 0C            beq       0x0276cc
+0276C0  6A 28 00 42 03 00 mov.b     @0x420300, r0l
+0276C6  A8 01            cmp.b     #0x01, r0l
+0276C8  58 60 00 AE      bne       0x02777a
+0276CC  5E 02 CF A0      jsr       0x02cfa0
+0276D0  A8 01            cmp.b     #0x01, r0l
+0276D2  46 30            bne       0x027704
+0276D4  6A 28 00 42 02 FE mov.b     @0x4202fe, r0l
+0276DA  A8 01            cmp.b     #0x01, r0l
+0276DC  47 1C            beq       0x0276fa
+0276DE  68 58            mov.b     @er5, r0l
+0276E0  A8 01            cmp.b     #0x01, r0l
+0276E2  46 0E            bne       0x0276f2
+0276E4  5E 02 CF C0      jsr       0x02cfc0
+0276E8  A8 01            cmp.b     #0x01, r0l
+0276EA  46 06            bne       0x0276f2
+0276EC  0C C8            mov.b     r4l, r0l
+0276EE  5C 00 06 D2      bsr       0x027dc4
+0276F2  18 88            sub.b     r0l, r0l
+0276F4  68 D8            mov.b     r0l, @er5
+0276F6  5A 02 77 C8      jmp       0x0277c8
+0276FA  5C 00 02 32      bsr       0x027930
+0276FE  18 88            sub.b     r0l, r0l
+027700  68 D8            mov.b     r0l, @er5
+027702  40 76            bra*      0x02777a
+027704  F8 01            mov.b     #0x01, r0l
+027706  6A A8 00 42 02 FE mov.b     r0l, @0x4202fe
+02770C  40 6C            bra*      0x02777a
+02770E  5C 00 12 7A      bsr       0x02898c
+027712  0C 88            mov.b     r0l, r0l
+027714  46 24            bne       0x02773a
+027716  79 00 0E 10      mov.w     #0x0e10, r0
+02771A  69 E0            mov.w     r0, @er6
+02771C  0C C8            mov.b     r4l, r0l
+02771E  5C 00 03 32      bsr       0x027a54
+027722  5C 00 12 66      bsr       0x02898c
+027726  0C 88            mov.b     r0l, r0l
+027728  46 06            bne       0x027730
+02772A  5E 01 0B 56      jsr       0x010b56
+02772E  40 F2            bra*      0x027722
+027730  19 00            sub.w     r0, r0
+027732  69 E0            mov.w     r0, @er6
+027734  18 88            sub.b     r0l, r0l
+027736  5C 00 03 1A      bsr       0x027a54
+02773A  68 58            mov.b     @er5, r0l
+02773C  A8 01            cmp.b     #0x01, r0l
+02773E  46 1C            bne       0x02775c
+027740  5E 02 CF C0      jsr       0x02cfc0
+027744  A8 01            cmp.b     #0x01, r0l
+027746  46 14            bne       0x02775c
+027748  F8 01            mov.b     #0x01, r0l
+02774A  5C 00 06 76      bsr       0x027dc4
+02774E  18 88            sub.b     r0l, r0l
+027750  68 D8            mov.b     r0l, @er5
+027752  F8 FF            mov.b     #0xff, r0l
+027754  6A A8 00 42 02 44 mov.b     r0l, @0x420244
+02775A  40 1E            bra*      0x02777a
+02775C  5E 02 CF 60      jsr       0x02cf60
+027760  0C 88            mov.b     r0l, r0l
+027762  46 16            bne       0x02777a
+027764  5E 02 CF A0      jsr       0x02cfa0
+027768  0C 88            mov.b     r0l, r0l
+02776A  46 0E            bne       0x02777a
+02776C  F8 01            mov.b     #0x01, r0l
+02776E  5C 00 06 52      bsr       0x027dc4
+027772  F8 FF            mov.b     #0xff, r0l
+027774  6A A8 00 42 02 44 mov.b     r0l, @0x420244
+02777A  6A 28 00 40 0D 77 mov.b     @0x400d77, r0l
+027780  A8 01            cmp.b     #0x01, r0l
+027782  46 44            bne       0x0277c8
+027784  5E 02 9C D8      jsr       0x029cd8
+027788  0C 88            mov.b     r0l, r0l
+02778A  46 24            bne       0x0277b0
+02778C  79 00 0E 00      mov.w     #0x0e00, r0
+027790  69 E0            mov.w     r0, @er6
+027792  0C C8            mov.b     r4l, r0l
+027794  5C 00 02 BC      bsr       0x027a54
+027798  5E 02 9C D8      jsr       0x029cd8
+02779C  0C 88            mov.b     r0l, r0l
+02779E  46 06            bne       0x0277a6
+0277A0  5E 01 0B 56      jsr       0x010b56
+0277A4  40 F2            bra*      0x027798
+0277A6  19 00            sub.w     r0, r0
+0277A8  69 E0            mov.w     r0, @er6
+0277AA  18 88            sub.b     r0l, r0l
+0277AC  5C 00 02 A4      bsr       0x027a54
+0277B0  5E 02 B0 E8      jsr       0x02b0e8
+0277B4  5E 02 CE 40      jsr       0x02ce40
+0277B8  18 88            sub.b     r0l, r0l
+0277BA  6A A8 00 40 0D 77 mov.b     r0l, @0x400d77
+0277C0  18 88            sub.b     r0l, r0l
+0277C2  6A A8 00 40 0D 78 mov.b     r0l, @0x400d78
+0277C8  01 20 6D 76      ldm.l     @sp+, er4-er6
+0277CC  54 70            rts       
+
+; ========================================================================================
+; CTX    0x0277CE  state sequencer, state @0x420300
+; range 0x0277CE - 0x027930  insns=118
+; ========================================================================================
+0277CE  01 00 6D F3      mov.l     er3, @-sp
+0277D2  01 20 6D F4      stm.l     er4-er6, @-sp
+0277D6  19 CC            sub.w     e4, e4
+0277D8  7A 03 00 01 86 A0 mov.l     #0x000186a0, er3
+0277DE  18 CC            sub.b     r4l, r4l
+0277E0  7A 05 00 42 02 A2 mov.l     #0x004202a2, er5
+0277E6  7A 06 00 42 03 00 mov.l     #0x00420300, er6
+0277EC  5E 02 CF A0      jsr       0x02cfa0
+0277F0  0C 88            mov.b     r0l, r0l
+0277F2  46 14            bne       0x027808
+0277F4  5E 02 CF 60      jsr       0x02cf60
+0277F8  0C 88            mov.b     r0l, r0l
+0277FA  46 0C            bne       0x027808
+0277FC  5E 02 CF E0      jsr       0x02cfe0
+027800  0C 88            mov.b     r0l, r0l
+027802  46 04            bne       0x027808
+027804  18 44            sub.b     r4h, r4h
+027806  40 02            bra*      0x02780a
+027808  F4 01            mov.b     #0x01, r4h
+02780A  68 68            mov.b     @er6, r0l
+02780C  46 20            bne       0x02782e
+02780E  0C 44            mov.b     r4h, r4h
+027810  46 1C            bne       0x02782e
+027812  5E 02 D0 00      jsr       0x02d000
+027816  0C 88            mov.b     r0l, r0l
+027818  46 14            bne       0x02782e
+02781A  F8 03            mov.b     #0x03, r0l
+02781C  68 E8            mov.b     r0l, @er6
+02781E  01 00 6B 20 00 40 03 F6 mov.l     @0x4003f6, er0
+027826  01 00 6B A0 00 42 03 02 mov.l     er0, @0x420302
+02782E  68 68            mov.b     @er6, r0l
+027830  A8 03            cmp.b     #0x03, r0l
+027832  46 6E            bne       0x0278a2
+027834  0C 44            mov.b     r4h, r4h
+027836  46 66            bne       0x02789e
+027838  5E 02 D0 00      jsr       0x02d000
+02783C  0C 88            mov.b     r0l, r0l
+02783E  46 5E            bne       0x02789e
+027840  01 00 6B 20 00 40 03 F6 mov.l     @0x4003f6, er0
+027848  01 00 6B 21 00 42 03 02 mov.l     @0x420302, er1
+027850  1A 90            sub.l     er1, er0
+027852  7A 20 00 00 04 B0 cmp.l     #0x000004b0, er0
+027858  45 48            bcs       0x0278a2
+02785A  F8 01            mov.b     #0x01, r0l
+02785C  5C 00 01 F4      bsr       0x027a54
+027860  40 10            bra*      0x027872
+027862  6D F4            mov.w     r4, @-sp
+027864  0F B1            mov.l     er3, er1
+027866  0D C0            mov.w     e4, r0
+027868  5E 02 AD CE      jsr       0x02adce
+02786C  0B 87            adds.l    #2, sp
+02786E  5E 02 AC BA      jsr       0x02acba
+027872  69 50            mov.w     @er5, r0
+027874  46 EC            bne       0x027862
+027876  79 00 07 FF      mov.w     #0x07ff, r0
+02787A  69 D0            mov.w     r0, @er5
+02787C  40 10            bra*      0x02788e
+02787E  6D F4            mov.w     r4, @-sp
+027880  0F B1            mov.l     er3, er1
+027882  0D C0            mov.w     e4, r0
+027884  5E 02 AD CE      jsr       0x02adce
+027888  0B 87            adds.l    #2, sp
+02788A  5E 02 AC BA      jsr       0x02acba
+02788E  69 50            mov.w     @er5, r0
+027890  46 EC            bne       0x02787e
+027892  F8 04            mov.b     #0x04, r0l
+027894  68 E8            mov.b     r0l, @er6
+027896  0C C8            mov.b     r4l, r0l
+027898  5C 00 01 B8      bsr       0x027a54
+02789C  40 04            bra*      0x0278a2
+02789E  18 88            sub.b     r0l, r0l
+0278A0  68 E8            mov.b     r0l, @er6
+0278A2  68 68            mov.b     @er6, r0l
+0278A4  A8 04            cmp.b     #0x04, r0l
+0278A6  46 1C            bne       0x0278c4
+0278A8  5E 02 D0 00      jsr       0x02d000
+0278AC  A8 01            cmp.b     #0x01, r0l
+0278AE  46 14            bne       0x0278c4
+0278B0  F8 05            mov.b     #0x05, r0l
+0278B2  68 E8            mov.b     r0l, @er6
+0278B4  01 00 6B 20 00 40 03 F6 mov.l     @0x4003f6, er0
+0278BC  01 00 6B A0 00 42 03 02 mov.l     er0, @0x420302
+0278C4  68 68            mov.b     @er6, r0l
+0278C6  A8 05            cmp.b     #0x05, r0l
+0278C8  46 5C            bne       0x027926
+0278CA  5E 02 D0 00      jsr       0x02d000
+0278CE  A8 01            cmp.b     #0x01, r0l
+0278D0  46 50            bne       0x027922
+0278D2  01 00 6B 20 00 40 03 F6 mov.l     @0x4003f6, er0
+0278DA  01 00 6B 21 00 42 03 02 mov.l     @0x420302, er1
+0278E2  1A 90            sub.l     er1, er0
+0278E4  7A 20 00 00 01 F4 cmp.l     #0x000001f4, er0
+0278EA  45 3A            bcs       0x027926
+0278EC  F8 01            mov.b     #0x01, r0l
+0278EE  5C 00 01 62      bsr       0x027a54
+0278F2  19 00            sub.w     r0, r0
+0278F4  69 D0            mov.w     r0, @er5
+0278F6  40 12            bra*      0x02790a
+0278F8  6D F4            mov.w     r4, @-sp
+0278FA  0F B1            mov.l     er3, er1
+0278FC  79 00 07 FF      mov.w     #0x07ff, r0
+027900  5E 02 AD CE      jsr       0x02adce
+027904  0B 87            adds.l    #2, sp
+027906  5E 02 AC BA      jsr       0x02acba
+02790A  69 50            mov.w     @er5, r0
+02790C  79 20 07 FF      cmp.w     #0x07ff, r0
+027910  46 E6            bne       0x0278f8
+027912  5E 02 B0 38      jsr       0x02b038
+027916  18 88            sub.b     r0l, r0l
+027918  68 E8            mov.b     r0l, @er6
+02791A  18 88            sub.b     r0l, r0l
+02791C  5C 00 01 34      bsr       0x027a54
+027920  40 04            bra*      0x027926
+027922  F8 04            mov.b     #0x04, r0l
+027924  68 E8            mov.b     r0l, @er6
+027926  01 20 6D 76      ldm.l     @sp+, er4-er6
+02792A  01 00 6D 73      mov.l     @sp+, er3
+02792E  54 70            rts       
+
+; ========================================================================================
+; CTX    0x02753E  E0 worker loop (incl. 0x5000 gate)
+; range 0x02753E - 0x027676  insns=102
+; ========================================================================================
+02753E  6A 28 00 40 04 1C mov.b     @0x40041c, r0l
+027544  A8 01            cmp.b     #0x01, r0l
+027546  46 0E            bne       0x027556
+027548  6A 38 00 FF FF 2E 72 10 bclr      #1, @0xffff2e
+027550  5E 01 0B 56      jsr       0x010b56
+027554  40 FA            bra*      0x027550
+027556  6A 28 00 42 06 EC mov.b     @0x4206ec, r0l
+02755C  46 56            bne       0x0275b4
+02755E  5C 00 01 14      bsr       0x027676
+027562  69 50            mov.w     @er5, r0
+027564  79 20 0E 10      cmp.w     #0x0e10, r0
+027568  47 4E            beq       0x0275b8
+02756A  69 50            mov.w     @er5, r0
+02756C  79 20 30 00      cmp.w     #0x3000, r0
+027570  47 46            beq       0x0275b8
+027572  69 50            mov.w     @er5, r0
+027574  79 20 20 00      cmp.w     #0x2000, r0
+027578  47 3E            beq       0x0275b8
+02757A  6A 28 00 40 0D 72 mov.b     @0x400d72, r0l
+027580  A8 01            cmp.b     #0x01, r0l
+027582  47 08            beq       0x02758c
+027584  79 00 90 00      mov.w     #0x9000, r0
+027588  69 D0            mov.w     r0, @er5
+02758A  40 2C            bra*      0x0275b8
+02758C  6A 28 00 40 0D 79 mov.b     @0x400d79, r0l
+027592  A8 01            cmp.b     #0x01, r0l
+027594  47 08            beq       0x02759e
+027596  79 00 50 00      mov.w     #0x5000, r0
+02759A  69 D0            mov.w     r0, @er5
+02759C  40 14            bra*      0x0275b2
+02759E  6A 28 00 40 03 FB mov.b     @0x4003fb, r0l
+0275A4  A8 10            cmp.b     #0x10, r0l
+0275A6  46 06            bne       0x0275ae
+0275A8  79 00 11 00      mov.w     #0x1100, r0
+0275AC  40 02            bra*      0x0275b0
+0275AE  19 00            sub.w     r0, r0
+0275B0  69 D0            mov.w     r0, @er5
+0275B2  40 04            bra*      0x0275b8
+0275B4  5E 03 C3 1E      jsr       0x03c31e
+0275B8  7C 30 73 60      btst      #6, @er3
+0275BC  58 70 00 A8      beq       0x027668
+0275C0  F8 01            mov.b     #0x01, r0l
+0275C2  5C 00 04 8E      bsr       0x027a54
+0275C6  19 00            sub.w     r0, r0
+0275C8  6B A0 00 40 04 02 mov.w     r0, @0x400402
+0275CE  69 50            mov.w     @er5, r0
+0275D0  79 20 20 00      cmp.w     #0x2000, r0
+0275D4  47 08            beq       0x0275de
+0275D6  69 50            mov.w     @er5, r0
+0275D8  79 20 30 00      cmp.w     #0x3000, r0
+0275DC  46 14            bne       0x0275f2
+0275DE  6A 28 00 40 0D 72 mov.b     @0x400d72, r0l
+0275E4  A8 01            cmp.b     #0x01, r0l
+0275E6  46 04            bne       0x0275ec
+0275E8  19 00            sub.w     r0, r0
+0275EA  40 04            bra*      0x0275f0
+0275EC  79 00 90 00      mov.w     #0x9000, r0
+0275F0  69 D0            mov.w     r0, @er5
+0275F2  7A 04 00 03 ED E8 mov.l     #0x0003ede8, er4
+0275F8  40 14            bra*      0x02760e
+0275FA  69 30            mov.w     @er3, r0
+0275FC  79 60 00 FF      and.w     #0x00ff, r0
+027600  68 49            mov.b     @er4, r1l
+027602  17 51            extu.w    r1
+027604  1D 01            cmp.w     r0, r1
+027606  47 0A            beq       0x027612
+027608  7A 14 00 00 00 06 add.l     #0x00000006, er4
+02760E  68 48            mov.b     @er4, r0l
+027610  46 E8            bne       0x0275fa
+027612  68 48            mov.b     @er4, r0l
+027614  46 12            bne       0x027628
+027616  69 30            mov.w     @er3, r0
+027618  79 60 3F FF      and.w     #0x3fff, r0
+02761C  69 B0            mov.w     r0, @er3
+02761E  69 60            mov.w     @er6, r0
+027620  79 60 FF 00      and.w     #0xff00, r0
+027624  70 08            bset      #0, r0l
+027626  69 E0            mov.w     r0, @er6
+027628  69 60            mov.w     @er6, r0
+02762A  79 60 FF 00      and.w     #0xff00, r0
+02762E  69 E0            mov.w     r0, @er6
+027630  69 30            mov.w     @er3, r0
+027632  79 60 00 FF      and.w     #0x00ff, r0
+027636  69 61            mov.w     @er6, r1
+027638  64 01            or.w      r0, r1
+02763A  69 E1            mov.w     r1, @er6
+02763C  01 00 6F 44 00 02 mov.l     @(0x2,er4), er4
+027642  5D 40            jsr       er4
+027644  69 30            mov.w     @er3, r0
+027646  79 60 3F FF      and.w     #0x3fff, r0
+02764A  69 B0            mov.w     r0, @er3
+02764C  6B 20 00 40 04 02 mov.w     @0x400402, r0
+027652  47 06            beq       0x02765a
+027654  79 00 30 00      mov.w     #0x3000, r0
+027658  69 D0            mov.w     r0, @er5
+02765A  69 60            mov.w     @er6, r0
+02765C  79 60 FF 00      and.w     #0xff00, r0
+027660  70 08            bset      #0, r0l
+027662  69 E0            mov.w     r0, @er6
+027664  5C 00 04 92      bsr       0x027afa
+027668  5C 00 12 8A      bsr       0x0288f6
+02766C  5E 01 0B 56      jsr       0x010b56
+
+; ========================================================================================
+; CTX    0x0274BC  E0 worker body (cont. of 0x2740A)
+; range 0x0274BC - 0x02753E  insns=33
+; ========================================================================================
+
+; --- 0x2740A-0x274BC: NOT decoded by any CFG (cfg_v4/v5/v6), hand-decoded ---
+02740A  01 00 6D F3      mov.l     er3, @-sp
+02740E  01 20 6D F4      stm.l     er4-er6, @-sp
+027412  7A 03 00 40 04 00 mov.l     #0x00400400, er3
+027418  7A 05 00 40 04 04 mov.l     #0x00400404, er5
+02741E  7A 06 00 40 04 06 mov.l     #0x00400406, er6
+027424  6A 28 00 42 07 F8 mov.b     @0x4207f8, r0l
+02742A  A8 01            cmp.b     #0x01, r0l
+02742C  58 70 00 80      beq       0x0274b0
+027430  6B 20 00 40 04 02 mov.w     @0x400402, r0
+027436  79 20 00 10      cmp.w     #0x0010, r0
+02743A  46 12            bne       0x02744e
+02743C  79 00 20 00      mov.w     #0x2000, r0
+027440  69 D0            mov.w     r0, @er5
+027442  F8 02            mov.b     #0x02, r0l
+027444  5C 00 06 0C      bsr       0x027a54
+027448  5E 01 0B 56      jsr       0x010b56
+02744C  40 FA            bra*      0x027448
+02744E  6A 28 00 42 06 EC mov.b     @0x4206ec, r0l
+027454  46 24            bne       0x02747a
+027456  6A 28 00 42 02 45 mov.b     @0x420245, r0l
+02745C  A8 01            cmp.b     #0x01, r0l
+02745E  47 10            beq       0x027470
+027460  5E 02 DC 38      jsr       0x02dc38
+027464  5E 02 ED 14      jsr       0x02ed14
+027468  F8 01            mov.b     #0x01, r0l
+02746A  6A A8 00 42 02 45 mov.b     r0l, @0x420245
+027470  5C 00 06 AA      bsr       0x027b1e
+027474  5C 00 06 82      bsr       0x027afa
+027478  40 3A            bra*      0x0274b4
+02747A  6A 28 00 42 06 EC mov.b     @0x4206ec, r0l
+027480  A8 01            cmp.b     #0x01, r0l
+027482  47 04            beq       0x027488
+027484  A8 05            cmp.b     #0x05, r0l
+027486  46 2C            bne       0x0274b4
+027488  5E 02 08 C2      jsr       0x0208c2
+02748C  6B 20 00 40 04 02 mov.w     @0x400402, r0
+027492  79 20 00 10      cmp.w     #0x0010, r0
+027496  46 12            bne       0x0274aa
+027498  79 00 20 00      mov.w     #0x2000, r0
+02749C  69 D0            mov.w     r0, @er5
+02749E  F8 02            mov.b     #0x02, r0l
+0274A0  5C 00 05 B0      bsr       0x027a54
+0274A4  5E 01 0B 56      jsr       0x010b56
+0274A8  40 FA            bra*      0x0274a4
+0274AA  5E 03 A1 30      jsr       0x03a130
+0274AE  40 04            bra*      0x0274b4
+0274B0  5C 00 0F 28      bsr       0x0283dc
+0274B4  69 60            mov.w     @er6, r0
+0274B6  79 60 FF 00      and.w     #0xff00, r0
+0274BA  70 08            bset      #0, r0l
+
+; --- 0x274BC onwards: from cfg_v4 ---
+0274BC  69 E0            mov.w     r0, @er6
+0274BE  F8 01            mov.b     #0x01, r0l
+0274C0  6A A8 00 42 07 F8 mov.b     r0l, @0x4207f8
+0274C6  6A 28 00 42 06 EC mov.b     @0x4206ec, r0l
+0274CC  47 0A            beq       0x0274d8
+0274CE  F8 FF            mov.b     #0xff, r0l
+0274D0  6A A8 00 20 00 42 mov.b     r0l, @0x200042
+0274D6  40 4E            bra*      0x027526
+0274D8  69 50            mov.w     @er5, r0
+0274DA  79 20 20 00      cmp.w     #0x2000, r0
+0274DE  47 0A            beq       0x0274ea
+0274E0  6A 28 00 40 04 1C mov.b     @0x40041c, r0l
+0274E6  A8 01            cmp.b     #0x01, r0l
+0274E8  46 3C            bne       0x027526
+0274EA  6B 20 00 40 04 02 mov.w     @0x400402, r0
+0274F0  79 20 01 10      cmp.w     #0x0110, r0
+0274F4  47 22            beq       0x027518
+0274F6  6B 20 00 40 04 02 mov.w     @0x400402, r0
+0274FC  79 20 01 20      cmp.w     #0x0120, r0
+027500  47 16            beq       0x027518
+027502  6B 20 00 40 04 02 mov.w     @0x400402, r0
+027508  79 20 01 21      cmp.w     #0x0121, r0
+02750C  47 0A            beq       0x027518
+02750E  6A 28 00 40 04 1C mov.b     @0x40041c, r0l
+027514  A8 01            cmp.b     #0x01, r0l
+027516  46 0E            bne       0x027526
+027518  6A 38 00 FF FF 2E 72 10 bclr      #1, @0xffff2e
+027520  5E 01 0B 56      jsr       0x010b56
+027524  40 FA            bra*      0x027520
+027526  6B 20 00 42 02 A2 mov.w     @0x4202a2, r0
+02752C  6B A0 00 42 02 B2 mov.w     r0, @0x4202b2
+027532  6B 20 00 42 02 EC mov.w     @0x4202ec, r0
+027538  6B A0 00 42 02 FC mov.w     r0, @0x4202fc

@@ -1,0 +1,764 @@
+=== 直接 abs24 访问点 ===
+
+[0x4003EC]
+  0x0109A8 mov.w  r0                 @0x4003ec      W  owner=0x10948
+  0x010A14 mov.w  @0x4003ec          r0             R  owner=None
+  0x010A36 mov.w  r0                 @0x4003ec      W  owner=None
+  0x010AB6 mov.w  @0x4003ec          r1             R  owner=None
+  0x010B26 mov.w  @0x4003ec          r1             R  owner=None
+  0x010B66 mov.w  @0x4003ec          r0             R  owner=0x10b56
+
+[0x4003EE]
+  0x010A20 mov.w  r7                 @0x4003ee      W  owner=None
+  0x010A30 mov.w  @0x4003ee          r7             R  owner=None
+  0x010AB0 mov.w  r0                 @0x4003ee      W  owner=None
+  0x012B20 mov.w  r0                 @0x4003ee      W  owner=None
+
+[0x4003F2]
+  0x010B20 mov.w  r0                 @0x4003f2      W  owner=None
+
+[0x4003F6]
+  0x010BEA mov.w  r0                 @0x4003f6      W  owner=None
+  0x010C80 mov.w  @0x4003f6          r0             R  owner=None
+  0x010CBA mov.w  @0x4003f6          r0             R  owner=None
+  0x010CD8 mov.w  @0x4003f6          r0             R  owner=None
+  0x0133AC mov.w  @0x4003f6          r0             R  owner=None
+  0x0133FA mov.w  @0x4003f6          r1             R  owner=None
+  0x013450 mov.w  @0x4003f6          r0             R  owner=None
+  0x01349E mov.w  @0x4003f6          r1             R  owner=None
+  0x01350A mov.w  @0x4003f6          r0             R  owner=None
+  0x013548 mov.w  @0x4003f6          r1             R  owner=None
+  0x0139C8 mov.w  @0x4003f6          r0             R  owner=None
+  0x013A54 mov.w  @0x4003f6          r1             R  owner=None
+  0x013B00 mov.w  @0x4003f6          r0             R  owner=None
+  0x013BE4 mov.w  @0x4003f6          r1             R  owner=None
+  0x013CD2 mov.w  @0x4003f6          r0             R  owner=None
+  0x013D56 mov.w  @0x4003f6          r1             R  owner=None
+  0x013DCC mov.w  @0x4003f6          r0             R  owner=None
+  0x013E58 mov.w  @0x4003f6          r1             R  owner=None
+  0x013F28 mov.w  @0x4003f6          r0             R  owner=None
+  0x01404E mov.w  @0x4003f6          r1             R  owner=None
+  0x01411A mov.w  @0x4003f6          r0             R  owner=None
+  0x0141A2 mov.w  @0x4003f6          r1             R  owner=None
+  0x01484C mov.w  @0x4003f6          r0             R  owner=None
+  0x014886 mov.w  @0x4003f6          r1             R  owner=None
+  0x0148B0 mov.w  @0x4003f6          r0             R  owner=None
+  0x014936 mov.w  @0x4003f6          r1             R  owner=None
+  0x0150AE mov.w  @0x4003f6          r0             R  owner=None
+  0x0150BC mov.w  @0x4003f6          r0             R  owner=None
+  0x01510A mov.w  @0x4003f6          r0             R  owner=None
+  0x015C8C mov.w  @0x4003f6          r0             R  owner=None
+  0x015D24 mov.w  @0x4003f6          r0             R  owner=None
+  0x015DBC mov.w  @0x4003f6          r0             R  owner=None
+  0x015F36 mov.w  @0x4003f6          r0             R  owner=None
+  0x027820 mov.w  @0x4003f6          r0             R  owner=None
+  0x027842 mov.w  @0x4003f6          r0             R  owner=None
+  0x0278B6 mov.w  @0x4003f6          r0             R  owner=None
+  0x0278D4 mov.w  @0x4003f6          r0             R  owner=None
+  0x027D74 mov.w  @0x4003f6          r0             R  owner=None
+  0x02891C mov.w  @0x4003f6          r0             R  owner=None
+  0x02893A mov.w  @0x4003f6          r0             R  owner=None
+  0x028958 mov.w  @0x4003f6          r0             R  owner=None
+  0x02EE3A mov.w  @0x4003f6          r0             R  owner=None
+  0x02EE4A mov.w  @0x4003f6          r0             R  owner=None
+  0x035F36 mov.w  @0x4003f6          r0             R  owner=None
+  0x036056 mov.w  @0x4003f6          r0             R  owner=None
+  0x03607E mov.w  @0x4003f6          r0             R  owner=None
+  0x03C2A6 mov.w  @0x4003f6          r0             R  owner=None
+  0x03C2EA mov.w  @0x4003f6          r1             R  owner=None
+  0x03C4FE mov.w  @0x4003f6          r0             R  owner=None
+  0x03C516 mov.w  @0x4003f6          r0             R  owner=None
+
+[0x4003FA]
+  0x0107DE mov.b  r0l                @0x4003fa      W  owner=0x107d8
+  0x010948 mov.b  @0x4003fa          r1l            R  owner=0x10948
+  0x0109FE mov.b  @0x4003fa          r0l            R  owner=None
+  0x010A6C mov.b  @0x4003fa          r1l            R  owner=None
+  0x0208A0 mov.b  r0l                @0x4003fa      W  owner=0x2089a
+  0x0208B0 mov.b  r0l                @0x4003fa      W  owner=0x2089a
+  0x027262 mov.b  r0l                @0x4003fa      W  owner=0x27260
+
+[0x4003FB]
+  0x016C16 mov.b  @0x4003fb          r0l            R  owner=0x16c10
+  0x016C20 mov.b  @0x4003fb          r0l            R  owner=0x16c10
+  0x016C2A mov.b  @0x4003fb          r0l            R  owner=0x16c10
+  0x02236E mov.b  @0x4003fb          r0l            R  owner=0x21d68
+  0x02322E mov.b  @0x4003fb          r0l            R  owner=0x22f4e
+  0x023D22 mov.b  @0x4003fb          r0l            R  owner=0x23a3a
+  0x024256 mov.b  @0x4003fb          r6l            R  owner=None
+  0x024332 mov.b  @0x4003fb          r0l            R  owner=None
+  0x02474E mov.b  @0x4003fb          r0l            R  owner=0x246d6
+  0x02491A mov.b  @0x4003fb          r0l            R  owner=0x246d6
+  0x0249AE mov.b  @0x4003fb          r0l            R  owner=None
+  0x0249EC mov.b  @0x4003fb          r0l            R  owner=None
+  0x024A2A mov.b  @0x4003fb          r0l            R  owner=None
+  0x025F32 mov.b  @0x4003fb          r0l            R  owner=None
+  0x02759E mov.b  @0x4003fb          r0l            R  owner=0x2753e
+  0x027B50 mov.b  r0l                @0x4003fb      W  owner=None
+  0x027E20 mov.b  r0l                @0x4003fb      W  owner=0x27dc4
+  0x027EA0 mov.b  r0l                @0x4003fb      W  owner=0x27dc4
+  0x027EB4 mov.b  r0l                @0x4003fb      W  owner=0x27dc4
+  0x028590 mov.b  @0x4003fb          r0l            R  owner=0x2842c
+  0x02859E mov.b  r0l                @0x4003fb      W  owner=0x2842c
+  0x028D6E mov.b  @0x4003fb          r0l            R  owner=None
+  0x0290E0 mov.b  @0x4003fb          r0l            R  owner=None
+  0x029D06 mov.b  @0x4003fb          r0l            R  owner=0x29cd8
+  0x029D98 mov.b  @0x4003fb          r0l            R  owner=0x29d2a
+  0x03719E mov.b  @0x4003fb          r0l            R  owner=None
+  0x03A50C mov.b  @0x4003fb          r0l            R  owner=None
+
+[0x4003FC]
+  0x0279BC mov.b  @0x4003fc          r0l            R  owner=0x27930
+  0x0279CA mov.b  r0l                @0x4003fc      W  owner=0x27930
+  0x027B56 mov.b  r0l                @0x4003fc      W  owner=None
+  0x027CBA mov.b  r0l                @0x4003fc      W  owner=None
+  0x027CE6 mov.b  r0l                @0x4003fc      W  owner=None
+  0x028596 mov.b  r0l                @0x4003fc      W  owner=0x2842c
+
+[0x4003FE]
+  0x010E82 mov.b  @0x4003fe          r0l            R  owner=None
+  0x02A548 mov.b  r0l                @0x4003fe      W  owner=0x2a4fe
+  0x02AB1A mov.b  r0l                @0x4003fe      W  owner=None
+  0x02ABB8 mov.b  r0l                @0x4003fe      W  owner=None
+  0x02B7AE mov.b  r0l                @0x4003fe      W  owner=0x2b712
+  0x02C120 mov.b  r0l                @0x4003fe      W  owner=0x2c0e2
+  0x02C66A mov.b  r0l                @0x4003fe      W  owner=0x2c5e4
+  0x02C73C mov.b  r0l                @0x4003fe      W  owner=None
+
+[0x4003FF]
+  0x010E3A mov.b  @0x4003ff          r0l            R  owner=None
+  0x02A4F6 mov.b  r0l                @0x4003ff      W  owner=0x2a3ee
+  0x02B43A mov.b  r0l                @0x4003ff      W  owner=0x2b2d4
+  0x02C0D6 mov.b  r0l                @0x4003ff      W  owner=0x2bfa8
+
+[0x400400]
+  0x0216A0 mov.w  @0x400400          r0             R  owner=0x2159c
+  0x0224D4 mov.w  r0                 @0x400400      W  owner=0x21d68
+  0x0237DA mov.w  @0x400400          r0             R  owner=0x22f4e
+  0x026BD8 mov.w  r0                 @0x400400      W  owner=0x26bd2
+
+[0x400402]
+  0x0106C6 mov.w  r2                 @0x400402      W  owner=0x10648
+  0x0110B6 mov.w  @0x400402          r0             R  owner=0x11078
+  0x02077A mov.w  r2                 @0x400402      W  owner=None
+  0x0209D0 mov.w  r2                 @0x400402      W  owner=None
+  0x020BC8 mov.w  @0x400402          r0             R  owner=0x20b84
+  0x02155C mov.w  @0x400402          r0             R  owner=None
+  0x022FB2 mov.w  @0x400402          r0             R  owner=0x22f4e
+  0x022FBA mov.w  @0x400402          r0             R  owner=0x22f4e
+  0x02380E mov.w  @0x400402          r0             R  owner=0x22f4e
+  0x023818 mov.w  @0x400402          r0             R  owner=0x22f4e
+  0x027430 mov.w  @0x400402          r0             R  owner=None
+  0x02748C mov.w  @0x400402          r0             R  owner=None
+  0x0274EA mov.w  @0x400402          r0             R  owner=0x274bc
+  0x0274F6 mov.w  @0x400402          r0             R  owner=0x274bc
+  0x027502 mov.w  @0x400402          r0             R  owner=0x274bc
+  0x0275C8 mov.w  r0                 @0x400402      W  owner=0x2753e
+  0x02764C mov.w  @0x400402          r0             R  owner=0x2753e
+  0x0279A0 mov.w  @0x400402          r0             R  owner=0x27930
+  0x027AFA mov.w  @0x400402          r0             R  owner=0x27afa
+  0x028190 mov.w  @0x400402          r0             R  owner=0x28190
+  0x02819C mov.w  @0x400402          r0             R  owner=0x28190
+  0x028274 mov.w  @0x400402          r0             R  owner=0x282b6
+  0x0285E2 mov.w  r0                 @0x400402      W  owner=0x2842c
+  0x02AFE8 mov.w  r0                 @0x400402      W  owner=0x2afa4
+  0x02B02C mov.w  r0                 @0x400402      W  owner=0x2aff4
+  0x02B882 mov.w  @0x400402          r0             R  owner=0x2b87c
+  0x02B88E mov.w  @0x400402          r0             R  owner=0x2b87c
+  0x02B8F4 mov.w  @0x400402          r0             R  owner=0x2b8ea
+  0x02B900 mov.w  @0x400402          r0             R  owner=0x2b8ea
+  0x02B990 mov.w  @0x400402          r0             R  owner=None
+  0x02B99E mov.w  @0x400402          r0             R  owner=None
+  0x02BA40 mov.w  r0                 @0x400402      W  owner=None
+  0x02BA7C mov.w  r0                 @0x400402      W  owner=None
+  0x02BB78 mov.w  r0                 @0x400402      W  owner=None
+  0x02BCF0 mov.w  @0x400402          r0             R  owner=None
+  0x02BCFC mov.w  @0x400402          r0             R  owner=None
+  0x02CBCA mov.w  r0                 @0x400402      W  owner=0x2cbb0
+  0x02CBF4 mov.w  r0                 @0x400402      W  owner=None
+  0x02CD64 mov.w  r0                 @0x400402      W  owner=None
+  0x02CE18 mov.w  @0x400402          r0             R  owner=0x2cdae
+  0x030780 mov.w  r0                 @0x400402      W  owner=0x308ac
+  0x030892 mov.w  r0                 @0x400402      W  owner=0x30880
+  0x030D42 mov.w  r0                 @0x400402      W  owner=0x30d12
+  0x030F4C mov.w  r0                 @0x400402      W  owner=0x30f1a
+  0x031296 mov.w  r0                 @0x400402      W  owner=0x311e4
+  0x0312FE mov.w  r0                 @0x400402      W  owner=0x311e4
+  0x031346 mov.w  @0x400402          r0             R  owner=0x311e4
+  0x0315C2 mov.w  r0                 @0x400402      W  owner=0x316d6
+  0x03161C mov.w  r0                 @0x400402      W  owner=0x316d6
+  0x03188A mov.w  @0x400402          r0             R  owner=None
+  0x0318E8 mov.w  r0                 @0x400402      W  owner=None
+  0x034DDA mov.w  r0                 @0x400402      W  owner=0x34ed2
+  0x034EB4 mov.w  r0                 @0x400402      W  owner=0x34ea4
+  0x03530A mov.w  r0                 @0x400402      W  owner=0x3517a
+  0x03554A mov.w  r0                 @0x400402      W  owner=0x354de
+  0x0357CA mov.w  @0x400402          r0             R  owner=None
+  0x037588 mov.w  @0x400402          r0             R  owner=None
+  0x037658 mov.w  @0x400402          r0             R  owner=None
+  0x0394D2 mov.w  @0x400402          r0             R  owner=None
+  0x03A9EE mov.w  r0                 @0x400402      W  owner=None
+  0x03AE88 mov.w  @0x400402          r0             R  owner=None
+  0x03AE94 mov.w  @0x400402          r0             R  owner=None
+  0x03B42C mov.w  r0                 @0x400402      W  owner=0x3b0e8
+  0x03B4DC mov.w  r0                 @0x400402      W  owner=0x3b0e8
+  0x03B582 mov.w  r0                 @0x400402      W  owner=None
+  0x03C5A4 mov.w  r0                 @0x400402      W  owner=None
+  0x03CCCA mov.w  r0                 @0x400402      W  owner=None
+  0x03D428 mov.w  r4                 @0x400402      W  owner=0x3d40e
+  0x03D4DA mov.w  r4                 @0x400402      W  owner=None
+  0x03D50E mov.w  r4                 @0x400402      W  owner=None
+
+[0x400404]
+  0x0110B0 mov.w  @0x400404          e0             R  owner=0x11078
+  0x020BC2 mov.w  @0x400404          e0             R  owner=0x20b84
+  0x0216C4 mov.w  @0x400404          r0             R  owner=0x2159c
+  0x0279B2 mov.w  r0                 @0x400404      W  owner=0x27930
+  0x027A14 mov.w  r0                 @0x400404      W  owner=0x27930
+  0x027B34 mov.w  r0                 @0x400404      W  owner=None
+  0x027D6C mov.w  r0                 @0x400404      W  owner=None
+  0x0285EC mov.w  r0                 @0x400404      W  owner=0x2842c
+  0x028D46 mov.w  r0                 @0x400404      W  owner=None
+  0x03A492 mov.w  r0                 @0x400404      W  owner=None
+
+[0x400406]
+  0x0108BE mov.w  @0x400406          r0             R  owner=0x10824
+  0x01197E mov.w  @0x400406          r0             R  owner=0x1193e
+  0x015E6A mov.w  @0x400406          r0             R  owner=None
+  0x016D74 mov.w  @0x400406          r0             R  owner=0x16c46
+  0x016E9E mov.w  @0x400406          r0             R  owner=0x16e8e
+  0x01769C mov.w  @0x400406          r0             R  owner=0x174bc
+  0x020BDE mov.w  @0x400406          r0             R  owner=0x20bde
+  0x021002 mov.w  @0x400406          r0             R  owner=0x20ec0
+  0x02100E mov.w  @0x400406          r0             R  owner=0x20ec0
+  0x021022 mov.w  @0x400406          r0             R  owner=0x20ec0
+  0x0213E8 mov.w  @0x400406          r0             R  owner=0x21418
+  0x0230E2 mov.w  @0x400406          r0             R  owner=0x23066
+  0x02317A mov.w  @0x400406          r0             R  owner=0x23066
+  0x0237C4 mov.w  @0x400406          r0             R  owner=0x22f4e
+  0x023828 mov.w  @0x400406          r0             R  owner=0x22f4e
+  0x023B9C mov.w  @0x400406          r0             R  owner=0x23a3a
+  0x023C36 mov.w  @0x400406          r0             R  owner=0x23a3a
+  0x023C9C mov.w  @0x400406          r0             R  owner=0x23a3a
+  0x0251CC mov.w  @0x400406          r0             R  owner=0x2510c
+  0x028440 mov.w  @0x400406          r0             R  owner=0x2842c
+  0x0285BA mov.w  @0x400406          r0             R  owner=0x2842c
+  0x0285CE mov.w  @0x400406          r0             R  owner=0x2842c
+  0x0285F2 mov.w  @0x400406          r5             R  owner=0x2842c
+  0x02DB64 mov.w  @0x400406          r0             R  owner=0x2dab2
+  0x02DBEA mov.w  @0x400406          r0             R  owner=0x2dab2
+  0x03192C mov.w  @0x400406          r0             R  owner=0x31924
+  0x031990 mov.w  @0x400406          r0             R  owner=0x311e4
+  0x032D52 mov.w  @0x400406          r0             R  owner=0x32d2c
+  0x032F12 mov.w  @0x400406          r0             R  owner=None
+  0x039A18 mov.w  @0x400406          r0             R  owner=None
+  0x039A20 mov.w  r0                 @0x400406      W  owner=None
+
+[0x400408]
+  0x026A88 mov.w  r0                 @0x400408      W  owner=None
+  0x026AC6 mov.w  r0                 @0x400408      W  owner=None
+  0x026B48 mov.w  r0                 @0x400408      W  owner=None
+  0x028D96 mov.w  r2                 @0x400408      W  owner=None
+
+[0x40040A]
+  0x02AF76 mov.w  @0x40040a          r0             R  owner=None
+  0x02AF8C mov.w  @0x40040a          r1             R  owner=None
+  0x02BA24 mov.w  @0x40040a          r0             R  owner=None
+  0x03A418 mov.w  @0x40040a          r0             R  owner=None
+  0x03A95E mov.w  @0x40040a          r0             R  owner=None
+  0x03A9BA mov.w  @0x40040a          r0             R  owner=None
+
+[0x40040C]
+  0x026B00 mov.w  r0                 @0x40040c      W  owner=None
+  0x026B82 mov.w  r0                 @0x40040c      W  owner=None
+  0x028DB2 mov.w  r2                 @0x40040c      W  owner=None
+  0x03A426 mov.w  @0x40040c          r0             R  owner=None
+  0x03A96C mov.w  @0x40040c          r0             R  owner=None
+
+[0x40040E]
+  0x03A9C4 mov.w  @0x40040e          r1             R  owner=None
+
+[0x400410]
+  0x02AECE mov.w  @0x400410          r0             R  owner=None
+  0x02AF3C mov.w  @0x400410          r1             R  owner=None
+  0x02B9B0 mov.w  @0x400410          r0             R  owner=None
+  0x02BA02 mov.w  @0x400410          r1             R  owner=None
+  0x02BC12 mov.b  @0x400410          r0l            R  owner=None
+  0x02CAD4 mov.w  @0x400410          r0             R  owner=None
+  0x02CB42 mov.w  @0x400410          r1             R  owner=None
+
+[0x400411]
+  0x02BC1C mov.b  @0x400411          r0l            R  owner=None
+
+[0x400412]
+  0x026B0E mov.b  r0l                @0x400412      W  owner=0x269a6
+  0x02BC3A mov.b  @0x400412          r0l            R  owner=None
+
+[0x400413]
+  0x026BA0 mov.b  r0l                @0x400413      W  owner=0x269a6
+  0x02BC26 mov.b  @0x400413          r0l            R  owner=None
+
+[0x400414]
+  0x026BAA mov.b  r0l                @0x400414      W  owner=0x269a6
+  0x02BC30 mov.b  @0x400414          r0l            R  owner=None
+
+[0x400416]
+  0x011342 mov.w  r0                 @0x400416      W  owner=None
+  0x0212F0 mov.w  @0x400416          r0             R  owner=None
+  0x021426 mov.w  @0x400416          r0             R  owner=None
+  0x0357B4 mov.w  r0                 @0x400416      W  owner=None
+  0x036186 mov.w  @0x400416          r0             R  owner=None
+  0x0361C4 mov.w  @0x400416          r0             R  owner=None
+  0x036242 mov.w  r0                 @0x400416      W  owner=None
+  0x0362B6 mov.w  @0x400416          r0             R  owner=None
+  0x03631C mov.w  @0x400416          r0             R  owner=None
+  0x036338 mov.w  r0                 @0x400416      W  owner=None
+  0x039416 mov.w  r0                 @0x400416      W  owner=None
+  0x039BB0 mov.w  @0x400416          r0             R  owner=None
+  0x039C02 mov.w  r0                 @0x400416      W  owner=None
+  0x039C5E mov.w  @0x400416          r0             R  owner=None
+  0x039CD0 mov.w  @0x400416          r0             R  owner=None
+  0x039CEC mov.w  r0                 @0x400416      W  owner=None
+
+[0x40041A]
+  0x023246 mov.b  @0x40041a          r0l            R  owner=0x22f4e
+  0x02326E mov.b  @0x40041a          r0l            R  owner=0x22f4e
+  0x023480 mov.b  @0x40041a          r0l            R  owner=0x23480
+  0x023D92 mov.b  r0l                @0x40041a      W  owner=0x23a3a
+  0x023F68 mov.b  @0x40041a          r0l            R  owner=0x23f68
+  0x024906 mov.b  @0x40041a          r0l            R  owner=0x246d6
+  0x024910 mov.b  @0x40041a          r0l            R  owner=0x246d6
+  0x024AF8 mov.b  @0x40041a          r0l            R  owner=None
+  0x024C5A mov.b  @0x40041a          r0l            R  owner=None
+  0x027E38 mov.b  r0l                @0x40041a      W  owner=0x27dc4
+  0x027ECC mov.b  r0l                @0x40041a      W  owner=0x27dc4
+  0x0285A6 mov.b  r0l                @0x40041a      W  owner=0x2842c
+  0x029164 mov.b  r0l                @0x40041a      W  owner=None
+  0x0291A6 mov.b  r0l                @0x40041a      W  owner=None
+  0x029226 mov.b  r0l                @0x40041a      W  owner=None
+  0x0295D2 mov.b  r0l                @0x40041a      W  owner=None
+  0x02968A mov.b  @0x40041a          r0l            R  owner=None
+  0x0296B8 mov.b  r0l                @0x40041a      W  owner=None
+  0x029770 mov.b  @0x40041a          r0l            R  owner=None
+  0x02979E mov.b  r0l                @0x40041a      W  owner=None
+  0x0298F2 mov.b  r0l                @0x40041a      W  owner=None
+  0x0299A8 mov.b  r0l                @0x40041a      W  owner=None
+  0x0299E2 mov.b  r0l                @0x40041a      W  owner=None
+  0x029A24 mov.b  r0l                @0x40041a      W  owner=None
+  0x029A96 mov.b  r0l                @0x40041a      W  owner=None
+  0x029B08 mov.b  r0l                @0x40041a      W  owner=None
+  0x029B7A mov.b  r0l                @0x40041a      W  owner=None
+  0x029BEC mov.b  r0l                @0x40041a      W  owner=None
+  0x029C56 mov.b  r0l                @0x40041a      W  owner=None
+  0x029C98 mov.b  r0l                @0x40041a      W  owner=None
+  0x0300D0 mov.b  @0x40041a          r0l            R  owner=0x30000
+  0x037356 mov.b  @0x40041a          r0l            R  owner=None
+  0x0373CC mov.b  @0x40041a          r1l            R  owner=None
+  0x03A9E0 mov.b  @0x40041a          r1l            R  owner=None
+  0x03C05A mov.b  @0x40041a          r0l            R  owner=None
+  0x03C0C0 mov.b  @0x40041a          r1l            R  owner=None
+
+[0x40041B]
+  0x014E20 mov.b  r0l                @0x40041b      W  owner=None
+  0x023954 mov.b  r0l                @0x40041b      W  owner=0x22f4e
+  0x02A41C mov.b  r0l                @0x40041b      W  owner=0x2a3ee
+  0x02A460 mov.b  r0l                @0x40041b      W  owner=0x2a3ee
+  0x02A7BE mov.b  r0l                @0x40041b      W  owner=0x2a788
+  0x02B302 mov.b  r0l                @0x40041b      W  owner=0x2b2d4
+  0x02B3BC mov.b  r0l                @0x40041b      W  owner=0x2b2d4
+  0x02B796 mov.b  r0l                @0x40041b      W  owner=0x2b712
+  0x02BFEC mov.b  r0l                @0x40041b      W  owner=0x2bfa8
+  0x02C052 mov.b  r0l                @0x40041b      W  owner=0x2bfa8
+  0x02C0FC mov.b  r0l                @0x40041b      W  owner=0x2c0e2
+  0x02C3AE mov.b  r0l                @0x40041b      W  owner=0x2c376
+  0x02C652 mov.b  r0l                @0x40041b      W  owner=0x2c5e4
+  0x02C724 mov.b  r0l                @0x40041b      W  owner=None
+  0x02C79E mov.b  r0l                @0x40041b      W  owner=None
+  0x0398B6 mov.b  r0l                @0x40041b      W  owner=None
+
+[0x40041C]
+  0x010F80 mov.b  r0l                @0x40041c      W  owner=None
+  0x01108C mov.b  r0l                @0x40041c      W  owner=0x11078
+  0x020A7C mov.b  r0l                @0x40041c      W  owner=None
+  0x020B98 mov.b  r0l                @0x40041c      W  owner=0x20b84
+  0x0274E0 mov.b  @0x40041c          r0l            R  owner=0x274bc
+  0x02750E mov.b  @0x40041c          r0l            R  owner=0x274bc
+  0x02753E mov.b  @0x40041c          r0l            R  owner=0x2753e
+
+[0x40041E]
+  0x015C94 mov.w  r0                 @0x40041e      W  owner=None
+  0x015D2C mov.w  r0                 @0x40041e      W  owner=None
+  0x015DC4 mov.w  r0                 @0x40041e      W  owner=None
+  0x015F3E mov.w  r0                 @0x40041e      W  owner=None
+
+[0x400426]
+  0x021490 mov.w  r0                 @0x400426      W  owner=None
+  0x021508 mov.w  r0                 @0x400426      W  owner=None
+  0x0237AC mov.w  r0                 @0x400426      W  owner=None
+
+[0x40042E]
+  0x010FFA mov.w  r0                 @0x40042e      W  owner=None
+  0x011304 mov.w  r0                 @0x40042e      W  owner=None
+  0x0133DE mov.w  r0                 @0x40042e      W  owner=None
+  0x013408 mov.w  r0                 @0x40042e      W  owner=None
+  0x013482 mov.w  r0                 @0x40042e      W  owner=None
+  0x0134AC mov.w  r0                 @0x40042e      W  owner=None
+  0x013A1C mov.w  r0                 @0x40042e      W  owner=None
+  0x013B84 mov.w  r0                 @0x40042e      W  owner=None
+  0x013D22 mov.w  r0                 @0x40042e      W  owner=None
+  0x013E20 mov.w  r0                 @0x40042e      W  owner=None
+  0x013FCC mov.w  r0                 @0x40042e      W  owner=None
+  0x01416C mov.w  r0                 @0x40042e      W  owner=None
+  0x020ED6 mov.w  @0x40042e          r0             R  owner=None
+
+[0x400436]
+  0x011004 mov.w  r0                 @0x400436      W  owner=0x11000
+  0x0116A2 mov.w  @0x400436          r6             R  owner=0x116a0
+  0x0116AA mov.w  r0                 @0x400436      W  owner=0x116a0
+  0x0118C4 mov.w  @0x400436          r0             R  owner=0x11882
+  0x011AB6 mov.w  r0                 @0x400436      W  owner=None
+  0x011ADC mov.w  r0                 @0x400436      W  owner=None
+  0x011B04 mov.w  r0                 @0x400436      W  owner=None
+  0x011B96 mov.w  r0                 @0x400436      W  owner=None
+  0x011BBC mov.w  r0                 @0x400436      W  owner=None
+  0x011BE4 mov.w  r0                 @0x400436      W  owner=None
+  0x011CF6 mov.w  r0                 @0x400436      W  owner=None
+  0x011D0C mov.w  r0                 @0x400436      W  owner=None
+  0x011D28 mov.w  r0                 @0x400436      W  owner=None
+  0x011D48 mov.w  r0                 @0x400436      W  owner=None
+  0x011DCA mov.w  r0                 @0x400436      W  owner=None
+  0x011E54 mov.w  r0                 @0x400436      W  owner=None
+  0x011E7E mov.w  r0                 @0x400436      W  owner=None
+  0x011EDC mov.w  r0                 @0x400436      W  owner=None
+  0x011F00 mov.w  r0                 @0x400436      W  owner=None
+  0x011F20 mov.w  r0                 @0x400436      W  owner=None
+  0x011FEA mov.w  r0                 @0x400436      W  owner=0x11f36
+  0x01201A mov.w  r0                 @0x400436      W  owner=0x11f36
+  0x012030 mov.w  r0                 @0x400436      W  owner=0x11f36
+  0x012050 mov.w  r0                 @0x400436      W  owner=0x11f36
+  0x012070 mov.w  @0x400436          r0             R  owner=0x11f36
+  0x012894 mov.w  r0                 @0x400436      W  owner=0x1280c
+  0x0128FA mov.w  r0                 @0x400436      W  owner=None
+  0x01291E mov.w  r0                 @0x400436      W  owner=None
+  0x012950 mov.w  r0                 @0x400436      W  owner=None
+  0x01297E mov.w  r0                 @0x400436      W  owner=None
+  0x0129A4 mov.w  r0                 @0x400436      W  owner=None
+  0x0129CC mov.w  r0                 @0x400436      W  owner=None
+  0x0129E4 mov.w  r0                 @0x400436      W  owner=None
+  0x012A2E mov.w  r0                 @0x400436      W  owner=None
+  0x012A7E mov.w  @0x400436          r0             R  owner=None
+  0x0133E8 mov.w  r0                 @0x400436      W  owner=0x1338a
+  0x013412 mov.w  r0                 @0x400436      W  owner=0x1338a
+  0x01348C mov.w  r0                 @0x400436      W  owner=0x1342e
+  0x0134B6 mov.w  r0                 @0x400436      W  owner=0x1342e
+  0x013A26 mov.w  r0                 @0x400436      W  owner=0x139de
+  0x013B8E mov.w  r0                 @0x400436      W  owner=0x13b16
+  0x013D2C mov.w  r0                 @0x400436      W  owner=None
+  0x013E2A mov.w  r0                 @0x400436      W  owner=0x13de2
+  0x013FD6 mov.w  r0                 @0x400436      W  owner=0x13f3e
+  0x014176 mov.w  r0                 @0x400436      W  owner=0x14130
+  0x0171C6 mov.w  r0                 @0x400436      W  owner=0x170a0
+  0x020B2C mov.w  r0                 @0x400436      W  owner=None
+  0x020E88 mov.w  r0                 @0x400436      W  owner=0x20e86
+  0x020EA8 mov.w  @0x400436          r0             R  owner=0x20e86
+  0x0213BE mov.w  @0x400436          r0             R  owner=0x21418
+  0x021476 mov.w  r0                 @0x400436      W  owner=0x21460
+  0x0214EE mov.w  r0                 @0x400436      W  owner=0x214a6
+  0x02157E mov.w  @0x400436          r0             R  owner=None
+  0x02158A mov.w  r0                 @0x400436      W  owner=None
+  0x0217A6 mov.w  r0                 @0x400436      W  owner=0x21768
+  0x021D34 mov.w  r0                 @0x400436      W  owner=0x21bd0
+  0x022AFE mov.w  @0x400436          r5             R  owner=0x22ad6
+  0x022C00 mov.w  @0x400436          r5             R  owner=0x22bf2
+  0x024102 mov.w  r0                 @0x400436      W  owner=0x2401c
+  0x0255E4 mov.w  r0                 @0x400436      W  owner=0x254f6
+  0x025AA6 mov.w  r0                 @0x400436      W  owner=0x25a56
+  0x025DA0 mov.w  r0                 @0x400436      W  owner=None
+  0x025E94 mov.w  r0                 @0x400436      W  owner=None
+  0x0261DC mov.w  r0                 @0x400436      W  owner=None
+
+[0x400438]
+  0x010EFC mov.w  r0                 @0x400438      W  owner=0x10ee6
+  0x01106E mov.w  r0                 @0x400438      W  owner=0x11000
+  0x011B0E mov.w  r0                 @0x400438      W  owner=None
+  0x011F1A mov.w  @0x400438          r0             R  owner=None
+  0x011F28 mov.w  r0                 @0x400438      W  owner=None
+  0x015E8C mov.w  r0                 @0x400438      W  owner=None
+  0x02172C mov.w  r0                 @0x400438      W  owner=0x21708
+  0x0224E4 mov.w  r0                 @0x400438      W  owner=0x21d68
+  0x022DF6 mov.w  @0x400438          r0             R  owner=0x22d9a
+  0x022E24 mov.w  r0                 @0x400438      W  owner=0x22d9a
+  0x02699A mov.w  r0                 @0x400438      W  owner=0x2694a
+  0x026BE8 mov.w  r0                 @0x400438      W  owner=0x26bd2
+
+[0x40043A]
+  0x022E78 mov.w  r0                 @0x40043a      W  owner=0x22e62
+  0x022E8A mov.w  r0                 @0x40043a      W  owner=0x22e62
+
+[0x40043C]
+  0x011508 mov.b  @0x40043c          r1l            R  owner=0x114d8
+  0x011AD0 mov.b  @0x40043c          r1l            R  owner=None
+  0x011BB0 mov.b  @0x40043c          r1l            R  owner=None
+  0x011E48 mov.b  @0x40043c          r1l            R  owner=None
+  0x011EF4 mov.b  @0x40043c          r1l            R  owner=None
+  0x012912 mov.b  @0x40043c          r1l            R  owner=None
+  0x012998 mov.b  @0x40043c          r1l            R  owner=None
+  0x020F04 mov.b  @0x40043c          r1l            R  owner=0x20ec0
+  0x0215CC mov.b  @0x40043c          r1l            R  owner=None
+  0x021874 mov.b  @0x40043c          r1l            R  owner=None
+  0x021DA0 mov.b  @0x40043c          r1l            R  owner=None
+  0x025170 mov.b  @0x40043c          r1l            R  owner=None
+  0x02551C mov.b  @0x40043c          r1l            R  owner=None
+
+[0x40043D]
+  0x0114C2 mov.b  @0x40043d          r0l            R  owner=0x114b8
+  0x011AA4 mov.b  @0x40043d          r0l            R  owner=None
+  0x011B84 mov.b  @0x40043d          r0l            R  owner=None
+  0x011C02 mov.b  @0x40043d          r0l            R  owner=None
+  0x011CE4 mov.b  @0x40043d          r0l            R  owner=None
+  0x011D52 mov.b  @0x40043d          r0l            R  owner=None
+  0x011DE6 mov.b  @0x40043d          r0l            R  owner=None
+  0x011E6E mov.b  @0x40043d          r0l            R  owner=None
+  0x011E94 mov.b  @0x40043d          r0l            R  owner=None
+  0x011EA0 mov.b  @0x40043d          r0l            R  owner=None
+  0x011ECE mov.b  @0x40043d          r0l            R  owner=None
+  0x012008 mov.b  @0x40043d          r0l            R  owner=0x11f36
+  0x01203A mov.b  @0x40043d          r0l            R  owner=0x11f36
+  0x0128E8 mov.b  @0x40043d          r0l            R  owner=None
+  0x01296C mov.b  @0x40043d          r0l            R  owner=None
+  0x0215B6 mov.b  @0x40043d          r0l            R  owner=0x2159c
+  0x02185C mov.b  @0x40043d          r0l            R  owner=0x21840
+  0x021D8A mov.b  @0x40043d          r0l            R  owner=0x21d68
+  0x022EFE mov.b  @0x40043d          r0l            R  owner=0x22ecc
+  0x023A50 mov.b  @0x40043d          r0l            R  owner=0x23a3a
+  0x02515A mov.b  @0x40043d          r0l            R  owner=0x2510c
+  0x025504 mov.b  @0x40043d          r0l            R  owner=0x254f6
+  0x02554E mov.b  @0x40043d          r0l            R  owner=0x254f6
+  0x025626 mov.b  @0x40043d          r0l            R  owner=0x254f6
+
+[0x40043E]
+  0x0129D6 mov.b  @0x40043e          r0l            R  owner=None
+  0x012A88 mov.b  @0x40043e          r0l            R  owner=None
+  0x022EF0 mov.b  @0x40043e          r0l            R  owner=0x22ecc
+  0x022F8C mov.b  @0x40043e          r0l            R  owner=0x22f4e
+  0x023AE0 mov.b  @0x40043e          r2h            R  owner=0x23a3a
+
+[0x40043F]
+  0x011D00 mov.b  @0x40043f          r0l            R  owner=None
+  0x011D5E mov.b  @0x40043f          r0l            R  owner=None
+  0x022F0A mov.b  @0x40043f          r0l            R  owner=0x22ecc
+  0x023A5C mov.b  @0x40043f          r0l            R  owner=0x23a3a
+
+=== 未对齐/非操作数命中（离群） ===
+  tgt=0x4003EE at 0x010964 sz=6 mov.l #0x004003ee er1
+  tgt=0x4003EE at 0x0109B0 sz=6 mov.l #0x004003ee er0
+  tgt=0x4003F6 at 0x010C1E sz=6 mov.l #0x004003f6 er0
+  tgt=0x4003F6 at 0x010F66 sz=6 mov.l #0x004003f6 er3
+  tgt=0x4003F6 at 0x016002 sz=6 mov.l #0x004003f6 er5
+  tgt=0x4003F6 at 0x027A80 sz=6 mov.l #0x004003f6 er1
+  tgt=0x4003FB at 0x023FB2 sz=6 mov.l #0x004003fb er3
+  tgt=0x4003FB at 0x0241C2 sz=6 mov.l #0x004003fb er5
+  tgt=0x4003FB at 0x02793A sz=6 mov.l #0x004003fb er5
+  tgt=0x4003FB at 0x0289C6 sz=6 mov.l #0x004003fb er6
+  tgt=0x4003FB at 0x029E0E sz=6 mov.l #0x004003fb er6
+  tgt=0x400400 at 0x015E7C sz=8 bset #7 @0x400400
+  tgt=0x400400 at 0x0210DA sz=8 bset #7 @0x400400
+  tgt=0x400400 at 0x02110A sz=8 bset #7 @0x400400
+  tgt=0x400400 at 0x021132 sz=8 bset #7 @0x400400
+  tgt=0x400400 at 0x021156 sz=8 bset #7 @0x400400
+  tgt=0x400400 at 0x021510 sz=8 bset #7 @0x400400
+  tgt=0x400400 at 0x021544 sz=8 btst #6 @0x400400
+  tgt=0x400400 at 0x021554 sz=8 btst #6 @0x400400
+  tgt=0x400400 at 0x023840 sz=8 bset #7 @0x400400
+  tgt=0x400400 at 0x026982 sz=6 mov.l #0x00400400 er6
+  tgt=0x400400 at 0x027414 sz=6 mov.l #0x00400400 er3
+  tgt=0x400400 at 0x0283F2 sz=6 mov.l #0x00400400 er6
+  tgt=0x400400 at 0x030380 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x030520 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x0306FE sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x0307C6 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x030B0E sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x030D78 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x031254 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x031502 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x032668 sz=6 mov.l #0x00400400 er6
+  tgt=0x400400 at 0x0326EC sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x0326F8 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x032894 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x03495C sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x034B74 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x034D52 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x034E20 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x03519E sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x035368 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x0356AC sz=6 mov.l #0x00400400 er4
+  tgt=0x400400 at 0x036326 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x037594 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x0375AA sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x037650 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x03766E sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x0376A0 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x0378CA sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x0379A6 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x039876 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x039A28 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x039A44 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x039B20 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x039B54 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x039BBA sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x039C68 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x039C74 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x039CDA sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x03A5D8 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x03A726 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x03A880 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x03A8CC sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x03A8FA sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x03A94E sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x03AE6A sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x03AEF2 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x03B604 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x03BE78 sz=8 btst #7 @0x400400
+  tgt=0x400400 at 0x03EEAF sz=2 nop None None
+  tgt=0x400401 at 0x0181B9 sz=None None None None
+  tgt=0x400402 at 0x0215AC sz=6 mov.l #0x00400402 er5
+  tgt=0x400402 at 0x022E00 sz=6 mov.l #0x00400402 er3
+  tgt=0x400402 at 0x027B2E sz=6 mov.l #0x00400402 er6
+  tgt=0x400402 at 0x027F54 sz=6 mov.l #0x00400402 er4
+  tgt=0x400402 at 0x02814E sz=6 mov.l #0x00400402 er6
+  tgt=0x400402 at 0x02CC16 sz=6 mov.l #0x00400402 er5
+  tgt=0x400402 at 0x032924 sz=6 mov.l #0x00400402 er3
+  tgt=0x400402 at 0x03A3E4 sz=6 mov.l #0x00400402 er4
+  tgt=0x400404 at 0x0215A6 sz=6 mov.l #0x00400404 er3
+  tgt=0x400404 at 0x02741A sz=6 mov.l #0x00400404 er5
+  tgt=0x400404 at 0x027684 sz=6 mov.l #0x00400404 er6
+  tgt=0x400404 at 0x027DE0 sz=6 mov.l #0x00400404 er5
+  tgt=0x400404 at 0x0287AA sz=6 mov.l #0x00400404 er3
+  tgt=0x400406 at 0x020C48 sz=6 mov.l #0x00400406 er4
+  tgt=0x400406 at 0x0215E6 sz=6 mov.l #0x00400406 er4
+  tgt=0x400406 at 0x027420 sz=6 mov.l #0x00400406 er6
+  tgt=0x400406 at 0x027940 sz=6 mov.l #0x00400406 er6
+  tgt=0x400406 at 0x027B3C sz=6 mov.l #0x00400406 er4
+  tgt=0x400406 at 0x027DDA sz=6 mov.l #0x00400406 er4
+  tgt=0x400406 at 0x0285C8 sz=8 bset #4 @0x400406
+  tgt=0x400406 at 0x032614 sz=6 mov.l #0x00400406 er6
+  tgt=0x400406 at 0x0355A8 sz=6 mov.l #0x00400406 er1
+  tgt=0x400406 at 0x035D7A sz=6 mov.l #0x00400406 er5
+  tgt=0x400406 at 0x039A0C sz=6 mov.l #0x00400406 er0
+  tgt=0x400406 at 0x03C592 sz=6 mov.l #0x00400406 er1
+  tgt=0x400406 at 0x03CCB8 sz=6 mov.l #0x00400406 er1
+  tgt=0x400408 at 0x02AECA sz=6 mov.l #0x00400408 er4
+  tgt=0x400408 at 0x02B9AC sz=6 mov.l #0x00400408 er6
+  tgt=0x400408 at 0x02BBC2 sz=6 mov.l #0x00400408 er5
+  tgt=0x400408 at 0x02CAD0 sz=6 mov.l #0x00400408 er5
+  tgt=0x400408 at 0x02CB72 sz=6 mov.l #0x00400408 er4
+  tgt=0x40040C at 0x02BBEA sz=6 mov.l #0x0040040c er5
+  tgt=0x400410 at 0x0269E8 sz=6 mov.l #0x00400410 er5
+  tgt=0x400416 at 0x0213B0 sz=6 mov.l #0x00400416 er1
+  tgt=0x400416 at 0x0283EC sz=6 mov.l #0x00400416 er4
+  tgt=0x40041C at 0x027B28 sz=6 mov.l #0x0040041c er5
+  tgt=0x400426 at 0x011760 sz=6 mov.l #0x00400426 er1
+  tgt=0x40042A at 0x0117DA sz=6 mov.l #0x0040042a er1
+  tgt=0x40042E at 0x020A62 sz=6 mov.l #0x0040042e er4
+  tgt=0x400436 at 0x011466 sz=6 mov.l #0x00400436 er6
+  tgt=0x400436 at 0x0114E2 sz=6 mov.l #0x00400436 er4
+  tgt=0x400436 at 0x020ED0 sz=6 mov.l #0x00400436 er6
+  tgt=0x400436 at 0x0215B2 sz=6 mov.l #0x00400436 er6
+  tgt=0x400436 at 0x021850 sz=6 mov.l #0x00400436 er5
+  tgt=0x400436 at 0x021AE6 sz=6 mov.l #0x00400436 er4
+  tgt=0x400436 at 0x021B50 sz=6 mov.l #0x00400436 er3
+  tgt=0x400436 at 0x021D7E sz=6 mov.l #0x00400436 er5
+  tgt=0x400436 at 0x022C74 sz=6 mov.l #0x00400436 er6
+  tgt=0x400436 at 0x022DB2 sz=6 mov.l #0x00400436 er6
+  tgt=0x400436 at 0x022ED2 sz=6 mov.l #0x00400436 er3
+  tgt=0x400436 at 0x023A4A sz=6 mov.l #0x00400436 er4
+  tgt=0x400436 at 0x025122 sz=6 mov.l #0x00400436 er5
+  tgt=0x400436 at 0x026544 sz=6 mov.l #0x00400436 er5
+  tgt=0x400436 at 0x0267B4 sz=6 mov.l #0x00400436 er3
+  tgt=0x400436 at 0x026950 sz=6 mov.l #0x00400436 er4
+  tgt=0x400436 at 0x0269B6 sz=6 mov.l #0x00400436 er4
+  tgt=0x400436 at 0x026C16 sz=6 mov.l #0x00400436 er6
+  tgt=0x400436 at 0x026F12 sz=6 mov.l #0x00400436 er4
+  tgt=0x40043A at 0x022CB6 sz=6 mov.l #0x0040043a er5
+  tgt=0x40043C at 0x0114BA sz=6 mov.l #0x0040043c er0
+  tgt=0x40043C at 0x021778 sz=6 mov.l #0x0040043c er4
+  tgt=0x40043C at 0x021AEC sz=6 mov.l #0x0040043c er5
+  tgt=0x40043C at 0x021B56 sz=6 mov.l #0x0040043c er4
+  tgt=0x40043C at 0x021BE0 sz=6 mov.l #0x0040043c er4
+  tgt=0x40043C at 0x022C7A sz=6 mov.l #0x0040043c er5
+  tgt=0x40043C at 0x022DAA sz=6 mov.l #0x0040043c er4
+  tgt=0x40043C at 0x023FB8 sz=6 mov.l #0x0040043c er4
+  tgt=0x40043C at 0x02654A sz=6 mov.l #0x0040043c er6
+  tgt=0x40043C at 0x0267BA sz=6 mov.l #0x0040043c er4
+  tgt=0x40043C at 0x026956 sz=6 mov.l #0x0040043c er5
+  tgt=0x40043C at 0x0269B0 sz=6 mov.l #0x0040043c er3
+  tgt=0x40043C at 0x026C08 sz=6 mov.l #0x0040043c er4
+  tgt=0x40043C at 0x026F18 sz=6 mov.l #0x0040043c er5
+  tgt=0x40043E at 0x022F24 sz=6 mov.l #0x0040043e er4
+  tgt=0x40043E at 0x023A74 sz=6 mov.l #0x0040043e er3
+
+=== mov.l #0x00400xxx → erN（指针基址） ===
+  0x10962 #0x004003ee -> er1  owner=0x10948
+  0x109ae #0x004003ee -> er0  owner=0x10948
+  0x27a7e #0x004003f6 -> er1  owner=0x27a54
+  0x11190 #0x004003e4 -> er3  owner=0x11180
+  0x1175e #0x00400426 -> er1  owner=0x11708
+  0x117d8 #0x0040042a -> er1  owner=0x11708
+  0x11464 #0x00400436 -> er6  owner=0x11460
+  0x114e0 #0x00400436 -> er4  owner=0x114d8
+  0x119ae #0x004003e4 -> er5  owner=0x119a6
+  0x114b8 #0x0040043c -> er0  owner=0x114b8
+  0x16000 #0x004003f6 -> er5  owner=0x15ffc
+  0x20c3a #0x004003e4 -> er5  owner=0x20c2c
+  0x20c46 #0x00400406 -> er4  owner=0x20c2c
+  0x20ece #0x00400436 -> er6  owner=0x20ec0
+  0x213ae #0x00400416 -> er1  owner=0x21418
+  0x215a4 #0x00400404 -> er3  owner=0x2159c
+  0x215aa #0x00400402 -> er5  owner=0x2159c
+  0x215b0 #0x00400436 -> er6  owner=0x2159c
+  0x215e4 #0x00400406 -> er4  owner=0x2159c
+  0x21776 #0x0040043c -> er4  owner=0x21768
+  0x2184e #0x00400436 -> er5  owner=0x21840
+  0x21ae4 #0x00400436 -> er4  owner=0x21ae0
+  0x21aea #0x0040043c -> er5  owner=0x21ae0
+  0x21b4e #0x00400436 -> er3  owner=0x21b46
+  0x21b54 #0x0040043c -> er4  owner=0x21b46
+  0x21bde #0x0040043c -> er4  owner=0x21bd0
+  0x21d7c #0x00400436 -> er5  owner=0x21d68
+  0x22c72 #0x00400436 -> er6  owner=0x22c62
+  0x22c78 #0x0040043c -> er5  owner=0x22c62
+  0x22cb4 #0x0040043a -> er5  owner=0x22c62
+  0x22da8 #0x0040043c -> er4  owner=0x22d9a
+  0x22db0 #0x00400436 -> er6  owner=0x22d9a
+  0x22dfe #0x00400402 -> er3  owner=0x22d9a
+  0x22ed0 #0x00400436 -> er3  owner=0x22ecc
+  0x22f22 #0x0040043e -> er4  owner=0x22ecc
+  0x23a48 #0x00400436 -> er4  owner=0x23a3a
+  0x23a72 #0x0040043e -> er3  owner=0x23a3a
+  0x23fb0 #0x004003fb -> er3  owner=0x23fa4
+  0x23fb6 #0x0040043c -> er4  owner=0x23fa4
+  0x25120 #0x00400436 -> er5  owner=0x2510c
+  0x26542 #0x00400436 -> er5  owner=0x26534
+  0x26548 #0x0040043c -> er6  owner=0x26534
+  0x267b2 #0x00400436 -> er3  owner=0x267aa
+  0x267b8 #0x0040043c -> er4  owner=0x267aa
+  0x2694e #0x00400436 -> er4  owner=0x2694a
+  0x26954 #0x0040043c -> er5  owner=0x2694a
+  0x26980 #0x00400400 -> er6  owner=0x2694a
+  0x269ae #0x0040043c -> er3  owner=0x269a6
+  0x269b4 #0x00400436 -> er4  owner=0x269a6
+  0x269e6 #0x00400410 -> er5  owner=0x269a6
+  0x26c06 #0x0040043c -> er4  owner=0x26bf8
+  0x26c14 #0x00400436 -> er6  owner=0x26bf8
+  0x26f10 #0x00400436 -> er4  owner=0x26efc
+  0x26f16 #0x0040043c -> er5  owner=0x26efc
+  0x27682 #0x00400404 -> er6  owner=0x27676
+  0x27dd8 #0x00400406 -> er4  owner=0x27dc4
+  0x27dde #0x00400404 -> er5  owner=0x27dc4
+  0x27f52 #0x00400402 -> er4  owner=0x27f44
+  0x2814c #0x00400402 -> er6  owner=0x28148
+  0x32922 #0x00400402 -> er3  owner=0x32914
+  0x27938 #0x004003fb -> er5  owner=0x27930
+  0x2793e #0x00400406 -> er6  owner=0x27930
+  0x2cc14 #0x00400402 -> er5  owner=0x2cc04
+  0x289c4 #0x004003fb -> er6  owner=0x289b4

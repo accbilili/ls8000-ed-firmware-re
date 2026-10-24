@@ -1,0 +1,920 @@
+=== XREFS ===
+target ram:0003ead8 refs=0
+target ram:00019022 refs=0
+target ram:0003e9a4 refs=0
+target ram:0003e9d2 refs=1
+   from ram:0003eae0 type=DATA
+target ram:0003eabb refs=1
+   from ram:0003eb24 type=DATA
+target ram:0003eac5 refs=1
+   from ram:0003eb28 type=DATA
+
+=== immediate operands referencing 0x3E000-0x3F000 ===
+ram:000211b8  mov.l #0x3e390,er1
+ram:00024028  mov.b @(0x3e5d8,er0),r0l
+ram:0002404c  mov.l @(0x3e5da,er0),er0
+ram:00024062  mov.b @(0x3e5d8,er0),r0l
+ram:00024086  add.l #0x3e62c,er1
+ram:000240be  add.l #0x3e62c,er1
+ram:000240ea  add.l #0x3e62c,er1
+ram:0002438c  mov.l #0x3ede0,er1
+ram:00024392  mov.l #0x3eb70,er2
+ram:000243a6  mov.l #0x3ede0,er1
+ram:000243ac  mov.l #0x3eb78,er2
+ram:000243d4  mov.l #0x3ede0,er1
+ram:000243da  mov.l #0x3eb70,er2
+ram:000243ee  mov.l #0x3ede0,er1
+ram:000243f4  mov.l #0x3eb80,er2
+ram:0002441c  mov.l #0x3ede0,er1
+ram:00024422  mov.l #0x3eb70,er2
+ram:00024436  mov.l #0x3ede0,er1
+ram:0002443c  mov.l #0x3eb80,er2
+ram:00024464  mov.l #0x3ede0,er1
+ram:0002446a  mov.l #0x3eb70,er2
+ram:0002447e  mov.l #0x3ede0,er1
+ram:00024484  mov.l #0x3eb88,er2
+ram:000244ac  mov.l #0x3ede0,er1
+ram:000244b2  mov.l #0x3eb70,er2
+ram:000244c6  mov.l #0x3ede0,er1
+ram:000244cc  mov.l #0x3eb90,er2
+ram:000244fc  mov.l #0x3ede0,er1
+ram:00024502  mov.l #0x3eb90,er2
+ram:00024532  mov.l #0x3ede0,er1
+ram:00024538  mov.l #0x3eb98,er2
+ram:00024568  mov.l #0x3ede0,er1
+ram:0002456e  mov.l #0x3eba0,er2
+ram:0002459e  mov.l #0x3ede0,er1
+ram:000245a4  mov.l #0x3eba0,er2
+ram:000245d4  mov.l #0x3ede0,er1
+ram:000245da  mov.l #0x3eba0,er2
+ram:0002460a  mov.l #0x3ede0,er1
+ram:00024610  mov.l #0x3eba0,er2
+ram:00024640  mov.l #0x3ede0,er1
+ram:00024646  mov.l #0x3eba0,er2
+ram:00024676  mov.l #0x3ede0,er1
+ram:0002467c  mov.l #0x3eba0,er2
+ram:000246aa  mov.l #0x3ede0,er1
+ram:000246b0  mov.l #0x3eba0,er2
+ram:000246c2  mov.l #0x3ede0,er1
+ram:000246c8  mov.l #0x3eb70,er2
+ram:000246dc  mov.l #0x3ede0,er1
+ram:000246e2  mov.l #0x3eba8,er2
+ram:000291ac  mov.l #0x3ede0,er1
+ram:000291b2  mov.l #0x3ef80,er2
+ram:000291ca  mov.l #0x3ede0,er1
+ram:000291d0  mov.l #0x3ef48,er2
+ram:00029a2a  mov.l #0x3ede0,er1
+ram:00029a48  mov.l #0x3ede0,er1
+ram:00029a9c  mov.l #0x3ede0,er1
+ram:00029aba  mov.l #0x3ede0,er1
+ram:00029b0e  mov.l #0x3ede0,er1
+ram:00029b2c  mov.l #0x3ede0,er1
+ram:00029b80  mov.l #0x3ede0,er1
+ram:00029b9e  mov.l #0x3ede0,er1
+ram:00029bf2  mov.l #0x3ede0,er1
+ram:00029bf8  mov.l #0x3ef80,er2
+ram:00029c10  mov.l #0x3ede0,er1
+ram:0003df14  cmp.l #0x3e2e8,er0
+total 65
+
+=== peripheral access (0xFFFF00-0xFFFFFF) ===
+  0xFFFF02 x1
+  0xFFFF03 x1
+  0xFFFF04 x2
+  0xFFFF05 x2
+  0xFFFF06 x6
+  0xFFFF07 x6
+  0xFFFF2E x1
+  0xFFFF3A x1
+  0xFFFF46 x4
+  0xFFFF47 x4
+  0xFFFF4D x1
+  0xFFFF4E x1
+  0xFFFF54 x1
+  0xFFFFBC x25
+  0xFFFFD5 x1
+  0xFFFFD6 x2
+  0xFFFFD8 x2
+  0xFFFFF5 x1
+  0xFFFFF6 x2
+  0xFFFFF8 x2
+
+=== port / special access (0x0040xx, 0xFFDCxx) ===
+  0x004000 x3
+  0x004001 x2
+  0x004003 x40
+  0x004004 x76
+  0x004005 x18
+  0x004007 x60
+  0x00400C x6
+  0x00400D x237
+  0x00400E x29
+  0x00400F x13
+  0x004011 x1
+  0xFFDC30 x4
+  0xFFDC34 x4
+  0xFFDC3C x1
+
+=== FUNC ram:0002eee2 ===
+  size=1220
+  ram:0002eee2  push.l er6
+  ram:0002eee6  mov.l er7,er6
+  ram:0002eee8  push.w r5
+  ram:0002eeea  subs #4,er7
+  ram:0002eeec  subs #2,er7
+  ram:0002eeee  mov.b r0l,r5l
+  ram:0002eef0  mov.b r0h,r5h
+  ram:0002eef2  mov.w #0xfff4,r0
+  ram:0002eef6  mov.w r0,@(-0x8,er6)
+  ram:0002eefa  sub.w r0,r0
+  ram:0002eefc  mov.w r0,@(-0x6,er6)
+  ram:0002ef00  mov.w #0xc,r0
+  ram:0002ef04  mov.w r0,@(-0x4,er6)
+  ram:0002ef08  mov.b r5l,r5l
+  ram:0002ef0a  beq 0x0002ef12
+  ram:0002ef0c  cmp.b #0x1,r5l
+  ram:0002ef0e  bne 0x0002ef98
+  ram:0002ef12  mov.b r5h,r5h
+  ram:0002ef14  beq 0x0002ef98
+  ram:0002ef18  mov.w @0x00400d80,r0
+  ram:0002ef1e  mov.w #0x3,e0
+  ram:0002ef22  mulxu.w e0,er0
+  ram:0002ef24  mov.w r0,@0x00400dfa
+  ram:0002ef2a  mov.w @0x00400d7c,r0
+  ram:0002ef30  mov.w #0x3,e0
+  ram:0002ef34  mulxu.w e0,er0
+  ram:0002ef36  mov.w @0x00400d64,r1
+  ram:0002ef3c  sub.w r0,r1
+  ram:0002ef3e  mov.w @0x00400d60,r0
+  ram:0002ef44  add.w r0,r1
+  ram:0002ef46  mov.w @0x00400dfa,r0
+  ram:0002ef4c  sub.w r0,r1
+  ram:0002ef4e  mov.w r1,@0x00400df8
+  ram:0002ef54  mov.w @0x00400dfa,r0
+  ram:0002ef5a  mov.w r0,@0x00400dfc
+  ram:0002ef60  mov.w @0x00400d7e,r0
+  ram:0002ef66  add.w #0xc,r0
+  ram:0002ef6a  mov.w r0,@0x00400dfe
+  ram:0002ef70  mov.w @0x00400d84,r0
+  ram:0002ef76  extu.l er0
+  ram:0002ef78  mov.w #0x3,r1
+  ram:0002ef7c  divxu.w r1,er0
+  ram:0002ef7e  mov.w r0,@0x00400e00
+  ram:0002ef84  mov.b #0x1,r0l
+  ram:0002ef86  mov.b r0l,@0x00400e02
+  ram:0002ef8c  mov.b @0x00400d87,r0l
+  ram:0002ef92  mov.b r0l,@0x00400e03
+  ram:0002ef98  cmp.b #0x2,r5l
+  ram:0002ef9a  bne 0x0002f02e
+  ram:0002ef9e  mov.b r5h,r5h
+  ram:0002efa0  beq 0x0002f02e
+  ram:0002efa4  mov.w @0x00400d80,r0
+  ram:0002efaa  shlr.w r0
+  ram:0002efac  mov.w #0x3,e0
+  ram:0002efb0  mulxu.w e0,er0
+  ram:0002efb2  mov.w r0,@0x00400dfa
+  ram:0002efb8  mov.w @0x00400d7c,r0
+  ram:0002efbe  shlr.w r0
+  ram:0002efc0  mov.w #0x3,e0
+  ram:0002efc4  mulxu.w e0,er0
+  ram:0002efc6  mov.w @0x00400d64,r1
+  ram:0002efcc  sub.w r0,r1
+  ram:0002efce  mov.w @0x00400d60,r0
+  ram:0002efd4  add.w r0,r1
+  ram:0002efd6  mov.w @0x00400dfa,r0
+  ram:0002efdc  sub.w r0,r1
+  ram:0002efde  mov.w r1,@0x00400df8
+  ram:0002efe4  mov.w @0x00400d82,r0
+  ram:0002efea  mov.w #0x3,e0
+  ram:0002efee  mulxu.w e0,er0
+  ram:0002eff0  mov.w r0,@0x00400dfc
+  ram:0002eff6  mov.w @0x00400d7e,r0
+  ram:0002effc  add.w #0xc,r0
+  ram:0002f000  mov.w r0,@0x00400dfe
+  ram:0002f006  mov.w @0x00400d84,r0
+  ram:0002f00c  extu.l er0
+  ram:0002f00e  mov.w #0x3,r1
+  ram:0002f012  divxu.w r1,er0
+  ram:0002f014  mov.w r0,@0x00400e00
+  ram:0002f01a  mov.b #0x1,r0l
+  ram:0002f01c  mov.b r0l,@0x00400e02
+  ram:0002f022  mov.b @0x00400d87,r0l
+  ram:0002f028  mov.b r0l,@0x00400e03
+  ram:0002f02e  cmp.b #0x3,r5l
+  ram:0002f030  bne 0x0002f0d0
+  ram:0002f034  mov.b r5h,r5h
+  ram:0002f036  beq 0x0002f0d0
+  ram:0002f03a  mov.w @0x00400d80,r0
+  ram:0002f040  extu.l er0
+  ram:0002f042  mov.w #0x3,r1
+  ram:0002f046  divxu.w r1,er0
+  ram:0002f048  mov.w #0x3,e0
+  ram:0002f04c  mulxu.w e0,er0
+  ram:0002f04e  mov.w r0,@0x00400dfa
+  ram:0002f054  mov.w @0x00400d7c,r0
+  ram:0002f05a  extu.l er0
+  ram:0002f05c  mov.w #0x3,r1
+  ram:0002f060  divxu.w r1,er0
+  ram:0002f062  mov.w #0x3,e0
+  ram:0002f066  mulxu.w e0,er0
+  ram:0002f068  mov.w @0x00400d64,r1
+  ram:0002f06e  sub.w r0,r1
+  ram:0002f070  mov.w @0x00400d60,r0
+  ram:0002f076  add.w r0,r1
+  ram:0002f078  mov.w @0x00400dfa,r0
+  ram:0002f07e  sub.w r0,r1
+  ram:0002f080  mov.w r1,@0x00400df8
+  ram:0002f086  mov.w @0x00400d82,r0
+  ram:0002f08c  mov.w #0x3,e0
+  ram:0002f090  mulxu.w e0,er0
+  ram:0002f092  mov.w r0,@0x00400dfc
+  ram:0002f098  mov.w @0x00400d7e,r0
+  ram:0002f09e  add.w #0xc,r0
+  ram:0002f0a2  mov.w r0,@0x00400dfe
+  ram:0002f0a8  mov.w @0x00400d84,r0
+  ram:0002f0ae  extu.l er0
+  ram:0002f0b0  mov.w #0x3,r1
+  ram:0002f0b4  divxu.w r1,er0
+  ram:0002f0b6  mov.w r0,@0x00400e00
+  ram:0002f0bc  mov.b #0x1,r0l
+  ram:0002f0be  mov.b r0l,@0x00400e02
+  ram:0002f0c4  mov.b @0x00400d87,r0l
+  ram:0002f0ca  mov.b r0l,@0x00400e03
+  ram:0002f0d0  cmp.b #0x4,r5l
+  ram:0002f0d2  bne 0x0002f166
+  ram:0002f0d6  mov.b r5h,r5h
+  ram:0002f0d8  beq 0x0002f166
+  ram:0002f0dc  mov.w @0x00400d80,r0
+  ram:0002f166  cmp.b #0x6,r5l
+  ram:0002f168  bne 0x0002f208
+  ram:0002f16c  mov.b r5h,r5h
+  ram:0002f16e  beq 0x0002f208
+  ram:0002f172  mov.w @0x00400d80,r0
+  ram:0002f178  extu.l er0
+  ram:0002f17a  mov.w #0x6,r1
+  ram:0002f17e  divxu.w r1,er0
+  ram:0002f180  mov.w #0x3,e0
+  ram:0002f184  mulxu.w e0,er0
+  ram:0002f186  mov.w r0,@0x00400dfa
+  ram:0002f18c  mov.w @0x00400d7c,r0
+  ram:0002f192  extu.l er0
+  ram:0002f194  mov.w #0x6,r1
+  ram:0002f198  divxu.w r1,er0
+  ram:0002f19a  mov.w #0x3,e0
+  ram:0002f19e  mulxu.w e0,er0
+  ram:0002f1a0  mov.w @0x00400d64,r1
+  ram:0002f1a6  sub.w r0,r1
+  ram:0002f1a8  mov.w @0x00400d60,r0
+  ram:0002f1ae  add.w r0,r1
+  ram:0002f1b0  mov.w @0x00400dfa,r0
+  ram:0002f1b6  sub.w r0,r1
+  ram:0002f1b8  mov.w r1,@0x00400df8
+  ram:0002f1be  mov.w @0x00400d82,r0
+  ram:0002f1c4  mov.w #0x3,e0
+  ram:0002f1c8  mulxu.w e0,er0
+  ram:0002f1ca  mov.w r0,@0x00400dfc
+  ram:0002f1d0  mov.w @0x00400d7e,r0
+  ram:0002f1d6  add.w #0xc,r0
+  ram:0002f1da  mov.w r0,@0x00400dfe
+  ram:0002f1e0  mov.w @0x00400d84,r0
+  ram:0002f1e6  extu.l er0
+  ram:0002f1e8  mov.w #0x3,r1
+  ram:0002f1ec  divxu.w r1,er0
+  ram:0002f1ee  mov.w r0,@0x00400e00
+  ram:0002f1f4  mov.b #0x1,r0l
+  ram:0002f1f6  mov.b r0l,@0x00400e02
+  ram:0002f1fc  mov.b @0x00400d87,r0l
+  ram:0002f202  mov.b r0l,@0x00400e03
+  ram:0002f208  mov.b r5l,r5l
+  ram:0002f20a  beq 0x0002f210
+  ram:0002f20c  cmp.b #0x1,r5l
+  ram:0002f20e  bne 0x0002f286
+  ram:0002f210  mov.b r5h,r5h
+  ram:0002f212  bne 0x0002f286
+  ram:0002f214  mov.w @0x00400d80,r0
+  ram:0002f21a  mov.w r0,@0x00400dfa
+  ram:0002f220  mov.w @0x00400d64,r0
+  ram:0002f226  mov.w @0x00400d60,r1
+  ram:0002f22c  add.w r1,r0
+  ram:0002f22e  mov.w @0x00400dfa,r1
+  ram:0002f234  sub.w r1,r0
+  ram:0002f236  mov.w @0x00400d7c,r1
+  ram:0002f23c  sub.w r1,r0
+  ram:0002f23e  mov.w r0,@0x00400df8
+  ram:0002f244  mov.w @0x00400d82,r0
+  ram:0002f24a  mov.w r0,@0x00400dfc
+  ram:0002f250  mov.w @0x00400d7e,r0
+  ram:0002f256  mov.w @(-0x6,er6),r1
+  ram:0002f25a  add.w r1,r0
+  ram:0002f25c  mov.w r0,@0x00400dfe
+  ram:0002f262  mov.w @0x00400d84,r0
+  ram:0002f268  mov.w r0,@0x00400e00
+  ram:0002f26e  mov.b @0x00400d86,r0l
+  ram:0002f274  mov.b r0l,@0x00400e02
+  ram:0002f27a  mov.b @0x00400d87,r0l
+  ram:0002f280  mov.b r0l,@0x00400e03
+  ram:0002f286  cmp.b #0x2,r5l
+  ram:0002f288  bne 0x0002f300
+  ram:0002f28a  mov.b r5h,r5h
+  ram:0002f28c  bne 0x0002f300
+  ram:0002f28e  mov.w @0x00400d80,r0
+  ram:0002f294  shlr.w r0
+  ram:0002f296  mov.w r0,@0x00400dfa
+  ram:0002f29c  mov.w @0x00400d7c,r0
+  ram:0002f2a2  shlr.w r0
+  ram:0002f2a4  mov.w @0x00400d64,r1
+  ram:0002f2aa  sub.w r0,r1
+  ram:0002f2ac  mov.w @0x00400d60,r0
+  ram:0002f2b2  add.w r0,r1
+  ram:0002f2b4  mov.w @0x00400dfa,r0
+  ram:0002f2ba  sub.w r0,r1
+  ram:0002f2bc  mov.w r1,@0x00400df8
+  ram:0002f2c2  mov.w @0x00400d82,r0
+  ram:0002f2c8  mov.w r0,@0x00400dfc
+  ram:0002f2ce  mov.w @0x00400d7e,r0
+  ram:0002f2d4  mov.w @(-0x6,er6),r1
+  ram:0002f2d8  add.w r1,r0
+  ram:0002f2da  mov.w r0,@0x00400dfe
+  ram:0002f2e0  mov.w @0x00400d84,r0
+  ram:0002f2e6  mov.w r0,@0x00400e00
+
+=== FUNC ram:0002fa6c ===
+  size=984
+  ram:0002fa6c  push.l er6
+  ram:0002fa70  mov.l er7,er6
+  ram:0002fa72  push.w r5
+  ram:0002fa74  sub.l #0xa,er7
+  ram:0002fa7a  mov.b r0l,r5l
+  ram:0002fa7c  mov.l #0x4202b6,er0
+  ram:0002fa82  mov.l er0,@(-0x8,er6)
+  ram:0002fa88  mov.l #0x4202d0,er0
+  ram:0002fa8e  mov.l er0,@(-0xc,er6)
+  ram:0002fa94  mov.b r5l,r0l
+  ram:0002fa96  beq 0x0002fabe
+  ram:0002fa98  cmp.b #0x1,r0l
+  ram:0002fa9a  beq 0x0002faf8
+  ram:0002fa9c  cmp.b #0x2,r0l
+  ram:0002fa9e  beq 0x0002fb9c
+  ram:0002faa2  cmp.b #0x3,r0l
+  ram:0002faa4  beq 0x0002fc40
+  ram:0002faa8  cmp.b #0x4,r0l
+  ram:0002faaa  beq 0x0002fce4
+  ram:0002faae  cmp.b #0x6,r0l
+  ram:0002fab0  beq 0x0002fd88
+  ram:0002fab4  cmp.b #0xc,r0l
+  ram:0002fab6  beq 0x0002fe10
+  ram:0002faba  jmp @0x0002fe44
+  ram:0002fabe  mov.l @(-0xc,er6),er0
+  ram:0002fac4  inc.l #1,er0
+  ram:0002fac6  mov.l er0,@(-0xc,er6)
+  ram:0002facc  dec.l #1,er0
+  ram:0002face  mov.b #0x80,r1l
+  ram:0002fad0  mov.b r1l,@er0
+  ram:0002fad2  mov.l @(-0x8,er6),er0
+  ram:0002fad8  inc.l #2,er0
+  ram:0002fada  mov.l er0,@(-0x8,er6)
+  ram:0002fae0  dec.l #2,er0
+  ram:0002fae2  mov.b @0x00400d87,r1l
+  ram:0002fae8  extu.w r1
+  ram:0002faea  mov.w r1,@er0
+  ram:0002faec  mov.b #0x1,r0l
+  ram:0002faee  mov.b r0l,@0x004202dd
+  ram:0002faf4  jmp @0x0002fe48
+  ram:0002faf8  sub.b r0l,r0l
+  ram:0002fafa  mov.b r0l,@(-0x3,er6)
+  ram:0002fafe  bra 0x0002fb34
+  ram:0002fb00  mov.l @(-0xc,er6),er0
+  ram:0002fb06  inc.l #1,er0
+  ram:0002fb08  mov.l er0,@(-0xc,er6)
+  ram:0002fb0e  dec.l #1,er0
+  ram:0002fb10  mov.b #0x80,r1l
+  ram:0002fb12  mov.b r1l,@er0
+  ram:0002fb14  mov.l @(-0x8,er6),er0
+  ram:0002fb1a  inc.l #2,er0
+  ram:0002fb1c  mov.l er0,@(-0x8,er6)
+  ram:0002fb22  dec.l #2,er0
+  ram:0002fb24  mov.w #0x1,r1
+  ram:0002fb28  mov.w r1,@er0
+  ram:0002fb2a  mov.b @(-0x3,er6),r0l
+  ram:0002fb2e  inc.b r0l
+  ram:0002fb30  mov.b r0l,@(-0x3,er6)
+  ram:0002fb34  mov.b @(-0x3,er6),r0l
+  ram:0002fb38  cmp.b #0xb,r0l
+  ram:0002fb3a  bcs 0x0002fb00
+  ram:0002fb3c  mov.l @(-0xc,er6),er0
+  ram:0002fb42  inc.l #1,er0
+  ram:0002fb44  mov.l er0,@(-0xc,er6)
+  ram:0002fb4a  dec.l #1,er0
+  ram:0002fb4c  mov.b #0x85,r1l
+  ram:0002fb4e  mov.b r1l,@er0
+  ram:0002fb50  mov.l @(-0x8,er6),er0
+  ram:0002fb56  inc.l #2,er0
+  ram:0002fb58  mov.l er0,@(-0x8,er6)
+  ram:0002fb5e  dec.l #2,er0
+  ram:0002fb60  mov.w #0x18,r1
+  ram:0002fb64  mov.w r1,@er0
+  ram:0002fb66  mov.l @(-0xc,er6),er0
+  ram:0002fb6c  inc.l #1,er0
+  ram:0002fb6e  mov.l er0,@(-0xc,er6)
+  ram:0002fb74  dec.l #1,er0
+  ram:0002fb76  mov.b #0x2,r1l
+  ram:0002fb78  mov.b r1l,@er0
+  ram:0002fb7a  mov.l @(-0x8,er6),er0
+  ram:0002fb80  inc.l #2,er0
+  ram:0002fb82  mov.l er0,@(-0x8,er6)
+  ram:0002fb88  dec.l #2,er0
+  ram:0002fb8a  mov.w #0x1,r1
+  ram:0002fb8e  mov.w r1,@er0
+  ram:0002fb90  mov.b #0xd,r0l
+  ram:0002fb92  mov.b r0l,@0x004202dd
+  ram:0002fb98  jmp @0x0002fe48
+  ram:0002fb9c  sub.b r0l,r0l
+  ram:0002fb9e  mov.b r0l,@(-0x3,er6)
+  ram:0002fba2  bra 0x0002fbd8
+  ram:0002fba4  mov.l @(-0xc,er6),er0
+  ram:0002fbaa  inc.l #1,er0
+  ram:0002fbac  mov.l er0,@(-0xc,er6)
+  ram:0002fbb2  dec.l #1,er0
+  ram:0002fbb4  mov.b #0x80,r1l
+  ram:0002fbb6  mov.b r1l,@er0
+  ram:0002fbb8  mov.l @(-0x8,er6),er0
+  ram:0002fbbe  inc.l #2,er0
+  ram:0002fbc0  mov.l er0,@(-0x8,er6)
+  ram:0002fbc6  dec.l #2,er0
+  ram:0002fbc8  mov.w #0x2,r1
+  ram:0002fbcc  mov.w r1,@er0
+  ram:0002fbce  mov.b @(-0x3,er6),r0l
+  ram:0002fbd2  inc.b r0l
+  ram:0002fbd4  mov.b r0l,@(-0x3,er6)
+  ram:0002fbd8  mov.b @(-0x3,er6),r0l
+  ram:0002fbdc  cmp.b #0x5,r0l
+  ram:0002fbde  bcs 0x0002fba4
+  ram:0002fbe0  mov.l @(-0xc,er6),er0
+  ram:0002fbe6  inc.l #1,er0
+  ram:0002fbe8  mov.l er0,@(-0xc,er6)
+  ram:0002fbee  dec.l #1,er0
+  ram:0002fbf0  mov.b #0x85,r1l
+  ram:0002fbf2  mov.b r1l,@er0
+  ram:0002fbf4  mov.l @(-0x8,er6),er0
+  ram:0002fbfa  inc.l #2,er0
+  ram:0002fbfc  mov.l er0,@(-0x8,er6)
+  ram:0002fc02  dec.l #2,er0
+  ram:0002fc04  mov.w #0x18,r1
+  ram:0002fc08  mov.w r1,@er0
+  ram:0002fc0a  mov.l @(-0xc,er6),er0
+  ram:0002fc10  inc.l #1,er0
+  ram:0002fc12  mov.l er0,@(-0xc,er6)
+  ram:0002fc18  dec.l #1,er0
+  ram:0002fc1a  mov.b #0x2,r1l
+  ram:0002fc1c  mov.b r1l,@er0
+  ram:0002fc1e  mov.l @(-0x8,er6),er0
+  ram:0002fc24  inc.l #2,er0
+  ram:0002fc26  mov.l er0,@(-0x8,er6)
+  ram:0002fc2c  dec.l #2,er0
+  ram:0002fc2e  mov.w #0x2,r1
+  ram:0002fc32  mov.w r1,@er0
+  ram:0002fc34  mov.b #0x7,r0l
+  ram:0002fc36  mov.b r0l,@0x004202dd
+  ram:0002fc3c  jmp @0x0002fe48
+  ram:0002fc40  sub.b r0l,r0l
+  ram:0002fc42  mov.b r0l,@(-0x3,er6)
+  ram:0002fc46  bra 0x0002fc7c
+  ram:0002fc48  mov.l @(-0xc,er6),er0
+  ram:0002fc4e  inc.l #1,er0
+  ram:0002fc50  mov.l er0,@(-0xc,er6)
+  ram:0002fc56  dec.l #1,er0
+  ram:0002fc58  mov.b #0x80,r1l
+  ram:0002fc5a  mov.b r1l,@er0
+  ram:0002fc5c  mov.l @(-0x8,er6),er0
+  ram:0002fc62  inc.l #2,er0
+  ram:0002fc64  mov.l er0,@(-0x8,er6)
+  ram:0002fc6a  dec.l #2,er0
+  ram:0002fc6c  mov.w #0x3,r1
+  ram:0002fc70  mov.w r1,@er0
+  ram:0002fc72  mov.b @(-0x3,er6),r0l
+  ram:0002fc76  inc.b r0l
+  ram:0002fc78  mov.b r0l,@(-0x3,er6)
+  ram:0002fc7c  mov.b @(-0x3,er6),r0l
+  ram:0002fc80  cmp.b #0x3,r0l
+  ram:0002fc82  bcs 0x0002fc48
+  ram:0002fc84  mov.l @(-0xc,er6),er0
+  ram:0002fc8a  inc.l #1,er0
+  ram:0002fc8c  mov.l er0,@(-0xc,er6)
+  ram:0002fc92  dec.l #1,er0
+  ram:0002fc94  mov.b #0x85,r1l
+  ram:0002fc96  mov.b r1l,@er0
+  ram:0002fc98  mov.l @(-0x8,er6),er0
+  ram:0002fc9e  inc.l #2,er0
+  ram:0002fca0  mov.l er0,@(-0x8,er6)
+  ram:0002fca6  dec.l #2,er0
+  ram:0002fca8  mov.w #0x18,r1
+  ram:0002fcac  mov.w r1,@er0
+  ram:0002fcae  mov.l @(-0xc,er6),er0
+  ram:0002fcb4  inc.l #1,er0
+  ram:0002fcb6  mov.l er0,@(-0xc,er6)
+  ram:0002fcbc  dec.l #1,er0
+  ram:0002fcbe  mov.b #0x2,r1l
+  ram:0002fcc0  mov.b r1l,@er0
+  ram:0002fcc2  mov.l @(-0x8,er6),er0
+  ram:0002fcc8  inc.l #2,er0
+  ram:0002fcca  mov.l er0,@(-0x8,er6)
+  ram:0002fcd0  dec.l #2,er0
+  ram:0002fcd2  mov.w #0x3,r1
+  ram:0002fcd6  mov.w r1,@er0
+  ram:0002fcd8  mov.b #0x5,r0l
+  ram:0002fcda  mov.b r0l,@0x004202dd
+  ram:0002fce0  jmp @0x0002fe48
+  ram:0002fce4  sub.b r0l,r0l
+  ram:0002fce6  mov.b r0l,@(-0x3,er6)
+  ram:0002fcea  bra 0x0002fd20
+  ram:0002fcec  mov.l @(-0xc,er6),er0
+  ram:0002fcf2  inc.l #1,er0
+  ram:0002fcf4  mov.l er0,@(-0xc,er6)
+  ram:0002fcfa  dec.l #1,er0
+  ram:0002fcfc  mov.b #0x80,r1l
+  ram:0002fcfe  mov.b r1l,@er0
+  ram:0002fd00  mov.l @(-0x8,er6),er0
+  ram:0002fd06  inc.l #2,er0
+  ram:0002fd08  mov.l er0,@(-0x8,er6)
+  ram:0002fd0e  dec.l #2,er0
+  ram:0002fd10  mov.w #0x4,r1
+  ram:0002fd14  mov.w r1,@er0
+  ram:0002fd16  mov.b @(-0x3,er6),r0l
+  ram:0002fd1a  inc.b r0l
+  ram:0002fd1c  mov.b r0l,@(-0x3,er6)
+  ram:0002fd20  mov.b @(-0x3,er6),r0l
+  ram:0002fd24  cmp.b #0x2,r0l
+  ram:0002fd26  bcs 0x0002fcec
+  ram:0002fd28  mov.l @(-0xc,er6),er0
+  ram:0002fd2e  inc.l #1,er0
+  ram:0002fd30  mov.l er0,@(-0xc,er6)
+  ram:0002fd36  dec.l #1,er0
+  ram:0002fd38  mov.b #0x85,r1l
+  ram:0002fd3a  mov.b r1l,@er0
+  ram:0002fd3c  mov.l @(-0x8,er6),er0
+  ram:0002fd42  inc.l #2,er0
+  ram:0002fd44  mov.l er0,@(-0x8,er6)
+  ram:0002fd4a  dec.l #2,er0
+  ram:0002fd4c  mov.w #0x18,r1
+  ram:0002fd50  mov.w r1,@er0
+  ram:0002fd52  mov.l @(-0xc,er6),er0
+  ram:0002fd58  inc.l #1,er0
+  ram:0002fd5a  mov.l er0,@(-0xc,er6)
+
+=== FUNC ram:000161e8 ===
+  size=762
+  ram:000161e8  push.l er6
+  ram:000161ec  mov.l er7,er6
+  ram:000161ee  sub.l #0xc,er7
+  ram:000161f4  sub.b r0l,r0l
+  ram:000161f6  mov.b r0l,@0x00449ada
+  ram:000161fc  sub.w r0,r0
+  ram:000161fe  mov.w r0,@0x00449ad4
+  ram:00016204  mov.l #0x60000,er0
+  ram:0001620a  mov.l er0,@0x00449ad0
+  ram:00016212  mov.l #0x60000,er0
+  ram:00016218  mov.l er0,@0x00449ad6
+  ram:00016220  mov.l #0x60000,er0
+  ram:00016226  mov.l er0,@(-0x4,er6)
+  ram:0001622c  mov.l @(-0x4,er6),er0
+  ram:00016232  mov.b @er0,r0l
+  ram:00016234  cmp.b #0xff,r0l
+  ram:00016236  bne 0x00016364
+  ram:0001623a  mov.l @(-0x4,er6),er0
+  ram:00016240  mov.b @(0x1f,er0),r0l
+  ram:00016244  cmp.b #0xff,r0l
+  ram:00016246  bne 0x00016364
+  ram:0001624a  mov.l #0x70000,er0
+  ram:00016250  mov.l er0,@(-0x4,er6)
+  ram:00016256  mov.l @(-0x4,er6),er0
+  ram:0001625c  mov.b @er0,r0l
+  ram:0001625e  cmp.b #0xff,r0l
+  ram:00016260  bne 0x00016290
+  ram:00016262  mov.l @(-0x4,er6),er0
+  ram:00016268  mov.b @(0x1f,er0),r0l
+  ram:0001626c  cmp.b #0xff,r0l
+  ram:0001626e  bne 0x00016290
+  ram:00016270  mov.b #0x1,r0l
+  ram:00016272  mov.b r0l,@0x00449ada
+  ram:00016278  mov.l #0x60000,er0
+  ram:0001627e  mov.l er0,@0x00449ad6
+  ram:00016286  bsr 0x0001680a
+  ram:0001628a  sub.b r0l,r0l
+  ram:0001628c  jmp @0x000165bc
+  ram:00016290  mov.l @(-0x4,er6),er0
+  ram:00016296  add.l #0x20,er0
+  ram:0001629c  mov.l er0,@(-0x8,er6)
+  ram:000162a2  bra 0x0001630e
+  ram:000162a4  mov.l #0x449ad4,er0
+  ram:000162aa  mov.w @er0,r1
+  ram:000162ac  inc.w #1,r1
+  ram:000162ae  mov.w r1,@er0
+  ram:000162b0  mov.l @(-0x8,er6),er0
+  ram:000162b6  mov.b @er0,r0l
+  ram:000162b8  cmp.b #0xff,r0l
+  ram:000162ba  bne 0x000162cc
+  ram:000162bc  mov.l @(-0x8,er6),er0
+  ram:000162c2  mov.b @(0x1f,er0),r0l
+  ram:000162c6  cmp.b #0xff,r0l
+  ram:000162c8  bne 0x000162cc
+  ram:000162ca  bra 0x0001631c
+  ram:000162cc  mov.l @(-0x8,er6),er0
+  ram:000162d2  mov.b @er0,r0l
+  ram:000162d4  cmp.b #0xaa,r0l
+  ram:000162d6  bne 0x000162f2
+  ram:000162d8  mov.l @(-0x8,er6),er0
+  ram:000162de  mov.b @(0x1f,er0),r0l
+  ram:000162e2  cmp.b #0x55,r0l
+  ram:000162e4  bne 0x000162f2
+  ram:000162e6  mov.l @(-0x8,er6),er0
+  ram:000162ec  mov.l er0,@(-0x4,er6)
+  ram:000162f2  mov.l @(-0x8,er6),er0
+  ram:000162f8  add.l #0x20,er0
+  ram:000162fe  mov.l er0,@(-0x8,er6)
+  ram:00016304  mov.w #0x5a00,r0
+  ram:00016308  mov.w r0,@0x00ffffbc
+  ram:0001630e  mov.l @(-0x8,er6),er0
+  ram:00016314  cmp.l #0x80000,er0
+  ram:0001631a  bcs 0x000162a4
+  ram:0001631c  mov.l @(-0x4,er6),er0
+  ram:00016322  mov.l er0,@0x00449ad0
+  ram:0001632a  mov.l @(-0x8,er6),er0
+  ram:00016330  mov.l er0,@0x00449ad6
+  ram:00016338  mov.l @(-0x8,er6),er0
+  ram:0001633e  cmp.l #0x80000,er0
+  ram:00016344  bcs 0x00016360
+  ram:00016346  mov.l #0x449ad4,er0
+  ram:0001634c  mov.w @er0,r1
+  ram:0001634e  inc.w #1,r1
+  ram:00016350  mov.w r1,@er0
+  ram:00016352  mov.l #0x60000,er0
+  ram:00016358  mov.l er0,@0x00449ad6
+  ram:00016360  jmp @0x000165b4
+  ram:00016364  mov.l #0x70000,er0
+  ram:0001636a  mov.l er0,@(-0x4,er6)
+  ram:00016370  mov.l @(-0x4,er6),er0
+  ram:00016376  mov.b @er0,r0l
+  ram:00016378  cmp.b #0xff,r0l
+  ram:0001637a  bne 0x000163b2
+  ram:0001637c  mov.l @(-0x4,er6),er0
+  ram:00016382  mov.b @(0x1f,er0),r0l
+  ram:00016386  cmp.b #0xff,r0l
+  ram:00016388  bne 0x000163b2
+  ram:0001638a  mov.l #0x60000,er0
+  ram:00016390  mov.l er0,@(-0x4,er6)
+  ram:00016396  mov.l #0x60020,er0
+  ram:0001639c  mov.l er0,@(-0x8,er6)
+  ram:000163a2  mov.l #0x70000,er0
+  ram:000163a8  mov.l er0,@(-0xc,er6)
+  ram:000163ae  jmp @0x000164e2
+  ram:000163b2  mov.l #0x7ffe0,er0
+  ram:000163b8  mov.l er0,@(-0x4,er6)
+  ram:000163be  mov.l @(-0x4,er6),er0
+  ram:000163c4  mov.b @er0,r0l
+  ram:000163c6  cmp.b #0xff,r0l
+  ram:000163c8  bne 0x000163d8
+  ram:000163ca  mov.l @(-0x4,er6),er0
+  ram:000163d0  mov.b @(0x1f,er0),r0l
+  ram:000163d4  cmp.b #0xff,r0l
+  ram:000163d6  beq 0x00016448
+  ram:000163d8  mov.w #0x800,r0
+  ram:000163dc  mov.w r0,@0x00449ad4
+  ram:000163e2  mov.l #0x6ffe0,er0
+  ram:000163e8  mov.l er0,@(-0x4,er6)
+  ram:000163ee  mov.l @(-0x4,er6),er0
+  ram:000163f4  mov.b @er0,r0l
+  ram:000163f6  cmp.b #0xff,r0l
+  ram:000163f8  bne 0x00016408
+  ram:000163fa  mov.l @(-0x4,er6),er0
+  ram:00016400  mov.b @(0x1f,er0),r0l
+  ram:00016404  cmp.b #0xff,r0l
+  ram:00016406  beq 0x00016420
+  ram:00016408  bsr 0x000165c8
+  ram:0001640c  mov.w #0x1000,r0
+  ram:00016410  mov.w r0,@0x00449ad4
+  ram:00016416  bsr 0x0001680a
+  ram:0001641a  mov.b #0x1,r0l
+  ram:0001641c  jmp @0x000165bc
+  ram:00016420  mov.l #0x60000,er0
+  ram:00016426  mov.l er0,@(-0x4,er6)
+  ram:0001642c  mov.l #0x60020,er0
+  ram:00016432  mov.l er0,@(-0x8,er6)
+  ram:00016438  mov.l #0x70000,er0
+  ram:0001643e  mov.l er0,@(-0xc,er6)
+  ram:00016444  jmp @0x000164e2
+  ram:00016448  mov.l #0x6ffe0,er0
+  ram:0001644e  mov.l er0,@(-0x4,er6)
+  ram:00016454  mov.l @(-0x4,er6),er0
+  ram:0001645a  mov.b @er0,r0l
+  ram:0001645c  cmp.b #0xff,r0l
+  ram:0001645e  bne 0x0001646e
+  ram:00016460  mov.l @(-0x4,er6),er0
+  ram:00016466  mov.b @(0x1f,er0),r0l
+  ram:0001646a  cmp.b #0xff,r0l
+  ram:0001646c  beq 0x0001649e
+  ram:0001646e  mov.w #0x800,r0
+  ram:00016472  mov.w r0,@0x00449ad4
+  ram:00016478  mov.l #0x70000,er0
+  ram:0001647e  mov.l er0,@(-0x4,er6)
+  ram:00016484  mov.l #0x70020,er0
+  ram:0001648a  mov.l er0,@(-0x8,er6)
+  ram:00016490  mov.l #0x7ffff,er0
+  ram:00016496  mov.l er0,@(-0xc,er6)
+  ram:0001649c  bra 0x000164e2
+  ram:0001649e  bsr 0x000165c8
+  ram:000164a2  mov.w #0x800,r0
+  ram:000164a6  mov.w r0,@0x00449ad4
+  ram:000164ac  mov.l @0x00449ad6,er0
+  ram:000164b4  mov.l er0,@(-0x4,er6)
+  ram:000164ba  mov.l @0x00449ad6,er0
+  ram:000164c2  add.l #0x20,er0
+  ram:000164c8  mov.l er0,@(-0x8,er6)
+  ram:000164ce  mov.l @0x00449ad6,er0
+  ram:000164d6  add.l #0x10000,er0
+  ram:000164dc  mov.l er0,@(-0xc,er6)
+
+=== FUNC ram:00014312 ===
+  size=748
+  ram:00014312  push.l er6
+  ram:00014316  mov.l er7,er6
+  ram:00014318  push.l er2
+  ram:0001431c  sub.l #0x10,er7
+  ram:00014322  sub.w r0,r0
+  ram:00014324  mov.w r0,@(-0xe,er6)
+  ram:00014328  bra 0x00014358
+  ram:0001432a  mov.w @(-0xe,er6),r0
+  ram:0001432e  extu.l er0
+  ram:00014358  mov.w @(-0xe,er6),r0
+  ram:0001435c  cmp.w #0x28,r0
+  ram:00014360  bcs 0x0001432a
+  ram:00014362  sub.l er0,er0
+  ram:00014364  mov.l er0,@(-0x8,er6)
+  ram:0001436a  mov.b @0x0001bdd8,r0l
+  ram:00014370  mov.b r0l,@(-0x5,er6)
+  ram:00014374  mov.l @(-0x8,er6),er0
+  ram:0001437a  mov.l #0x420764,er1
+  ram:00014380  mov.l @er1,er2
+  ram:00014384  or.l er0,er2
+  ram:00014388  mov.l er2,@er1
+  ram:0001438c  mov.l @0x0040052a,er0
+  ram:00014394  mov.l er0,@(-0x8,er6)
+  ram:0001439a  mov.b @0x0001bdd9,r0l
+  ram:000143a0  mov.b r0l,@(-0x8,er6)
+  ram:000143a4  mov.l @(-0x8,er6),er0
+  ram:000143aa  mov.l #0x420768,er1
+  ram:000143b0  mov.l @er1,er2
+  ram:000143b4  or.l er0,er2
+  ram:000143b8  mov.l er2,@er1
+  ram:000143bc  sub.l er0,er0
+  ram:000143be  mov.l er0,@(-0x8,er6)
+  ram:000143c4  sub.b r0l,r0l
+  ram:000143c6  mov.b r0l,@(-0x7,er6)
+  ram:000143ca  mov.b @0x0001bdd8,r0l
+  ram:000143d0  mov.b r0l,@(-0x6,er6)
+  ram:000143d4  mov.b @0x0001bdd9,r0l
+  ram:000143da  mov.b r0l,@(-0x5,er6)
+  ram:000143de  mov.l @(-0x8,er6),er0
+  ram:000143e4  mov.l #0x4207a4,er1
+  ram:000143ea  mov.l @er1,er2
+  ram:000143ee  or.l er0,er2
+  ram:000143f2  mov.l er2,@er1
+  ram:000143f6  sub.l er0,er0
+  ram:000143f8  mov.l er0,@(-0x8,er6)
+  ram:000143fe  mov.b @0x0001bdda,r0l
+  ram:00014404  mov.b r0l,@(-0x7,er6)
+  ram:00014408  mov.w @0x0001bddc,r0
+  ram:0001440e  mov.w r0,@(-0x6,er6)
+  ram:00014412  mov.l @(-0x8,er6),er0
+  ram:00014418  mov.l #0x420798,er1
+  ram:0001441e  mov.l @er1,er2
+  ram:00014422  or.l er0,er2
+  ram:00014426  mov.l er2,@er1
+  ram:0001442a  mov.w #0x8,r0
+  ram:0001442e  mov.w r0,@(-0x10,er6)
+  ram:00014432  sub.w r0,r0
+  ram:00014434  mov.w r0,@(-0xe,er6)
+  ram:00014438  mov.w #0x18,r0
+  ram:0001443c  mov.w r0,@(-0x14,er6)
+  ram:00014440  bra 0x000144b2
+  ram:00014442  mov.w @(-0xe,er6),r0
+  ram:00014446  and.w #0x3,r0
+  ram:0001444a  mov.w r0,@(-0x12,er6)
+  ram:0001444e  mov.w @(-0x12,er6),r0
+  ram:00014452  bne 0x0001445c
+  ram:00014454  sub.l er0,er0
+  ram:00014456  mov.l er0,@(-0x8,er6)
+  ram:0001445c  mov.w @(-0xe,er6),r0
+  ram:00014460  extu.l er0
+  ram:00014462  mov.w @(-0x12,er6),r1
+  ram:00014466  extu.l er1
+  ram:00014468  mov.l #0xfffffff8,er2
+  ram:0001446e  add.l er6,er2
+  ram:00014470  add.l er1,er2
+  ram:00014472  mov.b @(0x1bdde,er0),r0l
+  ram:0001447a  mov.b r0l,@er2
+  ram:0001447c  mov.w @(-0x12,er6),r0
+  ram:00014480  cmp.w #0x3,r0
+  ram:00014484  bne 0x000144a8
+  ram:00014486  mov.w @(-0x14,er6),r0
+  ram:0001448a  extu.l er0
+  ram:000144a8  mov.w @(-0xe,er6),r0
+  ram:000144ac  inc.w #1,r0
+  ram:000144ae  mov.w r0,@(-0xe,er6)
+  ram:000144b2  mov.w @(-0xe,er6),r0
+  ram:000144b6  mov.w @(-0x10,er6),r1
+  ram:000144ba  cmp.w r1,r0
+  ram:000144bc  bcs 0x00014442
+  ram:000144be  mov.w @(-0x12,er6),r0
+  ram:000144c2  cmp.w #0x3,r0
+  ram:000144c6  beq 0x000144e0
+  ram:000144c8  mov.w @(-0x14,er6),r0
+  ram:000144cc  extu.l er0
+  ram:000144e0  mov.w #0x10,r0
+  ram:000144e4  mov.w r0,@(-0x10,er6)
+  ram:000144e8  sub.w r0,r0
+  ram:000144ea  mov.w r0,@(-0xe,er6)
+  ram:000144ee  mov.w #0x1e,r0
+  ram:000144f2  mov.w r0,@(-0x14,er6)
+  ram:000144f6  bra 0x00014568
+  ram:000144f8  mov.w @(-0xe,er6),r0
+  ram:000144fc  and.w #0x3,r0
+  ram:00014500  mov.w r0,@(-0x12,er6)
+  ram:00014504  mov.w @(-0x12,er6),r0
+  ram:00014508  bne 0x00014512
+  ram:0001450a  sub.l er0,er0
+  ram:0001450c  mov.l er0,@(-0x8,er6)
+  ram:00014512  mov.w @(-0xe,er6),r0
+  ram:00014516  extu.l er0
+  ram:00014518  mov.w @(-0x12,er6),r1
+  ram:0001451c  extu.l er1
+  ram:0001451e  mov.l #0xfffffff8,er2
+  ram:00014524  add.l er6,er2
+  ram:00014526  add.l er1,er2
+  ram:00014528  mov.b @(0x1bde6,er0),r0l
+  ram:00014530  mov.b r0l,@er2
+  ram:00014532  mov.w @(-0x12,er6),r0
+  ram:00014536  cmp.w #0x3,r0
+  ram:0001453a  bne 0x0001455e
+  ram:0001453c  mov.w @(-0x14,er6),r0
+  ram:00014540  extu.l er0
+  ram:0001455e  mov.w @(-0xe,er6),r0
+  ram:00014562  inc.w #1,r0
+  ram:00014564  mov.w r0,@(-0xe,er6)
+  ram:00014568  mov.w @(-0xe,er6),r0
+  ram:0001456c  mov.w @(-0x10,er6),r1
+  ram:00014570  cmp.w r1,r0
+  ram:00014572  bcs 0x000144f8
+  ram:00014574  mov.w @(-0x12,er6),r0
+  ram:00014578  cmp.w #0x3,r0
+  ram:0001457c  beq 0x00014596
+  ram:0001457e  mov.w @(-0x14,er6),r0
+  ram:00014582  extu.l er0
+  ram:00014596  mov.l #0x42075c,er0
+  ram:0001459c  mov.w #0x4,r1
+  ram:000145a0  bsr 0x000142b6
+  ram:000145a4  mov.l er0,@(-0xc,er6)
+  ram:000145aa  mov.l @(-0xc,er6),er0
+  ram:000145b0  mov.l #0x420758,er1
+  ram:000145b6  mov.l @er1,er2
+  ram:000145ba  or.l er0,er2
+  ram:000145be  mov.l er2,@er1
+  ram:000145c2  mov.l #0x420770,er0
+  ram:000145c8  mov.w #0x5,r1
+  ram:000145cc  bsr 0x000142b6
+  ram:000145d0  mov.l er0,@(-0xc,er6)
+  ram:000145d6  mov.l @(-0xc,er6),er0
+  ram:000145dc  mov.l #0x42076c,er1
+  ram:000145e2  mov.l @er1,er2
+  ram:000145e6  or.l er0,er2
+  ram:000145ea  mov.l er2,@er1
+  ram:000145ee  mov.l #0x420788,er0
+  ram:000145f4  mov.w #0x9,r1
+  ram:000145f8  bsr 0x000142b6
+  ram:000145fc  mov.l er0,@(-0xc,er6)
+  ram:00014602  mov.l @(-0xc,er6),er0
+  ram:00014608  mov.l #0x420784,er1
+  ram:0001460e  mov.l @er1,er2
+  ram:00014612  or.l er0,er2
+  ram:00014616  mov.l er2,@er1
+  ram:0001461a  mov.l #0x4207b0,er0
+  ram:00014620  mov.w #0x5,r1
+  ram:00014624  bsr 0x000142b6
+  ram:00014628  mov.l er0,@(-0xc,er6)
+  ram:0001462e  mov.l @(-0xc,er6),er0
+  ram:00014634  mov.l #0x4207ac,er1
+  ram:0001463a  mov.l @er1,er2
+  ram:0001463e  or.l er0,er2
+  ram:00014642  mov.l er2,@er1
+  ram:00014646  mov.l #0x4207c8,er0
+  ram:0001464c  mov.w #0x6,r1
+  ram:00014650  bsr 0x000142b6
+  ram:00014654  mov.l er0,@(-0xc,er6)
+  ram:0001465a  mov.l @(-0xc,er6),er0
+  ram:00014660  mov.l #0x4207c4,er1
+  ram:00014666  mov.l @er1,er2
+  ram:0001466a  or.l er0,er2
+  ram:0001466e  mov.l er2,@er1
+  ram:00014672  add.l #0x10,er7
+  ram:00014678  pop.l er2
+  ram:0001467c  pop.l er6
+  ram:00014680  rts

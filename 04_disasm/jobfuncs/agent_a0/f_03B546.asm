@@ -1,0 +1,21 @@
+# fn 0x03B546 (callee_move2?) : 20 insns
+0x03B546  mov.w     r6, @-sp
+0x03B548  mov.w     r0, r6
+0x03B54A  jsr       0x02b87c
+0x03B54E  sub.b     r0l, r0l
+0x03B550  mov.b     r0l, @0x449a28
+0x03B556  mov.l     #0x00000064, er0
+0x03B55C  jsr       0x015ffc
+0x03B560  mov.w     @0x449a2c, r0
+0x03B566  mov.w     @0x449a2e, r1
+0x03B56C  sub.w     r1, r0
+0x03B56E  cmp.w     #0x0780, r0
+0x03B572  bcc       0x03b57e
+0x03B574  mov.w     r6, @0x42026c
+0x03B57A  mov.b     #0x01, r0l
+0x03B57C  bt        0x03b58a
+0x03B57E  mov.w     #0x0940, r0
+0x03B582  mov.w     r0, @0x400402
+0x03B588  sub.b     r0l, r0l
+0x03B58A  mov.w     @sp+, r6
+0x03B58C  rts       

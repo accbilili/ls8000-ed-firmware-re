@@ -1,0 +1,75 @@
+0x1000B52A jmp   dword ptr [eax*4 + 0x1000b57c]           reachable=Y owner=0x1000B520 bytes=ff24857cb50010
+0x1002760E jmp   dword ptr [eax*4 + 0x10027840]           reachable=Y owner=0x10027600 bytes=ff248540780210
+0x10027836 call  ecx                                      reachable=Y owner=0x1002780E bytes=ffd1
+0x1009185D jmp   dword ptr [edx + 4]                      reachable=Y owner=0x10091850 bytes=ff6204
+0x100AB42C call  dword ptr [0x100be0a4]                   reachable=Y owner=0x100AB3C9 bytes=ff15a4e00b10
+0x100AB925 jmp   dword ptr [edx*4 + 0x100aba3c]           reachable=Y owner=0x100AB8F0 bytes=ff24953cba0a10
+0x100AB93D jmp   dword ptr [eax*4 + 0x100ab950]           reachable=Y owner=0x100AB92C bytes=ff248550b90a10
+0x100AB944 jmp   dword ptr [ecx*4 + 0x100aba4c]           reachable=Y owner=0x100AB944 bytes=ff248d4cba0a10
+0x100AB94C jmp   dword ptr [ecx*4 + 0x100ab9d0]           reachable=Y owner=0x100AB94C bytes=ff248dd0b90a10
+0x100ABAAB jmp   dword ptr [edx*4 + 0x100abbd8]           reachable=Y owner=0x100ABA8C bytes=ff2495d8bb0a10
+0x100ABAB6 jmp   dword ptr [ecx*4 + 0x100abb88]           reachable=Y owner=0x100ABAB4 bytes=ff248d88bb0a10
+0x100ABAD1 jmp   dword ptr [eax*4 + 0x100abadc]           reachable=Y owner=0x100ABAC0 bytes=ff2485dcba0a10
+0x100ABAD8 jmp   dword ptr [ecx*4 + 0x100abbd8]           reachable=Y owner=0x100ABAD8 bytes=ff248dd8bb0a10
+0x100ABC8B call  dword ptr [0x100be070]                   reachable=Y owner=0x100ABC5D bytes=ff1570e00b10
+0x100ABF0A call  dword ptr [0x100be0ac]                   reachable=Y owner=0x100ABF02 bytes=ff15ace00b10
+0x100AD461 call  dword ptr [0x100d72b0]                   reachable=Y owner=0x100AD437 bytes=ff15b0720d10
+0x100AD47C call  eax                                      reachable=Y owner=0x100AD46F bytes=ffd0
+0x100AD555 jmp   dword ptr [edx*4 + 0x100ad66c]           reachable=Y owner=0x100AD520 bytes=ff24956cd60a10
+0x100AD56D jmp   dword ptr [eax*4 + 0x100ad580]           reachable=Y owner=0x100AD55C bytes=ff248580d50a10
+0x100AD574 jmp   dword ptr [ecx*4 + 0x100ad67c]           reachable=Y owner=0x100AD574 bytes=ff248d7cd60a10
+0x100AD57C jmp   dword ptr [ecx*4 + 0x100ad600]           reachable=Y owner=0x100AD57C bytes=ff248d00d60a10
+0x100AD6DB jmp   dword ptr [edx*4 + 0x100ad808]           reachable=Y owner=0x100AD6BC bytes=ff249508d80a10
+0x100AD6E6 jmp   dword ptr [ecx*4 + 0x100ad7b8]           reachable=Y owner=0x100AD6E4 bytes=ff248db8d70a10
+0x100AD701 jmp   dword ptr [eax*4 + 0x100ad70c]           reachable=Y owner=0x100AD6F0 bytes=ff24850cd70a10
+0x100AD708 jmp   dword ptr [ecx*4 + 0x100ad808]           reachable=Y owner=0x100AD708 bytes=ff248d08d80a10
+0x100AD92A call  dword ptr [0x100be04c]                   reachable=Y owner=0x100AD91D bytes=ff154ce00b10
+0x100AD9D9 call  dword ptr [0x100be048]                   reachable=Y owner=0x100AD9B1 bytes=ff1548e00b10
+0x100ADD86 call  esi                                      reachable=Y owner=0x100ADD47 bytes=ffd6
+0x100ADDE1 call  esi                                      reachable=Y owner=0x100ADD47 bytes=ffd6
+0x100ADDF3 call  dword ptr [0x100be0ac]                   reachable=Y owner=0x100ADD47 bytes=ff15ace00b10
+0x100ADE7E call  dword ptr [0x100be0dc]                   reachable=Y owner=0x100ADE57 bytes=ff15dce00b10
+0x100ADEB7 call  dword ptr [0x100be0a4]                   reachable=Y owner=0x100ADE8C bytes=ff15a4e00b10
+0x100ADED5 call  dword ptr [0x100be0d8]                   reachable=Y owner=0x100ADEC8 bytes=ff15d8e00b10
+0x100ADEEC call  dword ptr [0x100be0ac]                   reachable=Y owner=0x100ADEC8 bytes=ff15ace00b10
+0x100ADF60 call  dword ptr [0x100be0d8]                   reachable=Y owner=0x100ADF26 bytes=ff15d8e00b10
+0x100AEF3C call  dword ptr [0x100be038]                   reachable=Y owner=0x100AEF3A bytes=ff1538e00b10
+0x100AEF4A call  dword ptr [0x100be0c0]                   reachable=Y owner=0x100AEF3A bytes=ff15c0e00b10
+0x100AEF71 call  dword ptr [0x100be0bc]                   reachable=Y owner=0x100AEF3A bytes=ff15bce00b10
+0x100AEF89 call  dword ptr [0x100be0b8]                   reachable=Y owner=0x100AEF3A bytes=ff15b8e00b10
+0x100AEFA0 call  dword ptr [0x100be0e8]                   reachable=Y owner=0x100AEF9F bytes=ff15e8e00b10
+0x100AF4B8 call  dword ptr [0x100be0a4]                   reachable=Y owner=0x100AF498 bytes=ff15a4e00b10
+0x100AF50F call  dword ptr [0x100be0dc]                   reachable=Y owner=0x100AF498 bytes=ff15dce00b10
+0x100AF560 call  dword ptr [0x100be0dc]                   reachable=Y owner=0x100AF549 bytes=ff15dce00b10
+0x100AF58A call  dword ptr [0x100be0f8]                   reachable=Y owner=0x100AF585 bytes=ff15f8e00b10
+0x100AF59A call  dword ptr [0x100be024]                   reachable=Y owner=0x100AF585 bytes=ff1524e00b10
+0x100AF5A8 call  eax                                      reachable=Y owner=0x100AF585 bytes=ffd0
+0x100AF5AE call  dword ptr [0x100be0f4]                   reachable=Y owner=0x100AF585 bytes=ff15f4e00b10
+0x100AF647 call  dword ptr [0x100be100]                   reachable=Y owner=0x100AF62C bytes=ff1500e10b10
+0x100AF64E call  dword ptr [0x100be0fc]                   reachable=Y owner=0x100AF62C bytes=ff15fce00b10
+0x100AF684 call  eax                                      reachable=Y owner=0x100AF67E bytes=ffd0
+0x100AF6B1 call  eax                                      reachable=Y owner=0x100AF694 bytes=ffd0
+0x100AF6D0 call  eax                                      reachable=Y owner=0x100AF694 bytes=ffd0
+0x100AF779 call  dword ptr [0x100be104]                   reachable=Y owner=0x100AF75F bytes=ff1504e10b10
+0x100B2DB8 call  dword ptr [0x100be0a4]                   reachable=Y owner=0x100B2D36 bytes=ff15a4e00b10
+0x100B3E12 call  dword ptr [0x100be030]                   reachable=Y owner=0x100B3D99 bytes=ff1530e00b10
+0x100B3EED call  dword ptr [0x100be138]                   reachable=Y owner=0x100B3ED5 bytes=ff1538e10b10
+0x100B3EF4 call  dword ptr [0x100be12c]                   reachable=Y owner=0x100B3ED5 bytes=ff152ce10b10
+0x100B3F3B call  eax                                      reachable=Y owner=0x100B3F10 bytes=ffd0
+0x100B3F7C call  dword ptr [0x100be0f8]                   reachable=Y owner=0x100B3F59 bytes=ff15f8e00b10
+0x100B3F8C call  dword ptr [0x100be024]                   reachable=Y owner=0x100B3F59 bytes=ff1524e00b10
+0x100B3FAF call  eax                                      reachable=Y owner=0x100B3F59 bytes=ffd0
+0x100B4BD5 call  dword ptr [0x100be0f4]                   reachable=Y owner=0x100B4BCF bytes=ff15f4e00b10
+0x100B777B call  dword ptr [0x100be028]                   reachable=Y owner=0x100B7763 bytes=ff1528e00b10
+0x100B7797 call  esi                                      reachable=Y owner=0x100B7763 bytes=ffd6
+0x100B77A8 call  esi                                      reachable=Y owner=0x100B7763 bytes=ffd6
+0x100B77B5 call  esi                                      reachable=Y owner=0x100B7763 bytes=ffd6
+0x100B77CB call  esi                                      reachable=Y owner=0x100B7763 bytes=ffd6
+0x100B77DC call  esi                                      reachable=Y owner=0x100B7763 bytes=ffd6
+0x100B77EC call  eax                                      reachable=Y owner=0x100B7763 bytes=ffd0
+0x100B77FF call  dword ptr [0x100d8944]                   reachable=Y owner=0x100B7763 bytes=ff1544890d10
+0x100B7831 call  eax                                      reachable=Y owner=0x100B7828 bytes=ffd0
+0x100B7843 call  eax                                      reachable=Y owner=0x100B7828 bytes=ffd0
+0x100B7851 call  dword ptr [0x100d8934]                   reachable=Y owner=0x100B7847 bytes=ff1534890d10
+0x100B8313 call  eax                                      reachable=Y owner=0x100B82E5 bytes=ffd0
+0x100B8363 call  dword ptr [0x100be030]                   reachable=Y owner=0x100B8353 bytes=ff1530e00b10

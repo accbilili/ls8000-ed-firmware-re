@@ -1,0 +1,43 @@
+; Local Windows 11 x64 binding for Nikon SUPER COOLSCAN 8000 ED / 9000 ED.
+; Hardware IDs are taken from Nikon Scan 4.0.3 Nks1394.INF.
+; The kernel driver is supplied and signed by Microsoft through sti.inf.
+
+[Version]
+Signature="$Windows NT$"
+Class=Image
+ClassGUID={6bdd1fc6-810f-11d0-bec7-08002be2092f}
+Provider=%LocalProvider%
+DriverVer=10/04/2026,1.0.0.0
+CatalogFile.NTamd64=Nikon8000-9000-x64.cat
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Manufacturer]
+%NikonStr%=DeviceModels,NTamd64.10.0...22000
+
+[DeviceModels.NTamd64.10.0...22000]
+%DeviceDescLS8000%=NK1394SCN.Install,SBP2\NIKON___&LS-8000_ED______&CMDSETID104D8
+%DeviceDescLS9000%=NK1394SCN.Install,SBP2\NIKON___&LS-9000_ED______&CMDSETID104D8
+
+[NK1394SCN.Install.NT]
+Include=sti.inf
+Needs=STI.SBP2Section
+SubClass=StillImage
+DeviceType=1
+Capabilities=0
+AddReg=NK1394SCN.AddReg
+
+[NK1394SCN.Install.NT.Services]
+Include=sti.inf
+Needs=STI.SBP2Section.Services
+
+[NK1394SCN.AddReg]
+HKR,,HardwareConfig,1,2
+HKR,DeviceData,ICMProfile,1,0,0
+
+[Strings]
+NikonStr="Nikon Corporation"
+LocalProvider="Nikon scanner local x64 package"
+DeviceDescLS8000="Nikon SUPER COOLSCAN 8000 ED"
+DeviceDescLS9000="Nikon SUPER COOLSCAN 9000 ED"

@@ -1,0 +1,23 @@
+﻿{
+    "VerificationDate":  "2026-10-04",
+    "WindowsPowerShellVersion":  "5.1.26100.9549",
+    "InstallerSyntax":  "Passed",
+    "InfCatalogHash":  "Valid",
+    "CatalogCryptographicSignature":  "Passed",
+    "InstallerCryptographicSignature":  "Passed",
+    "HardwareIdsMatchOriginalNikonInf":  true,
+    "PreviouslyInstalled8000DeviceSectionsUnchanged":  true,
+    "Launchers":  "Passed",
+    "SupportedModels":  [
+                            "LS-8000 ED",
+                            "LS-9000 ED"
+                        ],
+    "Target":  "Windows 11 AMD64 / minimum build 22000",
+    "CertificateThumbprint":  "17124401603110A5F91704BB536493C0BE336944",
+    "InstallerAuthenticodeStatusOnBuildMachine":  "UnknownError",
+    "NewCertificateTrustedOnBuildMachine":  false,
+    "JointPackageInstallationExecuted":  false,
+    "UninstallExecuted":  false,
+    "LS9000HardwareTested":  false,
+    "ScanningTested":  false
+}

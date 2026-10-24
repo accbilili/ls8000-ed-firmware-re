@@ -67,8 +67,12 @@ SAMPLES_EXPECTED_EXT = {
     '.bin', '.exe', '.dll', '.md3', '.pdf', '.rom', '.txt', '.md', '.json',
 }
 
+# 驱动包中的签名构件（CAT 目录文件 / CER 证书）为二进制但属预期，
+# 既不作违规告警也不参与文本扫描。
+EXPECTED_ARTIFACT_EXT = {'.cat', '.cer'}
+
 TEXT_EXT = {'.py', '.md', '.txt', '.ps1', '.json', '.csv', '.lst', '.asm',
-            '.yml', '.yaml', '.sh', '.gitignore', ''}
+            '.yml', '.yaml', '.sh', '.cmd', '.bat', '.gitignore', '.inf', ''}
 
 
 def find_root(start):
@@ -98,6 +102,10 @@ def main():
             p = os.path.join(dirpath, f)
             rel = os.path.relpath(p, '.').replace('\\', '/')
             ext = os.path.splitext(f)[1].lower()
+
+            # 驱动签名构件（CAT / CER）为二进制但属预期：不告警、不参与文本扫描
+            if ext in EXPECTED_ARTIFACT_EXT:
+                continue
 
             # samples/ 下的官方固件/驱动/文档原件为刻意收录，见 samples/SOURCES.md
             if rel.startswith('samples/'):

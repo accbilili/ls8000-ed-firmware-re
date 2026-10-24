@@ -1,0 +1,8 @@
+﻿{
+  "Subject": "CN=Local Nikon 8000 ED 9000 ED INF Package",
+  "Thumbprint": "17124401603110A5F91704BB536493C0BE336944",
+  "NotBefore": "2026-10-04T22:13:21+08:00",
+  "NotAfter": "2031-10-04T22:23:21+08:00",
+  "PrivateKeyIncluded": false,
+  "PrivateKeyRemovedAfterSigning": true
+}

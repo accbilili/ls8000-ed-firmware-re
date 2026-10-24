@@ -1,0 +1,100 @@
+﻿Nikon SUPER COOLSCAN 8000 ED / 9000 ED 驱动安装包
+Windows 11 x64 | 本地安装包版本 1.0 | 制作日期 2026-10-04
+
+一、适用范围
+
+支持的扫描仪：
+  Nikon SUPER COOLSCAN 8000 ED（LS-8000 ED）
+  Nikon SUPER COOLSCAN 9000 ED（LS-9000 ED）
+
+系统：Intel/AMD x64 版 Windows 11。
+连接：IEEE 1394 / FireWire。电脑需要能正常工作的 1394 控制器。
+
+这是基于 Nikon 原厂硬件 ID 制作的本地设备绑定包。内核驱动由 Windows
+自带的 scsiscan.sys 提供，使用微软已有的签名。本包不是 Nikon 发布的
+新版官方驱动；不包含 Nikon Scan 软件、扫描仪固件或 1394 控制器驱动。
+
+二、安装
+
+1. 将 ZIP 完整解压到桌面等可写入的位置。请勿在压缩包内直接运行。
+2. 将扫描仪连接到电脑并打开电源。
+3. 双击“安装.cmd”。Windows 弹出管理员授权提示时点击“是”。
+4. 等待安装窗口显示结果。问题代码 0 表示设备已正常启动。
+5. 打开 Nikon Scan，核对识别、预览和扫描。
+
+也可以先安装，再连接扫描仪。未连接时，安装程序会明确提示驱动已加入
+驱动库，但未发现已连接设备。扫描仪通电、连接后由 Windows 尝试匹配。
+
+安装程序不会自动重启。只有 Windows 返回需要重启时，窗口才会提示。
+
+如果使用浏览器下载后 Windows 标记了文件来源，请核对来源后在 ZIP
+属性中解除锁定，再解压。默认双击入口会自动请求管理员权限。
+
+三、签名与系统变更
+
+为了让 Windows 接受修改后的 INF，本包带有独立的本地代码签名证书。
+安装时，该公共证书会加入本机“受信任的根证书颁发机构”和“受信任的
+发布者”证书存储，用于验证本包。证书名称：
+  Local Nikon 8000 ED 9000 ED INF Package
+证书指纹：
+  17124401603110A5F91704BB536493C0BE336944
+
+签名证书的私钥不随包提供，制作完成后删除。安装程序使用 Windows
+自带的 PowerShell、PnPUtil 和扫描驱动，不下载组件或更改驱动签名策略。
+
+四、卸载
+
+双击“卸载.cmd”，允许管理员提升。它根据本包 INF 名称查询实际的
+oem*.inf 发布名称，再卸载本包；卸载完成后移除本包的两份公共信任证书。
+如果 Windows 拒绝卸载，程序会报告错误并保留证书。
+
+卸载范围是本包。电脑上此前安装的 LS-8000 单机包或其他 Nikon 驱动
+保留，Windows 可能重新选择那些已有驱动。1394 控制器驱动也保留。
+
+五、日志和设备状态
+
+安装与卸载日志保存在解压目录的 Logs 文件夹：
+  Install.log           安装输出
+  Install-result.json   驱动库发布名称、已连接设备及其问题代码
+  Uninstall.log         卸载输出
+
+设备管理器中正常的显示名称为：
+  Nikon SUPER COOLSCAN 8000 ED
+  Nikon SUPER COOLSCAN 9000 ED
+
+本包 INF：
+  Driver\Nikon8000-9000-x64.inf
+
+六、验证范围与已知事项
+
+LS-8000：此前的单机安装包已验证过设备启动、问题代码 0，以及微软
+scsiscan 驱动服务运行。本联合包沿用相同的设备安装配置并增加 LS-9000
+硬件 ID，但本次制作没有重新安装或启动扫描。
+
+LS-9000：硬件 ID 已与 Nikon 原厂 Nks1394.INF 核对，尚未真机验证。
+
+本包没有复制原厂 32 位 NKScnUSD.dll，也没有配置原厂 USDClass/COM
+注册。它提供 Windows 扫描设备绑定；STI/USD 应用集成需独立验证。
+不能据此声称 Windows WIA、其他扫描应用或 Nikon Scan 的全部功能
+已经可用。
+
+现有本机记录包含 Nikon Scan.exe、LS9000.md3 的访问冲突。本包的制作
+没有验证这些应用崩溃已经解决。设备状态正常不等于扫描、保存或颜色
+处理全流程均已通过。
+
+七、包内文件核对
+
+SHA256SUMS.txt 列出包内各文件的 SHA256。只复制 INF 会丢失所需的
+CAT 签名文件和公共证书，请保留完整目录结构。
+
+八、实现依据
+
+硬件 ID 来自 Nikon Scan 4.0.3 原厂 Nks1394.INF 的 LS-8000/LS-9000 条目。
+Windows 安装段使用本机 sti.inf 的 STI.SBP2Section 及 Services 段。
+
+Microsoft：INF 平台声明
+https://learn.microsoft.com/en-us/windows-hardware/drivers/install/inf-manufacturer-section
+Microsoft：PnPUtil 安装和卸载
+https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/pnputil-command-syntax
+Microsoft：受信任发布者证书存储
+https://learn.microsoft.com/en-us/windows-hardware/drivers/install/trusted-publishers-certificate-store

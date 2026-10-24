@@ -1,7 +1,7 @@
 # LS8000 固件逆向 —— 文件校验清单（发布版）
 # 格式: SHA256  字节数  相对路径
 # 包根: <REPO_ROOT>  (仓库 ls8000-ed-firmware-re)
-# 文件数: 712   总字节: 13446809
+# 文件数: 723   总字节: 13480715
 # 注意: 脱敏改写后重新生成，与原交付包 MANIFEST 的哈希不可直接比对
 #       已排除目录: .git, .github, __pycache__
 
@@ -308,7 +308,7 @@ ccbd9aca2e204c0df89ec472804188b2a97d14a56bfabf2006af11aa6930ef05        6586  DI
 3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986       35149  LICENSE
 28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5       20138  LICENSE-DOCS
 c3e62300e6035a5986fbe0c09c9fd3579d3a7720737eef5f346fc4a0700d4553        7035  NOTICE
-4b97b14edf17739ff9c379dea0ab326c0273ae928dd16d41d5e50f2adcdb9520       18093  README.md
+2e3ac9c78b8eae1faa979c6d10724d178557958702792a556545a602fb2231c1       23584  README.md
 9e56dc8157b0e72725ce1af2118d6bb865ef57b27fad0d12d6db0c13bed94f4f        5129  README_实机安全须知.md
 32b263e625c7bf80614399ae4966f104ecebe345a25bb1f1f89a87f130c4cf8c        3515  bootstrap.ps1
 9f5733094739d14a5f7a826ed8718dda006e698fc9a9e5d6b73a47dee3e09f5d        3949  bootstrap.sh
@@ -374,7 +374,7 @@ fd7731d624eca8956b6acea1ee4c15cb1f12b1d5a6e9f55d6a35e2c3c859d1c8        4473  to
 1598014b17680e317fbc898f258a402f715730dd37ed9255a94175e58ce8e52e        3298  tools/legacy/scan_ptr_tables.py
 f3de40ce29ccb68dfb2c01d82d9ead28ff765649e19529d70e56a53efb2bf908       15960  tools/legacy/tail_resolve.py
 7e7cfc84e0599bbe3a59e0e0ae41aa67bcc795f6b9197d13eea06d1b1e691608        4210  tools/paths.py
-406604c08b459f253923aff144620f024281694e4f738ae36f3e3811c469e012        6470  tools/publish_check.py
+49a2f308e58971aadc34d3bdaf0e3d3df8aec776847f88c724d81e579840eba6        6858  tools/publish_check.py
 8c45b3cc51065a9c4caf5c3f9f34e1ed432da14ba02124a95e065fd5ac6c9f87       11069  tools/scripts/_pkgtool/_backup_preR24/ps_probe.ps1
 29417401e22e079e4b3fcc78ed93e0fe89b375972196dfee78a9e495ba43416e        6941  tools/scripts/_pkgtool/_backup_preR24/ps_probe5.ps1
 6f8bed00f8d7251da445541934e54e10a329ff0b41c4c9772a186676c0aed2b3        9092  tools/scripts/_pkgtool/_backup_preR24/ps_readonly.ps1
@@ -717,3 +717,14 @@ c3ea95c38e425c311ce1053b110b2f16192f45f7d669eeb66ba9c930c6b31242        9629  to
 5de32d98d98cc172ad109b0e6b6031abcc731781ab7a5a31109f46e4149cfb28        8207  tools/sim_verify_formulas.py
 bf557b9d3bd5ba80a15f063df796e5215c491f460ef1c3c55de7241d7b2bdc63        5905  tools/verify_decoder_fix.py
 e6eb5affd6b849362fb24faead6dd1f9dbb1651a072879d8a121fba526dd005b        4569  tools/verify_package.py
+b2a66702fecd04609dfe3946d2246dc3d80583807dc72f2362552f13219b50f6        1838  win11-driver/Driver/Nikon8000-9000-x64.cat
+8ac3dc6ddb5d026323c3f4ef36280fdfee54f85d49fac2267fd6e024729a2a6c        1217  win11-driver/Driver/Nikon8000-9000-x64.inf
+832e90d11bca443d15e8a0f6a1f9e08d6a9e8c1b72b07ac9cd8cce0d6f31ffdb         824  win11-driver/Nikon8000-9000-LocalSigner.cer
+e7d6df1273d58fd4213642128f1bc3d7246f7afebd326ce62af2d6a650996e2f        6536  win11-driver/README.md
+f09d8617dbe0cda19251d9f2d13b67aab2b9e83d5042e1a7ecabb987bf861c72         782  win11-driver/SHA256SUMS.txt
+8e82a39ffb22c8177e1013a7cdacd650b78dfaf1ca374aa240941d49420248a6       10406  win11-driver/Setup.ps1
+045a136bbe1bc73b86e9135a5eb3082b0f4d15b394b3e6b663e8cef16b9f7a8c        4654  win11-driver/使用说明.txt
+2db31c7fff75c9001d0ff8ff744dea2a30b04691265d18909da71d938f709aea         266  win11-driver/卸载.cmd
+d42678dac8614e8ba95b33f5a73865435973e9728ab48afa69eded84b36bd954         262  win11-driver/安装.cmd
+f87d4d4b2f0666332e51e95513260a169911bf0c7fcc18296a555a3e306b463d         950  win11-driver/核对结果.json
+fef3a82fc34ef36dcb4a81eb6263e5229fef0c5fd1fdc575263d282bd110a5b7         292  win11-driver/签名信息.json

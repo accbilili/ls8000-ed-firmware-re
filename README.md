@@ -104,8 +104,6 @@ probably the part most likely to actually help someone.
 ### 关于作者：我是新手，这是 AI 辅助的产物
 
 > **中文**  
-> 我必须在一开始就说清楚：**我是逆向工程和编程方面的新手（纯小白）**，对汇编语言、Windows 驱动、  
-> 固件体系结构的理解都很浅，**写不了真正的产品级代码**。
 >
 > 这个仓库里**几乎没有一行代码是我"从零写出来"的**。全部内容是在 **AI 助手辅助**下完成的——  
 > 方式是**一轮一轮提问 → AI 给出假设 → 我用脚本/模拟器去跑 → 推翻 → 再提问**，这样迭代累积出来的。  
@@ -115,8 +113,6 @@ probably the part most likely to actually help someone.
 > 是那些能被脚本重复跑出来、且脚本就在本仓库里的部分。
 >
 > **English**  
-> I am **not** a professional reverse engineer or programmer. My understanding of assembly,  
-> Windows drivers and firmware architecture is shallow, and I cannot write production-grade code.
 >
 > **Almost no line here was written from scratch by me.** Everything was produced with the assistance of an  
 > **AI assistant**, through many rounds of: ask → AI proposes → I run a script/simulator to test →  

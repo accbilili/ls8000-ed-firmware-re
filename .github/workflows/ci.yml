@@ -67,9 +67,27 @@ jobs:
       - name: ④ 三公式模拟验证 / Three formulas (simulator)
         run: python tools/sim_verify_formulas.py
 
-      - name: ⑤ 仓库结构快照 / Structure snapshot
+      - name: ⑤ 结构快照 / Structure snapshot
         run: |
-          echo "文件总数 / total files: $(find . -type f -not -path './.git/*' | wc -l)"
-          echo "二进制数 / binaries   : $(find . -type f -not -path './.git/*' \
-               \( -name '*.bin' -o -name '*.rom' -o -name '*.exe' -o -name '*.sys' -o -name '*.dmp' \) | wc -l)"
-          echo "总字节 / total bytes  : $(du -sb --exclude=.git . | cut -f1)"
+          echo "文件总数 / total files : $(find . -type f -not -path './.git/*' | wc -l)"
+          echo "总字节 / total bytes   : $(du -sb --exclude=samples --exclude=.git . | cut -f1)  (不含 samples)"
+          echo "samples 字节 / samples : $(du -sb samples | cut -f1)"
+          echo ""
+          echo "samples/ 之外不应有任何二进制 / no binaries outside samples/:"
+          OUTSIDE=$(find . -type f -not -path './.git/*' -not -path './samples/*' \
+                    \( -name '*.bin' -o -name '*.rom' -o -name '*.exe' -o -name '*.sys' \
+                       -o -name '*.dll' -o -name '*.dmp' -o -name '*.pdf' \) | wc -l)
+          echo "  命中 hit = $OUTSIDE"
+          test "$OUTSIDE" -eq 0 || { echo "✗ samples/ 之外出现二进制"; exit 1; }
+
+      - name: ⑥ 样本来源验证 / Sample provenance verify
+        run: |
+          python - <<'PY'
+          up = open('samples/official_package/SUPERCOOLSCAN8000ED_111.exe','rb').read()
+          fd = open('samples/FIRMDATA.bin','rb').read()
+          off = up.find(fd)
+          assert off >= 0, 'FIRMDATA not found inside official installer'
+          print('✓ 固件资源嵌于官方安装程序, offset = %s' % hex(off))
+          assert off == 0x17588, 'unexpected offset -> sample changed'
+          print('✓ 偏移与 SOURCES.md 记录一致')
+          PY

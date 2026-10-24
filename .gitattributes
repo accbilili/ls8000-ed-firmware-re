@@ -35,3 +35,5 @@
 *.sys   binary
 *.exe   binary
 *.dll   binary
+*.md3   binary
+*.pdf   binary

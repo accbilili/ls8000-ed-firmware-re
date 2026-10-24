@@ -1,12 +1,12 @@
 # LS8000 固件逆向 —— 文件校验清单（发布版）
 # 格式: SHA256  字节数  相对路径
 # 包根: <REPO_ROOT>  (仓库 ls8000-ed-firmware-re)
-# 文件数: 684   总字节: 5914148
+# 文件数: 712   总字节: 13446809
 # 注意: 脱敏改写后重新生成，与原交付包 MANIFEST 的哈希不可直接比对
-#       已排除目录: .git, .github, __pycache__, samples
+#       已排除目录: .git, .github, __pycache__
 
-e7de68c48744145e338f39439c533e59de25d8455accd3ab3df86d35d49ecea2        1548  .gitattributes
-c03c8a27d500d1ebc202dac778faddd10f395da27a4b11817879672134119dca        1350  .gitignore
+8d3636683c49c621422218909e63dc0494a27d76150d8135eed048ff7160ab70        1578  .gitattributes
+9facf6b90752873d709b5083e0fd48b77c350e105f54b95fb60fecd2da7cf7ee        1924  .gitignore
 8942ab71d2fff6b9eae166c292f9a534b8a1111918cee265275f5c0dd67c4701       16327  00_README.md
 bbfe97faafb64d0441946ab642264d11beefa9234f74b85e499797a2a280668a       13308  01_docs/HANDOFF.md
 a7799360f9ab2298302cfb7927500e00390a263872ed03c176031765dd7edd9b       25429  01_docs/LS8000-全案总结.md
@@ -304,16 +304,44 @@ ded0d1093985b5f6c86d16e93c7c1d47a6492c50de424f064663301f842c3e47        6466  07
 01fa63c7ac28417c108ee803001e2e7b91dff1d62bf9f3d3438427b9950e0ec7         253  07_data/sites.json
 a2b747b8ddeb6a99f6cc776afa480cbc4f945abeb2780b96ca778dbeb7960c52       15501  07_data/table_01914A.csv
 5f3829fb6bfb2a56730c34ff323bc81be1137c22750e7f2b56401bb01256d580       21508  07_data/table_03E390.json
-e214e8ddc527cb6f95373babaabd9602eaa935e0db04a6b9220b6d416a58dda7        5694  DISCLAIMER.md
+ccbd9aca2e204c0df89ec472804188b2a97d14a56bfabf2006af11aa6930ef05        6586  DISCLAIMER.md
 3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986       35149  LICENSE
 28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5       20138  LICENSE-DOCS
-a16b1c494edf2ebb7f40f816656eaf0b8a9a7b02bcc8a6a127fc0abd2ec67584        5661  NOTICE
-dfb167874ca45ba9171ee4e3677cf37e5b5586af8bf3864a2fa6ea778d54a507       15881  README.md
+c3e62300e6035a5986fbe0c09c9fd3579d3a7720737eef5f346fc4a0700d4553        7035  NOTICE
+4b97b14edf17739ff9c379dea0ab326c0273ae928dd16d41d5e50f2adcdb9520       18093  README.md
 9e56dc8157b0e72725ce1af2118d6bb865ef57b27fad0d12d6db0c13bed94f4f        5129  README_实机安全须知.md
 32b263e625c7bf80614399ae4966f104ecebe345a25bb1f1f89a87f130c4cf8c        3515  bootstrap.ps1
 9f5733094739d14a5f7a826ed8718dda006e698fc9a9e5d6b73a47dee3e09f5d        3949  bootstrap.sh
-7e7cfc84e0599bbe3a59e0e0ae41aa67bcc795f6b9197d13eea06d1b1e691608        4210  paths.py
-fbe90b51505d47a340e6abe36a73933c0923847182334b2c4f92d5fd3199ada1        3735  samples_manifest.txt
+b9e04033e05929e7a375b9a40ad665afbe3d4a12905d42585428f48fb4ef9566        5271  paths.py
+65e2559e795fc2392a107b5a235b6235d64aac819c3dcfee7ea08b8e201a3563       99865  samples/FIRMDATA.bin
+fd1f17c594490ad0034ff2b80d4c8eaf1eb93721eaff1a5131e87faca358be85      228345  samples/LS8000_111_ROM.bin
+2117e671e394bfb5bf407988bb6d28064fd48807580f04bccb4468bdc7790a72       65536  samples/LS8000_bootblock.bin
+015b512723d52c8e8cf89c50fb1de7179c64f8b0edcd57526b12faf002320bc8      524288  samples/LS8000_full_512K.bin
+de80ddedf34af9c48a0c0b2a04f2cf15ac36232927bbd5337f145b6c820de84f        6322  samples/SOURCES.md
+1ef6f0f6ad0555c4467382d4413ef368ea8a40546a59f12d694600eb56a22751     2154740  samples/cfg_v4.json
+fd1f17c594490ad0034ff2b80d4c8eaf1eb93721eaff1a5131e87faca358be85      228345  samples/decoded.bin
+ae86eb26f24ae65106af67847df3822a6da0fe9c74ff5ec31967d4ab7c8f2663      286720  samples/driver/ICEDLL.dll
+5aefaaf28a31f72097d6efebf312a36ab5369ad4e3c7b34a2a1e023d3ddcd32b      352256  samples/driver/ICENKNL1.dll
+674236caddc6bd7ff92f2d2c7078f26d71b71c87bfa0fe9b2175807b2d71df5c      442368  samples/driver/ICENKNX2.dll
+467aa9abb59b7635332443d05a2819f3823ad14d7900d41ca375025c2b0eacac      958464  samples/driver/LS8000.md3
+b7e8d1696d6441892d6e4f13a686671a2215221bb9709cb8c95cf0430d585df5       86016  samples/driver/NKDSBP2.dll
+4aa05d2ae83ab1c2f422eff4a1f08a822cb626a5a76491a0bf797c5dcbd44cce       90112  samples/driver/NKDUSCAN.dll
+8b634a16c33172205bd197ae1ba68ab5aa4a583d2feac316864a5eda76fcfd97       47659  samples/official_package/LS8000fw111.pdf
+e9afaa52fee60af3eab49ba80a1158a7054f3dcba8bbe11758c088a8c886ae58        2389  samples/official_package/ReadMe.txt
+16932eda980c865ddf602e571bce72c0ab7ce7faebe8cf1b046d13be10c3c9d4      196608  samples/official_package/SUPERCOOLSCAN8000ED_111.exe
+ac5f67703a1063925dd5972b6d89e62aaefd331deeff55c51afe6b3131caa1a6      194560  samples/other/COOLSCAN_417.EXE
+43bd161d1e64039bea2fc24a43367d5980394d1660a9c33bb2e9c9dd7062cff3        9226  samples/other/COOLSCAN_417.EXE.firmware.bin
+ac5f67703a1063925dd5972b6d89e62aaefd331deeff55c51afe6b3131caa1a6      194560  samples/other/COOLSCAN_691.EXE
+43bd161d1e64039bea2fc24a43367d5980394d1660a9c33bb2e9c9dd7062cff3        9226  samples/other/COOLSCAN_691.EXE.firmware.bin
+6d062210ee7e20ed91f523d801a55a6914eb240a2536dfe47e004e79baf06532      194560  samples/other/LS200011_512.EXE
+61a7188b33748c23adcc366f3d5b6ab33c22c79bff6e8d02e6e7e1e55abd22e9      262144  samples/other/LS200011_512.EXE.firmware.bin
+6d062210ee7e20ed91f523d801a55a6914eb240a2536dfe47e004e79baf06532      194560  samples/other/LS200011_786.EXE
+61a7188b33748c23adcc366f3d5b6ab33c22c79bff6e8d02e6e7e1e55abd22e9      262144  samples/other/LS200011_786.EXE.firmware.bin
+8ffa77d23cc98506530142aa6d91427b9bab11c8cb4f521b692f80bbd386877e       92176  samples/other/LS2000_FIRMDATA.bin
+5008f3ce9546355c6f865df743ce2770b97295d52f533097a5a40173e7e2ed8b      183750  samples/other/LS2000_ROM.bin
+274870fee6fe367a3fa8ea2ac2628a4135f019e8bbe9f4345b586d8adcef5f73      152992  samples/other/LS2000_ROM_decoded.bin
+82410c3dea3bcadc3209896b129911feedc02126dc30ba1838b0df671f8d7542        5393  samples/other/REPORT_LS2000_FIRMDATA.md
+0c190d186ed6f88b5eb1cb7ce4a2d94b39fec181a4d189d24df85d70702caa93        4292  samples_manifest.txt
 758a1da953fe9a7286b8aa2d72f9c8260c1625e04b88cfa0a65f6d051ca5276d        4901  tools/apply_verdict_fixes.py
 e9db28d89fd573dfec28edb177b7b48e5a6f9760995c584e387dffbd57947149       31288  tools/build_package.py
 d1d56babaa7b90216f89990b11c75163cb8005068434dc28f8c1e9921c49d396       11322  tools/build_prior_index.py
@@ -346,7 +374,7 @@ fd7731d624eca8956b6acea1ee4c15cb1f12b1d5a6e9f55d6a35e2c3c859d1c8        4473  to
 1598014b17680e317fbc898f258a402f715730dd37ed9255a94175e58ce8e52e        3298  tools/legacy/scan_ptr_tables.py
 f3de40ce29ccb68dfb2c01d82d9ead28ff765649e19529d70e56a53efb2bf908       15960  tools/legacy/tail_resolve.py
 7e7cfc84e0599bbe3a59e0e0ae41aa67bcc795f6b9197d13eea06d1b1e691608        4210  tools/paths.py
-929fccf192e1c8202a2d3c7b22e1292370ce94a0c92f6adf0ddcf2f833e8134f        5919  tools/publish_check.py
+406604c08b459f253923aff144620f024281694e4f738ae36f3e3811c469e012        6470  tools/publish_check.py
 8c45b3cc51065a9c4caf5c3f9f34e1ed432da14ba02124a95e065fd5ac6c9f87       11069  tools/scripts/_pkgtool/_backup_preR24/ps_probe.ps1
 29417401e22e079e4b3fcc78ed93e0fe89b375972196dfee78a9e495ba43416e        6941  tools/scripts/_pkgtool/_backup_preR24/ps_probe5.ps1
 6f8bed00f8d7251da445541934e54e10a329ff0b41c4c9772a186676c0aed2b3        9092  tools/scripts/_pkgtool/_backup_preR24/ps_readonly.ps1
@@ -688,4 +716,4 @@ c3ea95c38e425c311ce1053b110b2f16192f45f7d669eeb66ba9c930c6b31242        9629  to
 3d0808ffd9699349fe676834f4d73dfebca038a39b4431b6227da22b2393723a        2566  tools/scripts/watcher.py
 5de32d98d98cc172ad109b0e6b6031abcc731781ab7a5a31109f46e4149cfb28        8207  tools/sim_verify_formulas.py
 bf557b9d3bd5ba80a15f063df796e5215c491f460ef1c3c55de7241d7b2bdc63        5905  tools/verify_decoder_fix.py
-5791a7a98c2f65035183af3fe0201d02689358544d359fd6024b9abea2769df9        4483  tools/verify_package.py
+e6eb5affd6b849362fb24faead6dd1f9dbb1651a072879d8a121fba526dd005b        4569  tools/verify_package.py

@@ -89,16 +89,32 @@ While the root cause is unknown, the command whitelist **must remain frozen**.
 
 ---
 
-## 3. 固件持有合法性 / Legal compliance
+## 3. 关于 samples/ 与固件来源 / Sample provenance & legal compliance
 
-本仓库**不提供**固件或驱动。请**仅**从你合法拥有的设备中提取。
+`samples/` 中的固件来自 **Nikon 官方公开发布的固件更新软件包**
+（SUPER COOLSCAN 8000 ED Ver. 1.11，随附官方 ReadMe 标注 2002-12-26）。
+来源的三层可复现验证方法记录于 [`samples/SOURCES.md`](samples/SOURCES.md)，
+任何人都可以自行核实，毋须信任本项目的陈述。
 
-自行提取固件时，请注意遵守所在地法律中关于技术措施、
-软件逆向、以及著作权合理使用的相关规定。
+The firmware in `samples/` originates from Nikon's publicly distributed firmware
+update package (Ver. 1.11, official ReadMe dated 2002-12-26). `samples/SOURCES.md`
+documents three reproducible verification steps anyone can run independently.
 
-This repository provides **no** firmware or drivers. Extract them **only** from equipment
-you lawfully own, and comply with the laws of your jurisdiction regarding technological
-protection measures, reverse engineering, and copyright exceptions.
+**仍需使用者自行遵守所在地法律**：
+
+Users remain responsible for compliance with their local laws:
+
+- 各国对软件逆向、技术措施规避、以及著作权例外的规定不同，
+  请在你的司法辖区内自行判断使用的合法性
+- 本仓库**不涉及**任何需登录、付费或非公开渠道才能取得的固件
+- `samples/other/` 下的其它机型固件仅供格式交叉参考
+
+Regulations on reverse engineering, circumvention of technological measures and
+copyright exceptions vary by jurisdiction. Verify legality where you are.
+This repository includes no firmware obtainable only via login, payment or
+non-public channels.
+
+> 若你是权利持有人并认为本仓库内容不当，请提交 Issue，作者会配合处理。
 
 ---
 

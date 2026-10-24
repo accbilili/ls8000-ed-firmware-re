@@ -3,9 +3,10 @@
 **Nikon LS-8000 ED Firmware Reverse Engineering — Toolkit & Analysis Notes**
 
 [![CI](https://github.com/accbilili/ls8000-ed-firmware-re/actions/workflows/ci.yml/badge.svg)](https://github.com/accbilili/ls8000-ed-firmware-re/actions/workflows/ci.yml)
-![Files](https://img.shields.io/badge/files-677-blue)
-![Size](https://img.shields.io/badge/size-5.9MB-blue)
-![Binary](https://img.shields.io/badge/firmware%20binaries-0-brightgreen)
+![Files](https://img.shields.io/badge/files-714-blue)
+![Size](https://img.shields.io/badge/size-12.9MB-blue)
+![Samples](https://img.shields.io/badge/samples-included-green)
+![Provenance](https://img.shields.io/badge/provenance-official%20Nikon%20updater-brightgreen)
 ![License](https://img.shields.io/badge/code-GPL--3.0-blue)
 ![Docs](https://img.shields.io/badge/docs-CC%20BY--SA%204.0-lightgrey)
 ![Status](https://img.shields.io/badge/status-personal%20study-orange)
@@ -70,9 +71,13 @@ python tools/sim_verify_formulas.py
 > **This is an unofficial personal study project. It is not affiliated with, authorized by,
 > endorsed by, or supported by Nikon Corporation in any way.**
 >
-> **本仓库不包含、也不会分发任何 Nikon 固件二进制、驱动程序、ISO 镜像或原始扫描样本。**
-> 仓库 677 个文件**全部是纯文本**（`.md` / `.py` / `.asm` / `.txt` / `.json` / `.csv` / `.ps1`），
-> **二进制文件数量为 0**。ROM 镜像需你自行从自己拥有的设备中提取。
+> **`samples/` 收录了 Nikon 官方公开发布的固件更新软件包及其中的 ROM 镜像**——
+> 即尼康自己提供给用户、用于升级扫描仪固件的那份安装程序（Ver. 1.11，2002-12-26 发布）。
+> 这不是泄露件或内部渠道，来源已通过**三层可复现方法**验证，
+> 任何人都能自行核实，详见 [`samples/SOURCES.md`](samples/SOURCES.md)。
+>
+> 分析本体仍以纯文本为主：`.md` / `.py` / `.asm` / `.txt` / `.json` / `.csv` / `.ps1`。
+> 本仓库**不涉及**任何需登录、付费或非公开渠道才能取得的固件。
 >
 > 详见 [`NOTICE`](NOTICE) 与 [`DISCLAIMER.md`](DISCLAIMER.md)。
 
@@ -101,10 +106,17 @@ ioctl surface.
 
 **这不是 / What this is NOT**
 
-- ❌ 不是固件下载站，不提供任何 ROM / 驱动二进制
+- ❌ 不是官方产物：与 Nikon 无关联，未获授权（见 [`NOTICE`](NOTICE)）
 - ❌ 不是可用替代品：没有开源驱动、不能替代官方软件、不提供可刷写镜像
 - ❌ 不是完整逆向：结论覆盖 ROM 的一小部分，大量区域仍未分析
 - ❌ 不是权威资料：见开头关于作者能力与 AI 辅助的说明
+- ⚠️ `samples/other/` 下的 LS-2000 等**其它机型**固件仅供格式交叉参考，与本项目主题无关
+
+> 关于样本完整性 On sample integrity：`samples/` 收录的是**完整未改动的官方发布原件**，
+> 而非改造过的或来源不明的镜像。所有文件的 SHA256 均登记在 `MANIFEST.txt`，
+> 可用 `python tools/verify_package.py` 一键核对是否被改动。
+> The samples are complete, unmodified official originals — not altered or
+> unattributable dumps. Every SHA256 is recorded in MANIFEST.txt.
 
 ---
 
@@ -128,6 +140,25 @@ Directories keep their original workspace numbering so they match the path refer
 | `tools/` | 12 | 核心工具 | Core tools (see below) |
 | `tools/scripts/` | 339 | 一次性分析脚本 | One-off analysis scripts |
 | `tools/legacy/` | 23 | 早期探索脚本 | Early exploratory scripts |
+| **`samples/`** | **27** | **固件样本 + 官方安装包原件** | **Firmware samples + official updater** |
+
+`samples/` 结构 / layout：
+
+```
+samples/
+├── LS8000_111_ROM.bin            228,345 B  ← 逆向主对象（Ver. 1.11）
+├── LS8000_bootblock.bin           65,536 B  引导块
+├── LS8000_full_512K.bin          524,288 B  整机全镜像
+├── FIRMDATA.bin                   99,865 B  updater 内嵌资源
+├── decoded.bin                   228,345 B  与 ROM 同哈希（历史命名）
+├── SOURCES.md                               来源证明与三层验证方法
+├── official_package/                        官方发布包原件（逐字节未改动）
+│   ├── SUPERCOOLSCAN8000ED_111.exe 196,608 B
+│   ├── ReadMe.txt                    2,389 B
+│   └── LS8000fw111.pdf             47,659 B
+├── driver/                              6 件 Windows 驱动组件
+└── other/                              13 件 其它机型与更新工具
+```
 
 **核心工具 / Core tools**（`tools/`）
 
@@ -154,14 +185,19 @@ Old references to `03_analysis/` and `02_analysis/` point to pre-reorganization 
 ### 前置条件 / Prerequisites
 
 - Python **3.9+**（纯标准库，无需 pip install；已在 64 位 Python 3.13 实测通过）
-- **样本需自备**：固件 ROM 不包含在本仓库。请从你**自己拥有**的设备中提取，然后设置环境变量：
+- **样本已随仓库提供，clone 即可运行** 🎉 —— `samples/` 目录含全部分析用 ROM 镜像与官方安装包原件，
+  来源与校验方法见 [`samples/SOURCES.md`](samples/SOURCES.md)
+
+Samples ship with the repo — just clone and run. Provenance: `samples/SOURCES.md`.
+
+如果你希望改用自己持有的样本（例如别的固件版本），可指向自己的目录：
 
 ```bash
 export LS8000_SAMPLE_ROOT=/path/to/your/samples      # Linux / macOS / Git Bash
 $env:LS8000_SAMPLE_ROOT = "D:\path\to\your\samples"  # Windows PowerShell
 ```
 
-- 用 `samples_manifest.txt` 中的 **SHA256** 核对你的样本版本是否与分析所用一致（防止张冠李戴）
+- 用 `samples_manifest.txt` 中的 **SHA256** 核对样本版本是否与分析所用一致（防止张冠李戴）
 - 引导脚本见 [`bootstrap.sh`](bootstrap.sh) / [`bootstrap.ps1`](bootstrap.ps1)
 
 ### 复现命令 / Reproduce

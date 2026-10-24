@@ -1,13 +1,22 @@
-# LS8000 固件逆向 —— 只读样本登记表
+# LS8000 固件逆向 —— 样本登记表
 #
-# 【重要】本包 **不包含** 原始样本文件。以下仅登记其路径、字节数与 SHA256，
-#              便于第三方核对分析所依据的样本是否一致（防止张冠李戴）。
+# 【现状】本仓库的 samples/ 目录**已随附**分析所用的原始样本文件，
+#         clone 下来即可直接运行全部验证脚本，无需另行获取。
+#         来源已通过三层可复现方法验证，见 samples/SOURCES.md。
 #
-# 获取方式（二选一）：
-#   A. 直接从下表路径取用原样本（推荐，保持原始来源）
-#   B. 复制到一个目录后，用环境变量指定：
-#        set LS8000_SAMPLE_ROOT=<你的样本目录>
-#      然后运行 python tools/paths.py 自检。
+# 本表登记各样本的路径、字节数与 SHA256，用途：
+#   1) 第三方核对所持有的样本是否与本项目分析所用一致（防止张冠李戴）
+#   2) tools/verify_package.py 据此做完整性校验
+#   3) 任何人可独立复算，确认样本未被改动
+#
+# 若你希望改用自己持有的其它版本样本：
+#     export LS8000_SAMPLE_ROOT=<你的样本目录>      # Linux / macOS / Git Bash
+#     set LS8000_SAMPLE_ROOT=<你的样本目录>          # Windows
+#   然后运行 python paths.py 自检。
+#
+# 【重要】二进制的字节完整性由 .gitattributes 的 `* -text` 锁定，
+#         clone 后与原始文件逐字节一致，可用 tools/verify_package.py 核对。
+#         来源证明与三层验证方法见 samples/SOURCES.md。
 #
 # 样本间关系（已实测）：
 #   - LS8000_full_512K.bin[0x00000:0x10000] == LS8000_bootblock.bin （逐字节全等）

@@ -35,9 +35,18 @@ import sys
 # 1) 显式环境变量
 _env = os.environ.get('LS8000_SAMPLE_ROOT', '').strip()
 
-# 2) 包内随包分发的样本目录（scripts/ 的上两级即包根）
-_pkg_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_pkg_samples = os.path.join(_pkg_root, 'samples')
+# 2) 仓库内随库分发的样本目录（samples/）
+#    历史说明：本模块曾位于 tools/ 下，当时需 dirname 两次上溯；
+#    打包后它位于仓库根目录，上溯两次会越过仓库根，导致随包样本找不到。
+#    现同时支持两种布局：先查本级的 samples/，再查上一级的 samples/。
+_here_dir = os.path.dirname(os.path.abspath(__file__))
+_up_dir = os.path.dirname(_here_dir)
+_pkg_samples = ''
+for _cand_root in (_here_dir, _up_dir):
+    _s = os.path.join(_cand_root, 'samples')
+    if os.path.isdir(_s):
+        _pkg_samples = _s
+        break
 
 # 3) 原始 D 盘位置（兼容旧工作区）
 _orig = 'D:/DS/TEST/LS8000'
@@ -55,8 +64,10 @@ def _pick_root():
 
 SAMPLE_ROOT = _pick_root()
 
-# 工具链（h8.lst / h8dis.py / h8tab.py）在样本根下；打包时它们与样本同级
-TOOLCHAIN_ROOT = SAMPLE_ROOT
+# 工具链（h8.lst / h8dis.py / h8tab.py）：打包后随仓库提供于 tools/ 目录，
+# 只有在脱离打包形态时才回退到样本根。
+_tc = os.path.join(_here_dir, 'tools')
+TOOLCHAIN_ROOT = _tc if os.path.isdir(_tc) else SAMPLE_ROOT
 
 # 配置表（cfg_v4.json 等）体量较大，独立放置时可指向别处
 CFG_ROOT = os.environ.get('LS8000_CFG_ROOT', '').strip() or SAMPLE_ROOT
@@ -97,12 +108,26 @@ def _self_test():
     print()
     print('%-34s %12s %s' % ('文件', '大小', '状态'))
     print('-' * 60)
+    # 工具链文件（h8.lst / h8dis.py / h8tab.py）随仓库提供于 tools/，
+    # 不在样本根下；此处先查样本根，未命中再回退到工具链目录。
+    TOOLCHAIN_FILES = ('h8.lst', 'h8dis.py', 'h8tab.py')
+
+    def _locate(n):
+        p = sample(n)
+        if os.path.isfile(p):
+            return p, ''
+        if n in TOOLCHAIN_FILES:
+            cand = os.path.join(TOOLCHAIN_ROOT, n)
+            if os.path.isfile(cand):
+                return cand, '  <- tools/'
+        return p, ''
+
     for n in ('LS8000_111_ROM.bin', 'LS8000_bootblock.bin',
               'LS8000_full_512K.bin', 'h8.lst', 'h8dis.py', 'h8tab.py',
               'cfg_v4.json'):
-        p = sample(n)
+        p, note = _locate(n)
         if os.path.isfile(p):
-            print('%-34s %12d OK' % (n, os.path.getsize(p)))
+            print('%-34s %12d OK%s' % (n, os.path.getsize(p), note))
         else:
             print('%-34s %12s 缺失' % (n, '-'))
     for n in ('driver/LS8000.md3', 'driver/NKDUSCAN.dll',

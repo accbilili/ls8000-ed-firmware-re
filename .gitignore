@@ -27,9 +27,11 @@
 **/dumps/**
 dumps/
 
-# ========== 样本 / Samples（需自备，见 samples_manifest.txt） ==========
-samples/
-sample/
+# ========== 样本 / Samples ==========
+# 说明：samples/ 目录是**刻意纳入版本库**的官方固件与驱动原件，
+#       来源已验证并记录于 samples/SOURCES.md。
+#       因此下列全局二进制忽略规则对 samples/ 一律不适用（见文末豁免段）。
+#       These are intentionally tracked; see samples/SOURCES.md for provenance.
 *.raw
 *.tif
 *.tiff
@@ -82,3 +84,9 @@ desktop.ini
 *.swp
 *.swo
 *~
+
+# ============================================================================
+# 豁免：samples/ 下的官方固件与驱动原件需要入库
+# Exception: official firmware/drivers under samples/ ARE tracked.
+# ============================================================================
+!samples/**

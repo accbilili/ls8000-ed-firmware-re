@@ -82,7 +82,8 @@ def verify(root):
     # 版本控制、CI 配置与样本目录属于仓库治理文件，不计入「清单未收录」。
     # Version-control, CI config and sample dirs are repo-housekeeping files and
     # must not be reported as "unlisted" — otherwise every clone would fail.
-    EXCLUDE_DIRS = {'__pycache__', '.git', '.github', 'samples'}
+    # 注意：samples/ 已纳入版本库（官方固件原件），故不在排除列表内。
+    EXCLUDE_DIRS = {'__pycache__', '.git', '.github'}
     for dirpath, dirs, files in os.walk(root):
         dirs[:] = [d for d in dirs if d not in EXCLUDE_DIRS]
         for f in files:

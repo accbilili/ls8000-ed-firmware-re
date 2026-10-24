@@ -58,9 +58,14 @@ BINARY_EXT = {
     '.so', '.pyd', '.pyc', '.pyo',
 }
 
-SKIP_DIRS = {'__pycache__', '.git', 'samples'}
+SKIP_DIRS = {'__pycache__', '.git'}
 REQUIRED_FILES = ['README.md', 'LICENSE', 'LICENSE-DOCS', 'NOTICE',
                   'DISCLAIMER.md', '.gitignore']
+
+# samples/ 下刻意收录的官方固件、驱动与文档原件 —— 属于预期二进制，不作警告
+SAMPLES_EXPECTED_EXT = {
+    '.bin', '.exe', '.dll', '.md3', '.pdf', '.rom', '.txt', '.md', '.json',
+}
 
 TEXT_EXT = {'.py', '.md', '.txt', '.ps1', '.json', '.csv', '.lst', '.asm',
             '.yml', '.yaml', '.sh', '.gitignore', ''}
@@ -93,6 +98,13 @@ def main():
             p = os.path.join(dirpath, f)
             rel = os.path.relpath(p, '.').replace('\\', '/')
             ext = os.path.splitext(f)[1].lower()
+
+            # samples/ 下的官方固件/驱动/文档原件为刻意收录，见 samples/SOURCES.md
+            if rel.startswith('samples/'):
+                if ext in SAMPLES_EXPECTED_EXT:
+                    continue
+                warn.append((rel, 'samples/ 中出现非预期类型 unexpected type in samples/'))
+                continue
 
             if ext in BINARY_EXT:
                 bin_hits.append(rel)

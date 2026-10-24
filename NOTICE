@@ -23,28 +23,54 @@ exclusively by Nikon Corporation and/or its licensors.
 This project claims no rights in them and has received no authorization.
 
 ===============================================================================
-2. 本仓库不包含固件二进制   No firmware binaries are distributed here
+2. 关于 samples/ 目录    About the samples/ directory
 ===============================================================================
 
-本仓库 **不含**、将来亦 **不会分发** 下列内容：
+本仓库的 `samples/` 目录**收录了 Nikon 官方公开发布的固件更新软件包**，
+以及从中提取的固件镜像。
 
-  - Nikon 固件镜像（ROM / HEX / BIN / MOT / S19）
-  - Windows 驱动程序（SYS / DLL / EXE）
-  - 原始扫描样本文件
+The `samples/` directory contains Nikon's own publicly distributed firmware
+update package, together with the firmware images extracted from it.
+
+**其性质（重要）** Nature of the material:
+
+  这不是泄露件、内部渠道获取的材料，也不是未经授权拷贝的副本。而是
+  Nikon 自己向客户发放的固件升级安装程序：
+
+    SUPERCOOLSCAN8000ED_111.exe
+    SUPER COOLSCAN 8000 ED Ver. 1.11
+    随附官方 ReadMe.txt 标注日期 26/12/2002
+
+  ROM 镜像是从该安装程序内嵌的资源中提取并解压得到的。
+
+  This is not leaked material, nor obtained through internal channels, nor an
+  unauthorized copy. It is the installer Nikon itself supplied to customers to
+  upgrade scanner firmware (SUPER COOLSCAN 8000 ED Ver. 1.11, distributed with
+  an official ReadMe.txt dated 26/12/2002). The ROM image was obtained by
+  extracting and decompressing the resource embedded within it.
+
+  该来源已通过**三层可复现的方法**验证，任何人无需信任本项目陈述即可自行核实。
+  完整方法与实测数据见 samples/SOURCES.md：
+
+    (1) 官方安装程序的 SHA256 与收录文件完全一致并已登记；
+    (2) 固件资源 FIRMDATA.bin 全字节可在官方安装程序中定位（偏移 0x17588）；
+    (3) 信息熵比对表明 ROM 为该资源的解压产物（强支持）。
+
+===============================================================================
+2b. 本仓库不收录的内容    What this repository does NOT include
+===============================================================================
+
+本仓库**不含**下列内容，将来亦**不会**收录：
+
+  - 需要登录、付费或非公开渠道才能取得的固件
   - 内存转储文件（DMP）
+  - 通过规避技术措施或未经授权读取设备而取得的数据
 
-This repository does NOT contain and will never distribute:
+This repository does NOT contain, and will not accept:
 
-  - Nikon firmware images (ROM / HEX / BIN / MOT / S19)
-  - Windows drivers (SYS / DLL / EXE)
-  - original scan sample files
+  - firmware obtainable only via login, payment or non-public channels
   - memory dump files (DMP)
-
-仓库内 **677 个文件全部为纯文本**（.md / .py / .asm / .txt / .json / .csv / .ps1 / .lst），
-二进制文件数量为 0。ROM 镜像需使用者自行从自己合法拥有的设备中提取。
-
-All 677 files are plain text. The binary file count is zero. Users must extract the ROM
-image themselves from equipment they lawfully own.
+  - data obtained by circumventing technical protection measures
 
 仓库中的反汇编摘录（*.asm、disasm_all.txt）仅为说明与研究目的所作的
 选择性引用，不构成对固件作品的完整复制。

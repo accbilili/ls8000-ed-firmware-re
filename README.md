@@ -209,8 +209,16 @@ ioctl surface.
 > ⭐ **如果你只想要一件能直接用的东西**：看 [`win11-driver/`](win11-driver)。
 > 其余部分是逆向分析记录，主要用于研究与参考。
 >
+> 🔍 好奇它为什么只用了 **1,217 字节**就能管用？
+> 见 [`win11-driver/README.md`](win11-driver/README.md) 的「**精妙之处**」一节：
+> 没有写一行内核代码，也没有关签名强制——它只是把路让开了。
+>
 > If you only want one immediately usable thing: see [`win11-driver/`](win11-driver).
 > Everything else is reverse-engineering notes, mainly for study and reference.
+>
+> 🔍 Curious why **1,217 bytes** is enough? See the "**Why 1,217 bytes is enough**"
+> section in [`win11-driver/README.md`](win11-driver/README.md): no kernel code was
+> written and signature enforcement was never disabled — it just stepped out of the way.
 
 **这不是 / What this is NOT**
 

@@ -1,7 +1,7 @@
 # LS8000 固件逆向 —— 文件校验清单（发布版）
 # 格式: SHA256  字节数  相对路径
 # 包根: <REPO_ROOT>  (仓库 ls8000-ed-firmware-re)
-# 文件数: 723   总字节: 13490051
+# 文件数: 723   总字节: 13498701
 # 注意: 脱敏改写后重新生成，与原交付包 MANIFEST 的哈希不可直接比对
 #       已排除目录: .git, .github, __pycache__
 
@@ -308,7 +308,7 @@ ccbd9aca2e204c0df89ec472804188b2a97d14a56bfabf2006af11aa6930ef05        6586  DI
 3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986       35149  LICENSE
 28a9529c7d0bb4dc51f4bf5c116a3d16ef247a052f7591466768ddf563fd1cf5       20138  LICENSE-DOCS
 c3e62300e6035a5986fbe0c09c9fd3579d3a7720737eef5f346fc4a0700d4553        7035  NOTICE
-818dd6fd379d22a660c607ad95595e4ae3d14c164ef538ef8c5690c5e396bbd3       32920  README.md
+3aead378590477d4208099f6347cbce1fd41fb77880d2a18c3dd97d5501fb12a       33434  README.md
 9e56dc8157b0e72725ce1af2118d6bb865ef57b27fad0d12d6db0c13bed94f4f        5129  README_实机安全须知.md
 32b263e625c7bf80614399ae4966f104ecebe345a25bb1f1f89a87f130c4cf8c        3515  bootstrap.ps1
 9f5733094739d14a5f7a826ed8718dda006e698fc9a9e5d6b73a47dee3e09f5d        3949  bootstrap.sh
@@ -720,7 +720,7 @@ e6eb5affd6b849362fb24faead6dd1f9dbb1651a072879d8a121fba526dd005b        4569  to
 b2a66702fecd04609dfe3946d2246dc3d80583807dc72f2362552f13219b50f6        1838  win11-driver/Driver/Nikon8000-9000-x64.cat
 8ac3dc6ddb5d026323c3f4ef36280fdfee54f85d49fac2267fd6e024729a2a6c        1217  win11-driver/Driver/Nikon8000-9000-x64.inf
 832e90d11bca443d15e8a0f6a1f9e08d6a9e8c1b72b07ac9cd8cce0d6f31ffdb         824  win11-driver/Nikon8000-9000-LocalSigner.cer
-e7d6df1273d58fd4213642128f1bc3d7246f7afebd326ce62af2d6a650996e2f        6536  win11-driver/README.md
+5528c01cc87fd9db340730b82044dafebeb69e19fae1f9f286bc2ae20ee568df       14672  win11-driver/README.md
 f09d8617dbe0cda19251d9f2d13b67aab2b9e83d5042e1a7ecabb987bf861c72         782  win11-driver/SHA256SUMS.txt
 8e82a39ffb22c8177e1013a7cdacd650b78dfaf1ca374aa240941d49420248a6       10406  win11-driver/Setup.ps1
 045a136bbe1bc73b86e9135a5eb3082b0f4d15b394b3e6b663e8cef16b9f7a8c        4654  win11-driver/使用说明.txt

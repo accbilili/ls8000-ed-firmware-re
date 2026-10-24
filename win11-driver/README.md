@@ -116,6 +116,171 @@ Nikon SUPER COOLSCAN 9000 ED
 
 ---
 
+## 🔍 精妙之处：这 1,217 字节为什么管用 / Why 1,217 bytes is enough
+
+### 一句话 / In one sentence
+
+> 原厂驱动想让 Nikon 自己的代码接管这台扫描仪。
+> 这个包反其道而行——**它承认 Windows 早就知道怎么跟这台扫描仪说话，然后把路让开。**
+>
+> The vendor INF tries to put Nikon's own code in charge. This package does the opposite:
+> it recognises that Windows already knows how to talk to this scanner, and steps aside.
+
+---
+
+### ① 关键洞察：1394 扫描仪在 Windows 里本来就是"伪装成 SCSI"的
+
+这是整个方案能成立的**根本原因**，也是最反直觉的一点。
+
+```
+扫描仪硬件
+   │
+   ↓  IEEE 1394 线缆
+1394 控制器驱动
+   │
+   ↓
+sbp2port.sys     ← 微软提供。SBP-2 协议，把 1394 设备"伪装"成 SCSI 设备
+   │                （SBP2 = Serial Bus Protocol 2，即 SCSI-over-1394）
+   ↓
+scsiscan.sys     ← 微软提供、微软签名。静态图像扫描仪驱动，发标准 SCSI 命令
+   │
+   ↓
+STI / WIA        ← Windows 的扫描仪 API
+```
+
+**实证**：在 Windows 11 自带的 `sti.inf` 里，`STI.SBP2Section` 与 `STI.SCSISection`
+的内容**逐字相同**——两者都只有一行
+`AddService = scsiscan, 0x00000002, STI.ScsiScan.AddService`。
+
+这意味着：**微软自己就没有为 1394 扫描仪写过专门的驱动。**
+因为 SBP-2 已经在下一层把 1394 翻译成 SCSI 了，上层用同一个 `scsiscan.sys` 就够了。
+
+所以 Nikon 那份 2003 年的 INF 真正缺的，
+不是一个"能在 Windows 11 上运行的驱动"，而是**一句把这条路指出来的话**。
+
+Evidence: in Windows 11's own `sti.inf`, `STI.SBP2Section` and `STI.SCSISection` are
+**identical** — both contain only
+`AddService = scsiscan, 0x00000002, STI.ScsiScan.AddService`. Microsoft never wrote a
+1394-specific scanner driver, because SBP-2 already translates 1394 into SCSI one layer
+down. What Nikon's 2003 INF lacked was not a working driver — it was the one line
+pointing Windows at the road that was already there.
+
+---
+
+### ② 绕开签名强制的正确姿势：不签驱动，只签"一句话"
+
+Windows 11 x64 的驱动签名强制（Driver Signature Enforcement）是老硬件复活的最大障碍。
+常见的"解决办法"本质是**降低系统安全性**：开测试模式、改 BCD、利用过期签名漏洞。
+
+这个包一样都没做。原因很巧妙——
+
+| 需要签名的东西 / What needs signing | 门槛 / The bar | 本包的做法 / What this package does |
+|---|---|---|
+| 内核驱动代码（`.sys`） | 必须是有效的微软/WHQL 签名 | **一个字节都没有**——直接用 Windows 自带的 |
+| 安装指令（`.inf`） | 可由本机信任的发布者签名 | 本地自签证书 + CAT 目录文件 |
+
+**没有内核代码，签名强制就无从谈起。**
+
+需要签名的只是一个 1,217 字节的文本文件，而 INF 级签名的门槛完全不同：
+一枚本地自签证书、一个 CAT 目录文件、把公钥导入本机
+「受信任的根证书颁发机构」+「受信任的发布者」两个存储区即可。
+
+而且**私钥不随包分发**（`PrivateKeyIncluded: false`，签完即删）——
+拿到这个包的人，无法用这枚证书去签别的东西。
+
+With no kernel code, signature enforcement has nothing to bite on. All that needs signing
+is a 1,217-byte text file, and INF-level signing has an entirely different bar: one local
+self-signed certificate, one catalog file, and the public key imported into the machine's
+Root + Trusted Publisher stores. The private key is never shipped
+(`PrivateKeyIncluded: false`, deleted after signing), so nobody can reuse it.
+
+---
+
+### ③ 硬件 ID 一个字符都不改
+
+```
+SBP2\NIKON___&LS-8000_ED______&CMDSETID104D8
+```
+
+这串 ID 逐字符抄自 Nikon Scan 4.0.3 的 `Nks1394.INF`。
+注意那些下划线——它们是 SBP-2 ID 里的**空格填充**（`NIKON___` = "NIKON" + 3 个空格）。
+
+关键在于：**这个 ID 是 Windows 自己的 1394 栈枚举出来的，不是 Nikon 上报的。**
+只要 1394 控制器还在工作，Windows 每次开机都会生成这个 ID 去找驱动。
+我们只是在那个位置上换了一个答案——**扫描仪自己完全不知道发生了什么。**
+
+The ID is copied character-for-character from Nikon Scan 4.0.3's `Nks1394.INF`. Note the
+underscores: they are SBP-2 **space padding** (`NIKON___` = "NIKON" + 3 spaces). Crucially,
+this ID is enumerated by Windows' own 1394 stack, not declared by Nikon. As long as the
+controller works, Windows regenerates this ID at every boot and goes looking for a driver.
+We only changed the answer it finds — the scanner itself is entirely unaware.
+
+---
+
+### ④ 真正的工作量在"删"，不在"加"
+
+原厂 `Nks1394.INF` 写于 2003 年，它依赖的好几套机制在 Windows 11 上**已经不存在了**。
+所以问题从来不是"改一个开关"，而是整条路径都断了。
+
+| 原厂 INF（2003）/ Vendor INF (2003) | 在 Windows 11 上的下场 / Fate on Windows 11 | 本包的处理 / How this package handles it |
+|---|---|---|
+| `Signature="$CHICAGO$"` | Windows 9x/ME 遗留写法，NT 系不接受 | 改为 `$Windows NT$` |
+| `DriverVer=02/03/2003` + `nks1394.cat` | 2003 年的签名，证书早已过期 | 新 CAT，本地自签，有效期至 2031 |
+| `HKR,,DevLoader,,*NTKERN` | Windows 2000/XP 遗留机制，已移除 | **删除** |
+| `HKR,,NTMPDriver,,"scsiscan.sys"` | 同上 | **删除**（改由 `sti.inf` 的 AddService 提供） |
+| `CopyFiles` 从 "Nikon Scan 4 CD-ROM" 拷 `NKSCNUSD.dll` | 要求原安装盘位于正确路径 | **删除** |
+| `USDClass` + HKCR 的 COM 注册（32 位 STI USD） | 32 位 COM 组件在 x64 下的兼容问题 | **删除** |
+| `[Manufacturer]` 无平台限定 | 任何架构/系统版本都会尝试匹配 | 限定 `NTamd64.10.0...22000` |
+
+最后**只保留了两条**注册表项：
+
+```ini
+[NK1394SCN.AddReg]
+HKR,,HardwareConfig,1,2          ; 告诉 STI：这是台扫描仪
+HKR,DeviceData,ICMProfile,1,0,0  ; 不做色彩配置文件注入
+```
+
+> **加上去的只有"绑定"这一件事；删掉的，才是让它活过来的原因。**
+>
+> What was added is one thing — the binding. What was **removed** is why it works.
+
+---
+
+### ⑤ 安装脚本不是"点下一步"，是闭环验证
+
+`Setup.ps1` 有几处很讲究的处理：
+
+- **装之前**：硬编码校验证书指纹（`1712…6944`）防掉包；`Test-FileCatalog` 校验
+  INF 与 CAT 的哈希一致，确认 INF 没被改过
+- **装**：导入证书到 Root + TrustedPublisher 两个存储；`pnputil /add-driver /install`
+- **装之后**：回读设备的**真实状态**——用 `Get-PnpDevice` 过滤
+  `SBP2\NIKON___&LS-(8000|9000)_ED_`，读取 `DEVPKEY_Device_ProblemCode`
+  与 `DEVPKEY_Device_DriverInfPath`，再比对 `UsingThisPackage`，
+  确认设备**确实在用本包**，而没有被系统里别的驱动抢走
+- **判定标准**是"设备起来了"，不是"命令返回 0"
+- 识别退出码 `3010`（需重启）但**绝不自动重启**，只提示
+- **卸载**：按实际的 `oem*.inf` 发布名精确卸载，并把两份证书一起删掉——
+  不留永久的信任垃圾
+- 脚本自身带 Authenticode 签名块；非管理员时自动请求 UAC 提权并回传真实退出码
+
+It validates the certificate thumbprint and `Test-FileCatalog` **before** installing, and
+reads back `DEVPKEY_Device_ProblemCode` / `DriverInfPath` **after** installing, confirming
+`UsingThisPackage` so a competing driver can't silently win. Success means "the device
+came up", not "the command returned 0".
+
+---
+
+### ⑥ 但作用域是"设备绑定"，不是整个扫描流程
+
+技术在这一点上很干净，也必须把边界说清楚：
+**设备管理器里显示正常，不等于扫描、保存、色彩处理全流程都已通过。**
+原厂 32 位的 `NKScnUSD.dll`（STI/USD 应用层集成）本包并未包含。
+
+A device node that starts correctly does **not** mean the full scan/save/colour pipeline
+works. The vendor's 32-bit `NKScnUSD.dll` (STI/USD application integration) is not included.
+
+---
+
 ## 原理依据 / References
 
 本方案所依据的技术点均为 Microsoft 官方文档：

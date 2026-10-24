@@ -4,7 +4,7 @@
 
 ![CI](https://github.com/accbilili/ls8000-ed-firmware-re/actions/workflows/ci.yml/badge.svg)
 ![Files](https://img.shields.io/badge/files-725-blue)
-![Size](https://img.shields.io/badge/size-13.0MB-blue)
+![Size](https://img.shields.io/badge/size-12.9MB-blue)
 ![Win11 driver](https://img.shields.io/badge/Win11%20driver-included-green)
 ![Samples](https://img.shields.io/badge/samples-included-green)
 ![Provenance](https://img.shields.io/badge/provenance-official%20Nikon%20updater-brightgreen)
@@ -101,7 +101,7 @@ probably the part most likely to actually help someone.
 
 ## 📢 请先读完这一段 / Please Read This First
 
-### 关于作者：我是新手，这是 AI 辅助的产物
+### 关于作者：我是新手，这是 AI 辅助的产物 / About the author: a beginner, AI-assisted
 
 > **中文**  
 >
@@ -135,20 +135,24 @@ probably the part most likely to actually help someone.
 Why this survives the author's skill level: the load-bearing conclusions were produced by an  
 **instruction-level simulator executing the actual firmware code**, not by anyone reasoning about it.
 
-| 结论                  | 人工/AI 推导的版本          | 模拟器实跑的正确答案                  |
-| ------------------- | -------------------- | --------------------------- |
-| `er3`（校验对象）         | payload[1..8] 重排相加 ❌ | **`BE32(payload[1..4])`** ✅ |
-| 四条 `shll.l #2` 的位移量 | 以为是左移 16 位 ❌         | **实为左移 8 位（2 位 ×4）** ✅      |
-| `@(0x2,er6)` 的含义    | 以为是 payload[1] ❌     | **实为 payload[2]**（下标基准不同）✅  |
+| 结论 / Conclusion | 人工/AI 推导的版本 / Hand- or AI-derived | 模拟器实跑的正确答案 / Simulator-executed |
+| --- | --- | --- |
+| `er3`（校验对象 / checksum target） | payload[1..8] 重排相加 ❌<br>payload[1..8] rearranged and summed ❌ | **`BE32(payload[1..4])`** ✅ |
+| 四条 `shll.l #2` 的位移量 / shift amount of the four `shll.l #2` | 以为是左移 16 位 ❌<br>thought to be a left shift of 16 ❌ | **实为左移 8 位（2 位 ×4）** ✅<br>**actually a left shift of 8 (2 bits × 4)** ✅ |
+| `@(0x2,er6)` 的含义 / meaning of `@(0x2,er6)` | 以为是 payload[1] ❌<br>thought to be payload[1] ❌ | **实为 payload[2]**（下标基准不同）✅<br>**actually payload[2]** (different index base) ✅ |
 
-复现方法只需一行：
+复现方法只需一行 / Reproduction takes one line:
 
 ```bash
 python tools/sim_verify_formulas.py
 ```
 
-> 这也是本项目最想留下的经验：**凡是涉及位段、移位、字节序的结论，永远不要用推导，用模拟执行。**  
+> 这也是本项目最想留下的经验：**凡是涉及位段、移位、字节序的结论，永远不要用推导，用模拟执行。**
 > 因为推理链条上任何一层出错，结果看起来仍然自洽——它不会报错，只会静静地错。
+>
+> The lesson this project most wants to leave behind: **for any conclusion involving bit fields, shifts or byte
+> order, never derive it — execute it in a simulator.** Because if any link in the reasoning chain is wrong,
+> the result still looks self-consistent: it raises no error, it is simply and quietly wrong.
 
 ---
 
@@ -158,13 +162,23 @@ python tools/sim_verify_formulas.py
 > **This is an unofficial personal study project. It is not affiliated with, authorized by,  
 > endorsed by, or supported by Nikon Corporation in any way.**
 >
-> **`samples/` 收录了 Nikon 官方公开发布的固件更新软件包及其中的 ROM 镜像**——  
-> 即尼康自己提供给用户、用于升级扫描仪固件的那份安装程序（Ver. 1.11，2002-12-26 发布）。  
-> 这不是泄露件或内部渠道，来源已通过**三层可复现方法**验证，  
+> **`samples/` 收录了 Nikon 官方公开发布的固件更新软件包及其中的 ROM 镜像**——
+> 即尼康自己提供给用户、用于升级扫描仪固件的那份安装程序（Ver. 1.11，2002-12-26 发布）。
+> 这不是泄露件或内部渠道，来源已通过**三层可复现方法**验证，
 > 任何人都能自行核实，详见 [`samples/SOURCES.md`](samples/SOURCES.md)。
 >
-> 分析本体仍以纯文本为主：`.md` / `.py` / `.asm` / `.txt` / `.json` / `.csv` / `.ps1`。  
+> `samples/` includes the firmware update package that Nikon publicly released, together with the ROM image
+> inside it — that is, the very installer Nikon shipped for users to update their scanner firmware
+> (Ver. 1.11, released 2002-12-26). This is not a leak and does not come from any internal channel;
+> its provenance is verified by a **three-layer reproducible method** that anyone can re-check —
+> see [`samples/SOURCES.md`](samples/SOURCES.md).
+>
+> 分析本体仍以纯文本为主：`.md` / `.py` / `.asm` / `.txt` / `.json` / `.csv` / `.ps1`。
 > 本仓库**不涉及**任何需登录、付费或非公开渠道才能取得的固件。
+>
+> The analysis itself remains mostly plain text: `.md` / `.py` / `.asm` / `.txt` / `.json` / `.csv` / `.ps1`.
+> This repository **does not involve** any firmware that requires a login, a payment, or a non-public
+> channel to obtain.
 >
 > 详见 [`NOTICE`](NOTICE) 与 [`DISCLAIMER.md`](DISCLAIMER.md)。
 
@@ -181,16 +195,17 @@ ioctl surface.
 
 **你会得到 / What you get**
 
-| # | 产出                                        | 说明                                                                                              |
-| - | ----------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| 1 | **H8 反汇编工具链** `h8dis` / `h8tab` / `h8sim` | 纯 Python，无第三方依赖，零 `ctypes`/`struct`                                                             |
-| 2 | **解码器缺陷的量化修复**                            | 原版指令表 393 项 → 修复版 399 项；全 ROM 多检出 **211 处** 此前不可解的 `mov.l`（均为 size=10）                          |
-| 3 | **指令级模拟器**                                | 可执行真实指令读出寄存器值——本项目最重要的纠错手段                                                                      |
-| 4 | **200 个带洞函数的递归复走**                        | 36 个带洞函数额外解出 **1,299 条**指令                                                                      |
-| 5 | **ioctl `0x190012` 的完整判定**                | 穷举 Function×Method×Access 后的**唯一解**：`CTL_CODE(0x19, 0x004, METHOD_OUT_DIRECT, FILE_ANY_ACCESS)` |
-| 6 | **25 轮修正的完整记录**                           | 含 4 次自我推翻——难得的"错误档案"，见 `docs/REPORT_回写总账-20261024.md`                                           |
-| 7 | **12 组 / 146 条调用边**                       | 由实测而非猜测得出                                                                                       |
-| 8 | ⭐ **Windows 11 驱动适配包** [`win11-driver/`](win11-driver) | LS-8000 ED / 9000 ED 在 Win11 x64 上被正确识别；不含任何驱动二进制，INF 仅 1,217 B |
+| # | 产出 / Deliverable | 说明 / Notes |
+| - | --- | --- |
+| 1 | **H8 反汇编工具链** / **H8 disassembly toolchain**<br>`h8dis` / `h8tab` / `h8sim` | 纯 Python，无第三方依赖，零 `ctypes`/`struct`<br>Pure Python, no third-party dependencies, no `ctypes`/`struct` |
+| 2 | **解码器缺陷的量化修复** / **Quantified fix of a decoder defect** | 原版指令表 393 项 → 修复版 399 项；全 ROM 多检出 **211 处** 此前不可解的 `mov.l`（均为 size=10）<br>Original instruction table 393 entries → fixed 399; **211** previously undecodable `mov.l` (all size=10) newly decoded across the whole ROM |
+| 3 | **指令级模拟器** / **Instruction-level simulator** | 可执行真实指令读出寄存器值——本项目最重要的纠错手段<br>Executes real instructions and reads out register values — the most important error-correction tool in this project |
+| 4 | **200 个带洞函数的递归复走** / **Recursive re-walk of 200 holed functions** | 36 个带洞函数额外解出 **1,299 条**指令<br>36 holed functions yielded an extra **1,299** decoded instructions |
+| 5 | **ioctl `0x190012` 的完整判定** / **Complete determination of ioctl `0x190012`** | 穷举 Function×Method×Access 后的**唯一解**：`CTL_CODE(0x19, 0x004, METHOD_OUT_DIRECT, FILE_ANY_ACCESS)`<br>After exhausting Function×Method×Access: the **unique** solution `CTL_CODE(0x19, 0x004, METHOD_OUT_DIRECT, FILE_ANY_ACCESS)` |
+| 6 | **25 轮修正的完整记录** / **Full record of 25 correction rounds** | 含 4 次自我推翻——难得的"错误档案"，见 `docs/REPORT_回写总账-20261024.md`<br>Includes 4 self-retractions — a rare "error archive", see `docs/REPORT_回写总账-20261024.md` |
+| 7 | **12 组 / 146 条调用边** / **12 groups / 146 call edges** | 由实测而非猜测得出<br>Derived from measurement, not guesswork |
+| 8 | ⭐ **Windows 11 驱动适配包** / **Windows 11 driver package**<br>[`win11-driver/`](win11-driver) | LS-8000 ED / 9000 ED 在 Win11 x64 上被正确识别；不含任何驱动二进制，INF 仅 1,217 B<br>LS-8000 ED / 9000 ED correctly detected on Win11 x64; contains no driver binaries, the INF is only 1,217 B |
+
 > ⭐ **如果你只想要一件能直接用的东西**：看 [`win11-driver/`](win11-driver)。
 > 其余部分是逆向分析记录，主要用于研究与参考。
 >
@@ -199,11 +214,11 @@ ioctl surface.
 
 **这不是 / What this is NOT**
 
-- ❌ 不是官方产物：与 Nikon 无关联，未获授权（见 [`NOTICE`](NOTICE)）
-- ❌ 不是可用替代品：没有开源驱动、不能替代官方软件、不提供可刷写镜像
-- ❌ 不是完整逆向：结论覆盖 ROM 的一小部分，大量区域仍未分析
-- ❌ 不是权威资料：见开头关于作者能力与 AI 辅助的说明
-- ⚠️ `samples/other/` 下的 LS-2000 等**其它机型**固件仅供格式交叉参考，与本项目主题无关
+- ❌ 不是官方产物：与 Nikon 无关联，未获授权（见 [`NOTICE`](NOTICE)）<br>Not an official product: no affiliation with Nikon, no authorization (see [`NOTICE`](NOTICE))
+- ❌ 不是可用替代品：没有开源驱动、不能替代官方软件、不提供可刷写镜像<br>Not a working replacement: no open-source driver, does not substitute for the vendor software, ships no flashable image
+- ❌ 不是完整逆向：结论覆盖 ROM 的一小部分，大量区域仍未分析<br>Not a complete reverse-engineering: the conclusions cover only a small part of the ROM, large regions remain unanalyzed
+- ❌ 不是权威资料：见开头关于作者能力与 AI 辅助的说明<br>Not an authoritative source: see the note at the top about the author's ability and AI assistance
+- ⚠️ `samples/other/` 下的 LS-2000 等**其它机型**固件仅供格式交叉参考，与本项目主题无关<br>Firmware of **other models** (LS-2000 etc.) under `samples/other/` is kept only for format cross-reference and is unrelated to this project
 
 > 关于样本完整性 On sample integrity：`samples/` 收录的是**完整未改动的官方发布原件**，  
 > 而非改造过的或来源不明的镜像。所有文件的 SHA256 均登记在 `MANIFEST.txt`，  
@@ -234,30 +249,34 @@ Directories keep their original workspace numbering so they match the path refer
 | `tools/scripts/`       |    339 | 一次性分析脚本            | One-off analysis scripts                |
 | `tools/legacy/`        |     23 | 早期探索脚本             | Early exploratory scripts               |
 | **`win11-driver/`**   |     11 | **Win11 驱动适配包（独立）**  | **Win11 driver package (standalone)** |
-| **`samples/`**         | **27** | **固件样本 + 官方安装包原件** | **Firmware samples + official updater** |
+| **`samples/`**         | **28** | **固件样本 + 官方安装包原件** | **Firmware samples + official updater** |
 
 `samples/` 结构 / layout：
 
 ```
 samples/
-├── LS8000_111_ROM.bin            228,345 B  ← 逆向主对象（Ver. 1.11）
-├── LS8000_bootblock.bin           65,536 B  引导块
-├── LS8000_full_512K.bin          524,288 B  整机全镜像
-├── FIRMDATA.bin                   99,865 B  updater 内嵌资源
-├── decoded.bin                   228,345 B  与 ROM 同哈希（历史命名）
-├── SOURCES.md                               来源证明与三层验证方法
-├── official_package/                        官方发布包原件（逐字节未改动）
+├── LS8000_111_ROM.bin            228,345 B  ← 逆向主对象（Ver. 1.11）/ main RE target (Ver. 1.11)
+├── LS8000_bootblock.bin           65,536 B  引导块 / boot block
+├── LS8000_full_512K.bin          524,288 B  整机全镜像 / whole-device image
+├── FIRMDATA.bin                   99,865 B  updater 内嵌资源 / resource embedded in the updater
+├── decoded.bin                   228,345 B  与 ROM 同哈希（历史命名）/ same hash as the ROM (legacy name)
+├── SOURCES.md                               来源证明与三层验证方法 / provenance proof & 3-layer verification
+├── official_package/                        官方发布包原件（逐字节未改动）/ official release package (byte-for-byte unmodified)
 │   ├── SUPERCOOLSCAN8000ED_111.exe 196,608 B
 │   ├── ReadMe.txt                    2,389 B
 │   └── LS8000fw111.pdf             47,659 B
-├── driver/                              6 件 Windows 驱动组件
-└── other/                              13 件 其它机型与更新工具
+├── driver/                              6 件 Windows 驱动组件 / 6 Windows driver components
+└── other/                              13 件 其它机型与更新工具 / 13 other-model firmwares & update tools
 ```
 
 **核心工具 / Core tools**（`tools/`）
 
-`h8dis.py` 反汇编器 · `h8tab.py` 指令表 · `h8sim.py` 指令级模拟器 · `paths.py` 路径/样本解析 ·  
+`h8dis.py` 反汇编器 · `h8tab.py` 指令表 · `h8sim.py` 指令级模拟器 · `paths.py` 路径/样本解析 ·
 `verify_package.py` 完整性校验 · `verify_decoder_fix.py` 解码器缺陷复现 · `sim_verify_formulas.py` 三公式验证
+
+`h8dis.py` disassembler · `h8tab.py` instruction table · `h8sim.py` instruction-level simulator ·
+`paths.py` path/sample resolution · `verify_package.py` integrity check ·
+`verify_decoder_fix.py` decoder-defect reproduction · `sim_verify_formulas.py` three-formula verification
 
 ### 旧路径对照表 / Legacy path mapping
 
@@ -266,11 +285,11 @@ samples/
 
 Old references to `03_analysis/` and `02_analysis/` point to pre-reorganization paths that no longer exist:
 
-| 文档中的旧路径                     | 现在的位置                                       |
+| 文档中的旧路径 / Old path in the docs | 现在的位置 / Current location |
 | --------------------------- | ------------------------------------------- |
 | `03_analysis/status/*.md`   | `03_indexes/*.md`                           |
 | `03_analysis/firmware/*.md` | `02_reports/firmware/*.md`                  |
-| `02_analysis/*.md`          | `01_docs/*.md` 或 `02_reports/firmware/*.md` |
+| `02_analysis/*.md`          | `01_docs/*.md` 或 / or `02_reports/firmware/*.md` |
 
 ---
 
@@ -278,46 +297,52 @@ Old references to `03_analysis/` and `02_analysis/` point to pre-reorganization 
 
 ### 前置条件 / Prerequisites
 
-- Python **3.9+**（纯标准库，无需 pip install；已在 64 位 Python 3.13 实测通过）
-- **样本已随仓库提供，clone 即可运行** 🎉 —— `samples/` 目录含全部分析用 ROM 镜像与官方安装包原件，  
-  来源与校验方法见 [`samples/SOURCES.md`](samples/SOURCES.md)
-
-Samples ship with the repo — just clone and run. Provenance: `samples/SOURCES.md`.
+- Python **3.9+**（纯标准库，无需 pip install；已在 64 位 Python 3.13 实测通过）<br>Python **3.9+** (standard library only, no `pip install`; tested on 64-bit Python 3.13)
+- **样本已随仓库提供，clone 即可运行** 🎉 —— `samples/` 目录含全部分析用 ROM 镜像与官方安装包原件，来源与校验方法见 [`samples/SOURCES.md`](samples/SOURCES.md)<br>**Samples ship with the repo — just clone and run** 🎉 — `samples/` contains every ROM image used by the analysis plus the official installer originals; see [`samples/SOURCES.md`](samples/SOURCES.md) for provenance and verification
 
 如果你希望改用自己持有的样本（例如别的固件版本），可指向自己的目录：
+
+If you would rather use samples you already have (for example a different firmware version), point to your own directory:
 
 ```bash
 export LS8000_SAMPLE_ROOT=/path/to/your/samples      # Linux / macOS / Git Bash
 $env:LS8000_SAMPLE_ROOT = "D:\path\to\your\samples"  # Windows PowerShell
 ```
 
-- 用 `samples_manifest.txt` 中的 **SHA256** 核对样本版本是否与分析所用一致（防止张冠李戴）
-- 引导脚本见 [`bootstrap.sh`](bootstrap.sh) / [`bootstrap.ps1`](bootstrap.ps1)
+- 用 `samples_manifest.txt` 中的 **SHA256** 核对样本版本是否与分析所用一致（防止张冠李戴）<br>Use the **SHA256** values in `samples_manifest.txt` to confirm your sample version matches the one the analysis used (so versions don't get mixed up)
+- 引导脚本见 [`bootstrap.sh`](bootstrap.sh) / [`bootstrap.ps1`](bootstrap.ps1)<br>Bootstrap scripts: [`bootstrap.sh`](bootstrap.sh) / [`bootstrap.ps1`](bootstrap.ps1)
 
 ### 复现命令 / Reproduce
 
 ```bash
-python tools/verify_package.py            # 完整性校验，应输出 全部通过（0 缺失/0 不符/0 未收录）
-python tools/verify_decoder_fix.py        # 解码器缺陷：原版 393 / 修复版 399 / 命中 211
-python tools/sim_verify_formulas.py       # 三公式（模拟器实跑，非人工推导）
-python paths.py                           # 自检：SAMPLE_ROOT + 14 个样本是否齐备
+python tools/verify_package.py            # 完整性校验，应输出 全部通过（0 缺失/0 不符/0 未收录）/ integrity check; should print 全部通过 (0 missing / 0 mismatch / 0 unlisted)
+python tools/verify_decoder_fix.py        # 解码器缺陷：原版 393 / 修复版 399 / 命中 211 / decoder defect: original 393 / fixed 399 / 211 hits
+python tools/sim_verify_formulas.py       # 三公式（模拟器实跑，非人工推导）/ three formulas (simulator-executed, not hand-derived)
+python paths.py                           # 自检：SAMPLE_ROOT + 14 个样本是否齐备 / self-test: SAMPLE_ROOT + all 14 samples present
 ```
 
-> **Windows 用户请注意**：`显示与编码问题只影响实机线的 PowerShell 脚本`。固件分析脚本是纯 Python，  
-> 64 位下可正常运行。**"必须使用 32 位宿主"的要求仅针对实机线**（x86 驱动指针指针对齐），  
+> **Windows 用户请注意**：`显示与编码问题只影响实机线的 PowerShell 脚本`。固件分析脚本是纯 Python，
+> 64 位下可正常运行。**"必须使用 32 位宿主"的要求仅针对实机线**（x86 驱动指针指针对齐），
 > 这一点在早期文档中误写成了全局要求，现已更正。
+>
+> **Windows users**: display and encoding issues affect **only the PowerShell scripts on the live-hardware
+> track**. The firmware analysis scripts are pure Python and run fine under 64-bit. **The "32-bit host
+> required" rule applies only to the live track** (x86 driver pointer alignment); early documents wrongly
+> stated it as a global requirement — now corrected.
 
 ### 三公式速查 / Three formulas (simulator-verified)
 
-测试 payload = `11 22 33 44 55 66 77 88 99 AA BB CC DD`
+测试 payload / Test payload = `11 22 33 44 55 66 77 88 99 AA BB CC DD`
 
-| 目标         | 公式                                                | 实测值          |
-| ---------- | ------------------------------------------------- | ------------ |
-| `er3`      | `BE32(payload[1..4])`                             | `0x11223344` |
-| `0x400408` | `BE32(payload[2..5])`                             | `0x22334455` |
+| 目标 / Target | 公式 / Formula | 实测值 / Measured |
+| --- | --- | --- |
+| `er3` | `BE32(payload[1..4])` | `0x11223344` |
+| `0x400408` | `BE32(payload[2..5])` | `0x22334455` |
 | `0x40040C` | `(payload[7]<<16) + (payload[8]<<8) + payload[9]` | `0x00778899` |
 
 **请勿重新推导这三条**——早期版本曾把它写成"重排相加"，已被模拟器证伪并撤销（见 R22/R23 → R25）。
+
+**Do not re-derive these three** — an earlier version described it as "rearrange and add", which the simulator disproved; it was withdrawn (see R22/R23 → R25).
 
 ---
 
@@ -327,39 +352,43 @@ python paths.py                           # 自检：SAMPLE_ROOT + 14 个样本�
 
 This section is more important than anything else in this repo.
 
-`06_live/` 与 `tools/scripts/live/` 下的 **19 个 PowerShell 脚本会向真实的扫描仪硬件发送原始命令**。  
+`06_live/` 与 `tools/scripts/live/` 下的 **19 个 PowerShell 脚本会向真实的扫描仪硬件发送原始命令**。
 它们是抓取证据用的探针，**不是工具软件**。
 
+The **19 PowerShell scripts** under `06_live/` and `tools/scripts/live/` **send raw commands to real scanner
+hardware**. They are probes for collecting evidence, **not utility software**.
+
 ```
-┌───────────────────────────────────────────────────────────────┐
-│  已发生的真实事故 / REAL INCIDENT THAT ALREADY HAPPENED        │
-│                                                               │
-│  ps_probe6.ps1 曾导致宿主蓝屏：                                │
-│      0xD1  DRIVER_IRQL_NOT_LESS_OR_EQUAL                      │
-│      疑似发生于 sbp2port.sys（IEEE-1394 协议栈）               │
-│                                                               │
-│  根因尚未定位。在此之前，实机命令白名单保持冻结。               │
-│  Root cause NOT yet identified → the command whitelist        │
-│  remains FROZEN.                                              │
-└───────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────┐
+│  已发生的真实事故 / REAL INCIDENT THAT ALREADY HAPPENED     │
+│                                                             │
+│  ps_probe6.ps1 曾导致宿主蓝屏：                             │
+│  ps_probe6.ps1 caused a BSOD on the host machine:           │
+│      0xD1  DRIVER_IRQL_NOT_LESS_OR_EQUAL                    │
+│      疑似发生于 sbp2port.sys（IEEE-1394 协议栈）            │
+│      probably inside sbp2port.sys (IEEE-1394 stack)         │
+│                                                             │
+│  根因尚未定位。在此之前，实机命令白名单保持冻结。           │
+│  Root cause NOT yet identified → the command whitelist      │
+│  remains FROZEN.                                            │
+└──────────────────────────────────────────────────────────────┘
 ```
 
 **冻结中的白名单 / Frozen whitelist**
 
-| 允许 Allowed                           | 禁止 Forbidden                                  |
-| ------------------------------------ | --------------------------------------------- |
-| `INQUIRY` 标准页 0                      | 一切 VPD 页                                      |
-| CDB `12 00 00 00 24 00`（alloc 36 字节） | `MODE SENSE` / `READ BUFFER` / `WRITE BUFFER` |
-|                                      | `E0` / `E1` 自定义命令 / `TUR`                     |
+| 允许 / Allowed | 禁止 / Forbidden |
+| --- | --- |
+| `INQUIRY` 标准页 0 / `INQUIRY` standard page 0 | 一切 VPD 页 / all VPD pages |
+| CDB `12 00 00 00 24 00`（alloc 36 字节 / 36 bytes allocated） | `MODE SENSE` / `READ BUFFER` / `WRITE BUFFER` |
+| | `E0` / `E1` 自定义命令 / vendor commands / `TUR` |
 
-**风险分级 / Script risk levels**（每个脚本头部均已标注）
+**风险分级 / Script risk levels**（每个脚本头部均已标注 / marked in each script's header）
 
-| 级别        | 脚本                             | 说明                                        |
-| --------- | ------------------------------ | ----------------------------------------- |
-| 🟢 LOW    | `ps_readonly.ps1`              | 唯一相对安全的脚本，`SAFE_ONLY=$true`，仅发 `0x190012` |
-| 🟠 MEDIUM | `ps_probe{,2,3,4,5}.ps1`       | 中间演进版本，未完整验证                              |
-| 🔴 HIGH   | `ps_probe6.ps1`、`ps_brute.ps1` | **已知致蓝屏** / 含 `0x190024` 等宽 ioctl 码       |
-
+| 级别 / Level | 脚本 / Scripts | 说明 / Notes |
+| --- | --- | --- |
+| 🟢 LOW | `ps_readonly.ps1` | 唯一相对安全的脚本，`SAFE_ONLY=$true`，仅发 `0x190012`<br>The only relatively safe script; `SAFE_ONLY=$true`, sends only `0x190012` |
+| 🟠 MEDIUM | `ps_probe{,2,3,4,5}.ps1` | 中间演进版本，未完整验证<br>Intermediate iterations, not fully validated |
+| 🔴 HIGH | `ps_probe6.ps1`、`ps_brute.ps1` | **已知致蓝屏** / 含 `0x190024` 等宽 ioctl 码<br>**Known to cause a BSOD** / contains wide ioctl codes such as `0x190024` |
 
 > 这些脚本按用户要求**原位保留**，未做功能修改，仅追加了醒目的危险说明头。
 > 保留它们是为了让证据链完整；**保留 ≠ 推荐运行**。完整说明见 [`DISCLAIMER.md`](DISCLAIMER.md)。
@@ -373,14 +402,16 @@ This section is more important than anything else in this repo.
 
 诚实清单——以下**不是结论**，尚未验证：
 
-| # | 问题 |
+An honest list — the following are **not conclusions**; they remain unverified:
+
+| # | 问题 / Open question |
 |---|---|
-| 1 | `er3` 与执行层 `0x400408` 是否逐字节同源——两侧公式已实证，但同源性未闭合 |
-| 2 | `0x400410` 在某些分支"先拼 16 位再清零"的意图不明 |
-| 3 | `0x400408` 的完整业务语义标签未定（已知被多方复用） |
-| 4 | 解析层与执行层是否读取同一份数据，影响 `0x91`/`0x92` 的可达性判断 |
-| 5 | 扫描几何参数表生成器（`0x03A400–0x03BF00`）未分析 |
-| 6 | 图像算法三件：参数位域含义、像素搬运路径、gamma/位深转换本体 |
+| 1 | `er3` 与执行层 `0x400408` 是否逐字节同源——两侧公式已实证，但同源性未闭合<br>Whether `er3` and the execution-layer `0x400408` come from the very same bytes — both formulas are empirically verified, but the shared-source property is not closed |
+| 2 | `0x400410` 在某些分支"先拼 16 位再清零"的意图不明<br>The intent of "assemble 16 bits first, then clear" at `0x400410` in some branches is unclear |
+| 3 | `0x400408` 的完整业务语义标签未定（已知被多方复用）<br>The full semantic label of `0x400408` is undecided (known to be reused by several callers) |
+| 4 | 解析层与执行层是否读取同一份数据，影响 `0x91`/`0x92` 的可达性判断<br>Whether the parsing layer and the execution layer read the same data — this affects the reachability judgement for `0x91`/`0x92` |
+| 5 | 扫描几何参数表生成器（`0x03A400–0x03BF00`）未分析<br>The scan geometry parameter-table generator (`0x03A400–0x03BF00`) is unanalyzed |
+| 6 | 图像算法三件：参数位域含义、像素搬运路径、gamma/位深转换本体<br>Three image-algorithm items: the meaning of the parameter bit fields, the pixel transfer path, and the gamma/bit-depth conversion itself |
 
 ---
 
@@ -388,36 +419,42 @@ This section is more important than anything else in this repo.
 
 如果这份仓库有什么普适价值，大概是这几条：
 
-1. **位段类结论必须用模拟执行验证。** 人工推导要同时追踪「寄存器高低半字 / 字节搬移 / 移位 / 立即数」四层语义，任一层出错都会导致位段分配全错——且这种错误**不会报错**，结果看起来依然自洽，只会静静地错。
-2. **同一个坑会反复踩。** 两个独立分析路径都犯了同一个 `<<16` 误判——这是系统性陷阱，不是偶发失误。
-3. **修产物不如修源头。** 曾经只改 `edges.json` 的键名而不重算内容，中间态比一致地错更危险。
-4. **打包是复查的最佳时机。** 一次全量复扫接连查出 5 项问题，其中 3 项是全案级别。
-5. **保留错误记录。** R1–R25 的完整修正轨迹，比"干净的结论"更有参考价值。
+If this repository has any generalizable value, it is probably these five:
+
+1. **位段类结论必须用模拟执行验证。** 人工推导要同时追踪「寄存器高低半字 / 字节搬移 / 移位 / 立即数」四层语义，任一层出错都会导致位段分配全错——且这种错误**不会报错**，结果看起来依然自洽，只会静静地错。<br>**Bit-field conclusions must be verified by simulated execution.** Manual derivation has to track four semantic layers at once — register high/low halves, byte moves, shifts, and immediates. An error in any one layer mis-assigns the whole bit field — and it **raises nothing**; the result still looks self-consistent, it is simply and quietly wrong.
+2. **同一个坑会反复踩。** 两个独立分析路径都犯了同一个 `<<16` 误判——这是系统性陷阱，不是偶发失误。<br>**The same trap gets stepped in again and again.** Two independent analysis paths both made the same `<<16` misjudgement — a systemic trap, not an occasional slip.
+3. **修产物不如修源头。** 曾经只改 `edges.json` 的键名而不重算内容，中间态比一致地错更危险。<br>**Fix the source, not the artifact.** At one point I renamed keys in `edges.json` without recomputing their contents; a half-updated intermediate state is more dangerous than being consistently wrong.
+4. **打包是复查的最佳时机。** 一次全量复扫接连查出 5 项问题，其中 3 项是全案级别。<br>**Packaging is the best moment to re-audit.** A single full re-scan turned up 5 issues in a row, 3 of them case-level.
+5. **保留错误记录。** R1–R25 的完整修正轨迹，比"干净的结论"更有参考价值。<br>**Keep the record of the mistakes.** The complete R1–R25 correction trail is more useful as a reference than a "clean" conclusion.
 
 详见 `01_docs/REPORT_回写总账-20261024.md` 与 `03_indexes/APPLIED_R24_R25_FIXES.md`。
+
+See `01_docs/REPORT_回写总账-20261024.md` and `03_indexes/APPLIED_R24_R25_FIXES.md`.
 
 ---
 
 ## 许可证 / License
 
-| 部分 | 许可证 | 文件 |
+| 部分 / Part | 许可证 / License | 文件 / File |
 |---|---|---|
-| **代码**（`tools/` 下的 `.py`、`.ps1`） | **GPL-3.0** | [`LICENSE`](LICENSE) |
-| **文档**（`.md` / `.txt` / 数据分析记录） | **CC BY-SA 4.0** | [`LICENSE-DOCS`](LICENSE-DOCS) |
-| **底层 Nikon 固件本身** | 著作权归 Nikon Corporation，**不在本仓库、不受上述许可证覆盖** | [`NOTICE`](NOTICE) |
+| **代码**（`tools/` 下的 `.py`、`.ps1`）<br>**Code** (`.py` / `.ps1` under `tools/`) | **GPL-3.0** | [`LICENSE`](LICENSE) |
+| **文档**（`.md` / `.txt` / 数据分析记录）<br>**Docs** (`.md` / `.txt` / data-analysis notes) | **CC BY-SA 4.0** | [`LICENSE-DOCS`](LICENSE-DOCS) |
+| **Nikon 固件样本**（`samples/` 官方发布包原件）<br>**Nikon firmware samples** (official release package under `samples/`) | 著作权归 Nikon Corporation，**按原始形态收录、不受上述许可证覆盖**<br>Copyright stays with Nikon Corporation; **included verbatim and not covered by the licenses above** | [`NOTICE`](NOTICE) |
 
-> 许可证覆盖的是**我（在 AI 辅助下）撰写的内容**，
-> 不覆盖 Nikon 的固件——本仓库从未包含该固件。见 [`NOTICE`](NOTICE)。
+> 许可证覆盖的是**我（在 AI 辅助下）撰写的内容**，不覆盖 Nikon 的固件本身——
+> `samples/` 中收录的是尼康官方公开发布的固件更新包，逐字节未改动，著作权仍归 Nikon Corporation。见 [`NOTICE`](NOTICE)。
+>
+> The licenses cover **what I wrote (with AI assistance)**; they do **not** cover Nikon's firmware itself —
+> `samples/` contains the firmware update package Nikon publicly released, byte-for-byte unmodified, with
+> copyright remaining at Nikon Corporation. See [`NOTICE`](NOTICE).
 
 ---
 
 ## 致谢 / Acknowledgments
 
-- **AI 助手**：如开头所述，本项目的绝大部分分析工作是在 AI 辅助下迭代完成的。
-  在此如实标注，避免读者误以为是专业逆向工作。
-- **Nikon Corporation**：LS-8000 ED 是一款出色的底片扫描仪。本项目出于学习与保存的目的，
-  希望有助于延长这些二十余年前的设备的可用寿命。
-- 感谢所有愿意花时间复核、纠正本项目结论的人。请以 ISSUE 形式指出错误，我会更新记录。
+- **AI 助手 / AI assistants**：如开头所述，本项目的绝大部分分析工作是在 AI 辅助下迭代完成的。在此如实标注，避免读者误以为是专业逆向工作。<br>As stated at the top, the vast majority of the analysis here was iterated with AI assistance. Stated plainly so that readers do not mistake it for professional reverse-engineering work.
+- **Nikon Corporation**：LS-8000 ED 是一款出色的底片扫描仪。本项目出于学习与保存的目的，希望有助于延长这些二十余年前设备的可用寿命。<br>The LS-8000 ED is an outstanding film scanner. This project exists for study and preservation, in the hope of extending the usable life of these twenty-plus-year-old machines.
+- 感谢所有愿意花时间复核、纠正本项目结论的人。请以 ISSUE 形式指出错误，我会更新记录。<br>Thanks to everyone willing to spend time reviewing and correcting the conclusions here. Please report errors via ISSUE and I will update the record.
 
 ---
 

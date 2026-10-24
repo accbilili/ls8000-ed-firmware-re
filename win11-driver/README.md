@@ -1,5 +1,10 @@
 # Windows 11 x64 驱动适配包（LS-8000 ED / LS-9000 ED）
 
+> 本文件内容**已完整并入仓库根 `README.md`**（GitHub 首页）的「Windows 11 驱动适配包」一节，
+> 两处内容一致。此文件保留，是为了让它能随驱动包单独分发。
+> This file is also mirrored in the root `README.md`; kept here so the package can be
+> distributed on its own.
+
 **让你那台画质很棒的老扫描仪，在现代 Windows 上被正确识别。**
 
 > 适用：Nikon SUPER COOLSCAN **8000 ED** 与 **9000 ED**

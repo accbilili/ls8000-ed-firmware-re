@@ -1,7 +1,7 @@
 # LS8000 固件逆向 —— 文件校验清单（发布版）
 # 格式: SHA256  字节数  相对路径
 # 包根: <REPO_ROOT>  (仓库 ls8000-ed-firmware-re)
-# 文件数: 723   总字节: 13514052
+# 文件数: 723   总字节: 13514576
 # 注意: 脱敏改写后重新生成，与原交付包 MANIFEST 的哈希不可直接比对
 #       已排除目录: .git, .github, __pycache__
 
@@ -714,7 +714,7 @@ ccbaf3097d346c163338c7a50774111351118c857b91469218413480ea6ea72f        1491  to
 873c9261d94f4bd84059ba799919b12d7cccaecae36f43e19a888568af2f4705        6264  tools/scripts/status/_verify400408/verify_independent.py
 c3ea95c38e425c311ce1053b110b2f16192f45f7d669eeb66ba9c930c6b31242        9629  tools/scripts/status/_verify400408/verify_r22_conflict.py
 3d0808ffd9699349fe676834f4d73dfebca038a39b4431b6227da22b2393723a        2566  tools/scripts/watcher.py
-5de32d98d98cc172ad109b0e6b6031abcc731781ab7a5a31109f46e4149cfb28        8207  tools/sim_verify_formulas.py
+8f2fc0deeec8bd229cf15b66b5503a0f9584ef293444f6e0fee7ee9c1494d235        8731  tools/sim_verify_formulas.py
 bf557b9d3bd5ba80a15f063df796e5215c491f460ef1c3c55de7241d7b2bdc63        5905  tools/verify_decoder_fix.py
 e6eb5affd6b849362fb24faead6dd1f9dbb1651a072879d8a121fba526dd005b        4569  tools/verify_package.py
 b2a66702fecd04609dfe3946d2246dc3d80583807dc72f2362552f13219b50f6        1838  win11-driver/Driver/Nikon8000-9000-x64.cat

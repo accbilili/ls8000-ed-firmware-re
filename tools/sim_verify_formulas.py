@@ -36,11 +36,27 @@ def _setup():
 
 
 def _rom():
-    for c in (os.environ.get('LS8000_SAMPLE_ROOT', ''), 'D:/DS/TEST/LS8000'):
+    """按优先级查找 ROM 样本 / Look up the ROM sample by priority:
+
+    1. ``LS8000_SAMPLE_ROOT`` 环境变量（用户自定义样本目录 / user-specified dir）
+    2. 仓库内 ``samples/`` —— clone 即可运行，无需任何配置
+       (the bundled ``samples/`` — works straight after clone)
+    """
+    cands = []
+    env = os.environ.get('LS8000_SAMPLE_ROOT', '')
+    if env:
+        cands.append(env)
+    p = HERE
+    for _ in range(6):
+        cands.append(os.path.join(p, 'samples'))
+        p = os.path.dirname(p)
+        if not p:
+            break
+    for c in cands:
         if c:
-            p = os.path.join(c.replace('\\', '/'), 'LS8000_111_ROM.bin')
-            if os.path.isfile(p):
-                return open(p, 'rb').read()
+            fp = os.path.join(c.replace('\\', '/'), 'LS8000_111_ROM.bin')
+            if os.path.isfile(fp):
+                return open(fp, 'rb').read()
     return None
 
 
